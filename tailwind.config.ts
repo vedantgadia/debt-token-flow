@@ -61,6 +61,7 @@ export default {
 				vayana: {
 					red: '#E3032C',    // Pantone 185 C
 					blue: '#194388',   // Pantone 7687 C
+					'blue-darker': '#143470', // Darker shade for borders
 					green: '#4C6C34',  // Pantone 362 C
 					gray: '#98989A',   // Pantone Cool Gray 7 C
 					purple: '#723189', // Pantone 525 C

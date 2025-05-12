@@ -1,14 +1,15 @@
 
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import VayanaLogo from './VayanaLogo';
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-white py-12">
+    <footer className="bg-vayana-blue text-white py-12">
       <div className="container px-4 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <h3 className="text-xl font-bold mb-4">Vayana Debt Platform</h3>
+            <VayanaLogo className="mb-4" />
             <p className="text-gray-300 mb-4">
               Tokenise Private Credit. Simplify Issuance. Unlock Liquidity.
             </p>
@@ -45,7 +46,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-vayana-blue-darker mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 mb-4 md:mb-0">
             © 2025 Vayana. All rights reserved.
           </div>
