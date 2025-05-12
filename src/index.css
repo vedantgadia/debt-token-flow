@@ -16,16 +16,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 221 73% 31%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 353 97% 45%;
+    --secondary-foreground: 210 40% 98%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
+    --accent: 292 49% 36%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -91,7 +91,7 @@
 
 @layer components {
   .feature-badge {
-    @apply inline-flex items-center justify-center bg-secondary/10 text-secondary px-3 py-1 text-sm font-medium rounded-full;
+    @apply inline-flex items-center justify-center bg-vayana-blue/10 text-vayana-blue px-3 py-1 text-sm font-medium rounded-full;
   }
   
   .check-item {
@@ -103,7 +103,7 @@
   }
   
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-secondary to-accent;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary;
   }
   
   .hero-button {
@@ -116,5 +116,63 @@
   
   .section-subtitle {
     @apply text-lg text-gray-600 mb-10 max-w-3xl mx-auto;
+  }
+
+  .vayana-logo {
+    position: relative;
+    width: 180px;
+    height: 45px;
+  }
+
+  .vayana-logo-v {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .vayana-logo-red-bars {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 50% 100%, 0 100%);
+    background: repeating-linear-gradient(
+      -45deg,
+      #E3032C,
+      #E3032C 4px,
+      transparent 4px,
+      transparent 8px
+    );
+  }
+
+  .vayana-logo-blue-bars {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+    background: repeating-linear-gradient(
+      45deg,
+      #194388,
+      #194388 4px,
+      transparent 4px,
+      transparent 8px
+    );
+  }
+
+  .vayana-logo-text {
+    position: absolute;
+    left: 55px;
+    top: 12px;
+    color: #194388;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 1px;
   }
 }

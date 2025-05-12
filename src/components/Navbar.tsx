@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import VayanaLogo from './VayanaLogo';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,7 +40,7 @@ const Navbar = () => {
       <div className="container px-4 mx-auto">
         <div className="flex justify-between items-center">
           <a href="#" className="flex items-center">
-            <span className={`text-2xl font-bold ${isScrolled ? 'text-primary' : 'text-white'}`}>VDP</span>
+            <VayanaLogo />
           </a>
           
           <div className="hidden md:flex items-center space-x-8">

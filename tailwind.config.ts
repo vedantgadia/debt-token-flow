@@ -30,15 +30,15 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#1A1F2C',
+					DEFAULT: '#194388', // Pantone 7687 C - Blue
 					foreground: '#FFFFFF',
 				},
 				secondary: {
-					DEFAULT: '#7E69AB',
+					DEFAULT: '#E3032C', // Pantone 185 C - Red
 					foreground: '#FFFFFF',
 				},
 				accent: {
-					DEFAULT: '#1EAEDB',
+					DEFAULT: '#723189', // Pantone 525 C - Purple
 					foreground: '#FFFFFF',
 				},
 				destructive: {
@@ -56,6 +56,15 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))',
+				},
+				// Additional brand colors
+				vayana: {
+					red: '#E3032C',    // Pantone 185 C
+					blue: '#194388',   // Pantone 7687 C
+					green: '#4C6C34',  // Pantone 362 C
+					gray: '#98989A',   // Pantone Cool Gray 7 C
+					purple: '#723189', // Pantone 525 C
+					orange: '#DF5828', // Pantone 7578 C
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -102,9 +111,10 @@ export default {
 				'pulse-slow': 'pulse-slow 3s infinite',
 			},
 			backgroundImage: {
-				'hero-gradient': 'linear-gradient(135deg, #1A1F2C 0%, #362F51 100%)',
+				'hero-gradient': 'linear-gradient(135deg, #194388 0%, #723189 100%)',
 				'card-gradient': 'linear-gradient(225deg, #FFFFFF 0%, #F6F9FC 100%)',
-				'token-gradient': 'linear-gradient(90deg, hsla(277, 75%, 84%, 1) 0%, hsla(297, 50%, 51%, 1) 100%)',
+				'token-gradient': 'linear-gradient(90deg, #E3032C 0%, #194388 100%)',
+				'vayana-gradient': 'linear-gradient(90deg, #E3032C 0%, #194388 100%)',
 			},
 		},
 	},
