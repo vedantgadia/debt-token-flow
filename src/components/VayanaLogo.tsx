@@ -12,7 +12,7 @@ const VayanaLogo: React.FC<VayanaLogoProps> = ({ className = '' }) => {
         <div className="vayana-logo-red-bars"></div>
         <div className="vayana-logo-blue-bars"></div>
       </div>
-      <div className="vayana-logo-text">VAYANA</div>
+      <div className="vayana-logo-text">VAYANA<sup className="text-[10px] font-normal">TM</sup></div>
     </div>
   );
 };
