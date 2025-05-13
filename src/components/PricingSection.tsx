@@ -43,7 +43,7 @@ const PricingSection = () => {
                 </div>
                 <div className="flex items-center">
                   <X className="h-5 w-5 text-gray-400 mr-2 flex-shrink-0" />
-                  <span className="text-sm text-gray-500">No customisation</span>
+                  <span className="text-sm text-gray-500">No customization</span>
                 </div>
                 <div className="flex items-center">
                   <X className="h-5 w-5 text-gray-400 mr-2 flex-shrink-0" />
@@ -59,7 +59,7 @@ const PricingSection = () => {
                 </div>
                 <div className="flex items-start">
                   <Server className="h-5 w-5 text-vayana-blue mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">~1–2 Weeks deployment</span>
+                  <span className="text-sm">1-2 Weeks deployment</span>
                 </div>
                 <div className="flex items-start pt-2 border-t border-gray-100">
                   <Database className="h-5 w-5 text-vayana-red mr-2 mt-0.5 flex-shrink-0" />
@@ -69,8 +69,11 @@ const PricingSection = () => {
             </CardContent>
           </Card>
 
-          {/* Sprout Plan */}
-          <Card className="border-vayana-gray/20 shadow-sm">
+          {/* Sprout Plan - Now Most Popular */}
+          <Card className="border-vayana-blue shadow-md relative">
+            <div className="absolute -top-4 left-0 right-0 mx-auto w-max px-3 py-1 bg-vayana-blue text-white text-xs font-semibold rounded-full">
+              Most Popular
+            </div>
             <CardContent className="p-6">
               <div className="text-center mb-6">
                 <h3 className="text-xl font-bold">Sprout</h3>
@@ -83,7 +86,7 @@ const PricingSection = () => {
                   $10,000 one-time setup
                 </div>
               </div>
-              <Button className="w-full mb-6">Get Started</Button>
+              <Button className="w-full mb-6 bg-vayana-blue hover:bg-vayana-blue-darker">Get Started</Button>
               <div className="text-sm text-gray-600 mb-4 text-center">
                 Best For: <span className="font-medium">Early Commercial Use</span>
               </div>
@@ -98,7 +101,7 @@ const PricingSection = () => {
                 </div>
                 <div className="flex items-center">
                   <Check className="h-5 w-5 text-vayana-green mr-2 flex-shrink-0" />
-                  <span className="text-sm">Email Text customisation</span>
+                  <span className="text-sm">Email Text customization</span>
                 </div>
                 <div className="flex items-center">
                   <Check className="h-5 w-5 text-vayana-green mr-2 flex-shrink-0" />
@@ -114,7 +117,7 @@ const PricingSection = () => {
                 </div>
                 <div className="flex items-start">
                   <Server className="h-5 w-5 text-vayana-blue mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">~1–2 Weeks deployment</span>
+                  <span className="text-sm">1-2 Weeks deployment</span>
                 </div>
                 <div className="flex items-start pt-2 border-t border-gray-100">
                   <Database className="h-5 w-5 text-vayana-red mr-2 mt-0.5 flex-shrink-0" />
@@ -124,11 +127,8 @@ const PricingSection = () => {
             </CardContent>
           </Card>
 
-          {/* Forest Plan (Most Popular) */}
-          <Card className="border-vayana-blue shadow-md relative">
-            <div className="absolute -top-4 left-0 right-0 mx-auto w-max px-3 py-1 bg-vayana-blue text-white text-xs font-semibold rounded-full">
-              Most Popular
-            </div>
+          {/* Forest Plan (No longer Most Popular) */}
+          <Card className="border-vayana-gray/20 shadow-sm">
             <CardContent className="p-6">
               <div className="text-center mb-6">
                 <h3 className="text-xl font-bold">Forest</h3>
@@ -141,7 +141,7 @@ const PricingSection = () => {
                   $15,000 one-time setup
                 </div>
               </div>
-              <Button className="w-full mb-6 bg-vayana-blue hover:bg-vayana-blue-darker">Get Started</Button>
+              <Button className="w-full mb-6">Get Started</Button>
               <div className="text-sm text-gray-600 mb-4 text-center">
                 Best For: <span className="font-medium">Scale-ready Fintechs/Banks</span>
               </div>
@@ -156,7 +156,7 @@ const PricingSection = () => {
                 </div>
                 <div className="flex items-center">
                   <Check className="h-5 w-5 text-vayana-green mr-2 flex-shrink-0" />
-                  <span className="text-sm">Workflow Changes customisation</span>
+                  <span className="text-sm">Workflow Changes customization</span>
                 </div>
                 <div className="flex items-center">
                   <Check className="h-5 w-5 text-vayana-green mr-2 flex-shrink-0" />
@@ -172,7 +172,7 @@ const PricingSection = () => {
                 </div>
                 <div className="flex items-start">
                   <Server className="h-5 w-5 text-vayana-blue mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">~2–3 Weeks deployment</span>
+                  <span className="text-sm">2-3 Weeks deployment</span>
                 </div>
                 <div className="flex items-start pt-2 border-t border-gray-100">
                   <Database className="h-5 w-5 text-vayana-red mr-2 mt-0.5 flex-shrink-0" />
