@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import VayanaLogo from './VayanaLogo';
@@ -9,7 +8,9 @@ const Footer = () => {
       <div className="container px-4 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <VayanaLogo className="mb-4" />
+            <div className="bg-white inline-block px-3 py-2 rounded mb-4">
+              <VayanaLogo />
+            </div>
             <p className="text-gray-300 mb-4">
               Tokenise Private Credit. Simplify Issuance. Unlock Liquidity.
             </p>
