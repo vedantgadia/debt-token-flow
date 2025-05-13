@@ -3,7 +3,6 @@ import React from 'react';
 import { Check, X, Mail, Phone, Database, Shield, Server } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 
 const PricingSection = () => {
   return (
@@ -225,89 +224,6 @@ const PricingSection = () => {
               </div>
             </CardContent>
           </Card>
-        </div>
-
-        {/* Detailed Comparison Table - Mobile Hidden, Desktop Visible */}
-        <div className="mt-20 hidden lg:block">
-          <h3 className="text-2xl font-bold mb-6 text-center">Detailed Plan Comparison</h3>
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead className="w-[250px]">Features</TableHead>
-                <TableHead>Seed</TableHead>
-                <TableHead>Sprout</TableHead>
-                <TableHead>Forest</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              <TableRow>
-                <TableCell className="font-medium">Best For</TableCell>
-                <TableCell>Pilots, Trials</TableCell>
-                <TableCell>Early Commercial Use</TableCell>
-                <TableCell>Scale-ready Fintechs/Banks</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">Issuance Limit</TableCell>
-                <TableCell>Up to 2</TableCell>
-                <TableCell>Up to 20</TableCell>
-                <TableCell>Unlimited</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">Branding & Theming</TableCell>
-                <TableCell>Logo only</TableCell>
-                <TableCell>Logo + UI Color</TableCell>
-                <TableCell>Full UI Branding</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">Customisation</TableCell>
-                <TableCell>None</TableCell>
-                <TableCell>Email Texts</TableCell>
-                <TableCell>Workflow Changes</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">Integrations</TableCell>
-                <TableCell>Not available</TableCell>
-                <TableCell>Pre-approved + Optional Add-ons</TableCell>
-                <TableCell>Pre-approved + Optional Add-ons</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">Blockchain Support</TableCell>
-                <TableCell>EVM Chains</TableCell>
-                <TableCell>EVM Chains</TableCell>
-                <TableCell>EVM Chains</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">Support</TableCell>
-                <TableCell>Standard (Email)</TableCell>
-                <TableCell>Priority (Email/Phone)</TableCell>
-                <TableCell>Priority + Telegram</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">Deployment Time</TableCell>
-                <TableCell>~1–2 Weeks</TableCell>
-                <TableCell>~1–2 Weeks</TableCell>
-                <TableCell>~2–3 Weeks</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">Monthly Price</TableCell>
-                <TableCell>$1,000</TableCell>
-                <TableCell>$2,000</TableCell>
-                <TableCell>$3,000</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">One-Time Setup</TableCell>
-                <TableCell>$7,500</TableCell>
-                <TableCell>$10,000</TableCell>
-                <TableCell>$15,000</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">Success Fee</TableCell>
-                <TableCell>0.5% of drawdown</TableCell>
-                <TableCell>0.3% of drawdown</TableCell>
-                <TableCell>0.25% or monthly fee (whichever is higher)</TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
         </div>
       </div>
     </section>
