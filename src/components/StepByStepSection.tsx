@@ -61,21 +61,26 @@ const StepByStepSection = () => {
         <p className="section-subtitle text-center">A step-by-step guide to tokenizing assets on the Vayana Debt Platform</p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {steps.map((step) => (
-            <div 
-              key={step.id} 
-              className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 border border-gray-100 relative"
-            >
-              <div className="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center font-bold">
-                {step.id}
+          {steps.map((step) => {
+            const Icon = step.icon;
+            return (
+              <div 
+                key={step.id} 
+                className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 border border-gray-100 relative"
+              >
+                <div className="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center font-bold">
+                  {step.id}
+                </div>
+                <div className="mb-4">
+                  <div className="bg-vayana-gradient p-2 inline-block rounded-lg">
+                    <Icon className="h-8 w-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                <p className="text-gray-600">{step.description}</p>
               </div>
-              <div className="mb-4 bg-vayana-gradient bg-clip-text text-transparent">
-                <step.icon className="h-10 w-10" />
-              </div>
-              <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-              <p className="text-gray-600">{step.description}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
