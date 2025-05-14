@@ -74,9 +74,9 @@ const StepByStepSection = () => {
                 <div className="mb-4 mt-6 flex justify-center">
                   <div className="inline-flex items-center justify-center">
                     <Icon 
-                      className="h-10 w-10" 
+                      className="h-14 w-14" 
                       style={{ stroke: 'url(#iconGradient)' }}
-                      strokeWidth={1.5} 
+                      strokeWidth={2} 
                       strokeLinecap="round" 
                       strokeLinejoin="round" 
                     />

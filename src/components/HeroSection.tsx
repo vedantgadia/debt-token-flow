@@ -17,7 +17,7 @@ const HeroSection = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
-                className="hero-button bg-vayana-gradient hover:opacity-90 text-white flex items-center gap-2"
+                className="hero-button bg-vayana-blue hover:bg-vayana-blue/90 text-white flex items-center gap-2"
                 onClick={() => {
                   const form = document.getElementById('contact-form');
                   if (form) {

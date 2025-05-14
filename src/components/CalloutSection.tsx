@@ -15,7 +15,7 @@ const CalloutSection = () => {
             Our platform dramatically accelerates your time-to-market with pre-built templates, smart contract libraries, and compliance frameworks designed for private credit.
           </p>
           <Button 
-            className="bg-vayana-gradient hover:opacity-90 text-white px-8 py-3 text-lg font-medium rounded-lg inline-flex items-center gap-2"
+            className="bg-vayana-blue hover:bg-vayana-blue/90 text-white px-8 py-3 text-lg font-medium rounded-lg inline-flex items-center gap-2"
             onClick={() => {
               const form = document.getElementById('contact-form');
               if (form) {
