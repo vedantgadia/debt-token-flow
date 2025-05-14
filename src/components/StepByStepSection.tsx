@@ -66,14 +66,14 @@ const StepByStepSection = () => {
             return (
               <div 
                 key={step.id} 
-                className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 border border-gray-100 relative"
+                className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 border border-gray-100 relative flex flex-col items-center text-center"
               >
-                <div className="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center font-bold">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-vayana-gradient text-white flex items-center justify-center font-bold">
                   {step.id}
                 </div>
-                <div className="mb-4">
-                  <div className="bg-vayana-gradient p-2 inline-block rounded-lg">
-                    <Icon className="h-8 w-8 text-white" />
+                <div className="mb-4 mt-2">
+                  <div className="bg-vayana-gradient p-3 rounded-lg inline-flex items-center justify-center">
+                    <Icon className="h-8 w-8 text-white stroke-[1.5]" strokeLinecap="round" strokeLinejoin="round" />
                   </div>
                 </div>
                 <h3 className="text-xl font-bold mb-2">{step.title}</h3>
