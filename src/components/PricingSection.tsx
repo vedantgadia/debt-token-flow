@@ -28,7 +28,7 @@ const PricingSection = () => {
                   $7,500 one-time setup
                 </div>
               </div>
-              <Button className="w-full mb-6">Get Started</Button>
+              <Button className="w-full mb-6 bg-vayana-gradient hover:opacity-90">Get Started</Button>
               <div className="text-sm text-gray-600 mb-4 text-center">
                 Best For: <span className="font-medium">Pilots, Trials</span>
               </div>
@@ -86,7 +86,7 @@ const PricingSection = () => {
                   $10,000 one-time setup
                 </div>
               </div>
-              <Button className="w-full mb-6 bg-vayana-blue hover:bg-vayana-blue-darker">Get Started</Button>
+              <Button className="w-full mb-6 bg-vayana-gradient hover:opacity-90 text-white">Get Started</Button>
               <div className="text-sm text-gray-600 mb-4 text-center">
                 Best For: <span className="font-medium">Early Commercial Use</span>
               </div>
@@ -141,7 +141,7 @@ const PricingSection = () => {
                   $15,000 one-time setup
                 </div>
               </div>
-              <Button className="w-full mb-6">Get Started</Button>
+              <Button className="w-full mb-6 bg-vayana-gradient hover:opacity-90">Get Started</Button>
               <div className="text-sm text-gray-600 mb-4 text-center">
                 Best For: <span className="font-medium">Scale-ready Fintechs/Banks</span>
               </div>
@@ -214,7 +214,7 @@ const PricingSection = () => {
               </div>
               <div className="mt-auto">
                 <Button 
-                  className="w-full bg-vayana-blue hover:bg-vayana-blue-darker"
+                  className="w-full bg-vayana-gradient hover:opacity-90 text-white"
                   onClick={() => {
                     window.location.href = "mailto:sales@vayana.com";
                   }}

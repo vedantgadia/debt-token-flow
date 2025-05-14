@@ -69,7 +69,7 @@ const StepByStepSection = () => {
               <div className="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center font-bold">
                 {step.id}
               </div>
-              <div className="mb-4 text-secondary">
+              <div className="mb-4 bg-vayana-gradient bg-clip-text text-transparent">
                 <step.icon className="h-10 w-10" />
               </div>
               <h3 className="text-xl font-bold mb-2">{step.title}</h3>

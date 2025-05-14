@@ -6,13 +6,13 @@ import { Button } from '@/components/ui/button';
 const features = [
   {
     id: 'feature-1',
-    badge: 'Asset Tokenisation',
-    title: 'Launch Tokenised Debt Instruments',
-    description: 'Configure asset details, compliance parameters, supply caps, and transfer rules — all in one place.',
-    subtext: 'Issue tokenised debt instruments such as loans, debentures, or structured notes through intuitive workflows or developer-friendly APIs.',
+    badge: 'Asset Tokenization',
+    title: 'Launch Tokenized Debt Instruments',
+    description: 'Configure asset details, compliance parameters, supply caps, and transfer rules all in one place.',
+    subtext: 'Issue tokenized debt instruments such as loans, debentures, or structured notes through intuitive workflows or developer-friendly APIs.',
     checks: [
       'Built-in compliance (e.g., KYC, investor eligibility)',
-      'Customisable transfer logic (limits, conditions)',
+      'Customizable transfer logic (limits, conditions)',
       'Ready-to-use templates for faster go-live'
     ]
   },
@@ -20,8 +20,8 @@ const features = [
     id: 'feature-2',
     badge: 'Lifecycle Management',
     title: 'Manage Securities Across Their Lifecycle',
-    description: 'Maintain complete control over tokenised credit instruments post-issuance.',
-    subtext: 'Authorise actions, update records, and automate lifecycle events like interest payments, redemptions, and reporting.',
+    description: 'Maintain complete control over tokenized credit instruments post-issuance.',
+    subtext: 'Authorize actions, update records, and automate lifecycle events like interest payments, redemptions, and reporting.',
     checks: [
       'Role-based permissions',
       'Smart contract-driven actions (mint, burn, lock, transfer)',
@@ -32,8 +32,8 @@ const features = [
     id: 'feature-3',
     badge: 'Distribution',
     title: 'Enable Multi-Channel Distribution',
-    description: 'List, sell, or transfer tokenised instruments across regulated networks, private marketplaces, or institutional investor portals.',
-    subtext: 'Bridge to DeFi channels with built-in compliance controls — without losing oversight.',
+    description: 'List, sell, or transfer tokenized instruments across regulated networks, private marketplaces, or institutional investor portals.',
+    subtext: 'Bridge to DeFi channels with built-in compliance controls without losing oversight.',
     checks: [
       'Compatible with exchanges and broker-dealers',
       'Supports programmable compliance on every transaction',
@@ -47,8 +47,8 @@ const FeaturesSection = () => {
     <section className="py-20">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
-          <h2 className="section-title">Enterprise-Grade Tokenisation with VDP</h2>
-          <p className="section-subtitle">Powering Modern Private Credit Markets — Seamlessly and Securely</p>
+          <h2 className="section-title">Enterprise-Grade Tokenization with VDP</h2>
+          <p className="section-subtitle">Powering Modern Private Credit Markets Seamlessly and Securely</p>
           
           <div className="flex flex-wrap justify-center gap-6 mt-8">
             <div className="check-item">
@@ -97,7 +97,7 @@ const FeaturesSection = () => {
         
         <div className="mt-16 text-center">
           <Button 
-            className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg rounded-lg flex items-center gap-2 mx-auto"
+            className="bg-vayana-gradient hover:opacity-90 text-white px-8 py-6 text-lg rounded-lg flex items-center gap-2 mx-auto"
             onClick={() => {
               const form = document.getElementById('contact-form');
               if (form) {
@@ -105,7 +105,7 @@ const FeaturesSection = () => {
               }
             }}
           >
-            Start Tokenising Your Assets
+            Start Tokenizing Your Assets
             <ArrowRight className="h-5 w-5" />
           </Button>
         </div>
