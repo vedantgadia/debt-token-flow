@@ -66,14 +66,20 @@ const StepByStepSection = () => {
             return (
               <div 
                 key={step.id} 
-                className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 border border-gray-100 relative flex flex-col items-center text-center"
+                className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 border border-gray-100 relative text-center"
               >
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-vayana-gradient text-white flex items-center justify-center font-bold">
+                <div className="absolute -top-4 -left-4 w-10 h-10 rounded-full border border-gray-200 bg-white text-gray-700 flex items-center justify-center font-bold">
                   {step.id}
                 </div>
-                <div className="mb-4 mt-2">
-                  <div className="bg-vayana-gradient p-3 rounded-lg inline-flex items-center justify-center">
-                    <Icon className="h-8 w-8 text-white stroke-[1.5]" strokeLinecap="round" strokeLinejoin="round" />
+                <div className="mb-4 mt-6 flex justify-center">
+                  <div className="inline-flex items-center justify-center">
+                    <Icon 
+                      className="h-10 w-10" 
+                      style={{ stroke: 'url(#iconGradient)' }}
+                      strokeWidth={1.5} 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                    />
                   </div>
                 </div>
                 <h3 className="text-xl font-bold mb-2">{step.title}</h3>
@@ -83,6 +89,16 @@ const StepByStepSection = () => {
           })}
         </div>
       </div>
+      
+      {/* SVG gradient definitions for the icons */}
+      <svg width="0" height="0" className="absolute">
+        <defs>
+          <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#E3032C" />
+            <stop offset="100%" stopColor="#194388" />
+          </linearGradient>
+        </defs>
+      </svg>
     </section>
   );
 };
