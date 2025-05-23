@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -56,7 +57,7 @@ const ContactSection = () => {
       <div className="container px-4 mx-auto">
         <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2">
-            <div className="bg-secondary text-white p-8 lg:p-12">
+            <div className="bg-vayana-gradient text-white p-8 lg:p-12">
               <h2 className="text-3xl font-bold mb-6 font-display">Let's Tokenize</h2>
               <p className="text-lg text-gray-100 mb-8">
                 Ready to revolutionize your debt instruments? Schedule a demo with our team and see how Vayana Debt Platform can transform your issuance process.
