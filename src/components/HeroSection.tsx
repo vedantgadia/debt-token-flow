@@ -10,10 +10,10 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display leading-tight mb-6">
-              Powering Modern Private Credit Markets Seamlessly and Securely
+              Enterprise-Grade Tokenization with VDP
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-xl">
-              Enterprise-Grade Tokenization with VDP
+              Powering Modern Private Credit Markets Seamlessly and Securely
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
