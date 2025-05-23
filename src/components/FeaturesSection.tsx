@@ -1,6 +1,7 @@
 import React from 'react';
 import { Check, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+
 const features = [{
   id: 'feature-1',
   badge: 'Asset Tokenization',
@@ -11,7 +12,7 @@ const features = [{
 }, {
   id: 'feature-2',
   badge: 'Lifecycle Management',
-  title: 'Manage Securities Across Their Lifecycle',
+  title: 'Manage Securities Across Lifecycle',
   description: 'Maintain complete control over tokenized credit instruments post-issuance.',
   subtext: 'Authorize actions, update records, and automate lifecycle events like interest payments, redemptions, and reporting.',
   checks: ['Role-based permissions', 'Smart contract-driven actions (mint, burn, lock, transfer)', 'Dashboard view for all positions and updates']
@@ -23,6 +24,7 @@ const features = [{
   subtext: 'Bridge to DeFi channels with built-in compliance controls without losing oversight.',
   checks: ['Compatible with exchanges and broker-dealers', 'Supports programmable compliance on every transaction', 'Plug-and-play integrations for wider distribution reach']
 }];
+
 const FeaturesSection = () => {
   return <section className="py-20">
       <div className="container px-4 mx-auto">
