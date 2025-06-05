@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -56,6 +55,14 @@ const Navbar = () => {
                   </a>
                 </li>
                 <li>
+                  <a 
+                    href="/innovations" 
+                    className="font-medium hover:text-secondary transition-colors"
+                  >
+                    Innovations
+                  </a>
+                </li>
+                <li>
                   <button 
                     className="font-medium hover:text-secondary transition-colors"
                     onClick={() => scrollToSection('faq')}
@@ -105,6 +112,15 @@ const Navbar = () => {
                   onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); setIsMobileMenuOpen(false); }}
                 >
                   Home
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="/innovations" 
+                  className="block font-medium text-gray-700 hover:text-secondary transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Innovations
                 </a>
               </li>
               <li>
