@@ -11,8 +11,19 @@ const products = [
   {
     id: 'vdp',
     icon: Coins,
-    headline: 'Vayana Debt Platform: Tokenizing Capital Market Instruments',
-    description: 'Revolutionizing capital markets, our Vayana Debt Platform enables the secure and efficient tokenization of debt instruments. Experience enhanced liquidity, transparency, and accessibility in the digital age.',
+    headline: 'Vayana Debt Platform (VDP)',
+    subheadline: 'Tokenise Private Credit. Simplify Issuance. Unlock Liquidity.',
+    description: `The Vayana Debt Platform (VDP) is a modular, SaaS-based platform that enables financial institutions to issue, manage, and service tokenised private credit instruments — including loans, debentures, and structured debt — with ease.
+
+Built to power the next generation of private credit, VDP brings automation, transparency, and digital-native workflows to a market still constrained by manual processes and fragmented infrastructure.`,
+    coreCapabilities: [
+      'Tokenisation of Debt Instruments',
+      'Workflow Automation',
+      'Multi-Tenant SaaS',
+      'Built-in Compliance',
+      'API-First & Interoperable',
+      'Rapid Go-Live'
+    ],
     status: 'Live' as const,
     buttonText: 'Learn More',
     buttonLink: '/'
@@ -20,8 +31,19 @@ const products = [
   {
     id: 'trade-docs',
     icon: FileText,
-    headline: 'VDP Trade Docs: Digitizing Cross-Border Trade',
-    description: 'Streamline your global trade operations with VDP Trade Docs. Leveraging MLETR and TradeTrust, we digitize cross-border trade documents, reducing friction and accelerating transactions.',
+    headline: 'VDP Trade Docs',
+    subheadline: 'Digitize. Authenticate. Accelerate Trade.',
+    description: `VDP Trade Docs revolutionizes cross-border trade by digitizing and securing trade documents through MLETR and TradeTrust standards. Our platform eliminates paper-based processes, reduces fraud risks, and accelerates international trade settlements.
+
+Transform your trade operations with blockchain-verified documents, real-time tracking, and seamless integration with existing trade finance systems.`,
+    coreCapabilities: [
+      'MLETR Compliance',
+      'TradeTrust Integration',
+      'Document Authentication',
+      'Real-time Tracking',
+      'Fraud Prevention',
+      'Cross-border Efficiency'
+    ],
     status: 'Live' as const,
     buttonText: 'Contact Us',
     buttonLink: '#contact-us'
@@ -29,8 +51,19 @@ const products = [
   {
     id: 'supply-chain',
     icon: Truck,
-    headline: 'Deep-tier Supply Chain Payments & Finance',
-    description: 'Taking supply chain financing to the next level. Our solution extends financial access deep into your supply chain, optimizing working capital and fostering resilience across your ecosystem.',
+    headline: 'Deep-tier Supply Chain Platform',
+    subheadline: 'Extend Finance. Strengthen Partnerships. Build Resilience.',
+    description: `Our Deep-tier Supply Chain Finance platform extends working capital solutions beyond traditional first-tier suppliers, reaching deep into your supply ecosystem. Enable MSMEs at every tier to access financing based on their relationships with anchor buyers.
+
+Create a resilient supply network where financial inclusion drives operational excellence and sustainable growth across your entire value chain.`,
+    coreCapabilities: [
+      'Multi-tier Financing',
+      'MSME Inclusion',
+      'Risk Assessment',
+      'Automated Underwriting',
+      'Supply Chain Visibility',
+      'Working Capital Optimization'
+    ],
     status: 'Coming Soon' as const,
     buttonText: 'Enquire Now',
     buttonLink: '#contact-us'
@@ -38,8 +71,19 @@ const products = [
   {
     id: 'alternate-assets',
     icon: Gem,
-    headline: 'Tokenization of Alternate Assets',
-    description: 'Unlock new possibilities with the tokenization of alternate assets. From commodities to real estate, we\'re building the infrastructure to bring illiquid assets onto the blockchain, enhancing discoverability and liquidity.',
+    headline: 'Alternate Asset Tokenization',
+    subheadline: 'Tokenize. Trade. Transform Asset Markets.',
+    description: `Unlock the potential of illiquid assets through our comprehensive tokenization platform. From real estate and commodities to art and intellectual property, we provide the infrastructure to fractionally own, trade, and manage alternate assets on-chain.
+
+Democratize access to premium asset classes while providing institutional-grade compliance, custody, and settlement capabilities.`,
+    coreCapabilities: [
+      'Asset Fractionalization',
+      'Regulatory Compliance',
+      'Custody Solutions',
+      'Secondary Markets',
+      'Price Discovery',
+      'Institutional Infrastructure'
+    ],
     status: 'Coming Soon' as const,
     buttonText: 'Get Updates',
     buttonLink: '#contact-us'
@@ -54,7 +98,7 @@ const Innovations = () => {
       
       <section className="py-20 bg-gray-50">
         <div className="container px-4 mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="max-w-4xl mx-auto space-y-12">
             {products.map((product) => (
               <ProductCard key={product.id} {...product} />
             ))}
