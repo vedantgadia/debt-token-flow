@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import InnovationsHero from '@/components/InnovationsHero';
@@ -96,11 +95,11 @@ const Innovations = () => {
       <Navbar />
       <InnovationsHero />
       
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50">
         <div className="container px-4 mx-auto">
-          <div className="max-w-4xl mx-auto space-y-12">
-            {products.map((product) => (
-              <ProductCard key={product.id} {...product} />
+          <div className="max-w-5xl mx-auto">
+            {products.map((product, index) => (
+              <ProductCard key={product.id} {...product} index={index} />
             ))}
           </div>
         </div>
