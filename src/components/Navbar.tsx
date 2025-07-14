@@ -63,6 +63,14 @@ const Navbar = () => {
                   </a>
                 </li>
                 <li>
+                  <a 
+                    href="/vdp-trade-docs" 
+                    className="font-medium hover:text-secondary transition-colors"
+                  >
+                    VDP Trade Docs
+                  </a>
+                </li>
+                <li>
                   <button 
                     className="font-medium hover:text-secondary transition-colors"
                     onClick={() => scrollToSection('faq')}
@@ -121,6 +129,15 @@ const Navbar = () => {
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Innovations
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="/vdp-trade-docs" 
+                  className="block font-medium text-gray-700 hover:text-secondary transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  VDP Trade Docs
                 </a>
               </li>
               <li>
