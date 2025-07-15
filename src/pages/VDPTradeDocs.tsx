@@ -493,61 +493,34 @@ const VDPTradeDocs = () => {
       </section>
 
       {/* Stakeholder Section */}
-      <section className="py-20 bg-gradient-to-br from-muted/20 via-background to-muted/40">
+      <section className="py-24 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
         <div className="container mx-auto px-4">
-          <div className="space-y-12">
-            <div className="text-center space-y-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center space-y-6 mb-20">
               <h2 className="section-title">One Platform, Many Roles</h2>
-              <p className="section-subtitle">
-                Tailored benefits for every stakeholder in the trade ecosystem
+              <p className="section-subtitle max-w-3xl mx-auto">
+                Empowering every stakeholder in the global trade ecosystem with seamless digital document management
               </p>
             </div>
             
-            <div className="relative max-w-6xl mx-auto">
-              {/* Central Hub */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 hidden lg:block">
-                <div className="w-40 h-40 bg-gradient-to-br from-primary via-secondary to-accent rounded-full flex items-center justify-center shadow-2xl border-4 border-white">
-                  <div className="text-center">
-                    <span className="text-white font-bold text-lg block">VDP</span>
-                    <span className="text-white/90 font-medium text-sm">Trade Docs</span>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Stakeholder Cards in Organized Layout */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8 pt-8 lg:pt-16">
-                {stakeholders.map((stakeholder, index) => {
-                  // Position classes for circular arrangement around center on large screens
-                  const positions = [
-                    'lg:col-span-1 lg:row-start-1', // Top-left
-                    'lg:col-span-1 lg:row-start-1', // Top-right  
-                    'lg:col-span-1 lg:col-start-1 lg:row-start-2 lg:mt-8', // Left
-                    'lg:col-span-1 lg:col-start-5 lg:row-start-2 lg:mt-8', // Right
-                    'lg:col-span-1 lg:col-start-3 lg:row-start-3 lg:mt-16' // Bottom
-                  ];
-                  
-                  return (
-                    <div 
-                      key={index} 
-                      className={`group relative bg-gradient-to-br from-white to-white/95 backdrop-blur-sm rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-primary/20 hover:border-primary/40 overflow-hidden ${positions[index] || ''}`}
-                    >
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                      <div className="relative z-10 text-center">
-                        <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 shadow-lg">
-                          <stakeholder.icon className="h-8 w-8 text-white" />
-                        </div>
-                        <h3 className="text-lg font-bold mb-3 text-foreground group-hover:text-primary transition-colors duration-300">
-                          {stakeholder.role}
-                        </h3>
-                        <p className="text-muted-foreground text-sm leading-relaxed">
-                          {stakeholder.benefit}
-                        </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+              {stakeholders.map((stakeholder, index) => (
+                <div key={index} className="group relative">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-3xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-500" />
+                  <Card className="relative h-full bg-card/90 backdrop-blur-sm border border-border/50 rounded-2xl p-6 hover:shadow-xl transition-all duration-500 group-hover:-translate-y-2 overflow-hidden">
+                    <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full blur-2xl -translate-y-10 translate-x-10" />
+                    <CardContent className="relative text-center space-y-4 p-0">
+                      <div className="w-14 h-14 mx-auto bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <stakeholder.icon className="h-7 w-7" />
                       </div>
-                      <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-br from-accent/30 to-primary/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    </div>
-                  );
-                })}
-              </div>
+                      <div className="space-y-3">
+                        <h3 className="text-lg font-semibold text-foreground leading-tight">{stakeholder.role}</h3>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{stakeholder.benefit}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              ))}
             </div>
           </div>
         </div>
