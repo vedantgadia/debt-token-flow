@@ -240,12 +240,6 @@ const VDPTradeDocs = () => {
       desc: "Offer a fully brandable solution tailored to client-specific requirements, whether as a SaaS or enterprise deployment.", 
       icon: Building2,
       emoji: "🏷️"
-    },
-    { 
-      title: "Straight-Through API Integration with Banks", 
-      desc: "Support for no-touch operational workflows via customized API integrations with banking systems.", 
-      icon: Database,
-      emoji: "🔗"
     }
   ];
 
@@ -267,11 +261,10 @@ const VDPTradeDocs = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display leading-tight mb-6">
-                VDP Trade Docs – Your Gateway to 
-                <span className="text-gray-200"> Seamless, Secure</span> Cross-Border Trade Documentation
+                VDP Trade Docs
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-xl">
-                Digitize, verify, and transfer trade documents with legal validity and global interoperability — powered by MLETR and TradeTrust.
+                Revolutionizing Trade Document Digitization with MLETR & TradeTrust
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
@@ -427,27 +420,33 @@ const VDPTradeDocs = () => {
               </p>
             </div>
             
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {supportedDocs.map((doc, index) => (
-                <div 
-                  key={index} 
-                  className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 hover:border-primary/20"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative z-10">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                      <doc.icon className="h-8 w-8 text-primary group-hover:text-accent transition-colors duration-300" />
+            <div className="relative">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                {supportedDocs.slice(0, 4).map((doc, index) => (
+                  <div 
+                    key={index} 
+                    className="group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm rounded-3xl p-6 text-center hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-primary/20 hover:border-primary/40 overflow-hidden"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary/5 to-accent/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="relative z-10">
+                      <div className="w-14 h-14 mx-auto bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+                        <doc.icon className="h-7 w-7 text-white" />
+                      </div>
+                      <h3 className="text-sm font-bold mb-2 text-foreground leading-tight">{doc.name}</h3>
+                      <p className="text-xs text-muted-foreground leading-relaxed">{doc.desc}</p>
                     </div>
-                    <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-primary transition-colors duration-300">
-                      {doc.name}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {doc.desc}
-                    </p>
+                    <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </div>
-                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 rounded-b-2xl"></div>
+                ))}
+              </div>
+              
+              <div className="flex justify-end mt-8 pr-8">
+                <div className="bg-gradient-to-r from-primary/10 to-secondary/10 backdrop-blur-sm rounded-2xl px-6 py-3 border border-primary/20">
+                  <p className="text-sm font-medium text-muted-foreground">
+                    + any other trade document
+                  </p>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>
@@ -504,43 +503,47 @@ const VDPTradeDocs = () => {
               </p>
             </div>
             
-            <div className="relative">
+            <div className="relative max-w-6xl mx-auto">
               {/* Central Hub */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-32 h-32 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center shadow-2xl">
-                  <span className="text-white font-bold text-lg">VDP Trade</span>
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 hidden lg:block">
+                <div className="w-40 h-40 bg-gradient-to-br from-primary via-secondary to-accent rounded-full flex items-center justify-center shadow-2xl border-4 border-white">
+                  <div className="text-center">
+                    <span className="text-white font-bold text-lg block">VDP</span>
+                    <span className="text-white/90 font-medium text-sm">Trade Docs</span>
+                  </div>
                 </div>
               </div>
               
-              {/* Stakeholder Cards in Circle */}
-              <div className="grid grid-cols-1 md:grid-cols-5 gap-6 relative z-10">
+              {/* Stakeholder Cards in Organized Layout */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8 pt-8 lg:pt-16">
                 {stakeholders.map((stakeholder, index) => {
+                  // Position classes for circular arrangement around center on large screens
                   const positions = [
-                    'md:col-start-1 md:row-start-1 md:self-center', // Left
-                    'md:col-start-2 md:row-start-1 md:self-start', // Top-left
-                    'md:col-start-4 md:row-start-1 md:self-start', // Top-right
-                    'md:col-start-5 md:row-start-1 md:self-center', // Right
-                    'md:col-start-3 md:row-start-1 md:self-end' // Bottom
+                    'lg:col-span-1 lg:row-start-1', // Top-left
+                    'lg:col-span-1 lg:row-start-1', // Top-right  
+                    'lg:col-span-1 lg:col-start-1 lg:row-start-2 lg:mt-8', // Left
+                    'lg:col-span-1 lg:col-start-5 lg:row-start-2 lg:mt-8', // Right
+                    'lg:col-span-1 lg:col-start-3 lg:row-start-3 lg:mt-16' // Bottom
                   ];
                   
                   return (
                     <div 
                       key={index} 
-                      className={`group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 hover:border-primary/30 ${positions[index] || ''}`}
+                      className={`group relative bg-gradient-to-br from-white to-white/95 backdrop-blur-sm rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-primary/20 hover:border-primary/40 overflow-hidden ${positions[index] || ''}`}
                     >
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       <div className="relative z-10 text-center">
-                        <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                          <stakeholder.icon className="h-8 w-8 text-primary group-hover:text-accent transition-colors duration-300" />
+                        <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 shadow-lg">
+                          <stakeholder.icon className="h-8 w-8 text-white" />
                         </div>
-                        <h3 className="text-lg font-bold mb-3 text-gray-900 group-hover:text-primary transition-colors duration-300">
+                        <h3 className="text-lg font-bold mb-3 text-foreground group-hover:text-primary transition-colors duration-300">
                           {stakeholder.role}
                         </h3>
-                        <p className="text-gray-600 text-sm leading-relaxed">
+                        <p className="text-muted-foreground text-sm leading-relaxed">
                           {stakeholder.benefit}
                         </p>
                       </div>
-                      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 rounded-b-2xl"></div>
+                      <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-br from-accent/30 to-primary/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
                   );
                 })}
