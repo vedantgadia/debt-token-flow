@@ -195,12 +195,11 @@ const TradeDocVisual = () => {
 
 const VDPTradeDocs = () => {
   const supportedDocs = [
-    { name: "Electronic Bill of Lading", icon: FileText, desc: "Digital B/L with transfer of control" },
-    { name: "Commercial Invoice", icon: FileCheck, desc: "Verified invoicing documentation" },
-    { name: "Packing Lists", icon: ClipboardList, desc: "Detailed cargo specifications" },
+    { name: "Bill of Exchange", icon: FileText, desc: "Digital bill of exchange with legal validity" },
+    { name: "Promissory Notes", icon: FileCheck, desc: "Electronic promissory notes with transfer capability" },
+    { name: "Bill of Lading", icon: ClipboardList, desc: "Digital B/L with transfer of control" },
     { name: "Certificate of Origin", icon: Award, desc: "Origin verification documents" },
-    { name: "Warehouse Receipts", icon: Package, desc: "Storage and custody records" },
-    { name: "CMR/AWB", icon: Truck, desc: "Road and air waybills" }
+    { name: "Any Trade Document", icon: Package, desc: "Support for all critical trade documentation" }
   ];
 
   const features = [
