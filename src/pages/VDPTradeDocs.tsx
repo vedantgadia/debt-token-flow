@@ -3,43 +3,16 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { 
-  FileText, 
-  Shield, 
-  Globe, 
-  CheckCircle, 
-  ArrowRight, 
-  Zap, 
-  Users, 
-  Lock, 
-  Database,
-  Truck,
-  Building2,
-  Scale,
-  FileCheck,
-  ClipboardList,
-  Award,
-  Package,
-  Play,
-  Download,
-  RefreshCw,
-  Eye,
-  Mail,
-  Phone
-} from 'lucide-react';
-
+import { FileText, Shield, Globe, CheckCircle, ArrowRight, Zap, Users, Lock, Database, Truck, Building2, Scale, FileCheck, ClipboardList, Award, Package, Play, Download, RefreshCw, Eye, Mail, Phone } from 'lucide-react';
 const TradeDocVisual = () => {
   const [currentStep, setCurrentStep] = useState(0);
-
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentStep((prev) => (prev + 1) % 5);
+      setCurrentStep(prev => (prev + 1) % 5);
     }, 2000);
     return () => clearInterval(interval);
   }, []);
-
-  return (
-    <div className="relative w-full max-w-md">
+  return <div className="relative w-full max-w-md">
       <div className="absolute top-0 left-0 w-full h-full bg-vayana-red/20 rounded-2xl blur-3xl transform -translate-x-4 translate-y-4 animate-pulse-slow"></div>
       <div className="relative bg-gradient-to-br from-gray-900 to-black rounded-2xl overflow-hidden shadow-2xl animate-fade-in border border-vayana-blue/30 p-8">
         {/* Digital Supply Chain Flow */}
@@ -51,10 +24,10 @@ const TradeDocVisual = () => {
               <stop offset="100%" stopColor="#194388" stopOpacity="0.8" />
             </linearGradient>
             <filter id="docGlow">
-              <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+              <feGaussianBlur stdDeviation="2" result="coloredBlur" />
               <feMerge> 
-                <feMergeNode in="coloredBlur"/>
-                <feMergeNode in="SourceGraphic"/>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
               </feMerge>
             </filter>
           </defs>
@@ -63,107 +36,58 @@ const TradeDocVisual = () => {
           <rect width="400" height="300" fill="#0A0E1A" rx="8" />
           
           {/* Document flow path */}
-          <path 
-            d="M 50 150 Q 200 50 350 150" 
-            stroke="url(#docGrad)" 
-            strokeWidth="3" 
-            fill="none" 
-            filter="url(#docGlow)"
-            strokeDasharray="10,5"
-          />
+          <path d="M 50 150 Q 200 50 350 150" stroke="url(#docGrad)" strokeWidth="3" fill="none" filter="url(#docGlow)" strokeDasharray="10,5" />
           
           {/* Document stations */}
-          {[
-            { x: 50, y: 150, label: "Create", icon: "+" },
-            { x: 130, y: 100, label: "Verify", icon: "✓" },
-            { x: 200, y: 80, label: "Share", icon: "→" },
-            { x: 270, y: 100, label: "Endorse", icon: "✎" },
-            { x: 350, y: 150, label: "Transfer", icon: "⇄" }
-          ].map((station, index) => (
-            <g key={index}>
-              <circle 
-                cx={station.x} 
-                cy={station.y} 
-                r="20" 
-                fill={currentStep === index ? "url(#docGrad)" : "#194388"} 
-                filter="url(#docGlow)"
-                opacity={currentStep >= index ? "1" : "0.5"}
-              />
-              <text 
-                x={station.x} 
-                y={station.y + 5} 
-                textAnchor="middle" 
-                fill="#fff" 
-                fontSize="14" 
-                fontWeight="bold"
-              >
+          {[{
+          x: 50,
+          y: 150,
+          label: "Create",
+          icon: "+"
+        }, {
+          x: 130,
+          y: 100,
+          label: "Verify",
+          icon: "✓"
+        }, {
+          x: 200,
+          y: 80,
+          label: "Share",
+          icon: "→"
+        }, {
+          x: 270,
+          y: 100,
+          label: "Endorse",
+          icon: "✎"
+        }, {
+          x: 350,
+          y: 150,
+          label: "Transfer",
+          icon: "⇄"
+        }].map((station, index) => <g key={index}>
+              <circle cx={station.x} cy={station.y} r="20" fill={currentStep === index ? "url(#docGrad)" : "#194388"} filter="url(#docGlow)" opacity={currentStep >= index ? "1" : "0.5"} />
+              <text x={station.x} y={station.y + 5} textAnchor="middle" fill="#fff" fontSize="14" fontWeight="bold">
                 {station.icon}
               </text>
-              <text 
-                x={station.x} 
-                y={station.y + 35} 
-                textAnchor="middle" 
-                fill="#fff" 
-                fontSize="10"
-              >
+              <text x={station.x} y={station.y + 35} textAnchor="middle" fill="#fff" fontSize="10">
                 {station.label}
               </text>
-            </g>
-          ))}
+            </g>)}
           
           {/* Moving document */}
           <g transform={`translate(${50 + currentStep * 75}, ${150 - Math.abs(currentStep - 2) * 30})`}>
-            <rect 
-              x="-8" 
-              y="-12" 
-              width="16" 
-              height="20" 
-              fill="#fff" 
-              rx="2" 
-              opacity="0.9"
-            />
-            <rect 
-              x="-6" 
-              y="-8" 
-              width="12" 
-              height="2" 
-              fill="#194388" 
-            />
-            <rect 
-              x="-6" 
-              y="-4" 
-              width="8" 
-              height="1" 
-              fill="#723189" 
-            />
-            <rect 
-              x="-6" 
-              y="-1" 
-              width="10" 
-              height="1" 
-              fill="#E3032C" 
-            />
+            <rect x="-8" y="-12" width="16" height="20" fill="#fff" rx="2" opacity="0.9" />
+            <rect x="-6" y="-8" width="12" height="2" fill="#194388" />
+            <rect x="-6" y="-4" width="8" height="1" fill="#723189" />
+            <rect x="-6" y="-1" width="10" height="1" fill="#E3032C" />
           </g>
           
           {/* Blockchain anchors */}
-          {Array.from({ length: 8 }).map((_, i) => (
-            <circle 
-              key={i} 
-              cx={50 + i * 40} 
-              cy={250} 
-              r="3" 
-              fill="#194388" 
-              opacity="0.6"
-            >
-              <animate
-                attributeName="opacity"
-                values="0.3;1;0.3"
-                dur="2s"
-                repeatCount="indefinite"
-                begin={`${i * 0.25}s`}
-              />
-            </circle>
-          ))}
+          {Array.from({
+          length: 8
+        }).map((_, i) => <circle key={i} cx={50 + i * 40} cy={250} r="3" fill="#194388" opacity="0.6">
+              <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" begin={`${i * 0.25}s`} />
+            </circle>)}
           
           {/* Trust indicators */}
           <g transform="translate(20, 20)">
@@ -181,78 +105,86 @@ const TradeDocVisual = () => {
         
         {/* Step indicators */}
         <div className="flex justify-center mt-4 space-x-2">
-          {[0, 1, 2, 3, 4].map((step) => (
-            <div
-              key={step}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                currentStep === step ? 'bg-white' : 'bg-white/40'
-              }`}
-            />
-          ))}
+          {[0, 1, 2, 3, 4].map(step => <div key={step} className={`w-2 h-2 rounded-full transition-all duration-300 ${currentStep === step ? 'bg-white' : 'bg-white/40'}`} />)}
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 const VDPTradeDocs = () => {
-  const supportedDocs = [
-    { name: "Bill of Exchange", icon: FileText, desc: "Digital bill of exchange with legal validity" },
-    { name: "Promissory Notes", icon: FileCheck, desc: "Electronic promissory notes with transfer capability" },
-    { name: "Bill of Lading", icon: ClipboardList, desc: "Digital B/L with transfer of control" },
-    { name: "Certificate of Origin", icon: Award, desc: "Origin verification documents" },
-    { name: "Any Trade Document", icon: Package, desc: "Support for all critical trade documentation" }
-  ];
-
-  const features = [
-    { 
-      title: "Universal Document Digitization", 
-      desc: "Enable creation of Digital Originals for any Trade or B2B Credit document — including both Transferable (title-based) and Verifiable formats.", 
-      icon: FileText,
-      emoji: "📄"
-    },
-    { 
-      title: "Custom Workflow Configuration", 
-      desc: "Design flexible document workflows with user-defined roles (e.g., Maker-Checker), multi-party collaboration, automated notifications, and lifecycle triggers.", 
-      icon: RefreshCw,
-      emoji: "🧩"
-    },
-    { 
-      title: "Cross-Platform Document Transfers", 
-      desc: "Seamlessly transfer documents to blockchain wallet addresses, even if recipients are not onboarded to the platform.", 
-      icon: ArrowRight,
-      emoji: "🔄"
-    },
-    { 
-      title: "Interoperability with External Ecosystems", 
-      desc: "Ingest and manage documents issued by other platforms, supporting end-to-end flow across digital ecosystems.", 
-      icon: Globe,
-      emoji: "🤝"
-    },
-    { 
-      title: "AI-Powered Paper Digitization", 
-      desc: "Leverage AI to extract data from scanned or paper documents and generate compliant Digital Originals within the platform. Custody solutions for original paper documents are under active evaluation.", 
-      icon: Zap,
-      emoji: "🧠"
-    },
-    { 
-      title: "Whitelabel and Enterprise Customization", 
-      desc: "Offer a fully brandable solution tailored to client-specific requirements, whether as a SaaS or enterprise deployment.", 
-      icon: Building2,
-      emoji: "🏷️"
-    }
-  ];
-
-  const stakeholders = [
-    { role: "Exporters", benefit: "Faster document processing and reduced costs", icon: Truck },
-    { role: "Freight Forwarders", benefit: "Streamlined logistics coordination", icon: Globe },
-    { role: "Trade Platforms", benefit: "Enhanced platform capabilities", icon: Building2 },
-    { role: "Banks", benefit: "Simplified trade finance processes", icon: Shield },
-    { role: "Compliance Teams", benefit: "Automated verification and audit trails", icon: Scale }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const supportedDocs = [{
+    name: "Bill of Exchange",
+    icon: FileText,
+    desc: "Digital bill of exchange with legal validity"
+  }, {
+    name: "Promissory Notes",
+    icon: FileCheck,
+    desc: "Electronic promissory notes with transfer capability"
+  }, {
+    name: "Bill of Lading",
+    icon: ClipboardList,
+    desc: "Digital B/L with transfer of control"
+  }, {
+    name: "Certificate of Origin",
+    icon: Award,
+    desc: "Origin verification documents"
+  }, {
+    name: "Any Trade Document",
+    icon: Package,
+    desc: "Support for all critical trade documentation"
+  }];
+  const features = [{
+    title: "Universal Document Digitization",
+    desc: "Enable creation of Digital Originals for any Trade or B2B Credit document — including both Transferable (title-based) and Verifiable formats.",
+    icon: FileText,
+    emoji: "📄"
+  }, {
+    title: "Custom Workflow Configuration",
+    desc: "Design flexible document workflows with user-defined roles (e.g., Maker-Checker), multi-party collaboration, automated notifications, and lifecycle triggers.",
+    icon: RefreshCw,
+    emoji: "🧩"
+  }, {
+    title: "Cross-Platform Document Transfers",
+    desc: "Seamlessly transfer documents to blockchain wallet addresses, even if recipients are not onboarded to the platform.",
+    icon: ArrowRight,
+    emoji: "🔄"
+  }, {
+    title: "Interoperability with External Ecosystems",
+    desc: "Ingest and manage documents issued by other platforms, supporting end-to-end flow across digital ecosystems.",
+    icon: Globe,
+    emoji: "🤝"
+  }, {
+    title: "AI-Powered Paper Digitization",
+    desc: "Leverage AI to extract data from scanned or paper documents and generate compliant Digital Originals within the platform. Custody solutions for original paper documents are under active evaluation.",
+    icon: Zap,
+    emoji: "🧠"
+  }, {
+    title: "Whitelabel and Enterprise Customization",
+    desc: "Offer a fully brandable solution tailored to client-specific requirements, whether as a SaaS or enterprise deployment.",
+    icon: Building2,
+    emoji: "🏷️"
+  }];
+  const stakeholders = [{
+    role: "Exporters",
+    benefit: "Faster document processing and reduced costs",
+    icon: Truck
+  }, {
+    role: "Freight Forwarders",
+    benefit: "Streamlined logistics coordination",
+    icon: Globe
+  }, {
+    role: "Trade Platforms",
+    benefit: "Enhanced platform capabilities",
+    icon: Building2
+  }, {
+    role: "Banks",
+    benefit: "Simplified trade finance processes",
+    icon: Shield
+  }, {
+    role: "Compliance Teams",
+    benefit: "Automated verification and audit trails",
+    icon: Scale
+  }];
+  return <div className="min-h-screen bg-background">
       <Navbar />
       
       {/* Hero Section */}
@@ -267,16 +199,11 @@ const VDPTradeDocs = () => {
                 Revolutionizing Trade Document Digitization with MLETR & TradeTrust
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  className="hero-button bg-vayana-blue hover:bg-vayana-blue/90 text-white flex items-center gap-2"
-                >
+                <Button className="hero-button bg-vayana-blue hover:bg-vayana-blue/90 text-white flex items-center gap-2">
                   Explore the Platform
                   <ArrowRight className="h-5 w-5" />
                 </Button>
-                <Button 
-                  variant="outline" 
-                  className="hero-button bg-transparent border-white hover:bg-white/10 text-white flex items-center gap-2"
-                >
+                <Button variant="outline" className="hero-button bg-transparent border-white hover:bg-white/10 text-white flex items-center gap-2">
                   Book a Walkthrough
                 </Button>
               </div>
@@ -422,11 +349,7 @@ const VDPTradeDocs = () => {
             
             <div className="relative">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                {supportedDocs.slice(0, 4).map((doc, index) => (
-                  <div 
-                    key={index} 
-                    className="group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm rounded-3xl p-6 text-center hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-primary/20 hover:border-primary/40 overflow-hidden"
-                  >
+                {supportedDocs.slice(0, 4).map((doc, index) => <div key={index} className="group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm rounded-3xl p-6 text-center hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-primary/20 hover:border-primary/40 overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary/5 to-accent/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <div className="relative z-10">
                       <div className="w-14 h-14 mx-auto bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
@@ -436,16 +359,13 @@ const VDPTradeDocs = () => {
                       <p className="text-xs text-muted-foreground leading-relaxed">{doc.desc}</p>
                     </div>
                     <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  </div>
-                ))}
+                  </div>)}
               </div>
               
               <div className="flex justify-end mt-8 pr-8">
-                <div className="bg-gradient-to-r from-primary/10 to-secondary/10 backdrop-blur-sm rounded-2xl px-6 py-3 border border-primary/20">
                   <p className="text-sm font-medium text-muted-foreground">
                     + any other trade document
                   </p>
-                </div>
               </div>
             </div>
           </div>
@@ -465,11 +385,7 @@ const VDPTradeDocs = () => {
             </div>
             
             <div className="grid md:grid-cols-2 gap-8">
-              {features.map((feature, index) => (
-                <div 
-                  key={index} 
-                  className="group relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 hover:border-primary/30"
-                >
+              {features.map((feature, index) => <div key={index} className="group relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 hover:border-primary/30">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="relative z-10">
                     <div className="flex items-start space-x-4 mb-6">
@@ -485,8 +401,7 @@ const VDPTradeDocs = () => {
                     </p>
                   </div>
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 rounded-t-3xl"></div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -504,8 +419,7 @@ const VDPTradeDocs = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-              {stakeholders.map((stakeholder, index) => (
-                <div key={index} className="group relative">
+              {stakeholders.map((stakeholder, index) => <div key={index} className="group relative">
                   <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-3xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-500" />
                   <Card className="relative h-full bg-card/90 backdrop-blur-sm border border-border/50 rounded-2xl p-6 hover:shadow-xl transition-all duration-500 group-hover:-translate-y-2 overflow-hidden">
                     <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full blur-2xl -translate-y-10 translate-x-10" />
@@ -519,8 +433,7 @@ const VDPTradeDocs = () => {
                       </div>
                     </CardContent>
                   </Card>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -599,27 +512,14 @@ const VDPTradeDocs = () => {
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                         Full Name *
                       </label>
-                      <input
-                        id="name"
-                        name="name"
-                        required
-                        placeholder="John Doe"
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                      />
+                      <input id="name" name="name" required placeholder="John Doe" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
                     </div>
                     
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                         Email Address *
                       </label>
-                      <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        required
-                        placeholder="john@example.com"
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                      />
+                      <input id="email" name="email" type="email" required placeholder="john@example.com" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
                     </div>
                   </div>
                   
@@ -627,37 +527,21 @@ const VDPTradeDocs = () => {
                     <label htmlFor="organization" className="block text-sm font-medium text-gray-700 mb-1">
                       Organization
                     </label>
-                    <input
-                      id="organization"
-                      name="organization"
-                      placeholder="Your Organization"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                    />
+                    <input id="organization" name="organization" placeholder="Your Organization" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
                   </div>
 
                   <div>
                     <label htmlFor="role" className="block text-sm font-medium text-gray-700 mb-1">
                       Role
                     </label>
-                    <input
-                      id="role"
-                      name="role"
-                      placeholder="Your Role"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                    />
+                    <input id="role" name="role" placeholder="Your Role" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
                   </div>
                   
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                       Message *
                     </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      required
-                      placeholder="Tell us about your specific requirements or questions"
-                      className="w-full h-32 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                    />
+                    <textarea id="message" name="message" required placeholder="Tell us about your specific requirements or questions" className="w-full h-32 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
                   </div>
                   
                   <Button type="submit" className="w-full bg-vayana-gradient hover:opacity-90 text-white py-6">
@@ -671,8 +555,6 @@ const VDPTradeDocs = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default VDPTradeDocs;
