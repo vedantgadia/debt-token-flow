@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Innovations from "./pages/Innovations";
 import VDPTradeDocs from "./pages/VDPTradeDocs";
+import DeepTierSCF from "./pages/DeepTierSCF";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/innovations" element={<Innovations />} />
           <Route path="/vdp-trade-docs" element={<VDPTradeDocs />} />
+          <Route path="/deep-tier-scf" element={<DeepTierSCF />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

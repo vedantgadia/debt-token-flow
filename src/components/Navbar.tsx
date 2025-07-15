@@ -71,6 +71,14 @@ const Navbar = () => {
                   </a>
                 </li>
                 <li>
+                  <a 
+                    href="/deep-tier-scf" 
+                    className="font-medium hover:text-secondary transition-colors"
+                  >
+                    Deep-Tier SCF
+                  </a>
+                </li>
+                <li>
                   <button 
                     className="font-medium hover:text-secondary transition-colors"
                     onClick={() => scrollToSection('faq')}
@@ -138,6 +146,15 @@ const Navbar = () => {
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   VDP Trade Docs
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="/deep-tier-scf" 
+                  className="block font-medium text-gray-700 hover:text-secondary transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Deep-Tier SCF
                 </a>
               </li>
               <li>
