@@ -23,7 +23,9 @@ import {
   Play,
   Download,
   RefreshCw,
-  Eye
+  Eye,
+  Mail,
+  Phone
 } from 'lucide-react';
 
 const TradeDocVisual = () => {
@@ -203,12 +205,48 @@ const VDPTradeDocs = () => {
   ];
 
   const features = [
-    { title: "Digital Issuance", desc: "Create legally valid digital documents", icon: FileText },
-    { title: "Endorsement & Transfer", desc: "Secure document ownership transfer", icon: ArrowRight },
-    { title: "Document Viewer", desc: "Intuitive viewing and verification", icon: Globe },
-    { title: "Blockchain Anchoring", desc: "Immutable document integrity", icon: Database },
-    { title: "Role-Based Access", desc: "Granular permission controls", icon: Lock },
-    { title: "Enterprise Integration", desc: "ERP and system connectivity", icon: Building2 }
+    { 
+      title: "Universal Document Digitization", 
+      desc: "Enable creation of Digital Originals for any Trade or B2B Credit document — including both Transferable (title-based) and Verifiable formats.", 
+      icon: FileText,
+      emoji: "📄"
+    },
+    { 
+      title: "Custom Workflow Configuration", 
+      desc: "Design flexible document workflows with user-defined roles (e.g., Maker-Checker), multi-party collaboration, automated notifications, and lifecycle triggers.", 
+      icon: RefreshCw,
+      emoji: "🧩"
+    },
+    { 
+      title: "Cross-Platform Document Transfers", 
+      desc: "Seamlessly transfer documents to blockchain wallet addresses, even if recipients are not onboarded to the platform.", 
+      icon: ArrowRight,
+      emoji: "🔄"
+    },
+    { 
+      title: "Interoperability with External Ecosystems", 
+      desc: "Ingest and manage documents issued by other platforms, supporting end-to-end flow across digital ecosystems.", 
+      icon: Globe,
+      emoji: "🤝"
+    },
+    { 
+      title: "AI-Powered Paper Digitization", 
+      desc: "Leverage AI to extract data from scanned or paper documents and generate compliant Digital Originals within the platform. Custody solutions for original paper documents are under active evaluation.", 
+      icon: Zap,
+      emoji: "🧠"
+    },
+    { 
+      title: "Whitelabel and Enterprise Customization", 
+      desc: "Offer a fully brandable solution tailored to client-specific requirements, whether as a SaaS or enterprise deployment.", 
+      icon: Building2,
+      emoji: "🏷️"
+    },
+    { 
+      title: "Straight-Through API Integration with Banks", 
+      desc: "Support for no-touch operational workflows via customized API integrations with banking systems.", 
+      icon: Database,
+      emoji: "🔗"
+    }
   ];
 
   const stakeholders = [
@@ -379,7 +417,7 @@ const VDPTradeDocs = () => {
       </section>
 
       {/* Supported Documents Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-gradient-to-br from-muted/30 via-background to-muted/30">
         <div className="container mx-auto px-4">
           <div className="space-y-12">
             <div className="text-center space-y-4">
@@ -389,59 +427,35 @@ const VDPTradeDocs = () => {
               </p>
             </div>
             
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {supportedDocs.map((doc, index) => (
-                <Card key={index} className="hover-scale transition-all duration-300 hover:shadow-lg">
-                  <CardHeader>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                        <doc.icon className="h-5 w-5 text-primary" />
-                      </div>
-                      <CardTitle className="text-lg">{doc.name}</CardTitle>
+                <div 
+                  key={index} 
+                  className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 hover:border-primary/20"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative z-10">
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                      <doc.icon className="h-8 w-8 text-primary group-hover:text-accent transition-colors duration-300" />
                     </div>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription>{doc.desc}</CardDescription>
-                  </CardContent>
-                </Card>
+                    <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-primary transition-colors duration-300">
+                      {doc.name}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      {doc.desc}
+                    </p>
+                  </div>
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 rounded-b-2xl"></div>
+                </div>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Document Lifecycle Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="space-y-12">
-            <div className="text-center space-y-4">
-              <h2 className="section-title">One Document. Many Possibilities.</h2>
-              <p className="section-subtitle">
-                Complete document lifecycle management from creation to final settlement
-              </p>
-            </div>
-            
-            <div className="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-4">
-              {['Creation', 'Verification', 'Sharing', 'Endorsement', 'Settlement'].map((step, index) => (
-                <React.Fragment key={step}>
-                  <div className="text-center space-y-4">
-                    <div className="w-16 h-16 mx-auto bg-vayana-gradient rounded-full flex items-center justify-center text-white font-bold text-lg">
-                      {index + 1}
-                    </div>
-                    <h3 className="font-semibold">{step}</h3>
-                  </div>
-                  {index < 4 && (
-                    <ArrowRight className="hidden md:block h-6 w-6 text-muted-foreground" />
-                  )}
-                </React.Fragment>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-gradient-to-br from-background via-muted/30 to-background">
         <div className="container mx-auto px-4">
           <div className="space-y-12">
             <div className="text-center space-y-4">
@@ -451,19 +465,28 @@ const VDPTradeDocs = () => {
               </p>
             </div>
             
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8">
               {features.map((feature, index) => (
-                <Card key={index} className="text-center p-6 hover-scale transition-all duration-300">
-                  <CardHeader>
-                    <div className="w-12 h-12 mx-auto bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                      <feature.icon className="h-6 w-6 text-primary" />
+                <div 
+                  key={index} 
+                  className="group relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 hover:border-primary/30"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative z-10">
+                    <div className="flex items-start space-x-4 mb-6">
+                      <div className="text-4xl mb-2">{feature.emoji}</div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-primary transition-colors duration-300">
+                          {feature.title}
+                        </h3>
+                      </div>
                     </div>
-                    <CardTitle className="text-xl">{feature.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-base">{feature.desc}</CardDescription>
-                  </CardContent>
-                </Card>
+                    <p className="text-gray-600 leading-relaxed">
+                      {feature.desc}
+                    </p>
+                  </div>
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 rounded-t-3xl"></div>
+                </div>
               ))}
             </div>
           </div>
@@ -471,7 +494,7 @@ const VDPTradeDocs = () => {
       </section>
 
       {/* Stakeholder Section */}
-      <section className="py-20">
+      <section className="py-20 bg-gradient-to-br from-muted/20 via-background to-muted/40">
         <div className="container mx-auto px-4">
           <div className="space-y-12">
             <div className="text-center space-y-4">
@@ -481,27 +504,54 @@ const VDPTradeDocs = () => {
               </p>
             </div>
             
-            <div className="space-y-8">
-              {stakeholders.map((stakeholder, index) => (
-                <Card key={index} className="p-6 hover:shadow-lg transition-all duration-300">
-                  <div className="flex items-center space-x-6">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <stakeholder.icon className="h-8 w-8 text-primary" />
+            <div className="relative">
+              {/* Central Hub */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-32 h-32 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center shadow-2xl">
+                  <span className="text-white font-bold text-lg">VDP Trade</span>
+                </div>
+              </div>
+              
+              {/* Stakeholder Cards in Circle */}
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-6 relative z-10">
+                {stakeholders.map((stakeholder, index) => {
+                  const positions = [
+                    'md:col-start-1 md:row-start-1 md:self-center', // Left
+                    'md:col-start-2 md:row-start-1 md:self-start', // Top-left
+                    'md:col-start-4 md:row-start-1 md:self-start', // Top-right
+                    'md:col-start-5 md:row-start-1 md:self-center', // Right
+                    'md:col-start-3 md:row-start-1 md:self-end' // Bottom
+                  ];
+                  
+                  return (
+                    <div 
+                      key={index} 
+                      className={`group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 hover:border-primary/30 ${positions[index] || ''}`}
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div className="relative z-10 text-center">
+                        <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <stakeholder.icon className="h-8 w-8 text-primary group-hover:text-accent transition-colors duration-300" />
+                        </div>
+                        <h3 className="text-lg font-bold mb-3 text-gray-900 group-hover:text-primary transition-colors duration-300">
+                          {stakeholder.role}
+                        </h3>
+                        <p className="text-gray-600 text-sm leading-relaxed">
+                          {stakeholder.benefit}
+                        </p>
+                      </div>
+                      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 rounded-b-2xl"></div>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2">{stakeholder.role}</h3>
-                      <p className="text-muted-foreground">{stakeholder.benefit}</p>
-                    </div>
-                  </div>
-                </Card>
-              ))}
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Demo Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-gradient-to-br from-muted/30 via-background to-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="space-y-4">
@@ -511,9 +561,10 @@ const VDPTradeDocs = () => {
               </p>
             </div>
             
-            <div className="relative">
-              <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl flex items-center justify-center">
-                <Button size="lg" className="bg-white/90 text-primary hover:bg-white">
+            <div className="relative group">
+              <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center shadow-2xl hover:shadow-3xl transition-all duration-500 border border-primary/10">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <Button size="lg" className="relative z-10 bg-white/90 text-primary hover:bg-white hover:scale-110 transition-all duration-300 shadow-lg">
                   <Play className="mr-2 h-6 w-6" />
                   Watch Demo
                 </Button>
@@ -521,7 +572,7 @@ const VDPTradeDocs = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="outline">
+              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
                 Talk to Our Team
               </Button>
             </div>
@@ -529,60 +580,116 @@ const VDPTradeDocs = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="space-y-4">
-              <h2 className="section-title">Start Your Trade Document Digitization Journey</h2>
-              <p className="section-subtitle">
-                Ready to transform your trade operations? Get started with VDP Trade Docs today.
-              </p>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-vayana-gradient text-white hover:opacity-90">
-                Request a Demo
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline">
-                <Download className="mr-2 h-5 w-5" />
-                Download Overview PDF
-              </Button>
-            </div>
-            
-            <Card className="max-w-md mx-auto p-6 bg-white/50 backdrop-blur-sm">
-              <CardHeader>
-                <CardTitle className="text-lg">Quick Contact</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <input 
-                    type="text" 
-                    placeholder="Name" 
-                    className="w-full px-3 py-2 border border-input rounded-md bg-background"
-                  />
-                  <input 
-                    type="email" 
-                    placeholder="Email" 
-                    className="w-full px-3 py-2 border border-input rounded-md bg-background"
-                  />
+      {/* Contact Section */}
+      <section className="py-20 bg-white" id="contact-us">
+        <div className="container px-4 mx-auto">
+          <div className="max-w-4xl mx-auto bg-gray-50 rounded-2xl shadow-lg overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+              <div className="bg-vayana-gradient text-white p-8 lg:p-12">
+                <h2 className="text-3xl font-bold mb-6 font-display">Start Your Trade Document Digitization Journey</h2>
+                <p className="text-lg text-gray-100 mb-8">
+                  Transform your trade operations with our comprehensive digital documentation platform. Contact our team to learn more about VDP Trade Docs.
+                </p>
+                
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4">
+                    <div className="bg-white/10 p-3 rounded-full">
+                      <Mail className="h-6 w-6" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">Email Us</h3>
+                      <p className="text-gray-200">contact@vayana.com</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-4">
+                    <div className="bg-white/10 p-3 rounded-full">
+                      <Phone className="h-6 w-6" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">Call Us</h3>
+                      <p className="text-gray-200">+1 (123) 456-7890</p>
+                    </div>
+                  </div>
                 </div>
-                <input 
-                  type="text" 
-                  placeholder="Organization" 
-                  className="w-full px-3 py-2 border border-input rounded-md bg-background"
-                />
-                <input 
-                  type="text" 
-                  placeholder="Role" 
-                  className="w-full px-3 py-2 border border-input rounded-md bg-background"
-                />
-                <Button className="w-full bg-primary hover:bg-primary/90">
-                  Submit
-                </Button>
-              </CardContent>
-            </Card>
+              </div>
+              
+              <div className="p-8 lg:p-12">
+                <h3 className="text-2xl font-bold mb-6">Contact Us</h3>
+                
+                <form className="space-y-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                        Full Name *
+                      </label>
+                      <input
+                        id="name"
+                        name="name"
+                        required
+                        placeholder="John Doe"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                        Email Address *
+                      </label>
+                      <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        required
+                        placeholder="john@example.com"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="organization" className="block text-sm font-medium text-gray-700 mb-1">
+                      Organization
+                    </label>
+                    <input
+                      id="organization"
+                      name="organization"
+                      placeholder="Your Organization"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="role" className="block text-sm font-medium text-gray-700 mb-1">
+                      Role
+                    </label>
+                    <input
+                      id="role"
+                      name="role"
+                      placeholder="Your Role"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                      Message *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      placeholder="Tell us about your specific requirements or questions"
+                      className="w-full h-32 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                  </div>
+                  
+                  <Button type="submit" className="w-full bg-vayana-gradient hover:opacity-90 text-white py-6">
+                    Send Inquiry
+                  </Button>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </section>
