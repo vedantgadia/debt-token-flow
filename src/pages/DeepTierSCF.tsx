@@ -45,7 +45,7 @@ const DeepTierSCF = () => {
                 Explore the Platform
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary h-14 px-8 text-lg font-semibold backdrop-blur-sm">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900 h-14 px-8 text-lg font-semibold backdrop-blur-sm transition-all duration-300">
                 Book a Demo
               </Button>
             </div>

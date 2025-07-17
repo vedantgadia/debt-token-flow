@@ -284,7 +284,7 @@ const VDPTradeDocs = () => {
                   Explore Platform
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white hover:text-primary backdrop-blur-sm transition-all duration-300">
+                <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white hover:text-gray-900 backdrop-blur-sm transition-all duration-300">
                   Watch Demo
                   <Play className="ml-2 h-4 w-4" />
                 </Button>
