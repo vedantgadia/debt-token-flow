@@ -111,443 +111,720 @@ const TradeDocVisual = () => {
     </div>;
 };
 const VDPTradeDocs = () => {
-  const supportedDocs = [{
-    name: "Bill of Exchange",
-    icon: FileText,
-    desc: "Digital bill of exchange with legal validity"
-  }, {
-    name: "Promissory Notes",
-    icon: FileCheck,
-    desc: "Electronic promissory notes with transfer capability"
-  }, {
-    name: "Bill of Lading",
-    icon: ClipboardList,
-    desc: "Digital B/L with transfer of control"
-  }, {
-    name: "Certificate of Origin",
-    icon: Award,
-    desc: "Origin verification documents"
-  }, {
-    name: "Any Trade Document",
-    icon: Package,
-    desc: "Support for all critical trade documentation"
-  }];
-  const features = [{
-    title: "Universal Document Digitization",
-    desc: "Enable creation of Digital Originals for any Trade or B2B Credit document — including both Transferable (title-based) and Verifiable formats.",
-    icon: FileText,
-    emoji: "📄"
-  }, {
-    title: "Custom Workflow Configuration",
-    desc: "Design flexible document workflows with user-defined roles (e.g., Maker-Checker), multi-party collaboration, automated notifications, and lifecycle triggers.",
-    icon: RefreshCw,
-    emoji: "🧩"
-  }, {
-    title: "Cross-Platform Document Transfers",
-    desc: "Seamlessly transfer documents to blockchain wallet addresses, even if recipients are not onboarded to the platform.",
-    icon: ArrowRight,
-    emoji: "🔄"
-  }, {
-    title: "Interoperability with External Ecosystems",
-    desc: "Ingest and manage documents issued by other platforms, supporting end-to-end flow across digital ecosystems.",
-    icon: Globe,
-    emoji: "🤝"
-  }, {
-    title: "AI-Powered Paper Digitization",
-    desc: "Leverage AI to extract data from scanned or paper documents and generate compliant Digital Originals within the platform. Custody solutions for original paper documents are under active evaluation.",
-    icon: Zap,
-    emoji: "🧠"
-  }, {
-    title: "Whitelabel and Enterprise Customization",
-    desc: "Offer a fully brandable solution tailored to client-specific requirements, whether as a SaaS or enterprise deployment.",
-    icon: Building2,
-    emoji: "🏷️"
-  }];
-  const stakeholders = [{
-    role: "Exporters",
-    benefit: "Faster document processing and reduced costs",
-    icon: Truck
-  }, {
-    role: "Freight Forwarders",
-    benefit: "Streamlined logistics coordination",
-    icon: Globe
-  }, {
-    role: "Trade Platforms",
-    benefit: "Enhanced platform capabilities",
-    icon: Building2
-  }, {
-    role: "Banks",
-    benefit: "Simplified trade finance processes",
-    icon: Shield
-  }, {
-    role: "Compliance Teams",
-    benefit: "Automated verification and audit trails",
-    icon: Scale
-  }];
-  return <div className="min-h-screen bg-background">
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    message: ''
+  });
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setFormSubmitted(true);
+    setTimeout(() => {
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        message: ''
+      });
+      setFormSubmitted(false);
+    }, 3000);
+  };
+
+  const supportedDocs = [
+    {
+      name: "Bill of Exchange",
+      icon: FileText,
+      desc: "Digital bill of exchange with legal validity"
+    },
+    {
+      name: "Promissory Notes", 
+      icon: FileCheck,
+      desc: "Electronic promissory notes with transfer capability"
+    },
+    {
+      name: "Bill of Lading",
+      icon: ClipboardList,
+      desc: "Digital B/L with transfer of control"
+    },
+    {
+      name: "Certificate of Origin",
+      icon: Award,
+      desc: "Origin verification documents"
+    },
+    {
+      name: "Any Trade Document",
+      icon: Package,
+      desc: "Support for all critical trade documentation"
+    }
+  ];
+
+  const features = [
+    {
+      title: "Universal Document Digitization",
+      desc: "Enable creation of Digital Originals for any Trade or B2B Credit document — including both Transferable (title-based) and Verifiable formats.",
+      icon: FileText,
+      emoji: "📄"
+    },
+    {
+      title: "Custom Workflow Configuration", 
+      desc: "Design flexible document workflows with user-defined roles (e.g., Maker-Checker), multi-party collaboration, automated notifications, and lifecycle triggers.",
+      icon: RefreshCw,
+      emoji: "🧩"
+    },
+    {
+      title: "Cross-Platform Document Transfers",
+      desc: "Seamlessly transfer documents to blockchain wallet addresses, even if recipients are not onboarded to the platform.",
+      icon: ArrowRight,
+      emoji: "🔄"
+    },
+    {
+      title: "Interoperability with External Ecosystems",
+      desc: "Ingest and manage documents issued by other platforms, supporting end-to-end flow across digital ecosystems.",
+      icon: Globe,
+      emoji: "🤝"
+    },
+    {
+      title: "AI-Powered Paper Digitization",
+      desc: "Leverage AI to extract data from scanned or paper documents and generate compliant Digital Originals within the platform. Custody solutions for original paper documents are under active evaluation.",
+      icon: Zap,
+      emoji: "🧠"
+    },
+    {
+      title: "Whitelabel and Enterprise Customization",
+      desc: "Offer a fully brandable solution tailored to client-specific requirements, whether as a SaaS or enterprise deployment.",
+      icon: Building2,
+      emoji: "🏷️"
+    }
+  ];
+
+  const stakeholders = [
+    {
+      role: "Exporters",
+      benefit: "Faster document processing and reduced costs",
+      icon: Truck
+    },
+    {
+      role: "Freight Forwarders",
+      benefit: "Streamlined logistics coordination", 
+      icon: Globe
+    },
+    {
+      role: "Trade Platforms",
+      benefit: "Enhanced platform capabilities",
+      icon: Building2
+    },
+    {
+      role: "Banks",
+      benefit: "Simplified trade finance processes",
+      icon: Shield
+    },
+    {
+      role: "Compliance Teams",
+      benefit: "Automated verification and audit trails",
+      icon: Scale
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-background">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="bg-vayana-gradient text-white py-20 md:py-32">
-        <div className="container px-4 mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display leading-tight mb-6">
-                VDP Trade Docs
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-xl">
-                Revolutionizing Trade Document Digitization with MLETR & TradeTrust
-              </p>
+      {/* Hero Section with Enhanced Design */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-accent">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+          {/* Floating Elements */}
+          {[...Array(6)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-32 h-32 bg-white/5 rounded-full blur-xl animate-float"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${i * 0.5}s`,
+                animationDuration: `${4 + Math.random() * 2}s`
+              }}
+            />
+          ))}
+        </div>
+
+        <div className="container px-4 mx-auto relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="text-white space-y-8">
+              <div className="space-y-6">
+                <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+                  <span className="text-sm font-medium">MLETR & TradeTrust Compliant</span>
+                </div>
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                  VDP Trade
+                  <span className="block bg-gradient-to-r from-yellow-300 via-orange-300 to-red-300 bg-clip-text text-transparent">
+                    Documents
+                  </span>
+                </h1>
+                <p className="text-xl md:text-2xl text-white/90 max-w-xl leading-relaxed">
+                  Transform your trade operations with legally-binding digital documents that revolutionize global commerce
+                </p>
+              </div>
+              
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="hero-button bg-vayana-blue hover:bg-vayana-blue/90 text-white flex items-center gap-2">
-                  Explore the Platform
-                  <ArrowRight className="h-5 w-5" />
+                <Button size="lg" className="group bg-white text-primary hover:bg-white/90 transition-all duration-300 hover:scale-105">
+                  Explore Platform
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Button variant="outline" className="hero-button bg-transparent border-white hover:bg-white/10 text-white flex items-center gap-2">
-                  Book a Walkthrough
+                <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm">
+                  Watch Demo
+                  <Play className="ml-2 h-4 w-4" />
                 </Button>
               </div>
+
+              {/* Trust Indicators */}
+              <div className="flex items-center gap-6 pt-8">
+                <div className="flex items-center gap-2">
+                  <Shield className="h-6 w-6 text-green-400" />
+                  <span className="text-sm font-medium">Legal Validity</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Globe className="h-6 w-6 text-blue-400" />
+                  <span className="text-sm font-medium">Global Standards</span>
+                </div>
+              </div>
             </div>
+
             <div className="flex justify-center lg:justify-end">
-              <TradeDocVisual />
+              <div className="relative">
+                {/* Enhanced Glow Effect */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-primary via-secondary to-accent rounded-3xl blur-2xl opacity-30 animate-pulse" />
+                <TradeDocVisual />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 animate-bounce">
+          <div className="flex flex-col items-center gap-2">
+            <span className="text-sm">Scroll to explore</span>
+            <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+              <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Problem Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-12">
-            <div className="space-y-4">
-              <h2 className="section-title">Global Trade Still Runs on Paper. We're Changing That.</h2>
-              <p className="section-subtitle">
-                Current pain points of paper and PDF-based document exchange create significant risks and inefficiencies in global trade operations.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="p-8 border-l-4 border-l-destructive">
-                <CardHeader>
-                  <CardTitle className="text-destructive flex items-center gap-2">
-                    <FileText className="h-5 w-5" />
-                    Current Challenges
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <ul className="space-y-3 text-muted-foreground text-left">
-                    <li className="flex items-start gap-2">
-                      <span className="text-destructive mt-1">•</span>
-                      Paper documents prone to loss, damage, and fraud
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-destructive mt-1">•</span>
-                      Slow manual processing delays critical shipments
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-destructive mt-1">•</span>
-                      Limited visibility across complex supply chains
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-destructive mt-1">•</span>
-                      High operational costs and human errors
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-destructive mt-1">•</span>
-                      Compliance risks and audit trail gaps
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-              
-              <Card className="p-8 border-l-4 border-l-green-500">
-                <CardHeader>
-                  <CardTitle className="text-green-600 flex items-center gap-2">
-                    <CheckCircle className="h-5 w-5" />
-                    Digital Transformation
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <ul className="space-y-3 text-muted-foreground text-left">
-                    <li className="flex items-start gap-2">
-                      <span className="text-green-500 mt-1">•</span>
-                      Digital documents with full legal validity
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-green-500 mt-1">•</span>
-                      Instant verification and real-time processing
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-green-500 mt-1">•</span>
-                      Complete supply chain transparency and trust
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-green-500 mt-1">•</span>
-                      Dramatically reduced costs and enhanced security
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-green-500 mt-1">•</span>
-                      Automated compliance and immutable audit trails
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
+      {/* Problem Section with Enhanced Design */}
+      <section className="relative py-32 overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-gradient-to-br from-muted/30 via-background to-muted/50">
+          <div className="absolute inset-0 bg-grid-pattern opacity-5" />
         </div>
-      </section>
 
-      {/* Compliance Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-12">
-            <div className="space-y-4">
-              <h2 className="section-title">MLETR-Compliant. TradeTrust-Verified. Future-Proof.</h2>
-              <p className="section-subtitle">
-                Our platform ensures full legal validity and global interoperability for all digital trade documents
+        <div className="container mx-auto px-4 relative">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center space-y-6 mb-20">
+              <div className="inline-flex items-center px-4 py-2 bg-destructive/10 text-destructive rounded-full text-sm font-medium mb-4">
+                The Problem with Traditional Trade
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
+                Global Trade Still Runs on
+                <span className="block text-destructive">Paper & PDFs</span>
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Billions of trade documents are still processed manually, creating massive inefficiencies and risks across the global supply chain.
               </p>
             </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center space-y-4">
-                <div className="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center">
-                  <Scale className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold">Legal Validity</h3>
-                <p className="text-muted-foreground">MLETR-compliant digital documents with full legal recognition</p>
-              </div>
-              
-              <div className="text-center space-y-4">
-                <div className="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center">
-                  <Shield className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold">TradeTrust Integration</h3>
-                <p className="text-muted-foreground">Third-party verification and global interoperability standards</p>
-              </div>
-              
-              <div className="text-center space-y-4">
-                <div className="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center">
-                  <Database className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold">Blockchain Anchoring</h3>
-                <p className="text-muted-foreground">Immutable audit trails with complete document integrity</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Supported Documents Section */}
-      <section className="py-20 bg-gradient-to-br from-muted/30 via-background to-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="space-y-12">
-            <div className="text-center space-y-4">
-              <h2 className="section-title">Digitize and Control the Documents That Move Trade</h2>
-              <p className="section-subtitle">
-                Support for all critical trade documents with full digital transfer capabilities
-              </p>
-            </div>
-            
-            <div className="relative">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                {supportedDocs.slice(0, 4).map((doc, index) => <div key={index} className="group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm rounded-3xl p-6 text-center hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-primary/20 hover:border-primary/40 overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary/5 to-accent/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <div className="relative z-10">
-                      <div className="w-14 h-14 mx-auto bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
-                        <doc.icon className="h-7 w-7 text-white" />
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Problems */}
+              <div className="space-y-8">
+                <div className="space-y-6">
+                  {[
+                    { title: "Document Fraud & Loss", desc: "Paper documents worth $50B+ lost annually to fraud, forgery, and physical damage", icon: "🚨" },
+                    { title: "Processing Delays", desc: "Manual verification takes 7-14 days, delaying shipments and increasing costs", icon: "⏰" },
+                    { title: "Supply Chain Opacity", desc: "Zero visibility into document status across multi-tier supply chains", icon: "👁️" },
+                    { title: "Compliance Gaps", desc: "Inconsistent audit trails create regulatory and financial risks", icon: "⚠️" }
+                  ].map((problem, i) => (
+                    <div key={i} className="group flex items-start gap-4 p-6 bg-white/50 backdrop-blur-sm rounded-2xl border border-destructive/20 hover:border-destructive/40 transition-all duration-300 hover:-translate-y-1">
+                      <div className="text-3xl">{problem.icon}</div>
+                      <div className="space-y-2">
+                        <h3 className="text-lg font-semibold text-foreground">{problem.title}</h3>
+                        <p className="text-muted-foreground leading-relaxed">{problem.desc}</p>
                       </div>
-                      <h3 className="text-sm font-bold mb-2 text-foreground leading-tight">{doc.name}</h3>
-                      <p className="text-xs text-muted-foreground leading-relaxed">{doc.desc}</p>
                     </div>
-                    <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  </div>)}
+                  ))}
+                </div>
               </div>
-              
-              <div className="flex justify-end mt-8 pr-8">
-                  <p className="text-sm font-medium text-muted-foreground">
-                    + any other trade document
-                  </p>
+
+              {/* Solution */}
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-primary via-secondary to-accent rounded-3xl blur-2xl opacity-20" />
+                <div className="relative bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 backdrop-blur-sm rounded-3xl p-12 border border-primary/20">
+                  <div className="text-center space-y-8">
+                    <div className="w-20 h-20 mx-auto bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center text-white text-3xl font-bold shadow-2xl">
+                      ✓
+                    </div>
+                    <div className="space-y-4">
+                      <h3 className="text-2xl font-bold text-foreground">Digital Transformation</h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        VDP Trade Docs eliminates these pain points with legally-binding digital documents, instant verification, and complete supply chain transparency.
+                      </p>
+                    </div>
+                    <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div className="text-center p-4 bg-white/30 rounded-xl">
+                        <div className="text-2xl font-bold text-primary">99.9%</div>
+                        <div className="text-muted-foreground">Fraud Reduction</div>
+                      </div>
+                      <div className="text-center p-4 bg-white/30 rounded-xl">
+                        <div className="text-2xl font-bold text-primary">80%</div>
+                        <div className="text-muted-foreground">Faster Processing</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Compliance Section with Modern Design */}
+      <section className="relative py-32 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 overflow-hidden">
+        {/* Floating Elements */}
+        {[...Array(4)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-64 h-64 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full blur-3xl animate-float"
+            style={{
+              left: `${20 + i * 20}%`,
+              top: `${10 + i * 15}%`,
+              animationDelay: `${i * 1}s`,
+              animationDuration: `${6 + i}s`
+            }}
+          />
+        ))}
 
-      {/* Features Section */}
-      <section className="py-20 bg-gradient-to-br from-background via-muted/30 to-background">
-        <div className="container mx-auto px-4">
-          <div className="space-y-12">
-            <div className="text-center space-y-4">
-              <h2 className="section-title">Feature-Rich, Ready for Enterprise Workflows</h2>
-              <p className="section-subtitle">
-                Comprehensive capabilities designed for modern trade operations
+        <div className="container mx-auto px-4 relative">
+          <div className="max-w-6xl mx-auto text-center space-y-16">
+            <div className="space-y-6">
+              <div className="inline-flex items-center px-6 py-3 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                Legal Foundation
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+                Built on
+                <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent"> Global Standards</span>
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Full legal validity and worldwide interoperability through MLETR compliance and TradeTrust verification
               </p>
             </div>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              {features.map((feature, index) => <div key={index} className="group relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 hover:border-primary/30">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative z-10">
-                    <div className="flex items-start space-x-4 mb-6">
-                      <div className="text-4xl mb-2">{feature.emoji}</div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-primary transition-colors duration-300">
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                { icon: Scale, title: "MLETR Compliant", desc: "Electronic documents with the same legal validity as paper originals", color: "from-blue-500 to-cyan-500" },
+                { icon: Shield, title: "TradeTrust Verified", desc: "Third-party verification ensuring global interoperability", color: "from-green-500 to-emerald-500" },
+                { icon: Database, title: "Blockchain Anchored", desc: "Immutable audit trails with complete document integrity", color: "from-purple-500 to-indigo-500" }
+              ].map((item, i) => (
+                <div key={i} className="group relative">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 rounded-3xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 border border-border/50 hover:border-primary/30 transition-all duration-500 group-hover:-translate-y-2 h-full">
+                    <div className="text-center space-y-6">
+                      <div className={`w-16 h-16 mx-auto bg-gradient-to-r ${item.color} rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                        <item.icon className="h-8 w-8" />
+                      </div>
+                      <div className="space-y-3">
+                        <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
+                        <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Supported Documents with Interactive Grid */}
+      <section className="py-32 bg-gradient-to-br from-background via-muted/20 to-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto space-y-16">
+            <div className="text-center space-y-6">
+              <div className="inline-flex items-center px-6 py-3 bg-accent/10 text-accent rounded-full text-sm font-medium">
+                Document Support
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+                Digitize Every Document
+                <span className="block text-accent">That Moves Trade</span>
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                From Bills of Lading to Certificates of Origin - complete support for all critical trade documentation
+              </p>
+            </div>
+
+            <div className="relative">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {supportedDocs.slice(0, 4).map((doc, index) => (
+                  <div
+                    key={index}
+                    className="group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm rounded-3xl p-8 text-center hover:shadow-2xl transition-all duration-700 hover:-translate-y-4 border border-primary/20 hover:border-primary/40 overflow-hidden"
+                  >
+                    {/* Animated Background */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary/5 to-accent/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    
+                    {/* Content */}
+                    <div className="relative z-10 space-y-6">
+                      <div className="w-16 h-16 mx-auto bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+                        <doc.icon className="h-8 w-8 text-white" />
+                      </div>
+                      <div className="space-y-3">
+                        <h3 className="text-lg font-bold text-foreground leading-tight">{doc.name}</h3>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{doc.desc}</p>
+                      </div>
+                    </div>
+
+                    {/* Decorative Elements */}
+                    <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute -top-2 -left-2 w-8 h-8 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  </div>
+                ))}
+              </div>
+
+              {/* Plus Symbol */}
+              <div className="text-center mt-12">
+                <div className="inline-flex items-center gap-3 px-6 py-3 bg-muted/50 rounded-full">
+                  <span className="text-2xl">+</span>
+                  <span className="text-lg font-medium text-muted-foreground">Any other trade document</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section with Enhanced Design */}
+      <section className="relative py-32 bg-gradient-to-br from-muted/30 via-background to-muted/30 overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto space-y-16">
+            <div className="text-center space-y-6">
+              <div className="inline-flex items-center px-6 py-3 bg-secondary/10 text-secondary rounded-full text-sm font-medium">
+                Platform Capabilities
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+                Enterprise-Ready
+                <span className="block bg-gradient-to-r from-secondary via-accent to-primary bg-clip-text text-transparent">
+                  Features
+                </span>
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Comprehensive capabilities designed for modern trade operations and complex enterprise workflows
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-8">
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className="group relative bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50 hover:border-primary/30 overflow-hidden"
+                >
+                  {/* Animated Background */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  
+                  {/* Content */}
+                  <div className="relative z-10 space-y-6">
+                    <div className="flex items-start gap-6">
+                      <div className="text-5xl">{feature.emoji}</div>
+                      <div className="space-y-4 flex-1">
+                        <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                           {feature.title}
                         </h3>
+                        <p className="text-muted-foreground leading-relaxed text-lg">
+                          {feature.desc}
+                        </p>
                       </div>
                     </div>
-                    <p className="text-gray-600 leading-relaxed">
-                      {feature.desc}
-                    </p>
                   </div>
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 rounded-t-3xl"></div>
-                </div>)}
+
+                  {/* Progress Bar Animation */}
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-secondary to-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 rounded-b-3xl" />
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stakeholder Section */}
-      <section className="py-24 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
+      {/* Stakeholder Section with Modern Cards */}
+      <section className="py-32 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center space-y-6 mb-20">
-              <h2 className="section-title">One Platform, Many Roles</h2>
-              <p className="section-subtitle max-w-3xl mx-auto">
-                Empowering every stakeholder in the global trade ecosystem with seamless digital document management
+          <div className="max-w-7xl mx-auto space-y-16">
+            <div className="text-center space-y-6">
+              <div className="inline-flex items-center px-6 py-3 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                Ecosystem Impact
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+                One Platform,
+                <span className="block text-primary">Every Stakeholder</span>
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Empowering every participant in the global trade ecosystem with seamless digital document management
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-              {stakeholders.map((stakeholder, index) => <div key={index} className="group relative">
+              {stakeholders.map((stakeholder, index) => (
+                <div key={index} className="group relative">
                   <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-3xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-500" />
-                  <Card className="relative h-full bg-card/90 backdrop-blur-sm border border-border/50 rounded-2xl p-6 hover:shadow-xl transition-all duration-500 group-hover:-translate-y-2 overflow-hidden">
+                  <div className="relative h-full bg-white/90 backdrop-blur-sm border border-border/50 rounded-2xl p-6 hover:shadow-xl transition-all duration-500 group-hover:-translate-y-3 overflow-hidden">
                     <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full blur-2xl -translate-y-10 translate-x-10" />
-                    <CardContent className="relative text-center space-y-4 p-0">
-                      <div className="w-14 h-14 mx-auto bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                        <stakeholder.icon className="h-7 w-7" />
+                    <div className="relative text-center space-y-6">
+                      <div className="w-16 h-16 mx-auto bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <stakeholder.icon className="h-8 w-8" />
                       </div>
                       <div className="space-y-3">
                         <h3 className="text-lg font-semibold text-foreground leading-tight">{stakeholder.role}</h3>
                         <p className="text-sm text-muted-foreground leading-relaxed">{stakeholder.benefit}</p>
                       </div>
-                    </CardContent>
-                  </Card>
-                </div>)}
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Demo Section */}
-      <section className="py-20 bg-gradient-to-br from-muted/30 via-background to-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="space-y-4">
-              <h2 className="section-title">See How VDP Trade Docs Transforms Your Document Flows</h2>
-              <p className="section-subtitle">
-                Watch our platform in action and discover how it can revolutionize your trade operations
+      {/* Demo Section with Interactive Elements */}
+      <section className="relative py-32 bg-gradient-to-br from-background via-muted/20 to-background overflow-hidden">
+        {/* Background Animation */}
+        <div className="absolute inset-0">
+          {[...Array(3)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-96 h-96 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-full blur-3xl animate-float"
+              style={{
+                left: `${i * 30}%`,
+                top: `${i * 20}%`,
+                animationDelay: `${i * 2}s`,
+                animationDuration: `${8 + i * 2}s`
+              }}
+            />
+          ))}
+        </div>
+
+        <div className="container mx-auto px-4 relative">
+          <div className="max-w-5xl mx-auto text-center space-y-12">
+            <div className="space-y-6">
+              <div className="inline-flex items-center px-6 py-3 bg-accent/10 text-accent rounded-full text-sm font-medium">
+                See It In Action
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+                Transform Your Trade
+                <span className="block text-accent">Document Flows</span>
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Watch our platform revolutionize how trade documents are created, verified, and transferred across global supply chains
               </p>
             </div>
-            
+
             <div className="relative group">
-              <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center shadow-2xl hover:shadow-3xl transition-all duration-500 border border-primary/10">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <Button size="lg" className="relative z-10 bg-white/90 text-primary hover:bg-white hover:scale-110 transition-all duration-300 shadow-lg">
-                  <Play className="mr-2 h-6 w-6" />
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary via-secondary to-accent rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500" />
+              <div className="relative aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl flex items-center justify-center shadow-2xl hover:shadow-3xl transition-all duration-500 border border-primary/20 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <Button size="lg" className="relative z-10 bg-white/95 text-primary hover:bg-white hover:scale-110 transition-all duration-300 shadow-xl text-lg px-8 py-4">
+                  <Play className="mr-3 h-6 w-6" />
                   Watch Demo
                 </Button>
               </div>
             </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
-                Talk to Our Team
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-4">
+                Schedule Consultation
+              </Button>
+              <Button size="lg" className="bg-gradient-to-r from-secondary to-accent text-white hover:opacity-90 px-8 py-4">
+                Request Demo
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20 bg-white" id="contact-us">
+      {/* Enhanced Contact Section */}
+      <section className="relative py-32 bg-gradient-to-br from-background to-muted/30" id="contact-us">
         <div className="container px-4 mx-auto">
-          <div className="max-w-4xl mx-auto bg-gray-50 rounded-2xl shadow-lg overflow-hidden">
-            <div className="grid grid-cols-1 lg:grid-cols-2">
-              <div className="bg-vayana-gradient text-white p-8 lg:p-12">
-                <h2 className="text-3xl font-bold mb-6 font-display">Start Your Trade Document Digitization Journey</h2>
-                <p className="text-lg text-gray-100 mb-8">
-                  Transform your trade operations with our comprehensive digital documentation platform. Contact our team to learn more about VDP Trade Docs.
-                </p>
-                
-                <div className="space-y-6">
-                  <div className="flex items-center gap-4">
-                    <div className="bg-white/10 p-3 rounded-full">
-                      <Mail className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold">Email Us</h3>
-                      <p className="text-gray-200">contact@vayana.com</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center gap-4">
-                    <div className="bg-white/10 p-3 rounded-full">
-                      <Phone className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold">Call Us</h3>
-                      <p className="text-gray-200">+1 (123) 456-7890</p>
-                    </div>
-                  </div>
-                </div>
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center space-y-6 mb-16">
+              <div className="inline-flex items-center px-6 py-3 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                Get Started
               </div>
-              
-              <div className="p-8 lg:p-12">
-                <h3 className="text-2xl font-bold mb-6">Contact Us</h3>
-                
-                <form className="space-y-4">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                        Full Name *
-                      </label>
-                      <input id="name" name="name" required placeholder="John Doe" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+                Ready to Digitize
+                <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                  Your Trade Documents?
+                </span>
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Join leading organizations already transforming their trade operations with VDP Trade Docs
+              </p>
+            </div>
+
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary via-secondary to-accent rounded-3xl blur-2xl opacity-20" />
+              <div className="relative bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden border border-border/50">
+                <div className="grid grid-cols-1 lg:grid-cols-2">
+                  {/* Info Side */}
+                  <div className="bg-gradient-to-br from-primary via-secondary to-accent text-white p-8 lg:p-12 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-black/20" />
+                    <div className="relative z-10 space-y-8">
+                      <div className="space-y-4">
+                        <h3 className="text-3xl font-bold">Start Your Digital Transformation</h3>
+                        <p className="text-lg text-white/90 leading-relaxed">
+                          Transform your trade operations with our comprehensive digital documentation platform. Get started with VDP Trade Docs today.
+                        </p>
+                      </div>
+
+                      <div className="space-y-6">
+                        <div className="flex items-center gap-4">
+                          <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                            <Mail className="h-6 w-6" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-lg">Email Us</h4>
+                            <p className="text-white/80">contact@vayana.com</p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-center gap-4">
+                          <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                            <Phone className="h-6 w-6" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-lg">Call Us</h4>
+                            <p className="text-white/80">+1 (123) 456-7890</p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                        Email Address *
-                      </label>
-                      <input id="email" name="email" type="email" required placeholder="john@example.com" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="organization" className="block text-sm font-medium text-gray-700 mb-1">
-                      Organization
-                    </label>
-                    <input id="organization" name="organization" placeholder="Your Organization" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
                   </div>
 
-                  <div>
-                    <label htmlFor="role" className="block text-sm font-medium text-gray-700 mb-1">
-                      Role
-                    </label>
-                    <input id="role" name="role" placeholder="Your Role" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
+                  {/* Form Side */}
+                  <div className="p-8 lg:p-12">
+                    {formSubmitted ? (
+                      <div className="text-center space-y-6 py-16">
+                        <div className="w-20 h-20 mx-auto bg-green-100 rounded-full flex items-center justify-center">
+                          <CheckCircle className="h-10 w-10 text-green-600" />
+                        </div>
+                        <div className="space-y-3">
+                          <h3 className="text-2xl font-bold text-foreground">Thank You!</h3>
+                          <p className="text-muted-foreground">
+                            We've received your inquiry and will get back to you within 24 hours.
+                          </p>
+                        </div>
+                      </div>
+                    ) : (
+                      <>
+                        <h3 className="text-2xl font-bold mb-8 text-foreground">Contact Us</h3>
+                        
+                        <form onSubmit={handleSubmit} className="space-y-6">
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                              <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                                Full Name *
+                              </label>
+                              <input
+                                id="name"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                required
+                                placeholder="John Doe"
+                                className="w-full px-4 py-3 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
+                              />
+                            </div>
+                            
+                            <div>
+                              <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                                Email Address *
+                              </label>
+                              <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                required
+                                placeholder="john@company.com"
+                                className="w-full px-4 py-3 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
+                              />
+                            </div>
+                          </div>
+                          
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                              <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2">
+                                Organization
+                              </label>
+                              <input
+                                id="company"
+                                name="company"
+                                value={formData.company}
+                                onChange={handleChange}
+                                placeholder="Your Organization"
+                                className="w-full px-4 py-3 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
+                              />
+                            </div>
+
+                            <div>
+                              <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                                Phone Number
+                              </label>
+                              <input
+                                id="phone"
+                                name="phone"
+                                value={formData.phone}
+                                onChange={handleChange}
+                                placeholder="+1 (123) 456-7890"
+                                className="w-full px-4 py-3 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
+                              />
+                            </div>
+                          </div>
+                          
+                          <div>
+                            <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                              Message *
+                            </label>
+                            <textarea
+                              id="message"
+                              name="message"
+                              value={formData.message}
+                              onChange={handleChange}
+                              required
+                              placeholder="Tell us about your trade documentation requirements..."
+                              className="w-full h-32 px-4 py-3 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors resize-none"
+                            />
+                          </div>
+                          
+                          <Button type="submit" size="lg" className="w-full bg-gradient-to-r from-primary via-secondary to-accent text-white hover:opacity-90 transition-opacity py-4 text-lg">
+                            Send Inquiry
+                            <ArrowRight className="ml-2 h-5 w-5" />
+                          </Button>
+                        </form>
+                      </>
+                    )}
                   </div>
-                  
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                      Message *
-                    </label>
-                    <textarea id="message" name="message" required placeholder="Tell us about your specific requirements or questions" className="w-full h-32 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
-                  </div>
-                  
-                  <Button type="submit" className="w-full bg-vayana-gradient hover:opacity-90 text-white py-6">
-                    Send Inquiry
-                  </Button>
-                </form>
+                </div>
               </div>
             </div>
           </div>
@@ -555,6 +832,8 @@ const VDPTradeDocs = () => {
       </section>
 
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default VDPTradeDocs;
