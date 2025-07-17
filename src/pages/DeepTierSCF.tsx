@@ -4,25 +4,35 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { ArrowRight, CheckCircle, XCircle, Users, TrendingUp, Shield, Globe, Zap, Network, Building, Banknote, FileText, BarChart3, Target, Layers, ArrowUpRight, Mail, Phone, ArrowDown, Sparkles, Clock, CreditCard, Repeat, Send } from "lucide-react";
-
 const DeepTierSCF = () => {
-  return (
-    <div className="min-h-screen bg-background relative overflow-hidden">
+  return <div className="min-h-screen bg-background relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="fixed inset-0 opacity-5">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary rounded-full blur-3xl animate-pulse-slow"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary rounded-full blur-3xl animate-pulse-slow" style={{animationDelay: '1.5s'}}></div>
-        <div className="absolute top-3/4 left-1/2 w-64 h-64 bg-accent rounded-full blur-3xl animate-pulse-slow" style={{animationDelay: '3s'}}></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary rounded-full blur-3xl animate-pulse-slow" style={{
+        animationDelay: '1.5s'
+      }}></div>
+        <div className="absolute top-3/4 left-1/2 w-64 h-64 bg-accent rounded-full blur-3xl animate-pulse-slow" style={{
+        animationDelay: '3s'
+      }}></div>
       </div>
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary via-primary/80 to-secondary py-32 lg:py-40 overflow-hidden">
         {/* Floating elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-4 h-4 bg-white/20 rounded-full animate-bounce" style={{animationDelay: '0.5s'}}></div>
-          <div className="absolute top-40 right-20 w-6 h-6 bg-white/15 rounded-full animate-bounce" style={{animationDelay: '1s'}}></div>
-          <div className="absolute bottom-40 left-1/3 w-3 h-3 bg-white/25 rounded-full animate-bounce" style={{animationDelay: '1.5s'}}></div>
-          <div className="absolute bottom-20 right-1/3 w-5 h-5 bg-white/20 rounded-full animate-bounce" style={{animationDelay: '2s'}}></div>
+          <div className="absolute top-20 left-10 w-4 h-4 bg-white/20 rounded-full animate-bounce" style={{
+          animationDelay: '0.5s'
+        }}></div>
+          <div className="absolute top-40 right-20 w-6 h-6 bg-white/15 rounded-full animate-bounce" style={{
+          animationDelay: '1s'
+        }}></div>
+          <div className="absolute bottom-40 left-1/3 w-3 h-3 bg-white/25 rounded-full animate-bounce" style={{
+          animationDelay: '1.5s'
+        }}></div>
+          <div className="absolute bottom-20 right-1/3 w-5 h-5 bg-white/20 rounded-full animate-bounce" style={{
+          animationDelay: '2s'
+        }}></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -45,7 +55,7 @@ const DeepTierSCF = () => {
                 Explore the Platform
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900 h-14 px-8 text-lg font-semibold backdrop-blur-sm transition-all duration-300">
+              <Button size="lg" variant="outline" className="border-white hover:bg-white h-14 px-8 text-lg font-semibold backdrop-blur-sm transition-all duration-300 text-red-800">
                 Book a Demo
               </Button>
             </div>
@@ -158,7 +168,9 @@ const DeepTierSCF = () => {
                         <div className="w-16 h-16 bg-gradient-to-br from-secondary to-secondary/80 rounded-xl flex items-center justify-center shadow-xl group-hover:scale-110 transition-all duration-300">
                           <Users className="h-8 w-8 text-white" />
                         </div>
-                        <div className="absolute -top-1 -right-1 w-4 h-4 bg-orange-500 rounded-full border border-white animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                        <div className="absolute -top-1 -right-1 w-4 h-4 bg-orange-500 rounded-full border border-white animate-pulse" style={{
+                        animationDelay: '0.5s'
+                      }}></div>
                       </div>
                       <div className="flex-1">
                         <h4 className="font-bold text-lg text-gray-800">Tier 1 Suppliers</h4>
@@ -169,7 +181,9 @@ const DeepTierSCF = () => {
                     
                     {/* Connection line */}
                     <div className="flex justify-center ml-8">
-                      <div className="w-px h-8 bg-gradient-to-b from-secondary via-accent to-accent animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                      <div className="w-px h-8 bg-gradient-to-b from-secondary via-accent to-accent animate-pulse" style={{
+                      animationDelay: '0.5s'
+                    }}></div>
                     </div>
                     
                     {/* Tier 2 & 3 Suppliers */}
@@ -178,7 +192,9 @@ const DeepTierSCF = () => {
                         <div className="w-14 h-14 bg-gradient-to-br from-accent to-accent/80 rounded-lg flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300">
                           <Network className="h-6 w-6 text-white" />
                         </div>
-                        <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-500 rounded-full border border-white animate-pulse" style={{animationDelay: '1s'}}></div>
+                        <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-500 rounded-full border border-white animate-pulse" style={{
+                        animationDelay: '1s'
+                      }}></div>
                       </div>
                       <div className="flex-1">
                         <h4 className="font-bold text-lg text-gray-800">Tier 2 & 3 Suppliers</h4>
@@ -189,9 +205,15 @@ const DeepTierSCF = () => {
                   </div>
                   
                   {/* Floating elements around the visualization */}
-                  <div className="absolute top-4 right-4 w-3 h-3 bg-primary/30 rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
-                  <div className="absolute bottom-4 left-4 w-2 h-2 bg-secondary/30 rounded-full animate-bounce" style={{animationDelay: '0.7s'}}></div>
-                  <div className="absolute top-1/2 right-0 w-4 h-4 bg-accent/30 rounded-full animate-bounce" style={{animationDelay: '1.2s'}}></div>
+                  <div className="absolute top-4 right-4 w-3 h-3 bg-primary/30 rounded-full animate-bounce" style={{
+                  animationDelay: '0.2s'
+                }}></div>
+                  <div className="absolute bottom-4 left-4 w-2 h-2 bg-secondary/30 rounded-full animate-bounce" style={{
+                  animationDelay: '0.7s'
+                }}></div>
+                  <div className="absolute top-1/2 right-0 w-4 h-4 bg-accent/30 rounded-full animate-bounce" style={{
+                  animationDelay: '1.2s'
+                }}></div>
                 </div>
               </div>
             </div>
@@ -216,13 +238,27 @@ const DeepTierSCF = () => {
           
           {/* Benefits Cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {[
-              { icon: Shield, title: "Resilience", desc: "Against supplier default", color: "primary" },
-              { icon: Target, title: "Risk Reduction", desc: "Reduced risk concentration", color: "secondary" },
-              { icon: TrendingUp, title: "ESG Metrics", desc: "Stronger compliance", color: "accent" },
-              { icon: Users, title: "Loyalty", desc: "Improved supplier continuity", color: "primary" }
-            ].map((item, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white/60 backdrop-blur-sm hover:bg-white hover:-translate-y-2">
+            {[{
+            icon: Shield,
+            title: "Resilience",
+            desc: "Against supplier default",
+            color: "primary"
+          }, {
+            icon: Target,
+            title: "Risk Reduction",
+            desc: "Reduced risk concentration",
+            color: "secondary"
+          }, {
+            icon: TrendingUp,
+            title: "ESG Metrics",
+            desc: "Stronger compliance",
+            color: "accent"
+          }, {
+            icon: Users,
+            title: "Loyalty",
+            desc: "Improved supplier continuity",
+            color: "primary"
+          }].map((item, index) => <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white/60 backdrop-blur-sm hover:bg-white hover:-translate-y-2">
                 <CardContent className="pt-8 text-center">
                   <div className={`w-16 h-16 bg-${item.color}/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 group-hover:rotate-6`}>
                     <item.icon className={`h-8 w-8 text-${item.color}`} />
@@ -230,26 +266,31 @@ const DeepTierSCF = () => {
                   <h3 className="font-bold text-xl mb-3">{item.title}</h3>
                   <p className="text-gray-600">{item.desc}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
 
           {/* Statistics */}
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { stat: "80%", desc: "of supply chain participants are MSMEs", color: "from-primary to-secondary" },
-              { stat: "15%", desc: "of MSMEs have access to formal financing", color: "from-secondary to-accent" },
-              { stat: "50%", desc: "reduction in SME financing costs", color: "from-accent to-primary" }
-            ].map((item, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white hover:-translate-y-2">
+            {[{
+            stat: "80%",
+            desc: "of supply chain participants are MSMEs",
+            color: "from-primary to-secondary"
+          }, {
+            stat: "15%",
+            desc: "of MSMEs have access to formal financing",
+            color: "from-secondary to-accent"
+          }, {
+            stat: "50%",
+            desc: "reduction in SME financing costs",
+            color: "from-accent to-primary"
+          }].map((item, index) => <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white hover:-translate-y-2">
                 <CardContent className="pt-8 text-center">
                   <div className={`text-6xl font-bold bg-gradient-to-r ${item.color} bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform`}>
                     {item.stat}
                   </div>
                   <p className="text-gray-600 text-lg">{item.desc}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -267,51 +308,43 @@ const DeepTierSCF = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { 
-                num: 1, 
-                title: "Anchor Onboarding", 
-                desc: "Anchor buyer integrates supply chain data and agrees to support multi-tier suppliers.",
-                icon: Building,
-                color: "primary"
-              },
-              { 
-                num: 2, 
-                title: "Supply Chain Mapping", 
-                desc: "All tiers of suppliers are digitally mapped using invoices, purchase orders, and delivery milestones.",
-                icon: Network,
-                color: "secondary"
-              },
-              { 
-                num: 3, 
-                title: "Transaction Digitization", 
-                desc: "Real-time trade events are captured and authenticated through integrated systems.",
-                icon: FileText,
-                color: "accent"
-              },
-              { 
-                num: 4, 
-                title: "Early Encashment", 
-                desc: "Suppliers can encash their receivables early at competitive rates based on the anchor's credit strength, improving cash flow.",
-                icon: Clock,
-                color: "primary"
-              },
-              { 
-                num: 5, 
-                title: "Transfer to Next Tier", 
-                desc: "Credit availability cascades seamlessly to the next tier suppliers, extending liquidity throughout the supply chain.",
-                icon: Repeat,
-                color: "secondary"
-              },
-              { 
-                num: 6, 
-                title: "Repayment", 
-                desc: "Based on cash flow events or maturity dates, repayments are managed seamlessly.",
-                icon: CreditCard,
-                color: "accent"
-              }
-            ].map((step, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 hover:-translate-y-2 bg-gradient-to-br from-white to-gray-50">
+            {[{
+            num: 1,
+            title: "Anchor Onboarding",
+            desc: "Anchor buyer integrates supply chain data and agrees to support multi-tier suppliers.",
+            icon: Building,
+            color: "primary"
+          }, {
+            num: 2,
+            title: "Supply Chain Mapping",
+            desc: "All tiers of suppliers are digitally mapped using invoices, purchase orders, and delivery milestones.",
+            icon: Network,
+            color: "secondary"
+          }, {
+            num: 3,
+            title: "Transaction Digitization",
+            desc: "Real-time trade events are captured and authenticated through integrated systems.",
+            icon: FileText,
+            color: "accent"
+          }, {
+            num: 4,
+            title: "Early Encashment",
+            desc: "Suppliers can encash their receivables early at competitive rates based on the anchor's credit strength, improving cash flow.",
+            icon: Clock,
+            color: "primary"
+          }, {
+            num: 5,
+            title: "Transfer to Next Tier",
+            desc: "Credit availability cascades seamlessly to the next tier suppliers, extending liquidity throughout the supply chain.",
+            icon: Repeat,
+            color: "secondary"
+          }, {
+            num: 6,
+            title: "Repayment",
+            desc: "Based on cash flow events or maturity dates, repayments are managed seamlessly.",
+            icon: CreditCard,
+            color: "accent"
+          }].map((step, index) => <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 hover:-translate-y-2 bg-gradient-to-br from-white to-gray-50">
                 <CardHeader className="relative">
                   <div className="flex items-center space-x-4 mb-4">
                     <div className={`w-12 h-12 bg-gradient-to-br from-${step.color} to-${step.color}/80 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform`}>
@@ -326,8 +359,7 @@ const DeepTierSCF = () => {
                     {step.desc}
                   </CardDescription>
                 </CardHeader>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -345,39 +377,22 @@ const DeepTierSCF = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Building,
-                title: "Anchor Buyers",
-                benefits: [
-                  "Better control and transparency",
-                  "Resilient supply chains", 
-                  "ESG & D&I reporting enhancements"
-                ],
-                color: "primary"
-              },
-              {
-                icon: Users,
-                title: "Suppliers (all tiers)",
-                benefits: [
-                  "Fast access to affordable credit",
-                  "Improved working capital cycle",
-                  "Business continuity during shocks"
-                ],
-                color: "secondary"
-              },
-              {
-                icon: Banknote,
-                title: "Financiers", 
-                benefits: [
-                  "Low-risk, anchor-backed portfolios",
-                  "New MSME customer segments",
-                  "High-volume, short-tenure instruments"
-                ],
-                color: "accent"
-              }
-            ].map((stakeholder, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 hover:-translate-y-2 bg-white">
+            {[{
+            icon: Building,
+            title: "Anchor Buyers",
+            benefits: ["Better control and transparency", "Resilient supply chains", "ESG & D&I reporting enhancements"],
+            color: "primary"
+          }, {
+            icon: Users,
+            title: "Suppliers (all tiers)",
+            benefits: ["Fast access to affordable credit", "Improved working capital cycle", "Business continuity during shocks"],
+            color: "secondary"
+          }, {
+            icon: Banknote,
+            title: "Financiers",
+            benefits: ["Low-risk, anchor-backed portfolios", "New MSME customer segments", "High-volume, short-tenure instruments"],
+            color: "accent"
+          }].map((stakeholder, index) => <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 hover:-translate-y-2 bg-white">
                 <CardHeader>
                   <div className={`w-16 h-16 bg-gradient-to-br from-${stakeholder.color} to-${stakeholder.color}/80 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
                     <stakeholder.icon className="h-8 w-8 text-white" />
@@ -386,16 +401,13 @@ const DeepTierSCF = () => {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-4">
-                    {stakeholder.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-start space-x-3 group/item">
+                    {stakeholder.benefits.map((benefit, idx) => <li key={idx} className="flex items-start space-x-3 group/item">
                         <CheckCircle className={`h-5 w-5 text-${stakeholder.color} mt-0.5 flex-shrink-0 group-hover/item:scale-110 transition-transform`} />
                         <span className="text-gray-700">{benefit}</span>
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -425,15 +437,7 @@ const DeepTierSCF = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      {[
-                        "Multi-tier access",
-                        "Anchor Credit Utilization", 
-                        "MSME Onboarding at Scale",
-                        "Real-time Transaction Data",
-                        "Digital Document Exchange",
-                        "Tokenized Payments Option"
-                      ].map((feature, index) => (
-                        <tr key={index} className="border-b border-gray-100 hover:bg-white/50 transition-colors">
+                      {["Multi-tier access", "Anchor Credit Utilization", "MSME Onboarding at Scale", "Real-time Transaction Data", "Digital Document Exchange", "Tokenized Payments Option"].map((feature, index) => <tr key={index} className="border-b border-gray-100 hover:bg-white/50 transition-colors">
                           <td className="py-6 font-semibold text-gray-800">{feature}</td>
                           <td className="text-center py-6">
                             <div className="flex justify-center">
@@ -449,8 +453,7 @@ const DeepTierSCF = () => {
                               </div>
                             </div>
                           </td>
-                        </tr>
-                      ))}
+                        </tr>)}
                     </tbody>
                   </table>
                 </div>
@@ -473,27 +476,22 @@ const DeepTierSCF = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Globe,
-                title: "Global Manufacturer",
-                desc: "Anchors a multi-country chain with 4 supplier layers—financed directly from top to tier 3.",
-                color: "primary"
-              },
-              {
-                icon: Building,
-                title: "Automotive OEM", 
-                desc: "Helps second-tier parts manufacturers get faster access to capital via anchor's purchase orders.",
-                color: "secondary"
-              },
-              {
-                icon: Users,
-                title: "Consumer Goods Giant",
-                desc: "Uses DTSCF to meet ESG goals by bringing women-owned and rural suppliers into the finance fold.",
-                color: "accent"
-              }
-            ].map((useCase, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 hover:-translate-y-2 bg-gradient-to-br from-white to-gray-50">
+            {[{
+            icon: Globe,
+            title: "Global Manufacturer",
+            desc: "Anchors a multi-country chain with 4 supplier layers—financed directly from top to tier 3.",
+            color: "primary"
+          }, {
+            icon: Building,
+            title: "Automotive OEM",
+            desc: "Helps second-tier parts manufacturers get faster access to capital via anchor's purchase orders.",
+            color: "secondary"
+          }, {
+            icon: Users,
+            title: "Consumer Goods Giant",
+            desc: "Uses DTSCF to meet ESG goals by bringing women-owned and rural suppliers into the finance fold.",
+            color: "accent"
+          }].map((useCase, index) => <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 hover:-translate-y-2 bg-gradient-to-br from-white to-gray-50">
                 <CardHeader>
                   <div className={`w-16 h-16 bg-gradient-to-br from-${useCase.color} to-${useCase.color}/80 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
                     <useCase.icon className="h-8 w-8 text-white" />
@@ -503,8 +501,7 @@ const DeepTierSCF = () => {
                     {useCase.desc}
                   </CardDescription>
                 </CardHeader>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -522,33 +519,27 @@ const DeepTierSCF = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                icon: Network,
-                title: "Distributed Ledgers & Tokenization",
-                desc: "Transparency and programmable finance options for enhanced trust and automation.",
-                color: "primary"
-              },
-              {
-                icon: Layers,
-                title: "Seamless Integration",
-                desc: "Works with anchor ERP, logistics, and banking systems for unified operations.",
-                color: "secondary"
-              },
-              {
-                icon: Zap,
-                title: "Event-Based Smart Triggers", 
-                desc: "Automated financing based on real-time supply chain events and milestones.",
-                color: "accent"
-              },
-              {
-                icon: FileText,
-                title: "Comprehensive APIs",
-                desc: "Document exchange, onboarding, and credit scoring through robust API infrastructure.",
-                color: "primary"
-              }
-            ].map((tech, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 hover:-translate-y-2 bg-white">
+            {[{
+            icon: Network,
+            title: "Distributed Ledgers & Tokenization",
+            desc: "Transparency and programmable finance options for enhanced trust and automation.",
+            color: "primary"
+          }, {
+            icon: Layers,
+            title: "Seamless Integration",
+            desc: "Works with anchor ERP, logistics, and banking systems for unified operations.",
+            color: "secondary"
+          }, {
+            icon: Zap,
+            title: "Event-Based Smart Triggers",
+            desc: "Automated financing based on real-time supply chain events and milestones.",
+            color: "accent"
+          }, {
+            icon: FileText,
+            title: "Comprehensive APIs",
+            desc: "Document exchange, onboarding, and credit scoring through robust API infrastructure.",
+            color: "primary"
+          }].map((tech, index) => <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 hover:-translate-y-2 bg-white">
                 <CardHeader>
                   <div className={`w-16 h-16 bg-gradient-to-br from-${tech.color} to-${tech.color}/80 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
                     <tech.icon className="h-8 w-8 text-white" />
@@ -558,8 +549,7 @@ const DeepTierSCF = () => {
                     {tech.desc}
                   </CardDescription>
                 </CardHeader>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -577,27 +567,22 @@ const DeepTierSCF = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {[
-              {
-                icon: Building,
-                title: "Large Corporates",
-                desc: "Anchor Buyers",
-                color: "primary"
-              },
-              {
-                icon: Banknote,
-                title: "Banks & NBFCs",
-                desc: "Financial Institutions", 
-                color: "secondary"
-              },
-              {
-                icon: Globe,
-                title: "Development FIs",
-                desc: "Development Financial Institutions",
-                color: "accent"
-              }
-            ].map((audience, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 hover:-translate-y-2 bg-white/60 backdrop-blur-sm text-center">
+            {[{
+            icon: Building,
+            title: "Large Corporates",
+            desc: "Anchor Buyers",
+            color: "primary"
+          }, {
+            icon: Banknote,
+            title: "Banks & NBFCs",
+            desc: "Financial Institutions",
+            color: "secondary"
+          }, {
+            icon: Globe,
+            title: "Development FIs",
+            desc: "Development Financial Institutions",
+            color: "accent"
+          }].map((audience, index) => <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 hover:-translate-y-2 bg-white/60 backdrop-blur-sm text-center">
                 <CardContent className="pt-8">
                   <div className={`w-20 h-20 bg-gradient-to-br from-${audience.color} to-${audience.color}/80 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg`}>
                     <audience.icon className="h-10 w-10 text-white" />
@@ -605,8 +590,7 @@ const DeepTierSCF = () => {
                   <h3 className="font-bold text-2xl mb-3">{audience.title}</h3>
                   <p className="text-gray-600 text-lg">{audience.desc}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -667,27 +651,14 @@ const DeepTierSCF = () => {
                         <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
                           Full Name *
                         </label>
-                        <Input 
-                          id="name" 
-                          name="name" 
-                          required 
-                          placeholder="John Doe" 
-                          className="h-12 border-gray-200 focus:border-primary focus:ring-primary/20 rounded-xl"
-                        />
+                        <Input id="name" name="name" required placeholder="John Doe" className="h-12 border-gray-200 focus:border-primary focus:ring-primary/20 rounded-xl" />
                       </div>
                       
                       <div>
                         <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
                           Email Address *
                         </label>
-                        <Input 
-                          id="email" 
-                          name="email" 
-                          type="email" 
-                          required 
-                          placeholder="john@example.com" 
-                          className="h-12 border-gray-200 focus:border-primary focus:ring-primary/20 rounded-xl"
-                        />
+                        <Input id="email" name="email" type="email" required placeholder="john@example.com" className="h-12 border-gray-200 focus:border-primary focus:ring-primary/20 rounded-xl" />
                       </div>
                     </div>
                     
@@ -695,43 +666,24 @@ const DeepTierSCF = () => {
                       <label htmlFor="organization" className="block text-sm font-semibold text-gray-700 mb-2">
                         Organization
                       </label>
-                      <Input 
-                        id="organization" 
-                        name="organization" 
-                        placeholder="Your Organization" 
-                        className="h-12 border-gray-200 focus:border-primary focus:ring-primary/20 rounded-xl"
-                      />
+                      <Input id="organization" name="organization" placeholder="Your Organization" className="h-12 border-gray-200 focus:border-primary focus:ring-primary/20 rounded-xl" />
                     </div>
 
                     <div>
                       <label htmlFor="role" className="block text-sm font-semibold text-gray-700 mb-2">
                         Role
                       </label>
-                      <Input 
-                        id="role" 
-                        name="role" 
-                        placeholder="Your Role" 
-                        className="h-12 border-gray-200 focus:border-primary focus:ring-primary/20 rounded-xl"
-                      />
+                      <Input id="role" name="role" placeholder="Your Role" className="h-12 border-gray-200 focus:border-primary focus:ring-primary/20 rounded-xl" />
                     </div>
                     
                     <div>
                       <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
                         Message *
                       </label>
-                      <Textarea 
-                        id="message" 
-                        name="message" 
-                        required 
-                        placeholder="Tell us about your specific requirements or questions" 
-                        className="h-32 border-gray-200 focus:border-primary focus:ring-primary/20 rounded-xl resize-none"
-                      />
+                      <Textarea id="message" name="message" required placeholder="Tell us about your specific requirements or questions" className="h-32 border-gray-200 focus:border-primary focus:ring-primary/20 rounded-xl resize-none" />
                     </div>
                     
-                    <Button 
-                      type="submit" 
-                      className="w-full h-14 bg-gradient-to-r from-primary via-secondary to-accent hover:opacity-90 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
-                    >
+                    <Button type="submit" className="w-full h-14 bg-gradient-to-r from-primary via-secondary to-accent hover:opacity-90 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
                       Send Inquiry
                       <Send className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     </Button>
@@ -742,8 +694,6 @@ const DeepTierSCF = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default DeepTierSCF;
