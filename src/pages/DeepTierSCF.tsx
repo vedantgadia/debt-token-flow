@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, CheckCircle, XCircle, Users, TrendingUp, Shield, Globe, Zap, Network, Building, Banknote, FileText, BarChart3, Target, Layers, ArrowUpRight } from "lucide-react";
+import { ArrowRight, CheckCircle, XCircle, Users, TrendingUp, Shield, Globe, Zap, Network, Building, Banknote, FileText, BarChart3, Target, Layers, ArrowUpRight, Mail, Phone } from "lucide-react";
 
 const DeepTierSCF = () => {
   return (
@@ -74,8 +74,8 @@ const DeepTierSCF = () => {
                 </div>
               </div>
             </div>
-            <div className="flex justify-center">
-              <div className="relative">
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative scale-125">
                 <div className="flex flex-col space-y-8">
                   <div className="flex items-center space-x-4">
                     <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
@@ -229,9 +229,9 @@ const DeepTierSCF = () => {
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                   <span className="text-primary font-bold">4</span>
                 </div>
-                <CardTitle>Risk Assessment & Credit Cascade</CardTitle>
+                <CardTitle>Early Encashment</CardTitle>
                 <CardDescription>
-                  Suppliers are evaluated based on transaction flow, anchor dependency, and supply chain position.
+                  Suppliers can encash their receivables early at competitive rates based on the anchor's credit strength, improving cash flow.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -241,9 +241,9 @@ const DeepTierSCF = () => {
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                   <span className="text-primary font-bold">5</span>
                 </div>
-                <CardTitle>Disbursement</CardTitle>
+                <CardTitle>Transfer to Next Tier</CardTitle>
                 <CardDescription>
-                  Finance is provided automatically triggered by events like PO issuance or delivery confirmation.
+                  Credit availability cascades seamlessly to the next tier suppliers, extending liquidity throughout the supply chain.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -263,78 +263,6 @@ const DeepTierSCF = () => {
         </div>
       </section>
 
-      {/* Key Capabilities */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Key Capabilities of Our DTSCF Platform
-            </h2>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <Users className="h-12 w-12 text-primary mb-4" />
-                <CardTitle>Multi-Tier Supplier Onboarding</CardTitle>
-                <CardDescription>
-                  Easily onboard and manage suppliers across all tiers via API, CSV, or ERP integration.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <FileText className="h-12 w-12 text-primary mb-4" />
-                <CardTitle>Digital Document Flow</CardTitle>
-                <CardDescription>
-                  Invoices, POs, and delivery proofs exchanged and validated digitally.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <Zap className="h-12 w-12 text-primary mb-4" />
-                <CardTitle>Transaction-Based Financing</CardTitle>
-                <CardDescription>
-                  Capital linked to specific supply chain events like goods dispatch or invoice acceptance.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <TrendingUp className="h-12 w-12 text-primary mb-4" />
-                <CardTitle>Anchor Credit Extension Engine</CardTitle>
-                <CardDescription>
-                  Anchor's credit rating dynamically drives funding decisions downstream.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <Banknote className="h-12 w-12 text-primary mb-4" />
-                <CardTitle>Tokenized or Traditional Settlements</CardTitle>
-                <CardDescription>
-                  Supports both conventional bank payments and blockchain-based digital assets.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <Shield className="h-12 w-12 text-primary mb-4" />
-                <CardTitle>Compliance & ESG Layer</CardTitle>
-                <CardDescription>
-                  Monitor, trace, and report supplier behavior and sustainability data at all levels.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       {/* Benefits for All Stakeholders */}
       <section className="py-20 bg-card">
@@ -631,46 +559,90 @@ const DeepTierSCF = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardContent className="pt-6">
-                <Shield className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="font-semibold mb-2">Government Programs</h3>
-                <p className="text-sm text-muted-foreground">Procurement Programs</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardContent className="pt-6">
-                <Network className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="font-semibold mb-2">Digital Platforms</h3>
-                <p className="text-sm text-muted-foreground">Trade, Procurement & Logistics</p>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              Ready to Reimagine Your Supply Chain?
-            </h2>
-            <p className="text-xl text-white/90 mb-8">
-              Let's build a stronger, more inclusive, and resilient supply chain—tier by tier.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                Get Started
-                <ArrowUpRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                Talk to Our Team
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                Download Brochure
-              </Button>
+      {/* Contact Section */}
+      <section className="py-20 bg-gray-50" id="contact-form">
+        <div className="container px-4 mx-auto">
+          <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+              <div className="bg-vayana-gradient text-white p-8 lg:p-12">
+                <h2 className="text-3xl font-bold mb-6 font-display">Transform Your Supply Chain Finance</h2>
+                <p className="text-lg text-gray-100 mb-8">
+                  Ready to unlock capital deep into your supply chain? Contact our team to learn more about Deep-Tier Supply Chain Finance.
+                </p>
+                
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4">
+                    <div className="bg-white/10 p-3 rounded-full">
+                      <Mail className="h-6 w-6" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">Email Us</h3>
+                      <p className="text-gray-200">contact@vayana.com</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-4">
+                    <div className="bg-white/10 p-3 rounded-full">
+                      <Phone className="h-6 w-6" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">Call Us</h3>
+                      <p className="text-gray-200">+1 (123) 456-7890</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="p-8 lg:p-12">
+                <h3 className="text-2xl font-bold mb-6">Contact Us</h3>
+                
+                <form className="space-y-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                        Full Name *
+                      </label>
+                      <input id="name" name="name" required placeholder="John Doe" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
+                    </div>
+                    
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                        Email Address *
+                      </label>
+                      <input id="email" name="email" type="email" required placeholder="john@example.com" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="organization" className="block text-sm font-medium text-gray-700 mb-1">
+                      Organization
+                    </label>
+                    <input id="organization" name="organization" placeholder="Your Organization" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
+                  </div>
+
+                  <div>
+                    <label htmlFor="role" className="block text-sm font-medium text-gray-700 mb-1">
+                      Role
+                    </label>
+                    <input id="role" name="role" placeholder="Your Role" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                      Message *
+                    </label>
+                    <textarea id="message" name="message" required placeholder="Tell us about your specific requirements or questions" className="w-full h-32 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
+                  </div>
+                  
+                  <Button type="submit" className="w-full bg-vayana-gradient hover:opacity-90 text-white py-6">
+                    Send Inquiry
+                  </Button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
