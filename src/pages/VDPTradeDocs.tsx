@@ -119,14 +119,12 @@ const VDPTradeDocs = () => {
     message: ''
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setFormSubmitted(true);
@@ -141,104 +139,80 @@ const VDPTradeDocs = () => {
       setFormSubmitted(false);
     }, 3000);
   };
-
-  const supportedDocs = [
-    {
-      name: "Bill of Exchange",
-      icon: FileText,
-      desc: "Digital bill of exchange with legal validity"
-    },
-    {
-      name: "Promissory Notes", 
-      icon: FileCheck,
-      desc: "Electronic promissory notes with transfer capability"
-    },
-    {
-      name: "Bill of Lading",
-      icon: ClipboardList,
-      desc: "Digital B/L with transfer of control"
-    },
-    {
-      name: "Certificate of Origin",
-      icon: Award,
-      desc: "Origin verification documents"
-    },
-    {
-      name: "Any Trade Document",
-      icon: Package,
-      desc: "Support for all critical trade documentation"
-    }
-  ];
-
-  const features = [
-    {
-      title: "Universal Document Digitization",
-      desc: "Enable creation of Digital Originals for any Trade or B2B Credit document — including both Transferable (title-based) and Verifiable formats.",
-      icon: FileText,
-      emoji: "📄"
-    },
-    {
-      title: "Custom Workflow Configuration", 
-      desc: "Design flexible document workflows with user-defined roles (e.g., Maker-Checker), multi-party collaboration, automated notifications, and lifecycle triggers.",
-      icon: RefreshCw,
-      emoji: "🧩"
-    },
-    {
-      title: "Cross-Platform Document Transfers",
-      desc: "Seamlessly transfer documents to blockchain wallet addresses, even if recipients are not onboarded to the platform.",
-      icon: ArrowRight,
-      emoji: "🔄"
-    },
-    {
-      title: "Interoperability with External Ecosystems",
-      desc: "Ingest and manage documents issued by other platforms, supporting end-to-end flow across digital ecosystems.",
-      icon: Globe,
-      emoji: "🤝"
-    },
-    {
-      title: "AI-Powered Paper Digitization",
-      desc: "Leverage AI to extract data from scanned or paper documents and generate compliant Digital Originals within the platform. Custody solutions for original paper documents are under active evaluation.",
-      icon: Zap,
-      emoji: "🧠"
-    },
-    {
-      title: "Whitelabel and Enterprise Customization",
-      desc: "Offer a fully brandable solution tailored to client-specific requirements, whether as a SaaS or enterprise deployment.",
-      icon: Building2,
-      emoji: "🏷️"
-    }
-  ];
-
-  const stakeholders = [
-    {
-      role: "Exporters",
-      benefit: "Faster document processing and reduced costs",
-      icon: Truck
-    },
-    {
-      role: "Freight Forwarders",
-      benefit: "Streamlined logistics coordination", 
-      icon: Globe
-    },
-    {
-      role: "Trade Platforms",
-      benefit: "Enhanced platform capabilities",
-      icon: Building2
-    },
-    {
-      role: "Banks",
-      benefit: "Simplified trade finance processes",
-      icon: Shield
-    },
-    {
-      role: "Compliance Teams",
-      benefit: "Automated verification and audit trails",
-      icon: Scale
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const supportedDocs = [{
+    name: "Bill of Exchange",
+    icon: FileText,
+    desc: "Digital bill of exchange with legal validity"
+  }, {
+    name: "Promissory Notes",
+    icon: FileCheck,
+    desc: "Electronic promissory notes with transfer capability"
+  }, {
+    name: "Bill of Lading",
+    icon: ClipboardList,
+    desc: "Digital B/L with transfer of control"
+  }, {
+    name: "Certificate of Origin",
+    icon: Award,
+    desc: "Origin verification documents"
+  }, {
+    name: "Any Trade Document",
+    icon: Package,
+    desc: "Support for all critical trade documentation"
+  }];
+  const features = [{
+    title: "Universal Document Digitization",
+    desc: "Enable creation of Digital Originals for any Trade or B2B Credit document — including both Transferable (title-based) and Verifiable formats.",
+    icon: FileText,
+    emoji: "📄"
+  }, {
+    title: "Custom Workflow Configuration",
+    desc: "Design flexible document workflows with user-defined roles (e.g., Maker-Checker), multi-party collaboration, automated notifications, and lifecycle triggers.",
+    icon: RefreshCw,
+    emoji: "🧩"
+  }, {
+    title: "Cross-Platform Document Transfers",
+    desc: "Seamlessly transfer documents to blockchain wallet addresses, even if recipients are not onboarded to the platform.",
+    icon: ArrowRight,
+    emoji: "🔄"
+  }, {
+    title: "Interoperability with External Ecosystems",
+    desc: "Ingest and manage documents issued by other platforms, supporting end-to-end flow across digital ecosystems.",
+    icon: Globe,
+    emoji: "🤝"
+  }, {
+    title: "AI-Powered Paper Digitization",
+    desc: "Leverage AI to extract data from scanned or paper documents and generate compliant Digital Originals within the platform. Custody solutions for original paper documents are under active evaluation.",
+    icon: Zap,
+    emoji: "🧠"
+  }, {
+    title: "Whitelabel and Enterprise Customization",
+    desc: "Offer a fully brandable solution tailored to client-specific requirements, whether as a SaaS or enterprise deployment.",
+    icon: Building2,
+    emoji: "🏷️"
+  }];
+  const stakeholders = [{
+    role: "Exporters",
+    benefit: "Faster document processing and reduced costs",
+    icon: Truck
+  }, {
+    role: "Freight Forwarders",
+    benefit: "Streamlined logistics coordination",
+    icon: Globe
+  }, {
+    role: "Trade Platforms",
+    benefit: "Enhanced platform capabilities",
+    icon: Building2
+  }, {
+    role: "Banks",
+    benefit: "Simplified trade finance processes",
+    icon: Shield
+  }, {
+    role: "Compliance Teams",
+    benefit: "Automated verification and audit trails",
+    icon: Scale
+  }];
+  return <div className="min-h-screen bg-background">
       <Navbar />
       
       {/* Hero Section with Enhanced Design */}
@@ -247,18 +221,12 @@ const VDPTradeDocs = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-accent">
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
           {/* Floating Elements */}
-          {[...Array(6)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-32 h-32 bg-white/5 rounded-full blur-xl animate-float"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${i * 0.5}s`,
-                animationDuration: `${4 + Math.random() * 2}s`
-              }}
-            />
-          ))}
+          {[...Array(6)].map((_, i) => <div key={i} className="absolute w-32 h-32 bg-white/5 rounded-full blur-xl animate-float" style={{
+          left: `${Math.random() * 100}%`,
+          top: `${Math.random() * 100}%`,
+          animationDelay: `${i * 0.5}s`,
+          animationDuration: `${4 + Math.random() * 2}s`
+        }} />)}
         </div>
 
         <div className="container px-4 mx-auto relative z-10">
@@ -284,7 +252,7 @@ const VDPTradeDocs = () => {
                   Explore Platform
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white hover:text-gray-900 backdrop-blur-sm transition-all duration-300">
+                <Button size="lg" variant="outline" className="border-white/30 hover:bg-white backdrop-blur-sm transition-all duration-300 text-red-800">
                   Watch Demo
                   <Play className="ml-2 h-4 w-4" />
                 </Button>
@@ -350,20 +318,29 @@ const VDPTradeDocs = () => {
               {/* Problems */}
               <div className="space-y-8">
                 <div className="space-y-6">
-                  {[
-                    { title: "Document Fraud & Loss", desc: "Paper documents worth $50B+ lost annually to fraud, forgery, and physical damage", icon: "🚨" },
-                    { title: "Processing Delays", desc: "Manual verification takes 7-14 days, delaying shipments and increasing costs", icon: "⏰" },
-                    { title: "Supply Chain Opacity", desc: "Zero visibility into document status across multi-tier supply chains", icon: "👁️" },
-                    { title: "Compliance Gaps", desc: "Inconsistent audit trails create regulatory and financial risks", icon: "⚠️" }
-                  ].map((problem, i) => (
-                    <div key={i} className="group flex items-start gap-4 p-6 bg-white/50 backdrop-blur-sm rounded-2xl border border-destructive/20 hover:border-destructive/40 transition-all duration-300 hover:-translate-y-1">
+                  {[{
+                  title: "Document Fraud & Loss",
+                  desc: "Paper documents worth $50B+ lost annually to fraud, forgery, and physical damage",
+                  icon: "🚨"
+                }, {
+                  title: "Processing Delays",
+                  desc: "Manual verification takes 7-14 days, delaying shipments and increasing costs",
+                  icon: "⏰"
+                }, {
+                  title: "Supply Chain Opacity",
+                  desc: "Zero visibility into document status across multi-tier supply chains",
+                  icon: "👁️"
+                }, {
+                  title: "Compliance Gaps",
+                  desc: "Inconsistent audit trails create regulatory and financial risks",
+                  icon: "⚠️"
+                }].map((problem, i) => <div key={i} className="group flex items-start gap-4 p-6 bg-white/50 backdrop-blur-sm rounded-2xl border border-destructive/20 hover:border-destructive/40 transition-all duration-300 hover:-translate-y-1">
                       <div className="text-3xl">{problem.icon}</div>
                       <div className="space-y-2">
                         <h3 className="text-lg font-semibold text-foreground">{problem.title}</h3>
                         <p className="text-muted-foreground leading-relaxed">{problem.desc}</p>
                       </div>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
 
@@ -402,18 +379,12 @@ const VDPTradeDocs = () => {
       {/* Compliance Section with Modern Design */}
       <section className="relative py-32 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 overflow-hidden">
         {/* Floating Elements */}
-        {[...Array(4)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-64 h-64 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full blur-3xl animate-float"
-            style={{
-              left: `${20 + i * 20}%`,
-              top: `${10 + i * 15}%`,
-              animationDelay: `${i * 1}s`,
-              animationDuration: `${6 + i}s`
-            }}
-          />
-        ))}
+        {[...Array(4)].map((_, i) => <div key={i} className="absolute w-64 h-64 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full blur-3xl animate-float" style={{
+        left: `${20 + i * 20}%`,
+        top: `${10 + i * 15}%`,
+        animationDelay: `${i * 1}s`,
+        animationDuration: `${6 + i}s`
+      }} />)}
 
         <div className="container mx-auto px-4 relative">
           <div className="max-w-6xl mx-auto text-center space-y-16">
@@ -431,12 +402,22 @@ const VDPTradeDocs = () => {
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              {[
-                { icon: Scale, title: "MLETR Compliant", desc: "Electronic documents with the same legal validity as paper originals", color: "from-blue-500 to-cyan-500" },
-                { icon: Shield, title: "TradeTrust Verified", desc: "Third-party verification ensuring global interoperability", color: "from-green-500 to-emerald-500" },
-                { icon: Database, title: "Blockchain Anchored", desc: "Immutable audit trails with complete document integrity", color: "from-purple-500 to-indigo-500" }
-              ].map((item, i) => (
-                <div key={i} className="group relative">
+              {[{
+              icon: Scale,
+              title: "MLETR Compliant",
+              desc: "Electronic documents with the same legal validity as paper originals",
+              color: "from-blue-500 to-cyan-500"
+            }, {
+              icon: Shield,
+              title: "TradeTrust Verified",
+              desc: "Third-party verification ensuring global interoperability",
+              color: "from-green-500 to-emerald-500"
+            }, {
+              icon: Database,
+              title: "Blockchain Anchored",
+              desc: "Immutable audit trails with complete document integrity",
+              color: "from-purple-500 to-indigo-500"
+            }].map((item, i) => <div key={i} className="group relative">
                   <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 rounded-3xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 border border-border/50 hover:border-primary/30 transition-all duration-500 group-hover:-translate-y-2 h-full">
                     <div className="text-center space-y-6">
@@ -449,8 +430,7 @@ const VDPTradeDocs = () => {
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -475,11 +455,7 @@ const VDPTradeDocs = () => {
 
             <div className="relative">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {supportedDocs.slice(0, 4).map((doc, index) => (
-                  <div
-                    key={index}
-                    className="group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm rounded-3xl p-8 text-center hover:shadow-2xl transition-all duration-700 hover:-translate-y-4 border border-primary/20 hover:border-primary/40 overflow-hidden"
-                  >
+                {supportedDocs.slice(0, 4).map((doc, index) => <div key={index} className="group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm rounded-3xl p-8 text-center hover:shadow-2xl transition-all duration-700 hover:-translate-y-4 border border-primary/20 hover:border-primary/40 overflow-hidden">
                     {/* Animated Background */}
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary/5 to-accent/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     
@@ -497,8 +473,7 @@ const VDPTradeDocs = () => {
                     {/* Decorative Elements */}
                     <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <div className="absolute -top-2 -left-2 w-8 h-8 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                  </div>
-                ))}
+                  </div>)}
               </div>
 
               {/* Plus Symbol */}
@@ -533,11 +508,7 @@ const VDPTradeDocs = () => {
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="group relative bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50 hover:border-primary/30 overflow-hidden"
-                >
+              {features.map((feature, index) => <div key={index} className="group relative bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50 hover:border-primary/30 overflow-hidden">
                   {/* Animated Background */}
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
@@ -558,8 +529,7 @@ const VDPTradeDocs = () => {
 
                   {/* Progress Bar Animation */}
                   <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-secondary to-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 rounded-b-3xl" />
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -583,8 +553,7 @@ const VDPTradeDocs = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-              {stakeholders.map((stakeholder, index) => (
-                <div key={index} className="group relative">
+              {stakeholders.map((stakeholder, index) => <div key={index} className="group relative">
                   <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-3xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-500" />
                   <div className="relative h-full bg-white/90 backdrop-blur-sm border border-border/50 rounded-2xl p-6 hover:shadow-xl transition-all duration-500 group-hover:-translate-y-3 overflow-hidden">
                     <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full blur-2xl -translate-y-10 translate-x-10" />
@@ -598,8 +567,7 @@ const VDPTradeDocs = () => {
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -609,18 +577,12 @@ const VDPTradeDocs = () => {
       <section className="relative py-32 bg-gradient-to-br from-background via-muted/20 to-background overflow-hidden">
         {/* Background Animation */}
         <div className="absolute inset-0">
-          {[...Array(3)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-96 h-96 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-full blur-3xl animate-float"
-              style={{
-                left: `${i * 30}%`,
-                top: `${i * 20}%`,
-                animationDelay: `${i * 2}s`,
-                animationDuration: `${8 + i * 2}s`
-              }}
-            />
-          ))}
+          {[...Array(3)].map((_, i) => <div key={i} className="absolute w-96 h-96 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-full blur-3xl animate-float" style={{
+          left: `${i * 30}%`,
+          top: `${i * 20}%`,
+          animationDelay: `${i * 2}s`,
+          animationDuration: `${8 + i * 2}s`
+        }} />)}
         </div>
 
         <div className="container mx-auto px-4 relative">
@@ -721,8 +683,7 @@ const VDPTradeDocs = () => {
 
                   {/* Form Side */}
                   <div className="p-8 lg:p-12">
-                    {formSubmitted ? (
-                      <div className="text-center space-y-6 py-16">
+                    {formSubmitted ? <div className="text-center space-y-6 py-16">
                         <div className="w-20 h-20 mx-auto bg-green-100 rounded-full flex items-center justify-center">
                           <CheckCircle className="h-10 w-10 text-green-600" />
                         </div>
@@ -732,9 +693,7 @@ const VDPTradeDocs = () => {
                             We've received your inquiry and will get back to you within 24 hours.
                           </p>
                         </div>
-                      </div>
-                    ) : (
-                      <>
+                      </div> : <>
                         <h3 className="text-2xl font-bold mb-8 text-foreground">Contact Us</h3>
                         
                         <form onSubmit={handleSubmit} className="space-y-6">
@@ -743,31 +702,14 @@ const VDPTradeDocs = () => {
                               <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                                 Full Name *
                               </label>
-                              <input
-                                id="name"
-                                name="name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                required
-                                placeholder="John Doe"
-                                className="w-full px-4 py-3 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
-                              />
+                              <input id="name" name="name" value={formData.name} onChange={handleChange} required placeholder="John Doe" className="w-full px-4 py-3 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors" />
                             </div>
                             
                             <div>
                               <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                                 Email Address *
                               </label>
-                              <input
-                                id="email"
-                                name="email"
-                                type="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                required
-                                placeholder="john@company.com"
-                                className="w-full px-4 py-3 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
-                              />
+                              <input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required placeholder="john@company.com" className="w-full px-4 py-3 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors" />
                             </div>
                           </div>
                           
@@ -776,28 +718,14 @@ const VDPTradeDocs = () => {
                               <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2">
                                 Organization
                               </label>
-                              <input
-                                id="company"
-                                name="company"
-                                value={formData.company}
-                                onChange={handleChange}
-                                placeholder="Your Organization"
-                                className="w-full px-4 py-3 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
-                              />
+                              <input id="company" name="company" value={formData.company} onChange={handleChange} placeholder="Your Organization" className="w-full px-4 py-3 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors" />
                             </div>
 
                             <div>
                               <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
                                 Phone Number
                               </label>
-                              <input
-                                id="phone"
-                                name="phone"
-                                value={formData.phone}
-                                onChange={handleChange}
-                                placeholder="+1 (123) 456-7890"
-                                className="w-full px-4 py-3 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
-                              />
+                              <input id="phone" name="phone" value={formData.phone} onChange={handleChange} placeholder="+1 (123) 456-7890" className="w-full px-4 py-3 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors" />
                             </div>
                           </div>
                           
@@ -805,15 +733,7 @@ const VDPTradeDocs = () => {
                             <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                               Message *
                             </label>
-                            <textarea
-                              id="message"
-                              name="message"
-                              value={formData.message}
-                              onChange={handleChange}
-                              required
-                              placeholder="Tell us about your trade documentation requirements..."
-                              className="w-full h-32 px-4 py-3 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors resize-none"
-                            />
+                            <textarea id="message" name="message" value={formData.message} onChange={handleChange} required placeholder="Tell us about your trade documentation requirements..." className="w-full h-32 px-4 py-3 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors resize-none" />
                           </div>
                           
                           <Button type="submit" size="lg" className="w-full bg-gradient-to-r from-primary via-secondary to-accent text-white hover:opacity-90 transition-opacity py-4 text-lg">
@@ -821,8 +741,7 @@ const VDPTradeDocs = () => {
                             <ArrowRight className="ml-2 h-5 w-5" />
                           </Button>
                         </form>
-                      </>
-                    )}
+                      </>}
                   </div>
                 </div>
               </div>
@@ -832,8 +751,6 @@ const VDPTradeDocs = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default VDPTradeDocs;
