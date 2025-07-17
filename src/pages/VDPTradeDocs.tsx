@@ -493,16 +493,16 @@ const VDPTradeDocs = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto space-y-16">
             <div className="text-center space-y-6">
-              <div className="inline-flex items-center px-6 py-3 bg-secondary/10 text-secondary rounded-full text-sm font-medium">
+              <div className="inline-flex items-center px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-medium">
                 Platform Capabilities
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight">
                 Enterprise-Ready
                 <span className="block bg-gradient-to-r from-secondary via-accent to-primary bg-clip-text text-transparent">
                   Features
                 </span>
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                 Comprehensive capabilities designed for modern trade operations and complex enterprise workflows
               </p>
             </div>
@@ -513,14 +513,16 @@ const VDPTradeDocs = () => {
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
                   {/* Content */}
-                  <div className="relative z-10 space-y-6">
-                    <div className="flex items-start gap-6">
-                      <div className="text-5xl">{feature.emoji}</div>
-                      <div className="space-y-4 flex-1">
-                        <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                  <div className="relative z-10 space-y-4">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl flex items-center justify-center">
+                        <feature.icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <div className="space-y-3 flex-1">
+                        <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
                           {feature.title}
                         </h3>
-                        <p className="text-muted-foreground leading-relaxed text-lg">
+                        <p className="text-muted-foreground leading-relaxed text-sm">
                           {feature.desc}
                         </p>
                       </div>
