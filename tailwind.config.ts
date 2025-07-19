@@ -30,16 +30,16 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#194388', // Pantone 7687 C - Blue
-					foreground: '#FFFFFF',
+					DEFAULT: 'hsl(var(--primary))',
+					foreground: 'hsl(var(--primary-foreground))',
 				},
 				secondary: {
-					DEFAULT: '#E3032C', // Pantone 185 C - Red
-					foreground: '#FFFFFF',
+					DEFAULT: 'hsl(var(--secondary))',
+					foreground: 'hsl(var(--secondary-foreground))',
 				},
 				accent: {
-					DEFAULT: '#723189', // Pantone 525 C - Purple
-					foreground: '#FFFFFF',
+					DEFAULT: 'hsl(var(--accent))',
+					foreground: 'hsl(var(--accent-foreground))',
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
@@ -57,15 +57,15 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))',
 				},
-				// Additional brand colors
+				// Additional brand colors (HSL format)
 				vayana: {
-					red: '#E3032C',    // Pantone 185 C
-					blue: '#194388',   // Pantone 7687 C
-					'blue-darker': '#143470', // Darker shade for borders
-					green: '#4C6C34',  // Pantone 362 C
-					gray: '#98989A',   // Pantone Cool Gray 7 C
-					purple: '#723189', // Pantone 525 C
-					orange: '#DF5828', // Pantone 7578 C
+					red: '353 97% 45%',    // Converted to HSL
+					blue: '221 73% 31%',   // Converted to HSL
+					'blue-darker': '221 77% 25%', // Darker shade
+					green: '98 41% 31%',  // Converted to HSL
+					gray: '240 2% 60%',   // Converted to HSL
+					purple: '292 49% 36%', // Converted to HSL
+					orange: '14 74% 52%', // Converted to HSL
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -112,10 +112,10 @@ export default {
 				'pulse-slow': 'pulse-slow 3s infinite',
 			},
 			backgroundImage: {
-				'hero-gradient': 'linear-gradient(135deg, #194388 0%, #723189 100%)',
-				'card-gradient': 'linear-gradient(225deg, #FFFFFF 0%, #F6F9FC 100%)',
-				'token-gradient': 'linear-gradient(90deg, #E3032C 0%, #194388 100%)',
-				'vayana-gradient': 'linear-gradient(90deg, #E3032C 0%, #194388 100%)',
+				'hero-gradient': 'linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%)',
+				'card-gradient': 'linear-gradient(225deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%)',
+				'token-gradient': 'linear-gradient(90deg, hsl(var(--secondary)) 0%, hsl(var(--primary)) 100%)',
+				'vayana-gradient': 'linear-gradient(90deg, hsl(var(--secondary)) 0%, hsl(var(--primary)) 100%)',
 			},
 		},
 	},
