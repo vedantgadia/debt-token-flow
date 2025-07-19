@@ -21,6 +21,7 @@ import {
   Layers
 } from "lucide-react";
 import { useSearchParams } from "react-router-dom";
+import ContactSection from '../components/ContactSection';
 
 const Tokenization = () => {
   const [searchParams] = useSearchParams();
@@ -437,6 +438,9 @@ const Tokenization = () => {
           </div>
         </div>
       </section>
+
+      {/* Contact Section */}
+      <ContactSection />
     </div>
   );
 };
