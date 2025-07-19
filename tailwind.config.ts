@@ -58,15 +58,13 @@ export default {
 					foreground: 'hsl(var(--card-foreground))',
 				},
 				// Additional brand colors (HSL format)
-				vayana: {
-					red: '353 97% 45%',    // Converted to HSL
-					blue: '221 73% 31%',   // Converted to HSL
-					'blue-darker': '221 77% 25%', // Darker shade
-					green: '98 41% 31%',  // Converted to HSL
-					gray: '240 2% 60%',   // Converted to HSL
-					purple: '292 49% 36%', // Converted to HSL
-					orange: '14 74% 52%', // Converted to HSL
-				},
+				'vayana-red': 'hsl(353 97% 45%)',
+				'vayana-blue': 'hsl(221 73% 31%)',
+				'vayana-blue-darker': 'hsl(221 77% 25%)',
+				'vayana-green': 'hsl(98 41% 31%)',
+				'vayana-gray': 'hsl(240 2% 60%)',
+				'vayana-purple': 'hsl(292 49% 36%)',
+				'vayana-orange': 'hsl(14 74% 52%)',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
