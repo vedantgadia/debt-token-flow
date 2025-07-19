@@ -179,10 +179,10 @@ const Tokenization = () => {
             
             <div className="grid md:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-card-gradient">
-                  <CardContent className="p-8 text-center space-y-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl flex items-center justify-center mx-auto">
-                      <benefit.icon className="h-8 w-8 text-primary" />
+                 <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white hover:bg-vayana-blue/5">
+                   <CardContent className="p-8 text-center space-y-4">
+                     <div className="w-16 h-16 bg-vayana-blue/10 rounded-xl flex items-center justify-center mx-auto group-hover:bg-vayana-blue/20 transition-all duration-300">
+                       <benefit.icon className="h-8 w-8 text-vayana-blue" />
                     </div>
                     <h3 className="text-xl font-semibold">
                       {benefit.title}
@@ -213,11 +213,11 @@ const Tokenization = () => {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {capabilities.map((capability, index) => (
-                <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white">
-                  <CardContent className="p-6 flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center">
-                      <capability.icon className="h-6 w-6 text-primary" />
-                    </div>
+                 <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white hover:bg-vayana-blue/5">
+                   <CardContent className="p-6 flex items-center space-x-4">
+                     <div className="w-12 h-12 bg-vayana-blue/10 rounded-lg flex items-center justify-center group-hover:bg-vayana-blue/20 transition-all duration-300">
+                       <capability.icon className="h-6 w-6 text-vayana-blue" />
+                     </div>
                     <h3 className="font-semibold">
                       {capability.title}
                     </h3>
@@ -259,11 +259,11 @@ const Tokenization = () => {
             
             <div className="grid md:grid-cols-3 gap-8">
               {pillars.map((pillar, index) => (
-                <Card key={index} className="text-center group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white">
-                  <CardContent className="p-8 space-y-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl flex items-center justify-center mx-auto">
-                      <pillar.icon className="h-8 w-8 text-primary" />
-                    </div>
+                 <Card key={index} className="text-center group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white hover:bg-vayana-blue/5">
+                   <CardContent className="p-8 space-y-4">
+                     <div className="w-16 h-16 bg-vayana-blue/10 rounded-xl flex items-center justify-center mx-auto group-hover:bg-vayana-blue/20 transition-all duration-300">
+                       <pillar.icon className="h-8 w-8 text-vayana-blue" />
+                     </div>
                     <h3 className="text-xl font-semibold">
                       {pillar.title}
                     </h3>
@@ -293,30 +293,30 @@ const Tokenization = () => {
             
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Lock className="h-6 w-6 text-blue-600" />
-                  </div>
+                 <div className="flex items-start space-x-4">
+                   <div className="w-12 h-12 bg-vayana-blue/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                     <Lock className="h-6 w-6 text-vayana-blue" />
+                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Identity & Compliance</h3>
                     <p className="text-gray-600">Built-in KYC/AML verification with on-chain identity registry ensuring only verified investors can participate</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Shield className="h-6 w-6 text-green-600" />
-                  </div>
+                 <div className="flex items-start space-x-4">
+                   <div className="w-12 h-12 bg-vayana-red/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                     <Shield className="h-6 w-6 text-vayana-red" />
+                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Transfer Restrictions</h3>
                     <p className="text-gray-600">Programmable transfer rules that automatically enforce regulatory requirements and investment restrictions</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Layers className="h-6 w-6 text-purple-600" />
-                  </div>
+                 <div className="flex items-start space-x-4">
+                   <div className="w-12 h-12 bg-vayana-purple/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                     <Layers className="h-6 w-6 text-vayana-purple" />
+                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Modular Architecture</h3>
                     <p className="text-gray-600">Flexible smart contract framework that adapts to different asset classes and regulatory environments</p>
@@ -325,10 +325,10 @@ const Tokenization = () => {
               </div>
               
               <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8">
-                <div className="text-center space-y-4">
-                  <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center mx-auto">
-                    <Award className="h-10 w-10 text-primary" />
-                  </div>
+                 <div className="text-center space-y-4">
+                   <div className="w-20 h-20 bg-vayana-blue/10 rounded-2xl flex items-center justify-center mx-auto">
+                     <Award className="h-10 w-10 text-vayana-blue" />
+                   </div>
                   <h3 className="text-xl font-bold text-gray-900">ERC3643 Compliance</h3>
                   <p className="text-gray-600">
                     Industry-standard protocol ensuring your tokenized assets meet global regulatory requirements while maintaining operational efficiency
@@ -350,11 +350,11 @@ const Tokenization = () => {
             <p className="section-subtitle text-gray-600">
               Start small with a compliant, branded tokenization flow using our plug-and-play infrastructure. Whether it's a tokenized {content.title.toLowerCase()} project, fund unit, or alt-asset drop — go live in weeks, not months.
             </p>
-            <div className="flex items-center justify-center space-x-4 text-primary mb-8">
+            <div className="flex items-center justify-center space-x-4 text-vayana-blue mb-8">
               <Clock className="h-8 w-8" />
               <span className="text-2xl font-bold">Weeks, not Months</span>
             </div>
-            <Button size="lg" className="bg-primary text-white hover:bg-primary/90 text-lg px-8 font-semibold">
+            <Button size="lg" className="bg-vayana-blue text-white hover:bg-vayana-blue/90 text-lg px-8 font-semibold">
               Book a Demo
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
@@ -374,10 +374,10 @@ const Tokenization = () => {
             
             <div className="grid md:grid-cols-5 gap-6">
               {steps.map((step, index) => (
-                <div key={index} className="text-center space-y-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl flex items-center justify-center mx-auto">
-                    <step.icon className="h-8 w-8 text-primary" />
-                  </div>
+                 <div key={index} className="text-center space-y-4">
+                   <div className="w-16 h-16 bg-vayana-blue/10 rounded-xl flex items-center justify-center mx-auto">
+                     <step.icon className="h-8 w-8 text-vayana-blue" />
+                   </div>
                   <h3 className="font-semibold text-sm">
                     {step.title}
                   </h3>
@@ -406,15 +406,15 @@ const Tokenization = () => {
             <div className="grid md:grid-cols-2 gap-8 mt-12">
               <Card className="p-8 text-center border-0 shadow-lg bg-white">
                 <h3 className="text-xl font-semibold mb-2">Your UI</h3>
-                <div className="h-32 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center">
-                  <Target className="h-12 w-12 text-primary" />
-                </div>
+                 <div className="h-32 bg-vayana-blue/10 rounded-lg flex items-center justify-center">
+                   <Target className="h-12 w-12 text-vayana-blue" />
+                 </div>
               </Card>
               <Card className="p-8 text-center border-0 shadow-lg bg-white">
                 <h3 className="text-xl font-semibold mb-4 text-gray-900">Vayana Engine</h3>
-                <div className="h-32 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center">
-                  <Cog className="h-12 w-12 text-primary" />
-                </div>
+                 <div className="h-32 bg-vayana-blue/10 rounded-lg flex items-center justify-center">
+                   <Cog className="h-12 w-12 text-vayana-blue" />
+                 </div>
               </Card>
             </div>
           </div>
@@ -431,7 +431,7 @@ const Tokenization = () => {
             <p className="text-lg text-white/90 max-w-2xl mx-auto">
               {content.finalCTA}
             </p>
-            <Button size="lg" className="bg-white text-primary hover:bg-gray-100 text-lg px-8 font-semibold">
+             <Button size="lg" className="bg-white text-vayana-blue hover:bg-gray-100 text-lg px-8 font-semibold">
               Book a Demo
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
