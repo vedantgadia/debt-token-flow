@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import VayanaLogo from './VayanaLogo';
 
 const Navbar = () => {
@@ -77,6 +83,36 @@ const Navbar = () => {
                   >
                     Deep-Tier SCF
                   </a>
+                </li>
+                <li>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger className={`font-medium hover:text-secondary transition-colors inline-flex items-center gap-1`}>
+                      Tokenization
+                      <ChevronDown className="h-4 w-4" />
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent className="bg-background border-border/50 shadow-lg">
+                      <DropdownMenuItem asChild>
+                        <a href="/vdp-trade-docs" className="w-full">
+                          Debt Capital Markets
+                        </a>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <a href="/tokenization?category=real-estate" className="w-full">
+                          Real Estate
+                        </a>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <a href="/tokenization?category=equity-funds" className="w-full">
+                          Equity & Funds
+                        </a>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <a href="/tokenization?category=alternate-assets" className="w-full">
+                          Alternate Assets
+                        </a>
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
                 </li>
                 <li>
                   <button 
@@ -156,6 +192,39 @@ const Navbar = () => {
                 >
                   Deep-Tier SCF
                 </a>
+              </li>
+              <li>
+                <div className="block font-medium text-gray-700 pb-2">Tokenization</div>
+                <div className="pl-4 space-y-2">
+                  <a 
+                    href="/vdp-trade-docs" 
+                    className="block text-sm text-gray-600 hover:text-secondary transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Debt Capital Markets
+                  </a>
+                  <a 
+                    href="/tokenization?category=real-estate" 
+                    className="block text-sm text-gray-600 hover:text-secondary transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Real Estate
+                  </a>
+                  <a 
+                    href="/tokenization?category=equity-funds" 
+                    className="block text-sm text-gray-600 hover:text-secondary transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Equity & Funds
+                  </a>
+                  <a 
+                    href="/tokenization?category=alternate-assets" 
+                    className="block text-sm text-gray-600 hover:text-secondary transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Alternate Assets
+                  </a>
+                </div>
               </li>
               <li>
                 <button 
