@@ -421,24 +421,6 @@ const Tokenization = () => {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-24 bg-vayana-gradient">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h2 className="section-title text-white">
-              Ready to Explore Tokenization?
-            </h2>
-            <p className="text-lg text-white/90 max-w-2xl mx-auto">
-              {content.finalCTA}
-            </p>
-             <Button size="lg" className="bg-white text-vayana-blue hover:bg-gray-100 text-lg px-8 font-semibold">
-              Book a Demo
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
       <ContactSection />
     </div>
