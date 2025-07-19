@@ -1,9 +1,7 @@
 import React from 'react';
-import Navbar from '@/components/Navbar';
 import InnovationsHero from '@/components/InnovationsHero';
 import ProductCard from '@/components/ProductCard';
 import InnovationsContact from '@/components/InnovationsContact';
-import Footer from '@/components/Footer';
 import { Coins, FileText, Truck, Gem } from 'lucide-react';
 
 const products = [
@@ -91,8 +89,7 @@ Democratize access to premium asset classes while providing institutional-grade 
 
 const Innovations = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
+    <>
       <InnovationsHero />
       
       <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50">
@@ -106,8 +103,7 @@ const Innovations = () => {
       </section>
       
       <InnovationsContact />
-      <Footer />
-    </div>
+    </>
   );
 };
 

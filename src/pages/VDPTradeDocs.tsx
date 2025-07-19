@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import { FileText, Shield, Globe, CheckCircle, ArrowRight, Zap, Users, Lock, Database, Truck, Building2, Scale, FileCheck, ClipboardList, Award, Package, Play, Download, RefreshCw, Eye, Mail, Phone } from 'lucide-react';
 const TradeDocVisual = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -212,8 +210,8 @@ const VDPTradeDocs = () => {
     benefit: "Automated verification and audit trails",
     icon: Scale
   }];
-  return <div className="min-h-screen bg-background">
-      <Navbar />
+  return (
+    <>
       
       {/* Hero Section with Enhanced Design */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -752,7 +750,8 @@ const VDPTradeDocs = () => {
         </div>
       </section>
 
-      <Footer />
-    </div>;
+    </>
+  );
 };
+
 export default VDPTradeDocs;
