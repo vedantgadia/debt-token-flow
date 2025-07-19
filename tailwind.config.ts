@@ -110,7 +110,7 @@ export default {
 				'pulse-slow': 'pulse-slow 3s infinite',
 			},
 			backgroundImage: {
-				'hero-gradient': 'linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%)',
+				'hero-gradient': 'linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%)',
 				'card-gradient': 'linear-gradient(225deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%)',
 				'token-gradient': 'linear-gradient(90deg, hsl(var(--secondary)) 0%, hsl(var(--primary)) 100%)',
 				'vayana-gradient': 'linear-gradient(90deg, hsl(var(--secondary)) 0%, hsl(var(--primary)) 100%)',
