@@ -21,7 +21,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <div className="min-h-screen bg-background">
+        <div className="min-h-screen bg-background" data-app-version="v2-blockchain-only">
           <Navbar />
           <Routes>
             <Route path="/" element={<Index />} />
