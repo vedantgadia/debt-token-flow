@@ -210,8 +210,7 @@ const VDPTradeDocs = () => {
     benefit: "Automated verification and audit trails",
     icon: Scale
   }];
-  return (
-    <>
+  return <>
       
       {/* Hero Section with Enhanced Design */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -236,9 +235,7 @@ const VDPTradeDocs = () => {
                 </div>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
                   VDP Trade
-                  <span className="block bg-gradient-to-r from-yellow-300 via-orange-300 to-red-300 bg-clip-text text-transparent">
-                    Documents
-                  </span>
+                  <span className="block bg-gradient-to-r from-yellow-300 via-orange-300 to-red-300 bg-clip-text text-transparent">Trade Docs</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-white/90 max-w-xl leading-relaxed">
                   Transform your trade operations with legally-binding digital documents that revolutionize global commerce
@@ -750,8 +747,6 @@ const VDPTradeDocs = () => {
         </div>
       </section>
 
-    </>
-  );
+    </>;
 };
-
 export default VDPTradeDocs;
