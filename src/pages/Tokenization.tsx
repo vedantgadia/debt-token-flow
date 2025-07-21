@@ -28,6 +28,15 @@ const Tokenization = () => {
   const category = searchParams.get('category') || 'real-estate';
   
   const categoryContent = {
+    'debt-capital': {
+      title: 'Debt Capital Markets',
+      hero: 'Tokenizing Debt for Global Capital Access',
+      section2Title: 'Bringing Debt Capital Markets On-Chain',
+      section2Body: 'Debt instruments have historically been limited to institutional investors due to high capital thresholds, limited liquidity, and complex operational processes. Tokenization is changing that by digitizing debt securities, streamlining issuance, and enabling fractional investments in a fully compliant and programmable manner.',
+      useCases: 'Corporate bonds, government securities, asset-backed securities',
+      finalCTA: 'Digitize and distribute debt securities with confidence. Let\'s bring your bonds on-chain.',
+      partnershipText: 'Built in partnership with leading regulatory technology providers to ensure full compliance with debt securities regulations.'
+    },
     'real-estate': {
       title: 'Real Estate',
       hero: 'Tokenizing Real Estate for Global Market Access',

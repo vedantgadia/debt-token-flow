@@ -73,36 +73,36 @@ const Navbar = () => {
                         </DropdownMenuSubTrigger>
                         <DropdownMenuSubContent className="bg-background border-border/50 shadow-lg z-50">
                           <DropdownMenuItem asChild>
-                            <a href="https://debt-token-flow.lovable.app/" className="w-full">
+                            <Link to="/tokenization?category=debt-capital" className="w-full">
                               Debt Capital Markets
-                            </a>
+                            </Link>
                           </DropdownMenuItem>
                           <DropdownMenuItem asChild>
-                            <a href="https://debt-token-flow.lovable.app/tokenization" className="w-full">
+                            <Link to="/tokenization?category=real-estate" className="w-full">
                               Real Estate
-                            </a>
+                            </Link>
                           </DropdownMenuItem>
                           <DropdownMenuItem asChild>
-                            <a href="https://debt-token-flow.lovable.app/tokenization" className="w-full">
+                            <Link to="/tokenization?category=equity-funds" className="w-full">
                               Equity & Funds
-                            </a>
+                            </Link>
                           </DropdownMenuItem>
                           <DropdownMenuItem asChild>
-                            <a href="https://debt-token-flow.lovable.app/tokenization" className="w-full">
+                            <Link to="/tokenization?category=alternate-assets" className="w-full">
                               Alternate Assets
-                            </a>
+                            </Link>
                           </DropdownMenuItem>
                         </DropdownMenuSubContent>
                       </DropdownMenuSub>
                       <DropdownMenuItem asChild>
-                        <a href="https://debt-token-flow.lovable.app/vdp-trade-docs" className="w-full">
+                        <Link to="/vdp-trade-docs" className="w-full">
                           VDP Trade Docs
-                        </a>
+                        </Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem asChild>
-                        <a href="https://debt-token-flow.lovable.app/deep-tier-scf" className="w-full">
+                        <Link to="/deep-tier-scf" className="w-full">
                           Deep-Tier SCF
-                        </a>
+                        </Link>
                       </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
@@ -147,49 +147,49 @@ const Navbar = () => {
                 <div className="pl-4 space-y-2">
                   <div className="block font-medium text-gray-600 pb-1">Tokenization</div>
                   <div className="pl-4 space-y-2">
-                    <a 
-                      href="https://debt-token-flow.lovable.app/" 
+                    <Link 
+                      to="/tokenization?category=debt-capital" 
                       className="block text-sm text-gray-500 hover:text-secondary transition-colors"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       Debt Capital Markets
-                    </a>
-                    <a 
-                      href="https://debt-token-flow.lovable.app/tokenization" 
+                    </Link>
+                    <Link 
+                      to="/tokenization?category=real-estate" 
                       className="block text-sm text-gray-500 hover:text-secondary transition-colors"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       Real Estate
-                    </a>
-                    <a 
-                      href="https://debt-token-flow.lovable.app/tokenization" 
+                    </Link>
+                    <Link 
+                      to="/tokenization?category=equity-funds" 
                       className="block text-sm text-gray-500 hover:text-secondary transition-colors"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       Equity & Funds
-                    </a>
-                    <a 
-                      href="https://debt-token-flow.lovable.app/tokenization" 
+                    </Link>
+                    <Link 
+                      to="/tokenization?category=alternate-assets" 
                       className="block text-sm text-gray-500 hover:text-secondary transition-colors"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       Alternate Assets
-                    </a>
+                    </Link>
                   </div>
-                  <a 
-                    href="https://debt-token-flow.lovable.app/vdp-trade-docs" 
+                  <Link 
+                    to="/vdp-trade-docs" 
                     className="block text-sm text-gray-600 hover:text-secondary transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     VDP Trade Docs
-                  </a>
-                  <a 
-                    href="https://debt-token-flow.lovable.app/deep-tier-scf" 
+                  </Link>
+                  <Link 
+                    to="/deep-tier-scf" 
                     className="block text-sm text-gray-600 hover:text-secondary transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Deep-Tier SCF
-                  </a>
+                  </Link>
                 </div>
               </li>
               <li className="pt-2">
