@@ -1,4 +1,5 @@
 
+// Updated navbar - only shows Blockchain dropdown - v2
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, ChevronDown } from 'lucide-react';
