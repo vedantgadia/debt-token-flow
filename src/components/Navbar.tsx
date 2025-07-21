@@ -7,6 +7,9 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
 } from "@/components/ui/dropdown-menu";
 import VayanaLogo from './VayanaLogo';
 
@@ -54,86 +57,51 @@ const Navbar = () => {
             <nav className={`${isScrolled ? 'text-gray-700' : 'text-white'}`}>
               <ul className="flex space-x-8">
                 <li>
-                  <Link 
-                    to="/" 
-                    className="font-medium hover:text-secondary transition-colors"
-                  >
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                    to="/innovations" 
-                    className="font-medium hover:text-secondary transition-colors"
-                  >
-                    Innovations
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                    to="/vdp-trade-docs" 
-                    className="font-medium hover:text-secondary transition-colors"
-                  >
-                    VDP Trade Docs
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                    to="/deep-tier-scf" 
-                    className="font-medium hover:text-secondary transition-colors"
-                  >
-                    Deep-Tier SCF
-                  </Link>
-                </li>
-                <li>
                   <DropdownMenu>
                     <DropdownMenuTrigger className={`font-medium hover:text-secondary transition-colors inline-flex items-center gap-1`}>
-                      Tokenization
+                      Blockchain
                       <ChevronDown className="h-4 w-4" />
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent className="bg-background border-border/50 shadow-lg">
+                    <DropdownMenuContent className="bg-background border-border/50 shadow-lg z-50">
+                      <DropdownMenuSub>
+                        <DropdownMenuSubTrigger>
+                          Tokenization
+                        </DropdownMenuSubTrigger>
+                        <DropdownMenuSubContent className="bg-background border-border/50 shadow-lg z-50">
+                          <DropdownMenuItem asChild>
+                            <a href="https://debt-token-flow.lovable.app/" className="w-full">
+                              Debt Capital Markets
+                            </a>
+                          </DropdownMenuItem>
+                          <DropdownMenuItem asChild>
+                            <a href="https://debt-token-flow.lovable.app/tokenization" className="w-full">
+                              Real Estate
+                            </a>
+                          </DropdownMenuItem>
+                          <DropdownMenuItem asChild>
+                            <a href="https://debt-token-flow.lovable.app/tokenization" className="w-full">
+                              Equity & Funds
+                            </a>
+                          </DropdownMenuItem>
+                          <DropdownMenuItem asChild>
+                            <a href="https://debt-token-flow.lovable.app/tokenization" className="w-full">
+                              Alternate Assets
+                            </a>
+                          </DropdownMenuItem>
+                        </DropdownMenuSubContent>
+                      </DropdownMenuSub>
                       <DropdownMenuItem asChild>
-                        <Link to="/tokenization" className="w-full">
-                          Debt Capital Markets
-                        </Link>
+                        <a href="https://debt-token-flow.lovable.app/vdp-trade-docs" className="w-full">
+                          VDP Trade Docs
+                        </a>
                       </DropdownMenuItem>
                       <DropdownMenuItem asChild>
-                        <Link to="/tokenization?category=real-estate" className="w-full">
-                          Real Estate
-                        </Link>
-                      </DropdownMenuItem>
-                      <DropdownMenuItem asChild>
-                        <Link to="/tokenization?category=equity-funds" className="w-full">
-                          Equity & Funds
-                        </Link>
-                      </DropdownMenuItem>
-                      <DropdownMenuItem asChild>
-                        <Link to="/tokenization?category=alternate-assets" className="w-full">
-                          Alternate Assets
-                        </Link>
+                        <a href="https://debt-token-flow.lovable.app/deep-tier-scf" className="w-full">
+                          Deep-Tier SCF
+                        </a>
                       </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
-                </li>
-                <li>
-                  <button 
-                    className="font-medium hover:text-secondary transition-colors"
-                    onClick={() => {
-                      if (location.pathname === '/') {
-                        scrollToSection('faq');
-                      } else {
-                        window.location.href = '/#faq';
-                      }
-                    }}
-                  >
-                    FAQs
-                  </button>
-                </li>
-                <li>
-                  <a href="#" className="font-medium hover:text-secondary transition-colors">Pricing</a>
-                </li>
-                <li>
-                  <a href="#" className="font-medium hover:text-secondary transition-colors">About</a>
                 </li>
               </ul>
             </nav>
@@ -171,94 +139,54 @@ const Navbar = () => {
           <nav className="container px-4 py-4">
             <ul className="space-y-4">
               <li>
-                <Link 
-                  to="/" 
-                  className="block font-medium text-gray-700 hover:text-secondary transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/innovations" 
-                  className="block font-medium text-gray-700 hover:text-secondary transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Innovations
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/vdp-trade-docs" 
-                  className="block font-medium text-gray-700 hover:text-secondary transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  VDP Trade Docs
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/deep-tier-scf" 
-                  className="block font-medium text-gray-700 hover:text-secondary transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Deep-Tier SCF
-                </Link>
-              </li>
-              <li>
-                <div className="block font-medium text-gray-700 pb-2">Tokenization</div>
+                <div className="block font-medium text-gray-700 pb-2">Blockchain</div>
                 <div className="pl-4 space-y-2">
-                  <Link 
-                    to="/tokenization" 
+                  <div className="block font-medium text-gray-600 pb-1">Tokenization</div>
+                  <div className="pl-4 space-y-2">
+                    <a 
+                      href="https://debt-token-flow.lovable.app/" 
+                      className="block text-sm text-gray-500 hover:text-secondary transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Debt Capital Markets
+                    </a>
+                    <a 
+                      href="https://debt-token-flow.lovable.app/tokenization" 
+                      className="block text-sm text-gray-500 hover:text-secondary transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Real Estate
+                    </a>
+                    <a 
+                      href="https://debt-token-flow.lovable.app/tokenization" 
+                      className="block text-sm text-gray-500 hover:text-secondary transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Equity & Funds
+                    </a>
+                    <a 
+                      href="https://debt-token-flow.lovable.app/tokenization" 
+                      className="block text-sm text-gray-500 hover:text-secondary transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Alternate Assets
+                    </a>
+                  </div>
+                  <a 
+                    href="https://debt-token-flow.lovable.app/vdp-trade-docs" 
                     className="block text-sm text-gray-600 hover:text-secondary transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Debt Capital Markets
-                  </Link>
-                  <Link 
-                    to="/tokenization?category=real-estate" 
+                    VDP Trade Docs
+                  </a>
+                  <a 
+                    href="https://debt-token-flow.lovable.app/deep-tier-scf" 
                     className="block text-sm text-gray-600 hover:text-secondary transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Real Estate
-                  </Link>
-                  <Link 
-                    to="/tokenization?category=equity-funds" 
-                    className="block text-sm text-gray-600 hover:text-secondary transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Equity & Funds
-                  </Link>
-                  <Link 
-                    to="/tokenization?category=alternate-assets" 
-                    className="block text-sm text-gray-600 hover:text-secondary transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Alternate Assets
-                  </Link>
+                    Deep-Tier SCF
+                  </a>
                 </div>
-              </li>
-              <li>
-                <button 
-                  className="block font-medium text-gray-700 hover:text-secondary transition-colors"
-                  onClick={() => {
-                    if (location.pathname === '/') {
-                      scrollToSection('faq');
-                    } else {
-                      window.location.href = '/#faq';
-                    }
-                    setIsMobileMenuOpen(false);
-                  }}
-                >
-                  FAQs
-                </button>
-              </li>
-              <li>
-                <a href="#" className="block font-medium text-gray-700 hover:text-secondary transition-colors">Pricing</a>
-              </li>
-              <li>
-                <a href="#" className="block font-medium text-gray-700 hover:text-secondary transition-colors">About</a>
               </li>
               <li className="pt-2">
                 <Button 
