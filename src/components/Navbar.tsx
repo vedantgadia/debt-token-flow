@@ -18,6 +18,8 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  
+  // Force component refresh - updated navbar structure
 
   useEffect(() => {
     const handleScroll = () => {
