@@ -114,6 +114,16 @@ const Navbar = () => {
                           Articles & Insights
                         </a>
                       </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <a 
+                          href="https://www.youtube.com/@VayanaDebtPlatform" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="w-full"
+                        >
+                          Events & Webinars
+                        </a>
+                      </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </li>
@@ -208,6 +218,15 @@ const Navbar = () => {
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Articles & Insights
+                  </a>
+                  <a 
+                    href="https://www.youtube.com/@VayanaDebtPlatform" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block text-sm text-gray-600 hover:text-secondary transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Events & Webinars
                   </a>
                 </div>
               </li>
