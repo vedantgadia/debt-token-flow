@@ -220,7 +220,7 @@ const Navbar = () => {
                     Articles & Insights
                   </a>
                   <a 
-                    href="https://www.youtube.com/@VayanaDebtPlatform" 
+                    href="https://www.linkedin.com/company/vayana-debt-platform/events/?viewAsMember=true" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="block text-sm text-gray-600 hover:text-secondary transition-colors"
