@@ -226,7 +226,7 @@ const Navbar = () => {
                     className="block text-sm text-gray-600 hover:text-secondary transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Events & Webinars
+                    Podcasts & Webinars
                   </a>
                 </div>
               </li>
