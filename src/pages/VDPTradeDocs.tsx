@@ -651,7 +651,7 @@ const VDPTradeDocs = () => {
                   <div className="order-1 lg:order-2 space-y-6">
                     <div className="space-y-4">
                       <h3 className="text-3xl font-bold text-foreground">
-                        <span className="text-primary">Use Case 2:</span> Three Corner Model - Direct
+                        <span className="text-primary">Use Case 2:</span> Three Corner Model
                       </h3>
                       <p className="text-lg text-muted-foreground leading-relaxed">
                         Streamlined direct financing model where a single bank facilitates the transaction directly with the exporter and importer, reducing complexity and processing time.
