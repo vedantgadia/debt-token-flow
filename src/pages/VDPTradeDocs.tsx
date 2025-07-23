@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { FileText, Shield, Globe, CheckCircle, ArrowRight, Zap, Users, Lock, Database, Truck, Building2, Scale, FileCheck, ClipboardList, Award, Package, Play, Download, RefreshCw, Eye, Mail, Phone } from 'lucide-react';
+import fourCornerModel from '@/assets/four-corner-model.png';
+import threeCornerModel from '@/assets/three-corner-model.png';
 const TradeDocVisual = () => {
   const [currentStep, setCurrentStep] = useState(0);
   useEffect(() => {
@@ -564,6 +566,153 @@ const VDPTradeDocs = () => {
                     </div>
                   </div>
                 </div>)}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Financial Institution Use Cases Section */}
+      <section className="relative py-32 bg-gradient-to-br from-muted/20 via-background to-secondary/10 overflow-hidden">
+        <div className="container mx-auto px-4 relative">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center space-y-6 mb-20">
+              <div className="inline-flex items-center px-6 py-3 bg-secondary/10 text-secondary rounded-full text-sm font-medium">
+                Financial Institution Solutions
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+                Potential Use Cases for
+                <span className="block text-secondary">Financial Institutions</span>
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Streamline trade finance operations with digital document workflows that support both traditional and direct financing models.
+              </p>
+            </div>
+
+            <div className="space-y-20">
+              {/* Four Corner Model */}
+              <div className="bg-white/50 backdrop-blur-sm rounded-3xl p-8 lg:p-12 border border-secondary/20 shadow-xl">
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                  <div className="space-y-6">
+                    <div className="space-y-4">
+                      <h3 className="text-3xl font-bold text-foreground">
+                        <span className="text-secondary">Use Case 1:</span> Four Corner Model
+                      </h3>
+                      <p className="text-lg text-muted-foreground leading-relaxed">
+                        Traditional trade finance model involving both exporter and importer banks, enabling secure document exchange and payment facilitation across international borders.
+                      </p>
+                    </div>
+                    
+                    <div className="space-y-4">
+                      <h4 className="text-xl font-semibold text-foreground">Key Benefits:</h4>
+                      <div className="space-y-3">
+                        {[
+                          "Secure multi-party document verification",
+                          "Automated bill of exchange processing",
+                          "Real-time document status tracking",
+                          "Reduced settlement risks between banks",
+                          "Enhanced compliance and audit trails"
+                        ].map((benefit, i) => (
+                          <div key={i} className="flex items-center gap-3">
+                            <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0" />
+                            <span className="text-muted-foreground">{benefit}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="relative">
+                    <div className="absolute -inset-4 bg-gradient-to-r from-secondary/20 to-primary/20 rounded-2xl blur-xl opacity-50" />
+                    <div className="relative bg-white rounded-2xl p-6 shadow-2xl border border-secondary/20">
+                      <img 
+                        src={fourCornerModel} 
+                        alt="Four Corner Model - Trade finance flow between exporter, importer, and their respective banks"
+                        className="w-full h-auto rounded-lg"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Three Corner Model */}
+              <div className="bg-white/50 backdrop-blur-sm rounded-3xl p-8 lg:p-12 border border-primary/20 shadow-xl">
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                  <div className="order-2 lg:order-1 relative">
+                    <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur-xl opacity-50" />
+                    <div className="relative bg-white rounded-2xl p-6 shadow-2xl border border-primary/20">
+                      <img 
+                        src={threeCornerModel} 
+                        alt="Three Corner Model - Direct trade finance between exporter, importer, and single bank"
+                        className="w-full h-auto rounded-lg"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="order-1 lg:order-2 space-y-6">
+                    <div className="space-y-4">
+                      <h3 className="text-3xl font-bold text-foreground">
+                        <span className="text-primary">Use Case 2:</span> Three Corner Model - Direct
+                      </h3>
+                      <p className="text-lg text-muted-foreground leading-relaxed">
+                        Streamlined direct financing model where a single bank facilitates the transaction directly with the exporter and importer, reducing complexity and processing time.
+                      </p>
+                    </div>
+                    
+                    <div className="space-y-4">
+                      <h4 className="text-xl font-semibold text-foreground">Key Benefits:</h4>
+                      <div className="space-y-3">
+                        {[
+                          "Simplified single-bank workflow",
+                          "Faster document processing and payment",
+                          "Reduced operational complexity",
+                          "Lower transaction costs",
+                          "Direct relationship management"
+                        ].map((benefit, i) => (
+                          <div key={i} className="flex items-center gap-3">
+                            <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                            <span className="text-muted-foreground">{benefit}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Implementation Benefits */}
+              <div className="bg-gradient-to-br from-accent/10 via-primary/5 to-secondary/10 rounded-3xl p-8 lg:p-12 border border-accent/20">
+                <div className="text-center space-y-8">
+                  <h3 className="text-3xl font-bold text-foreground">Why Choose VDP Trade Docs for Your Institution?</h3>
+                  
+                  <div className="grid md:grid-cols-3 gap-8">
+                    {[
+                      {
+                        icon: Shield,
+                        title: "Legal Compliance",
+                        desc: "MLETR and TradeTrust compliant digital documents with full legal validity"
+                      },
+                      {
+                        icon: Zap,
+                        title: "Instant Processing",
+                        desc: "Real-time document verification and transfer capabilities"
+                      },
+                      {
+                        icon: Globe,
+                        title: "Global Interoperability",
+                        desc: "Seamless integration with existing banking systems and international standards"
+                      }
+                    ].map((feature, i) => (
+                      <div key={i} className="text-center space-y-4">
+                        <div className="w-16 h-16 mx-auto bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center text-white shadow-xl">
+                          <feature.icon className="h-8 w-8" />
+                        </div>
+                        <h4 className="text-xl font-semibold text-foreground">{feature.title}</h4>
+                        <p className="text-muted-foreground leading-relaxed">{feature.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
