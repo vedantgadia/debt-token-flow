@@ -372,6 +372,98 @@ const VDPTradeDocs = () => {
         </div>
       </section>
 
+      {/* MLETR Section */}
+      <section className="relative py-32 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 overflow-hidden">
+        <div className="container mx-auto px-4 relative">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center space-y-6 mb-16">
+              <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+                Global Standard
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
+                What is <span className="text-primary">MLETR</span>?
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                The Model Law on Electronic Transferable Records (MLETR) is a groundbreaking legal framework that enables the creation and use of electronic transferable records with the same legal status as their paper equivalents.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+              <div className="space-y-8">
+                <div className="space-y-6">
+                  {[
+                    {
+                      title: "Legal Framework",
+                      desc: "UNCITRAL Model Law providing legal foundation for electronic transferable records",
+                      icon: Scale
+                    },
+                    {
+                      title: "Functional Equivalence",
+                      desc: "Digital documents have the same legal effect as their paper counterparts",
+                      icon: CheckCircle
+                    },
+                    {
+                      title: "Control Standards",
+                      desc: "Establishes criteria for possession and control of electronic records",
+                      icon: Shield
+                    },
+                    {
+                      title: "International Recognition",
+                      desc: "Growing adoption by countries worldwide for cross-border trade",
+                      icon: Globe
+                    }
+                  ].map((item, i) => (
+                    <div key={i} className="group flex items-start gap-4 p-6 bg-white/50 backdrop-blur-sm rounded-2xl border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:-translate-y-1">
+                      <div className="text-primary bg-primary/10 rounded-xl p-3">
+                        <item.icon className="h-6 w-6" />
+                      </div>
+                      <div className="space-y-2">
+                        <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
+                        <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-primary via-secondary to-accent rounded-3xl blur-2xl opacity-20" />
+                <div className="relative bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 backdrop-blur-sm rounded-3xl p-12 border border-primary/20">
+                  <div className="text-center space-y-8">
+                    <div className="w-20 h-20 mx-auto bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center text-white text-3xl font-bold shadow-2xl">
+                      📜
+                    </div>
+                    <div className="space-y-4">
+                      <h3 className="text-2xl font-bold text-foreground">MLETR Adoption</h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        Countries worldwide are adopting MLETR to modernize their trade laws and enable digital transformation of trade finance.
+                      </p>
+                    </div>
+                    <Button 
+                      size="lg" 
+                      className="w-full bg-primary hover:bg-primary/90 text-white"
+                      onClick={() => window.open('https://www.digitalizetrade.org/mletr', '_blank')}
+                    >
+                      <Globe className="mr-2 h-5 w-5" />
+                      View Live MLETR Adoption Map
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center bg-white/30 backdrop-blur-sm rounded-2xl p-8 border border-primary/20">
+              <h3 className="text-xl font-semibold text-foreground mb-4">
+                VDP Trade Docs is fully MLETR compliant
+              </h3>
+              <p className="text-muted-foreground">
+                Our platform ensures that all digital documents created meet MLETR standards, providing legal certainty and global interoperability for your trade operations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Compliance Section with Modern Design */}
       <section className="relative py-32 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 overflow-hidden">
         {/* Floating Elements */}
@@ -763,98 +855,6 @@ const VDPTradeDocs = () => {
               <Button size="lg" className="bg-gradient-to-r from-secondary to-accent text-white hover:opacity-90 px-8 py-4">
                 Request Demo
               </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* MLETR Section */}
-      <section className="relative py-32 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 overflow-hidden">
-        <div className="container mx-auto px-4 relative">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center space-y-6 mb-16">
-              <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
-                Global Standard
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
-                What is <span className="text-primary">MLETR</span>?
-              </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                The Model Law on Electronic Transferable Records (MLETR) is a groundbreaking legal framework that enables the creation and use of electronic transferable records with the same legal status as their paper equivalents.
-              </p>
-            </div>
-
-            <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-              <div className="space-y-8">
-                <div className="space-y-6">
-                  {[
-                    {
-                      title: "Legal Framework",
-                      desc: "UNCITRAL Model Law providing legal foundation for electronic transferable records",
-                      icon: Scale
-                    },
-                    {
-                      title: "Functional Equivalence",
-                      desc: "Digital documents have the same legal effect as their paper counterparts",
-                      icon: CheckCircle
-                    },
-                    {
-                      title: "Control Standards",
-                      desc: "Establishes criteria for possession and control of electronic records",
-                      icon: Shield
-                    },
-                    {
-                      title: "International Recognition",
-                      desc: "Growing adoption by countries worldwide for cross-border trade",
-                      icon: Globe
-                    }
-                  ].map((item, i) => (
-                    <div key={i} className="group flex items-start gap-4 p-6 bg-white/50 backdrop-blur-sm rounded-2xl border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:-translate-y-1">
-                      <div className="text-primary bg-primary/10 rounded-xl p-3">
-                        <item.icon className="h-6 w-6" />
-                      </div>
-                      <div className="space-y-2">
-                        <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
-                        <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-r from-primary via-secondary to-accent rounded-3xl blur-2xl opacity-20" />
-                <div className="relative bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 backdrop-blur-sm rounded-3xl p-12 border border-primary/20">
-                  <div className="text-center space-y-8">
-                    <div className="w-20 h-20 mx-auto bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center text-white text-3xl font-bold shadow-2xl">
-                      📜
-                    </div>
-                    <div className="space-y-4">
-                      <h3 className="text-2xl font-bold text-foreground">MLETR Adoption</h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        Countries worldwide are adopting MLETR to modernize their trade laws and enable digital transformation of trade finance.
-                      </p>
-                    </div>
-                    <Button 
-                      size="lg" 
-                      className="w-full bg-primary hover:bg-primary/90 text-white"
-                      onClick={() => window.open('https://www.digitalizetrade.org/mletr', '_blank')}
-                    >
-                      <Globe className="mr-2 h-5 w-5" />
-                      View Live MLETR Adoption Map
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="text-center bg-white/30 backdrop-blur-sm rounded-2xl p-8 border border-primary/20">
-              <h3 className="text-xl font-semibold text-foreground mb-4">
-                VDP Trade Docs is fully MLETR compliant
-              </h3>
-              <p className="text-muted-foreground">
-                Our platform ensures that all digital documents created meet MLETR standards, providing legal certainty and global interoperability for your trade operations.
-              </p>
             </div>
           </div>
         </div>
