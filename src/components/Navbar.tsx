@@ -99,10 +99,20 @@ const Navbar = () => {
                           VDP Trade Docs
                         </Link>
                       </DropdownMenuItem>
-                      <DropdownMenuItem asChild>
+                       <DropdownMenuItem asChild>
                         <Link to="/deep-tier-scf" className="w-full">
                           Deep-Tier SCF
                         </Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <a 
+                          href="https://www.linkedin.com/company/vayanaofficial/posts/?feedView=articles" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="w-full"
+                        >
+                          Articles & Insights
+                        </a>
                       </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
@@ -190,6 +200,15 @@ const Navbar = () => {
                   >
                     Deep-Tier SCF
                   </Link>
+                  <a 
+                    href="https://www.linkedin.com/company/vayanaofficial/posts/?feedView=articles" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block text-sm text-gray-600 hover:text-secondary transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Articles & Insights
+                  </a>
                 </div>
               </li>
               <li className="pt-2">
