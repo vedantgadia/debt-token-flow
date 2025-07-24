@@ -556,42 +556,100 @@ const DeepTierSCF = () => {
       </section>
 
       {/* Who is it for */}
-      <section className="py-24 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-6 bg-white/80 text-primary shadow-lg">
+      <section className="py-24 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 relative overflow-hidden">
+        {/* Background Decorative Elements */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-10 w-32 h-32 border-2 border-primary rounded-full animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-24 h-24 border-2 border-secondary rounded-full animate-pulse delay-300"></div>
+          <div className="absolute top-1/2 left-1/4 w-16 h-16 border-2 border-accent rounded-full animate-pulse delay-700"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-20">
+            <Badge className="mb-8 bg-white/90 text-primary shadow-lg hover:shadow-xl transition-shadow duration-300 px-6 py-2 text-lg">
               Target Audience
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
               Who is it for?
             </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Empowering financial institutions and corporations to unlock supply chain liquidity
+            </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {[{
-            icon: Building,
-            title: "Large Corporates",
-            desc: "Anchor Buyers",
-            color: "primary"
-          }, {
-            icon: Banknote,
-            title: "Banks and Non-Banks",
-            desc: "Financial Institutions",
-            color: "secondary"
-          }, {
-            icon: Globe,
-            title: "Lending Fintechs",
-            desc: "Fintech Lending Platforms",
-            color: "accent"
-          }].map((audience, index) => <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 hover:-translate-y-2 bg-white/60 backdrop-blur-sm text-center">
-                <CardContent className="pt-8">
-                  <div className={`w-20 h-20 bg-gradient-to-br from-${audience.color} to-${audience.color}/80 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg`}>
-                    <audience.icon className="h-10 w-10 text-white" />
-                  </div>
-                  <h3 className="font-bold text-2xl mb-3">{audience.title}</h3>
-                  <p className="text-gray-600 text-lg">{audience.desc}</p>
-                </CardContent>
-              </Card>)}
+          {/* Connection Diagram */}
+          <div className="relative max-w-6xl mx-auto mb-16">
+            {/* Connection Lines */}
+            <div className="hidden md:block absolute top-1/2 left-1/4 right-1/4 h-0.5 bg-gradient-to-r from-primary via-secondary to-accent transform -translate-y-1/2"></div>
+            <div className="hidden md:block absolute top-1/2 left-1/4 w-2 h-2 bg-primary rounded-full transform -translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
+            <div className="hidden md:block absolute top-1/2 right-1/4 w-2 h-2 bg-accent rounded-full transform translate-x-1/2 -translate-y-1/2 animate-pulse delay-500"></div>
+            <div className="hidden md:block absolute top-1/2 left-1/2 w-3 h-3 bg-secondary rounded-full transform -translate-x-1/2 -translate-y-1/2 animate-pulse delay-300"></div>
+            
+            <div className="grid md:grid-cols-3 gap-12">
+              {[{
+                icon: Building,
+                title: "Large Corporates",
+                desc: "Anchor Buyers",
+                detail: "Drive supplier financing programs",
+                color: "primary",
+                gradient: "from-blue-500 to-blue-600"
+              }, {
+                icon: Banknote,
+                title: "Banks and Non-Banks",
+                desc: "Financial Institutions",
+                detail: "Provide competitive financing solutions",
+                color: "secondary", 
+                gradient: "from-purple-500 to-purple-600"
+              }, {
+                icon: Globe,
+                title: "Lending Fintechs",
+                desc: "Fintech Lending Platforms",
+                detail: "Scale innovative financing models",
+                color: "accent",
+                gradient: "from-emerald-500 to-emerald-600"
+              }].map((audience, index) => (
+                <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 hover:-translate-y-4 bg-white/80 backdrop-blur-sm relative overflow-hidden">
+                  {/* Card Background Glow */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${audience.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
+                  
+                  <CardContent className="p-8 relative z-10">
+                    {/* Icon Container with Enhanced Animation */}
+                    <div className="relative mb-8">
+                      <div className={`w-24 h-24 bg-gradient-to-br ${audience.gradient} rounded-3xl flex items-center justify-center mx-auto group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-xl group-hover:shadow-2xl`}>
+                        <audience.icon className="h-12 w-12 text-white" />
+                      </div>
+                      {/* Floating Ring Animation */}
+                      <div className={`absolute inset-0 w-24 h-24 border-2 border-${audience.color}/20 rounded-3xl mx-auto group-hover:scale-125 group-hover:border-${audience.color}/40 transition-all duration-700`}></div>
+                    </div>
+                    
+                    {/* Content with Better Spacing */}
+                    <div className="text-center space-y-4">
+                      <h3 className="font-bold text-2xl text-gray-800 group-hover:text-gray-900 transition-colors">
+                        {audience.title}
+                      </h3>
+                      <p className="text-lg font-semibold text-gray-600 mb-2">
+                        {audience.desc}
+                      </p>
+                      <p className="text-sm text-gray-500 leading-relaxed px-2">
+                        {audience.detail}
+                      </p>
+                    </div>
+                    
+                    {/* Bottom Accent Line */}
+                    <div className={`w-0 h-1 bg-gradient-to-r ${audience.gradient} mx-auto mt-6 group-hover:w-16 transition-all duration-500 rounded-full`}></div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+          
+          {/* Enhanced Call-to-Action */}
+          <div className="text-center">
+            <div className="inline-flex items-center gap-3 bg-white/90 backdrop-blur-sm rounded-2xl px-8 py-4 shadow-lg">
+              <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
+              <span className="text-gray-700 font-medium">Connecting supply chain stakeholders for mutual growth</span>
+              <div className="w-3 h-3 bg-accent rounded-full animate-pulse delay-500"></div>
+            </div>
           </div>
         </div>
       </section>
