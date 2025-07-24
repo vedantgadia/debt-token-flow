@@ -313,7 +313,7 @@ const DeepTierSCF = () => {
           
           {/* Flow Diagram */}
           <div className="max-w-6xl mx-auto mb-12">
-            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 md:p-8">
+            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-4 md:p-6">
               <div className="text-center mb-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-2">Deep-Tier Supply Chain Finance Flow</h3>
                 <p className="text-gray-600">Powered by Vayana's DTSCP Platform on Blockchain Rails</p>
