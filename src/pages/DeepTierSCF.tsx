@@ -296,7 +296,7 @@ const DeepTierSCF = () => {
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* How It Works - Flow Diagram */}
       <section className="py-24 bg-white relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -304,63 +304,97 @@ const DeepTierSCF = () => {
               Process Flow
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              How It Works
+              How Deep-Tier SCF Works
             </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              A blockchain-powered platform connecting anchors, suppliers, and financiers in a seamless flow
+            </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[{
-            num: 1,
-            title: "Anchor Onboarding",
-            desc: "Anchor buyer integrates supply chain data and agrees to support multi-tier suppliers.",
-            icon: Building,
-            color: "primary"
-          }, {
-            num: 2,
-            title: "Supply Chain Mapping",
-            desc: "All tiers of suppliers are digitally mapped using invoices, purchase orders, and delivery milestones.",
-            icon: Network,
-            color: "secondary"
-          }, {
-            num: 3,
-            title: "Transaction Digitization",
-            desc: "Real-time trade events are captured and authenticated through integrated systems.",
-            icon: FileText,
-            color: "accent"
-          }, {
-            num: 4,
-            title: "Early Encashment",
-            desc: "Suppliers can encash their receivables early at competitive rates based on the anchor's credit strength, improving cash flow.",
-            icon: Clock,
-            color: "primary"
-          }, {
-            num: 5,
-            title: "Transfer to Next Tier",
-            desc: "Credit availability cascades seamlessly to the next tier suppliers, extending liquidity throughout the supply chain.",
-            icon: Repeat,
-            color: "secondary"
-          }, {
-            num: 6,
-            title: "Repayment",
-            desc: "Based on cash flow events or maturity dates, repayments are managed seamlessly.",
-            icon: CreditCard,
-            color: "accent"
-          }].map((step, index) => <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 hover:-translate-y-2 bg-gradient-to-br from-white to-gray-50">
-                <CardHeader className="relative">
-                  <div className="flex items-center space-x-4 mb-4">
-                    <div className={`w-12 h-12 bg-gradient-to-br from-${step.color} to-${step.color}/80 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform`}>
-                      {step.num}
+          {/* Flow Diagram */}
+          <div className="max-w-6xl mx-auto mb-16">
+            <Card className="overflow-hidden border-0 shadow-2xl bg-gradient-to-br from-white to-gray-50">
+              <CardContent className="p-8 md:p-12">
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-4">Deep-Tier Supply Chain Finance Flow</h3>
+                  <p className="text-gray-600">Powered by Vayana's DTSCP Platform on Blockchain Rails</p>
+                </div>
+                
+                {/* Diagram Container */}
+                <div className="relative bg-white rounded-2xl p-6 shadow-inner">
+                  <img 
+                    src="/lovable-uploads/b4d908ab-34da-4fbc-9d1a-2a39b8403b72.png" 
+                    alt="Deep-Tier Supply Chain Finance Flow Diagram" 
+                    className="w-full h-auto max-w-full mx-auto rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  />
+                </div>
+                
+                {/* Key Features Below Diagram */}
+                <div className="grid md:grid-cols-4 gap-6 mt-12">
+                  {[
+                    {
+                      icon: Shield,
+                      title: "Blockchain Security",
+                      desc: "Immutable transaction records"
+                    },
+                    {
+                      icon: Zap,
+                      title: "Real-time Processing",
+                      desc: "Instant token transfers"
+                    },
+                    {
+                      icon: Network,
+                      title: "Multi-tier Coverage",
+                      desc: "From Tier 1 to Tier N suppliers"
+                    },
+                    {
+                      icon: TrendingUp,
+                      title: "Scalable Finance",
+                      desc: "Credit flows throughout the chain"
+                    }
+                  ].map((feature, index) => (
+                    <div key={index} className="text-center group">
+                      <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <feature.icon className="h-6 w-6 text-white" />
+                      </div>
+                      <h4 className="font-semibold text-gray-800 mb-2">{feature.title}</h4>
+                      <p className="text-sm text-gray-600">{feature.desc}</p>
                     </div>
-                    <div className={`w-12 h-12 bg-${step.color}/10 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
-                      <step.icon className={`h-6 w-6 text-${step.color}`} />
-                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Simple Process Steps */}
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {[
+              {
+                num: 1,
+                title: "Setup & Integration",
+                desc: "Anchor buyer integrates with Vayana DTSCP platform and maps supply chain tiers"
+              },
+              {
+                num: 2,
+                title: "Token Flow",
+                desc: "Digital payment obligations flow through blockchain rails from anchor to all supplier tiers"
+              },
+              {
+                num: 3,
+                title: "Financing & Settlement",
+                desc: "Financiers provide instant liquidity while secure repayment flows ensure seamless settlement"
+              }
+            ].map((step, index) => (
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-gradient-to-br from-white to-gray-50">
+                <CardContent className="p-6 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl group-hover:scale-110 transition-transform">
+                    {step.num}
                   </div>
-                  <CardTitle className="text-xl">{step.title}</CardTitle>
-                  <CardDescription className="text-gray-600 leading-relaxed">
-                    {step.desc}
-                  </CardDescription>
-                </CardHeader>
-              </Card>)}
+                  <h3 className="font-bold text-xl mb-3 text-gray-800">{step.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{step.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
