@@ -19,7 +19,7 @@ const DeepTierSCF = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary via-primary/80 to-secondary py-32 lg:py-40 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-primary via-primary/80 to-secondary py-20 lg:py-28 overflow-hidden">
         {/* Floating elements */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-4 h-4 bg-white/20 rounded-full animate-bounce" style={{
@@ -70,7 +70,7 @@ const DeepTierSCF = () => {
       </section>
 
       {/* What is Deep-Tier Supply Chain Finance */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 to-white relative">
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-white relative">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-5 gap-16 items-center">
             <div className="lg:col-span-3">
@@ -223,7 +223,7 @@ const DeepTierSCF = () => {
       </section>
 
       {/* Why DTSCF Matters Today */}
-      <section className="py-24 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 relative">
+      <section className="py-16 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-6 bg-white/80 text-primary shadow-lg">
@@ -297,77 +297,75 @@ const DeepTierSCF = () => {
       </section>
 
       {/* How It Works - Flow Diagram */}
-      <section className="py-24 bg-white relative">
+      <section className="py-16 bg-white relative">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-6 bg-primary/10 text-primary">
+          <div className="text-center mb-12">
+            <Badge className="mb-4 bg-primary/10 text-primary">
               Process Flow
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               How Deep-Tier SCF Works
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               A blockchain-powered platform connecting anchors, suppliers, and financiers in a seamless flow
             </p>
           </div>
           
           {/* Flow Diagram */}
-          <div className="max-w-6xl mx-auto mb-16">
-            <Card className="overflow-hidden border-0 shadow-2xl bg-gradient-to-br from-white to-gray-50">
-              <CardContent className="p-8 md:p-12">
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-gray-800 mb-4">Deep-Tier Supply Chain Finance Flow</h3>
-                  <p className="text-gray-600">Powered by Vayana's DTSCP Platform on Blockchain Rails</p>
-                </div>
-                
-                {/* Diagram Container */}
-                <div className="relative bg-white rounded-2xl p-6 shadow-inner">
-                  <img 
-                    src="/lovable-uploads/b4d908ab-34da-4fbc-9d1a-2a39b8403b72.png" 
-                    alt="Deep-Tier Supply Chain Finance Flow Diagram" 
-                    className="w-full h-auto max-w-full mx-auto rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
-                  />
-                </div>
-                
-                {/* Key Features Below Diagram */}
-                <div className="grid md:grid-cols-4 gap-6 mt-12">
-                  {[
-                    {
-                      icon: Shield,
-                      title: "Blockchain Security",
-                      desc: "Immutable transaction records"
-                    },
-                    {
-                      icon: Zap,
-                      title: "Real-time Processing",
-                      desc: "Instant token transfers"
-                    },
-                    {
-                      icon: Network,
-                      title: "Multi-tier Coverage",
-                      desc: "From Tier 1 to Tier N suppliers"
-                    },
-                    {
-                      icon: TrendingUp,
-                      title: "Scalable Finance",
-                      desc: "Credit flows throughout the chain"
-                    }
-                  ].map((feature, index) => (
-                    <div key={index} className="text-center group">
-                      <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                        <feature.icon className="h-6 w-6 text-white" />
-                      </div>
-                      <h4 className="font-semibold text-gray-800 mb-2">{feature.title}</h4>
-                      <p className="text-sm text-gray-600">{feature.desc}</p>
+          <div className="max-w-6xl mx-auto mb-12">
+            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 md:p-8">
+              <div className="text-center mb-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Deep-Tier Supply Chain Finance Flow</h3>
+                <p className="text-gray-600">Powered by Vayana's DTSCP Platform on Blockchain Rails</p>
+              </div>
+              
+              {/* Diagram Container */}
+              <div className="bg-gray-50 rounded-xl p-4">
+                <img 
+                  src="/lovable-uploads/b4d908ab-34da-4fbc-9d1a-2a39b8403b72.png" 
+                  alt="Deep-Tier Supply Chain Finance Flow Diagram" 
+                  className="w-full h-auto max-w-full mx-auto rounded-lg"
+                />
+              </div>
+              
+              {/* Key Features Below Diagram */}
+              <div className="grid md:grid-cols-4 gap-6 mt-8">
+                {[
+                  {
+                    icon: Shield,
+                    title: "Blockchain Security",
+                    desc: "Immutable transaction records"
+                  },
+                  {
+                    icon: Zap,
+                    title: "Real-time Processing",
+                    desc: "Instant token transfers"
+                  },
+                  {
+                    icon: Network,
+                    title: "Multi-tier Coverage",
+                    desc: "From Tier 1 to Tier N suppliers"
+                  },
+                  {
+                    icon: TrendingUp,
+                    title: "Scalable Finance",
+                    desc: "Credit flows throughout the chain"
+                  }
+                ].map((feature, index) => (
+                  <div key={index} className="text-center group">
+                    <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                      <feature.icon className="h-5 w-5 text-white" />
                     </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+                    <h4 className="font-semibold text-gray-800 mb-1">{feature.title}</h4>
+                    <p className="text-sm text-gray-600">{feature.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Simple Process Steps */}
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
               {
                 num: 1,
@@ -385,22 +383,20 @@ const DeepTierSCF = () => {
                 desc: "Financiers provide instant liquidity while secure repayment flows ensure seamless settlement"
               }
             ].map((step, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-gradient-to-br from-white to-gray-50">
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl group-hover:scale-110 transition-transform">
-                    {step.num}
-                  </div>
-                  <h3 className="font-bold text-xl mb-3 text-gray-800">{step.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{step.desc}</p>
-                </CardContent>
-              </Card>
+              <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 text-center hover:shadow-xl transition-shadow">
+                <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">
+                  {step.num}
+                </div>
+                <h3 className="font-bold text-lg mb-2 text-gray-800">{step.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{step.desc}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Benefits for All Stakeholders */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 to-white">
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-6 bg-accent/10 text-accent">
@@ -448,7 +444,7 @@ const DeepTierSCF = () => {
       </section>
 
       {/* Differentiators */}
-      <section className="py-24 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
+      <section className="py-16 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-6 bg-white/80 text-primary shadow-lg">
@@ -590,7 +586,7 @@ const DeepTierSCF = () => {
       </section>
 
       {/* Who is it for */}
-      <section className="py-24 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 relative overflow-hidden">
+      <section className="py-16 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 relative overflow-hidden">
         {/* Background Decorative Elements */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-10 w-32 h-32 border-2 border-primary rounded-full animate-pulse"></div>
@@ -689,7 +685,7 @@ const DeepTierSCF = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 bg-gradient-to-br from-gray-100 to-white" id="contact-form">
+      <section className="py-16 bg-gradient-to-br from-gray-100 to-white" id="contact-form">
         <div className="container px-4 mx-auto">
           <div className="max-w-6xl mx-auto">
             <Card className="overflow-hidden shadow-2xl border-0 bg-white">
