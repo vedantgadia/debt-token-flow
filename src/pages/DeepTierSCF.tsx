@@ -575,13 +575,13 @@ const DeepTierSCF = () => {
             color: "primary"
           }, {
             icon: Banknote,
-            title: "Banks & NBFCs",
+            title: "Banks and Non-Banks",
             desc: "Financial Institutions",
             color: "secondary"
           }, {
             icon: Globe,
-            title: "Development FIs",
-            desc: "Development Financial Institutions",
+            title: "Lending Fintechs",
+            desc: "Fintech Lending Platforms",
             color: "accent"
           }].map((audience, index) => <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 hover:-translate-y-2 bg-white/60 backdrop-blur-sm text-center">
                 <CardContent className="pt-8">
