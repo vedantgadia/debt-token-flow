@@ -22,9 +22,6 @@ import {
 } from "lucide-react";
 import { useSearchParams } from "react-router-dom";
 import ContactSection from '../components/ContactSection';
-import CalloutSection from '../components/CalloutSection';
-import PricingSection from '../components/PricingSection';
-import FAQSection from '../components/FAQSection';
 
 const Tokenization = () => {
   const [searchParams] = useSearchParams();
@@ -126,7 +123,7 @@ const Tokenization = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* 1. Hero Section */}
+      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-hero-gradient">
         <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-transparent to-black/20" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(255,255,255,0.1)_0%,transparent_50%)]" />
@@ -158,8 +155,8 @@ const Tokenization = () => {
         </div>
       </section>
 
-      {/* 2. Powering Modern Private Credit Markets Seamlessly and Securely */}
-      <section className="py-16 bg-gray-50">
+      {/* Section 2: Future of Asset Ownership */}
+      <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="section-title text-gray-900">
@@ -179,23 +176,94 @@ const Tokenization = () => {
         </div>
       </section>
 
-      {/* 3. Go from Term Sheet to Tokenized Debt in Days, Not Months */}
-      <CalloutSection />
-
-      {/* 4. Pricing */}
-      <PricingSection />
-
-      {/* 5. Vayana Debt Platform (VDP) */}
-      <section className="py-16 bg-gray-50">
+      {/* Section 3: Benefits */}
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center space-y-6 mb-16">
               <h2 className="section-title text-gray-900">
-                Vayana Debt Platform (VDP)
+                Why Tokenize {content.title}?
+              </h2>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                 <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white hover:bg-vayana-blue/5">
+                   <CardContent className="p-8 text-center space-y-4">
+                     <div className="w-16 h-16 bg-vayana-blue/10 rounded-xl flex items-center justify-center mx-auto group-hover:bg-vayana-blue/20 transition-all duration-300">
+                       <benefit.icon className="h-8 w-8 text-vayana-blue" />
+                    </div>
+                    <h3 className="text-xl font-semibold">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {benefit.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 4: Capabilities */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center space-y-6 mb-16">
+              <h2 className="section-title text-gray-900">
+                Institutional-Grade Tokenization Infrastructure
               </h2>
               <p className="section-subtitle text-gray-600">
-                Built by a trusted infrastructure partner powering the future of digital finance
+                Built for security, compliance, and scale, the Vayana Tokenization Platform offers everything you need to tokenize and manage {content.title.toLowerCase()} across their lifecycle.
               </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {capabilities.map((capability, index) => (
+                 <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white hover:bg-vayana-blue/5">
+                   <CardContent className="p-6 flex items-center space-x-4">
+                     <div className="w-12 h-12 bg-vayana-blue/10 rounded-lg flex items-center justify-center group-hover:bg-vayana-blue/20 transition-all duration-300">
+                       <capability.icon className="h-6 w-6 text-vayana-blue" />
+                     </div>
+                    <h3 className="font-semibold">
+                      {capability.title}
+                    </h3>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 5: Who We Work With */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <h2 className="section-title text-gray-900">
+              Trusted by Ecosystems Across Asset Classes
+            </h2>
+            <p className="section-subtitle text-gray-600">
+              Whether you're an asset manager, tokenization platform, REIT, private fund, or fractional investment platform — our infrastructure supports diverse use cases with modularity and control.
+            </p>
+            <div className="inline-flex items-center px-6 py-3 bg-green-50 text-green-700 rounded-xl font-medium border border-green-200">
+              <Target className="mr-2 h-5 w-5" />
+              Use Cases: {content.useCases}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 6: Why Vayana */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center space-y-6 mb-16">
+              <h2 className="section-title text-gray-900">
+                Built by a Trusted Infrastructure Partner
+              </h2>
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
@@ -219,33 +287,113 @@ const Tokenization = () => {
         </div>
       </section>
 
-      {/* 6. How it works */}
-      <section className="py-16 bg-white">
+      {/* New Section: ERC3643 Benefits */}
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center space-y-6 mb-16">
               <h2 className="section-title text-gray-900">
-                How It Works
+                Powered by ERC3643 Standard
               </h2>
               <p className="section-subtitle text-gray-600">
-                From asset to token in a few simple steps
+                Leverage the most advanced compliant tokenization standard for secure, regulatory-aligned digital assets
               </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                 <div className="flex items-start space-x-4">
+                   <div className="w-12 h-12 bg-vayana-blue/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                     <Lock className="h-6 w-6 text-vayana-blue" />
+                   </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Identity & Compliance</h3>
+                    <p className="text-gray-600">Built-in KYC/AML verification with on-chain identity registry ensuring only verified investors can participate</p>
+                  </div>
+                </div>
+                
+                 <div className="flex items-start space-x-4">
+                   <div className="w-12 h-12 bg-vayana-red/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                     <Shield className="h-6 w-6 text-vayana-red" />
+                   </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Transfer Restrictions</h3>
+                    <p className="text-gray-600">Programmable transfer rules that automatically enforce regulatory requirements and investment restrictions</p>
+                  </div>
+                </div>
+                
+                 <div className="flex items-start space-x-4">
+                   <div className="w-12 h-12 bg-vayana-purple/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                     <Layers className="h-6 w-6 text-vayana-purple" />
+                   </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Modular Architecture</h3>
+                    <p className="text-gray-600">Flexible smart contract framework that adapts to different asset classes and regulatory environments</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8">
+                 <div className="text-center space-y-4">
+                   <div className="w-20 h-20 bg-vayana-blue/10 rounded-2xl flex items-center justify-center mx-auto">
+                     <Award className="h-10 w-10 text-vayana-blue" />
+                   </div>
+                  <h3 className="text-xl font-bold text-gray-900">ERC3643 Compliance</h3>
+                  <p className="text-gray-600">
+                    Industry-standard protocol ensuring your tokenized assets meet global regulatory requirements while maintaining operational efficiency
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 7: Quick Deployment */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <h2 className="section-title text-gray-900">
+              Launch a Tokenized Offering in Weeks
+            </h2>
+            <p className="section-subtitle text-gray-600">
+              Start small with a compliant, branded tokenization flow using our plug-and-play infrastructure. Whether it's a tokenized {content.title.toLowerCase()} project, fund unit, or alt-asset drop — go live in weeks, not months.
+            </p>
+            <div className="flex items-center justify-center space-x-4 text-vayana-blue mb-8">
+              <Clock className="h-8 w-8" />
+              <span className="text-2xl font-bold">Weeks, not Months</span>
+            </div>
+            <Button size="lg" className="bg-vayana-blue text-white hover:bg-vayana-blue/90 text-lg px-8 font-semibold">
+              Book a Demo
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 8: How It Works */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center space-y-6 mb-16">
+              <h2 className="section-title text-gray-900">
+                From Asset to Token in a Few Steps
+              </h2>
             </div>
             
             <div className="grid md:grid-cols-5 gap-6">
               {steps.map((step, index) => (
-                 <div key={index} className="text-center space-y-4 relative">
-                   <div className="w-16 h-16 bg-vayana-blue/10 rounded-xl flex items-center justify-center mx-auto relative">
+                 <div key={index} className="text-center space-y-4">
+                   <div className="w-16 h-16 bg-vayana-blue/10 rounded-xl flex items-center justify-center mx-auto">
                      <step.icon className="h-8 w-8 text-vayana-blue" />
-                     <div className="absolute -top-2 -right-2 w-6 h-6 bg-vayana-blue text-white rounded-full flex items-center justify-center text-sm font-bold">
-                       {index + 1}
-                     </div>
                    </div>
-                  <h3 className="font-semibold text-gray-900">
+                  <h3 className="font-semibold text-sm">
                     {step.title}
                   </h3>
                   {index < steps.length - 1 && (
-                    <div className="hidden md:block absolute top-8 left-full w-6 h-0.5 bg-gray-300" />
+                    <div className="hidden md:block absolute top-8 left-full w-full">
+                      <ArrowRight className="h-4 w-4 text-muted-foreground mx-auto" />
+                    </div>
                   )}
                 </div>
               ))}
@@ -254,10 +402,35 @@ const Tokenization = () => {
         </div>
       </section>
 
-      {/* 7. FAQs */}
-      <FAQSection />
+      {/* Section 9: White-Labeled */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <h2 className="section-title text-gray-900">
+              Your Brand. Our Engine.
+            </h2>
+            <p className="section-subtitle text-gray-600">
+              Offer a fully customized front-end for your investors while we manage the backend, smart contracts, and compliance. Focus on growth, while we handle the technology.
+            </p>
+            <div className="grid md:grid-cols-2 gap-8 mt-12">
+              <Card className="p-8 text-center border-0 shadow-lg bg-white">
+                <h3 className="text-xl font-semibold mb-2">Your UI</h3>
+                 <div className="h-32 bg-vayana-blue/10 rounded-lg flex items-center justify-center">
+                   <Target className="h-12 w-12 text-vayana-blue" />
+                 </div>
+              </Card>
+              <Card className="p-8 text-center border-0 shadow-lg bg-white">
+                <h3 className="text-xl font-semibold mb-4 text-gray-900">Vayana Engine</h3>
+                 <div className="h-32 bg-vayana-blue/10 rounded-lg flex items-center justify-center">
+                   <Cog className="h-12 w-12 text-vayana-blue" />
+                 </div>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      {/* 8. Contact us */}
+      {/* Contact Section */}
       <ContactSection />
     </div>
   );
