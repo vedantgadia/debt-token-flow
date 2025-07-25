@@ -22,6 +22,11 @@ import {
 } from "lucide-react";
 import { useSearchParams } from "react-router-dom";
 import ContactSection from '../components/ContactSection';
+import TokenizationFlow from '../components/TokenizationFlow';
+import realEstateImage from '../assets/real-estate-building.jpg';
+import financeImage from '../assets/finance-code.jpg';
+import alternateAssetsImage from '../assets/alternate-assets.jpg';
+import debtCapitalImage from '../assets/debt-capital.jpg';
 
 const Tokenization = () => {
   const [searchParams] = useSearchParams();
@@ -67,6 +72,22 @@ const Tokenization = () => {
   };
 
   const content = categoryContent[category as keyof typeof categoryContent] || categoryContent['real-estate'];
+  
+  // Get appropriate image based on category
+  const getHeroImage = () => {
+    switch (category) {
+      case 'debt-capital':
+        return debtCapitalImage;
+      case 'real-estate':
+        return realEstateImage;
+      case 'equity-funds':
+        return financeImage;
+      case 'alternate-assets':
+        return alternateAssetsImage;
+      default:
+        return realEstateImage;
+    }
+  };
 
   const benefits = [
     {
@@ -124,32 +145,67 @@ const Tokenization = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-hero-gradient">
-        <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-transparent to-black/20" />
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Dynamic Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url(${getHeroImage()})`
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(255,255,255,0.1)_0%,transparent_50%)]" />
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="inline-flex items-center px-6 py-3 bg-white/20 text-white rounded-full text-sm font-medium backdrop-blur-sm border border-white/30">
-              {content.title} Tokenization
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center px-6 py-3 bg-white/20 text-white rounded-full text-sm font-medium backdrop-blur-sm border border-white/30">
+                {content.title} Tokenization
+              </div>
+              
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight font-display text-white">
+                {content.hero.split(' ').slice(0, -4).join(' ')}
+                <span className="block bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">
+                  {content.hero.split(' ').slice(-4).join(' ')}
+                </span>
+              </h1>
+              
+              <p className="text-lg md:text-xl text-white/90 max-w-xl">
+                Unlock liquidity, enable fractional ownership, and simplify distribution with compliant tokenization infrastructure built for institutions.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="bg-white text-primary hover:bg-gray-100 text-lg px-8 font-semibold">
+                  Explore the Platform
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </div>
             </div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight font-display text-white">
-              {content.hero.split(' ').slice(0, -4).join(' ')}
-              <span className="block bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">
-                {content.hero.split(' ').slice(-4).join(' ')}
-              </span>
-            </h1>
-            
-            <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
-              Unlock liquidity, enable fractional ownership, and simplify distribution with compliant tokenization infrastructure built for institutions.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-primary hover:bg-gray-100 text-lg px-8 font-semibold">
-                Explore the Platform
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+            {/* Asset Type Visual */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative">
+                <div className="w-80 h-80 rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20 backdrop-blur-sm">
+                  <img 
+                    src={getHeroImage()} 
+                    alt={content.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6 text-white">
+                    <h3 className="text-xl font-bold mb-2">{content.title}</h3>
+                    <p className="text-sm text-white/80">{content.useCases}</p>
+                  </div>
+                </div>
+                
+                {/* Floating Elements */}
+                <div className="absolute -top-4 -right-4 w-16 h-16 bg-vayana-blue/20 rounded-full backdrop-blur-sm border border-white/30 flex items-center justify-center animate-pulse">
+                  <Coins className="h-8 w-8 text-white" />
+                </div>
+                <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-vayana-red/20 rounded-full backdrop-blur-sm border border-white/30 flex items-center justify-center animate-pulse">
+                  <Network className="h-6 w-6 text-white" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -188,24 +244,33 @@ const Tokenization = () => {
             
             <div className="grid md:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                 <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white hover:bg-vayana-blue/5">
-                   <CardContent className="p-8 text-center space-y-4">
-                     <div className="w-16 h-16 bg-vayana-blue/10 rounded-xl flex items-center justify-center mx-auto group-hover:bg-vayana-blue/20 transition-all duration-300">
+                 <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white hover:bg-vayana-blue/5 overflow-hidden">
+                   {/* Visual Header */}
+                   <div className="h-32 bg-gradient-to-br from-vayana-blue/10 via-vayana-purple/10 to-vayana-red/10 relative overflow-hidden">
+                     <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent" />
+                     <div className="absolute top-4 right-4 w-16 h-16 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
                        <benefit.icon className="h-8 w-8 text-vayana-blue" />
-                    </div>
-                    <h3 className="text-xl font-semibold">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-muted-foreground">
-                      {benefit.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+                     </div>
+                     <div className="absolute bottom-4 left-4">
+                       <div className="w-8 h-8 bg-vayana-blue/20 rounded-full" />
+                       <div className="w-4 h-4 bg-vayana-red/30 rounded-full -mt-2 ml-6" />
+                     </div>
+                   </div>
+                   
+                   <CardContent className="p-8 text-center space-y-4">
+                     <h3 className="text-xl font-semibold">
+                       {benefit.title}
+                     </h3>
+                     <p className="text-muted-foreground">
+                       {benefit.description}
+                     </p>
+                   </CardContent>
+                 </Card>
+               ))}
+             </div>
+           </div>
+         </div>
+       </section>
 
       {/* Section 4: Capabilities */}
       <section className="py-24 bg-gray-50">
@@ -371,7 +436,7 @@ const Tokenization = () => {
         </div>
       </section>
 
-      {/* Section 8: How It Works */}
+      {/* Section 8: How It Works - Interactive Flow */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -379,23 +444,27 @@ const Tokenization = () => {
               <h2 className="section-title text-gray-900">
                 From Asset to Token in a Few Steps
               </h2>
+              <p className="section-subtitle text-gray-600">
+                Our streamlined tokenization process transforms traditional assets into compliant digital tokens through an integrated workflow designed for institutional efficiency.
+              </p>
             </div>
             
-            <div className="grid md:grid-cols-5 gap-6">
+            {/* Interactive Flow Diagram */}
+            <div className="mb-12">
+              <TokenizationFlow />
+            </div>
+            
+            {/* Process Details */}
+            <div className="grid md:grid-cols-5 gap-6 mt-12">
               {steps.map((step, index) => (
-                 <div key={index} className="text-center space-y-4">
-                   <div className="w-16 h-16 bg-vayana-blue/10 rounded-xl flex items-center justify-center mx-auto">
+                 <Card key={index} className="text-center space-y-4 p-6 border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
+                   <div className="w-16 h-16 bg-vayana-blue/10 rounded-xl flex items-center justify-center mx-auto group-hover:bg-vayana-blue/20 transition-all duration-300">
                      <step.icon className="h-8 w-8 text-vayana-blue" />
                    </div>
                   <h3 className="font-semibold text-sm">
                     {step.title}
                   </h3>
-                  {index < steps.length - 1 && (
-                    <div className="hidden md:block absolute top-8 left-full w-full">
-                      <ArrowRight className="h-4 w-4 text-muted-foreground mx-auto" />
-                    </div>
-                  )}
-                </div>
+                </Card>
               ))}
             </div>
           </div>
