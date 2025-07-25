@@ -165,7 +165,14 @@ const HeroSection = () => {
                 <Calendar className="h-5 w-5" />
                 Book a Demo
               </Button>
-              <Button variant="outline" className="hero-button bg-transparent border-white hover:bg-white/10 text-white flex items-center gap-2">
+              <Button variant="outline" className="hero-button bg-transparent border-white hover:bg-white/10 text-white flex items-center gap-2" onClick={() => {
+                const vdpSection = document.getElementById('about');
+                if (vdpSection) {
+                  vdpSection.scrollIntoView({
+                    behavior: 'smooth'
+                  });
+                }
+              }}>
                 Know More
                 <ArrowRight className="h-5 w-5" />
               </Button>
