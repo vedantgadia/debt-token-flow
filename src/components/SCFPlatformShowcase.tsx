@@ -150,7 +150,7 @@ const SCFPlatformShowcase = () => {
                       alt={currentScreen.title}
                       className="w-full h-auto transition-all duration-700 group-hover:scale-[1.02]"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center" />
                     
                     {/* Floating status indicator */}
                     <div className="absolute top-4 right-4 flex items-center space-x-2 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 shadow-lg">
