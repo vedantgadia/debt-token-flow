@@ -30,6 +30,12 @@ import debtCapitalImage from '../assets/debt-capital.jpg';
 import collectiblesImage from '../assets/collectibles-art.jpg';
 import techCircuitImage from '../assets/tech-circuit.jpg';
 import tokenNetworkImage from '../assets/token-network-flow.jpg';
+import modernBuildingImage from '../assets/modern-building.jpg';
+import warehouseImage from '../assets/warehouse-property.jpg';
+import goldBarsImage from '../assets/gold-bars.jpg';
+import fineArtImage from '../assets/fine-art.jpg';
+import equityDashboardImage from '../assets/equity-funds-dashboard.jpg';
+import debtSecuritiesImage from '../assets/debt-securities.jpg';
 
 const Tokenization = () => {
   const [searchParams] = useSearchParams();
@@ -76,21 +82,43 @@ const Tokenization = () => {
 
   const content = categoryContent[category as keyof typeof categoryContent] || categoryContent['real-estate'];
   
-  // Get appropriate image based on category
-  const getHeroImage = () => {
+  // Get appropriate images based on category and context
+  const getCategoryImages = () => {
     switch (category) {
       case 'debt-capital':
-        return debtCapitalImage;
+        return {
+          hero: debtSecuritiesImage,
+          section2: debtSecuritiesImage,
+          alternate: tokenNetworkImage
+        };
       case 'real-estate':
-        return realEstateImage;
+        return {
+          hero: modernBuildingImage,
+          section2: warehouseImage,
+          alternate: realEstateImage
+        };
       case 'equity-funds':
-        return financeImage;
+        return {
+          hero: equityDashboardImage,
+          section2: financeImage,
+          alternate: equityDashboardImage
+        };
       case 'alternate-assets':
-        return alternateAssetsImage;
+        return {
+          hero: goldBarsImage,
+          section2: fineArtImage,
+          alternate: collectiblesImage
+        };
       default:
-        return realEstateImage;
+        return {
+          hero: modernBuildingImage,
+          section2: warehouseImage,
+          alternate: realEstateImage
+        };
     }
   };
+
+  const categoryImages = getCategoryImages();
 
   const benefits = [
     {
@@ -222,19 +250,30 @@ const Tokenization = () => {
             </div>
             
             {/* Category-specific visual */}
-            <div className="relative">
-              <div className="rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative group">
+              <div className="rounded-2xl overflow-hidden shadow-2xl transform transition-all duration-500 group-hover:scale-105">
                 <img 
-                  src={category === 'alternate-assets' ? collectiblesImage : tokenNetworkImage} 
+                  src={categoryImages.section2} 
                   alt={content.title}
-                  className="w-full h-80 object-cover"
+                  className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-vayana-blue/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-vayana-blue/70 via-transparent to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <h3 className="text-xl font-bold mb-2">Digital Asset Innovation</h3>
-                  <p className="text-sm text-white/90">Transforming traditional assets into programmable digital securities</p>
+                  <h3 className="text-xl font-bold mb-2 transform transition-transform duration-300 group-hover:translate-y-[-4px]">
+                    {category === 'real-estate' ? 'Property Innovation' : 
+                     category === 'alternate-assets' ? 'Alternative Assets' :
+                     category === 'equity-funds' ? 'Fund Management' :
+                     'Debt Securities'}
+                  </h3>
+                  <p className="text-sm text-white/90 transform transition-transform duration-300 group-hover:translate-y-[-2px]">
+                    Transforming traditional assets into programmable digital securities
+                  </p>
                 </div>
               </div>
+              
+              {/* Floating animation elements */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-vayana-red/20 rounded-full animate-pulse" />
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-vayana-blue/30 rounded-full animate-pulse delay-300" />
             </div>
           </div>
         </div>
@@ -329,19 +368,57 @@ const Tokenization = () => {
         </div>
       </section>
 
-      {/* Section 5: Who We Work With */}
+      {/* Section 5: Category Showcase with Interactive Elements */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h2 className="section-title text-gray-900">
-              Trusted by Ecosystems Across Asset Classes
-            </h2>
-            <p className="section-subtitle text-gray-600">
-              Whether you're an asset manager, tokenization platform, REIT, private fund, or fractional investment platform — our infrastructure supports diverse use cases with modularity and control.
-            </p>
-            <div className="inline-flex items-center px-6 py-3 bg-green-50 text-green-700 rounded-xl font-medium border border-green-200">
-              <Target className="mr-2 h-5 w-5" />
-              Use Cases: {content.useCases}
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center space-y-6 mb-16">
+              <h2 className="section-title text-gray-900">
+                Trusted by Ecosystems Across Asset Classes
+              </h2>
+              <p className="section-subtitle text-gray-600">
+                Whether you're an asset manager, tokenization platform, REIT, private fund, or fractional investment platform — our infrastructure supports diverse use cases with modularity and control.
+              </p>
+            </div>
+            
+            {/* Interactive Asset Category Grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              {Object.entries(categoryContent).map(([key, categoryData]) => (
+                <Card key={key} className={`group cursor-pointer transition-all duration-300 border-2 overflow-hidden ${
+                  category === key ? 'border-vayana-blue shadow-lg scale-105' : 'border-gray-200 hover:border-vayana-blue/50 hover:shadow-xl'
+                }`}>
+                  <div className="relative h-40 overflow-hidden">
+                    <img 
+                      src={
+                        key === 'real-estate' ? modernBuildingImage :
+                        key === 'alternate-assets' ? goldBarsImage :
+                        key === 'equity-funds' ? equityDashboardImage :
+                        debtSecuritiesImage
+                      }
+                      alt={categoryData.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                    <div className="absolute bottom-4 left-4 right-4 text-white">
+                      <h3 className="font-bold text-lg mb-1">{categoryData.title}</h3>
+                      <p className="text-xs text-white/80">{categoryData.useCases}</p>
+                    </div>
+                  </div>
+                  <CardContent className="p-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm font-medium text-gray-600">Explore Category</span>
+                      <ArrowRight className="h-4 w-4 text-vayana-blue transform transition-transform group-hover:translate-x-1" />
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            
+            <div className="text-center">
+              <div className="inline-flex items-center px-6 py-3 bg-green-50 text-green-700 rounded-xl font-medium border border-green-200">
+                <Target className="mr-2 h-5 w-5" />
+                Current Focus: {content.useCases}
+              </div>
             </div>
           </div>
         </div>
