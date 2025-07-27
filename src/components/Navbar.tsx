@@ -99,6 +99,11 @@ const Navbar = () => {
                           VDP Trade Docs
                         </Link>
                       </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <Link to="/securitization" className="w-full">
+                          Securitization
+                        </Link>
+                      </DropdownMenuItem>
                       <DropdownMenuSub>
                         <DropdownMenuSubTrigger>
                           Supply Chain Finance
@@ -214,6 +219,13 @@ const Navbar = () => {
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     VDP Trade Docs
+                  </Link>
+                  <Link 
+                    to="/securitization" 
+                    className="block text-sm text-gray-600 hover:text-secondary transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Securitization
                   </Link>
                   <div className="block font-medium text-gray-600 pb-1">Supply Chain Finance</div>
                   <div className="pl-4 space-y-2">
