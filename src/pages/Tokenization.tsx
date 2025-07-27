@@ -23,6 +23,7 @@ import {
 import { useSearchParams } from "react-router-dom";
 import ContactSection from '../components/ContactSection';
 import TokenizationFlow from '../components/TokenizationFlow';
+import PlatformShowcase from '../components/PlatformShowcase';
 import realEstateImage from '../assets/real-estate-building.jpg';
 import financeImage from '../assets/finance-code.jpg';
 import alternateAssetsImage from '../assets/alternate-assets.jpg';
@@ -454,6 +455,9 @@ const Tokenization = () => {
           </div>
         </div>
       </section>
+
+      {/* Platform Screenshots Showcase */}
+      <PlatformShowcase />
 
       {/* New Section: ERC3643 Benefits */}
       <section className="py-24 bg-white">
