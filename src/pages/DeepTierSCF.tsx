@@ -3,11 +3,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import SCFPlatformShowcase from "@/components/SCFPlatformShowcase";
 import { ArrowRight, CheckCircle, XCircle, Users, TrendingUp, Shield, Globe, Zap, Network, Building, Banknote, FileText, BarChart3, Target, Layers, ArrowUpRight, Mail, Phone, ArrowDown, Sparkles, Clock, CreditCard, Repeat, Send } from "lucide-react";
 const DeepTierSCF = () => {
-  return (
-    <div className="min-h-screen bg-background relative overflow-hidden">
+  return <div className="min-h-screen bg-background relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="fixed inset-0 opacity-5">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary rounded-full blur-3xl animate-pulse-slow"></div>
@@ -322,76 +320,57 @@ const DeepTierSCF = () => {
               
               {/* Diagram Container */}
               <div className="bg-gray-50 rounded-xl p-4">
-                <img 
-                  src="/lovable-uploads/b4d908ab-34da-4fbc-9d1a-2a39b8403b72.png" 
-                  alt="Deep-Tier Supply Chain Finance Flow Diagram" 
-                  className="w-full h-auto max-w-full mx-auto rounded-lg"
-                />
+                <img src="/lovable-uploads/b4d908ab-34da-4fbc-9d1a-2a39b8403b72.png" alt="Deep-Tier Supply Chain Finance Flow Diagram" className="w-full h-auto max-w-full mx-auto rounded-lg" />
               </div>
               
               {/* Key Features Below Diagram */}
               <div className="grid md:grid-cols-4 gap-6 mt-8">
-                {[
-                  {
-                    icon: Shield,
-                    title: "Blockchain Security",
-                    desc: "Immutable transaction records"
-                  },
-                  {
-                    icon: Zap,
-                    title: "Real-time Processing",
-                    desc: "Instant token transfers"
-                  },
-                  {
-                    icon: Network,
-                    title: "Multi-tier Coverage",
-                    desc: "From Tier 1 to Tier N suppliers"
-                  },
-                  {
-                    icon: TrendingUp,
-                    title: "Scalable Finance",
-                    desc: "Credit flows throughout the chain"
-                  }
-                ].map((feature, index) => (
-                  <div key={index} className="text-center group">
+                {[{
+                icon: Shield,
+                title: "Blockchain Security",
+                desc: "Immutable transaction records"
+              }, {
+                icon: Zap,
+                title: "Real-time Processing",
+                desc: "Instant token transfers"
+              }, {
+                icon: Network,
+                title: "Multi-tier Coverage",
+                desc: "From Tier 1 to Tier N suppliers"
+              }, {
+                icon: TrendingUp,
+                title: "Scalable Finance",
+                desc: "Credit flows throughout the chain"
+              }].map((feature, index) => <div key={index} className="text-center group">
                     <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
                       <feature.icon className="h-5 w-5 text-white" />
                     </div>
                     <h4 className="font-semibold text-gray-800 mb-1">{feature.title}</h4>
                     <p className="text-sm text-gray-600">{feature.desc}</p>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
 
           {/* Simple Process Steps */}
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {[
-              {
-                num: 1,
-                title: "Setup & Integration",
-                desc: "Anchor buyer integrates with Vayana DTSCP platform and maps supply chain tiers"
-              },
-              {
-                num: 2,
-                title: "Token Flow",
-                desc: "Digital payment obligations flow through blockchain rails from anchor to all supplier tiers"
-              },
-              {
-                num: 3,
-                title: "Financing & Settlement",
-                desc: "Financiers provide instant liquidity while secure repayment flows ensure seamless settlement"
-              }
-            ].map((step, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 text-center hover:shadow-xl transition-shadow">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">
-                  {step.num}
-                </div>
+            {[{
+            num: 1,
+            title: "Setup & Integration",
+            desc: "Anchor buyer integrates with Vayana DTSCP platform and maps supply chain tiers"
+          }, {
+            num: 2,
+            title: "Token Flow",
+            desc: "Digital payment obligations flow through blockchain rails from anchor to all supplier tiers"
+          }, {
+            num: 3,
+            title: "Financing & Settlement",
+            desc: "Financiers provide instant liquidity while secure repayment flows ensure seamless settlement"
+          }].map((step, index) => <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 text-center hover:shadow-xl transition-shadow">
+                
                 <h3 className="font-bold text-lg mb-2 text-gray-800">{step.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{step.desc}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -586,9 +565,6 @@ const DeepTierSCF = () => {
         </div>
       </section>
 
-      {/* SCF Platform Screenshots Showcase */}
-      <SCFPlatformShowcase />
-
       {/* Who is it for */}
       <section className="py-16 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 relative overflow-hidden">
         {/* Background Decorative Elements */}
@@ -621,28 +597,27 @@ const DeepTierSCF = () => {
             
             <div className="grid md:grid-cols-3 gap-12">
               {[{
-                icon: Building,
-                title: "Large Corporates",
-                desc: "Anchor Buyers",
-                detail: "Drive supplier financing programs",
-                color: "primary",
-                gradient: "from-blue-500 to-blue-600"
-              }, {
-                icon: Banknote,
-                title: "Banks and Non-Banks",
-                desc: "Financial Institutions",
-                detail: "Provide competitive financing solutions",
-                color: "secondary", 
-                gradient: "from-purple-500 to-purple-600"
-              }, {
-                icon: Globe,
-                title: "Lending Fintechs",
-                desc: "Fintech Lending Platforms",
-                detail: "Scale innovative financing models",
-                color: "accent",
-                gradient: "from-emerald-500 to-emerald-600"
-              }].map((audience, index) => (
-                <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 hover:-translate-y-4 bg-white/80 backdrop-blur-sm relative overflow-hidden">
+              icon: Building,
+              title: "Large Corporates",
+              desc: "Anchor Buyers",
+              detail: "Drive supplier financing programs",
+              color: "primary",
+              gradient: "from-blue-500 to-blue-600"
+            }, {
+              icon: Banknote,
+              title: "Banks and Non-Banks",
+              desc: "Financial Institutions",
+              detail: "Provide competitive financing solutions",
+              color: "secondary",
+              gradient: "from-purple-500 to-purple-600"
+            }, {
+              icon: Globe,
+              title: "Lending Fintechs",
+              desc: "Fintech Lending Platforms",
+              detail: "Scale innovative financing models",
+              color: "accent",
+              gradient: "from-emerald-500 to-emerald-600"
+            }].map((audience, index) => <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 hover:-translate-y-4 bg-white/80 backdrop-blur-sm relative overflow-hidden">
                   {/* Card Background Glow */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${audience.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
                   
@@ -672,8 +647,7 @@ const DeepTierSCF = () => {
                     {/* Bottom Accent Line */}
                     <div className={`w-0 h-1 bg-gradient-to-r ${audience.gradient} mx-auto mt-6 group-hover:w-16 transition-all duration-500 rounded-full`}></div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
           
@@ -787,8 +761,6 @@ const DeepTierSCF = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default DeepTierSCF;
