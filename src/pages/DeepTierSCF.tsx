@@ -499,23 +499,23 @@ const DeepTierSCF = () => {
           <div className="space-y-16">
             {[{
               title: "Global Manufacturing Network",
-              subtitle: "Multi-tier financing across 15 countries",
+              subtitle: "Multi-tier financing across international supply chains",
               image: globalManufacturing,
-              stats: ["4 Supplier Tiers", "500+ MSMEs Financed", "25% Cost Reduction"],
+              stats: ["Multi-Tier Access", "MSME Empowerment", "Cost Optimization"],
               highlight: "Cross-border supply chain finance",
               color: "from-blue-500 to-indigo-600"
             }, {
               title: "Automotive Supply Chain",
-              subtitle: "Real-time financing for parts manufacturers",
+              subtitle: "Streamlined financing for parts manufacturers",
               image: automotiveSupplyChain,
-              stats: ["Tier 2-3 Coverage", "48hr Processing", "85% Approval Rate"],
+              stats: ["Deep-Tier Coverage", "Rapid Processing", "High Accessibility"],
               highlight: "Smart contract automation",
               color: "from-purple-500 to-pink-600"
             }, {
               title: "ESG-Driven Consumer Goods",
               subtitle: "Inclusive financing for diverse suppliers",
               image: consumerGoodsESG,
-              stats: ["60% Women-owned", "Rural Suppliers", "ESG Compliance+"],
+              stats: ["Women Entrepreneurs", "Rural Inclusion", "ESG Alignment"],
               highlight: "Social impact measurement",
               color: "from-emerald-500 to-teal-600"
             }].map((story, index) => (
@@ -539,8 +539,8 @@ const DeepTierSCF = () => {
                     
                     {/* Status Indicator */}
                     <div className="absolute bottom-6 left-6 flex items-center space-x-2 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2">
-                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                      <span className="text-sm font-medium text-gray-800">Live Implementation</span>
+                      <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                      <span className="text-sm font-medium text-gray-800">Ready to Deploy</span>
                     </div>
                   </div>
                 </div>
@@ -566,7 +566,7 @@ const DeepTierSCF = () => {
                         <div className={`text-sm font-bold bg-gradient-to-r ${story.color} bg-clip-text text-transparent mb-1`}>
                           {stat}
                         </div>
-                        <div className="text-xs text-gray-500">Impact</div>
+                        <div className="text-xs text-gray-500">Capability</div>
                       </div>
                     ))}
                   </div>
@@ -640,9 +640,9 @@ const DeepTierSCF = () => {
                 </div>
                 
                 {/* Status Indicator */}
-                <div className="absolute top-6 right-6 flex items-center space-x-2 bg-green-500/20 backdrop-blur-sm rounded-full px-4 py-2 border border-green-400/30">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-sm font-medium text-green-300">Live Infrastructure</span>
+                <div className="absolute top-6 right-6 flex items-center space-x-2 bg-blue-500/20 backdrop-blur-sm rounded-full px-4 py-2 border border-blue-400/30">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                  <span className="text-sm font-medium text-blue-300">Production Ready</span>
                 </div>
               </div>
             </div>
@@ -655,14 +655,14 @@ const DeepTierSCF = () => {
               {[{
                 icon: Network,
                 title: "Blockchain Infrastructure",
-                desc: "Distributed ledger technology ensuring transparency, immutability, and programmable finance across all tiers.",
-                features: ["Ethereum Compatibility", "Smart Contract Automation", "Cross-chain Integration"],
+                desc: "Distributed ledger technology ensuring transparency, immutability, and programmable finance across all supply chain tiers.",
+                features: ["Ethereum Compatible", "Smart Contracts", "Cross-chain Ready"],
                 color: "from-cyan-400 to-blue-500"
               }, {
                 icon: Zap,
                 title: "Real-time Processing",
-                desc: "Event-driven architecture with instant transaction processing and automated financing triggers.",
-                features: ["Microsecond Response", "Auto-scaling Infrastructure", "99.9% Uptime SLA"],
+                desc: "Event-driven architecture with instant transaction processing and automated financing triggers for seamless operations.",
+                features: ["Real-time Processing", "Auto-scaling Design", "Enterprise Grade"],
                 color: "from-purple-400 to-pink-500"
               }].map((tech, index) => (
                 <div key={index} className="group">
@@ -692,33 +692,33 @@ const DeepTierSCF = () => {
               ))}
             </div>
             
-            {/* Tech Metrics Dashboard */}
+            {/* Tech Capabilities Dashboard */}
             <div className="space-y-6">
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                <h3 className="text-2xl font-bold text-white mb-6 text-center">Platform Metrics</h3>
+                <h3 className="text-2xl font-bold text-white mb-6 text-center">Platform Capabilities</h3>
                 <div className="grid grid-cols-2 gap-6">
                   {[{
-                    value: "99.9%",
-                    label: "Uptime",
+                    value: "Enterprise",
+                    label: "Grade Security",
                     color: "text-green-400"
                   }, {
-                    value: "<500ms",
-                    label: "Response Time",
+                    value: "Real-time",
+                    label: "Processing",
                     color: "text-cyan-400"
                   }, {
-                    value: "1M+",
-                    label: "Transactions",
+                    value: "Scalable",
+                    label: "Architecture",
                     color: "text-purple-400"
                   }, {
-                    value: "24/7",
-                    label: "Monitoring",
+                    value: "Always-on",
+                    label: "Availability",
                     color: "text-blue-400"
-                  }].map((metric, index) => (
+                  }].map((capability, index) => (
                     <div key={index} className="text-center group">
-                      <div className={`text-3xl font-bold ${metric.color} mb-2 group-hover:scale-110 transition-transform`}>
-                        {metric.value}
+                      <div className={`text-2xl font-bold ${capability.color} mb-2 group-hover:scale-110 transition-transform`}>
+                        {capability.value}
                       </div>
-                      <div className="text-gray-400 text-sm">{metric.label}</div>
+                      <div className="text-gray-400 text-sm">{capability.label}</div>
                     </div>
                   ))}
                 </div>
