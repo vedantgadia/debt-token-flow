@@ -101,7 +101,12 @@ const Navbar = () => {
                       </DropdownMenuItem>
                        <DropdownMenuItem asChild>
                         <Link to="/deep-tier-scf" className="w-full">
-                          Deep-Tier SCF
+                          Multi-Tier Financing
+                        </Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <Link to="/deep-tier-sc-payments" className="w-full">
+                          Deep-Tier SC Payments
                         </Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem asChild>
@@ -208,7 +213,14 @@ const Navbar = () => {
                     className="block text-sm text-gray-600 hover:text-secondary transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Deep-Tier SCF
+                    Multi-Tier Financing
+                  </Link>
+                  <Link 
+                    to="/deep-tier-sc-payments" 
+                    className="block text-sm text-gray-600 hover:text-secondary transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Deep-Tier SC Payments
                   </Link>
                   <a 
                     href="https://www.linkedin.com/company/vayanaofficial/posts/?feedView=articles" 
