@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { FileText, Shield, Globe, CheckCircle, ArrowRight, Zap, Users, Lock, Database, Truck, Building2, Scale, FileCheck, ClipboardList, Award, Package, Play, Download, RefreshCw, Eye, Mail, Phone } from 'lucide-react';
+import { FileText, Shield, Globe, CheckCircle, ArrowRight, Zap, Users, Lock, Database, Truck, Building2, Scale, FileCheck, ClipboardList, Award, Package, Play, Download, RefreshCw, Eye, Mail, Phone, ExternalLink } from 'lucide-react';
 import fourCornerModel from '@/assets/four-corner-model.png';
 import threeCornerModel from '@/assets/three-corner-model.png';
 const TradeDocVisual = () => {
@@ -854,6 +854,15 @@ const VDPTradeDocs = () => {
               </Button>
               <Button size="lg" className="bg-gradient-to-r from-secondary to-accent text-white hover:opacity-90 px-8 py-4">
                 Request Demo
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-accent text-accent hover:bg-accent hover:text-white px-8 py-4"
+                onClick={() => window.open('https://www.perplexity.ai/search?q=Show+the+latest+news+on+MLETR+and+trade+digitisation+from+the+past+week', '_blank')}
+              >
+                Latest MLETR News
+                <ExternalLink className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>
