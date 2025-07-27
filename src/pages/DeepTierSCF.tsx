@@ -584,33 +584,32 @@ const DeepTierSCF = () => {
       </section>
 
       {/* Technology That Powers It - Interactive Tech Hub */}
-      <section className="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white relative overflow-hidden">
-        {/* Animated Background Grid */}
+      <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-primary/5 relative overflow-hidden">
+        {/* Animated Background Elements */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0)`,
-            backgroundSize: '40px 40px'
-          }}></div>
+          <div className="absolute top-20 left-20 w-32 h-32 border-2 border-primary rounded-full animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-24 h-24 border-2 border-secondary rounded-full animate-pulse delay-300"></div>
+          <div className="absolute top-1/2 left-1/4 w-16 h-16 border-2 border-accent rounded-full animate-pulse delay-700"></div>
         </div>
         
         {/* Floating Tech Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-          <div className="absolute top-40 right-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-300"></div>
-          <div className="absolute bottom-32 left-1/4 w-2 h-2 bg-green-400 rounded-full animate-pulse delay-700"></div>
-          <div className="absolute bottom-20 right-20 w-4 h-4 bg-blue-400 rounded-full animate-pulse delay-1000"></div>
+          <div className="absolute top-20 left-20 w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+          <div className="absolute top-40 right-32 w-3 h-3 bg-secondary rounded-full animate-pulse delay-300"></div>
+          <div className="absolute bottom-32 left-1/4 w-2 h-2 bg-accent rounded-full animate-pulse delay-700"></div>
+          <div className="absolute bottom-20 right-20 w-4 h-4 bg-primary rounded-full animate-pulse delay-1000"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-20">
-            <Badge className="mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 text-white border-0 px-6 py-2">
+            <Badge className="mb-6 bg-gradient-to-r from-primary to-secondary text-white border-0 px-6 py-2">
               <Zap className="mr-2 h-4 w-4" />
               Next-Gen Technology
             </Badge>
-            <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
               Powered by Innovation
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Cutting-edge technology stack driving the future of supply chain finance
             </p>
           </div>
@@ -624,14 +623,14 @@ const DeepTierSCF = () => {
                   alt="Blockchain Technology"
                   className="w-full h-96 object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/40 to-transparent"></div>
                 
                 {/* Floating Tech Badges */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl">
                     {['Blockchain', 'Smart Contracts', 'AI/ML', 'Real-time APIs'].map((tech, index) => (
-                      <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-2 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-pointer group">
-                        <div className="text-sm font-medium text-white group-hover:scale-105 transition-transform">
+                      <div key={index} className="bg-white/90 backdrop-blur-sm rounded-xl px-4 py-2 text-center border border-white/20 hover:bg-white transition-all duration-300 cursor-pointer group shadow-lg">
+                        <div className="text-sm font-medium text-gray-800 group-hover:scale-105 transition-transform">
                           {tech}
                         </div>
                       </div>
@@ -640,47 +639,46 @@ const DeepTierSCF = () => {
                 </div>
                 
                 {/* Status Indicator */}
-                <div className="absolute top-6 right-6 flex items-center space-x-2 bg-blue-500/20 backdrop-blur-sm rounded-full px-4 py-2 border border-blue-400/30">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
-                  <span className="text-sm font-medium text-blue-300">Production Ready</span>
+                <div className="absolute top-6 right-6 flex items-center space-x-2 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 border border-primary/20 shadow-lg">
+                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                  <span className="text-sm font-medium text-gray-800">Production Ready</span>
                 </div>
               </div>
             </div>
           </div>
           
           {/* Interactive Tech Stack */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Tech Features */}
-            <div className="space-y-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid gap-8">
               {[{
                 icon: Network,
                 title: "Blockchain Infrastructure",
                 desc: "Distributed ledger technology ensuring transparency, immutability, and programmable finance across all supply chain tiers.",
                 features: ["Ethereum Compatible", "Smart Contracts", "Cross-chain Ready"],
-                color: "from-cyan-400 to-blue-500"
+                color: "from-primary to-secondary"
               }, {
                 icon: Zap,
                 title: "Real-time Processing",
                 desc: "Event-driven architecture with instant transaction processing and automated financing triggers for seamless operations.",
                 features: ["Real-time Processing", "Auto-scaling Design", "Enterprise Grade"],
-                color: "from-purple-400 to-pink-500"
+                color: "from-secondary to-accent"
               }].map((tech, index) => (
                 <div key={index} className="group">
-                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-500 hover:bg-white/10">
+                  <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-200 hover:border-primary/30 transition-all duration-500 hover:shadow-xl shadow-lg">
                     <div className="flex items-start space-x-6">
                       <div className={`w-16 h-16 bg-gradient-to-br ${tech.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                         <tech.icon className="h-8 w-8 text-white" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">
+                        <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-primary transition-colors">
                           {tech.title}
                         </h3>
-                        <p className="text-gray-300 leading-relaxed mb-4">
+                        <p className="text-gray-600 leading-relaxed mb-4">
                           {tech.desc}
                         </p>
                         <div className="flex flex-wrap gap-2">
                           {tech.features.map((feature, idx) => (
-                            <span key={idx} className="px-3 py-1 bg-white/10 rounded-full text-sm text-gray-300 border border-white/20">
+                            <span key={idx} className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700 border border-gray-200 hover:bg-primary/10 hover:border-primary/30 transition-colors">
                               {feature}
                             </span>
                           ))}
@@ -690,54 +688,6 @@ const DeepTierSCF = () => {
                   </div>
                 </div>
               ))}
-            </div>
-            
-            {/* Tech Capabilities Dashboard */}
-            <div className="space-y-6">
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                <h3 className="text-2xl font-bold text-white mb-6 text-center">Platform Capabilities</h3>
-                <div className="grid grid-cols-2 gap-6">
-                  {[{
-                    value: "Enterprise",
-                    label: "Grade Security",
-                    color: "text-green-400"
-                  }, {
-                    value: "Real-time",
-                    label: "Processing",
-                    color: "text-cyan-400"
-                  }, {
-                    value: "Scalable",
-                    label: "Architecture",
-                    color: "text-purple-400"
-                  }, {
-                    value: "Always-on",
-                    label: "Availability",
-                    color: "text-blue-400"
-                  }].map((capability, index) => (
-                    <div key={index} className="text-center group">
-                      <div className={`text-2xl font-bold ${capability.color} mb-2 group-hover:scale-110 transition-transform`}>
-                        {capability.value}
-                      </div>
-                      <div className="text-gray-400 text-sm">{capability.label}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
-              {/* API Integration */}
-              <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
-                <div className="flex items-center space-x-4 mb-4">
-                  <FileText className="h-6 w-6 text-cyan-400" />
-                  <h4 className="text-lg font-semibold text-white">RESTful APIs</h4>
-                </div>
-                <p className="text-gray-300 text-sm mb-4">
-                  Comprehensive API suite for seamless integration with existing systems
-                </p>
-                <Button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white border-0 w-full">
-                  View API Documentation
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </Button>
-              </div>
             </div>
           </div>
         </div>
