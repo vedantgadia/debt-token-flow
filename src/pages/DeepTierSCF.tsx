@@ -230,7 +230,7 @@ const DeepTierSCF = () => {
       <section className="py-16 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="mb-6 bg-white/80 text-primary shadow-lg">
+            <Badge className="mb-6 bg-gradient-to-r from-primary to-secondary text-white shadow-lg px-4 py-2">{/* Keep the same text formatting */}
               Market Impact
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
@@ -365,7 +365,7 @@ const DeepTierSCF = () => {
       <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="mb-6 bg-accent/10 text-accent">
+            <Badge className="mb-6 bg-gradient-to-r from-accent to-primary text-white shadow-lg px-4 py-2">{/* Keep the same text formatting */}
               Stakeholder Benefits
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-accent via-primary to-secondary bg-clip-text text-transparent">
@@ -413,7 +413,7 @@ const DeepTierSCF = () => {
       <section className="py-16 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="mb-6 bg-white/80 text-primary shadow-lg">
+            <Badge className="mb-6 bg-gradient-to-r from-secondary to-accent text-white shadow-lg px-4 py-2">{/* Keep the same text formatting */}
               Competitive Edge
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
@@ -685,7 +685,7 @@ const DeepTierSCF = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-20">
-            <Badge className="mb-8 bg-white/90 text-primary shadow-lg hover:shadow-xl transition-shadow duration-300 px-6 py-2 text-lg">
+            <Badge className="mb-8 bg-gradient-to-r from-primary to-secondary text-white shadow-lg hover:shadow-xl transition-shadow duration-300 px-6 py-2 text-lg">{/* Keep the same text formatting */}
               Target Audience
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
