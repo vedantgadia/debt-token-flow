@@ -7,7 +7,7 @@ import { ArrowRight, CheckCircle, XCircle, Users, TrendingUp, Shield, Globe, Zap
 
 import globalManufacturing from '../assets/global-manufacturing.jpg';
 import automotiveSupplyChain from '../assets/automotive-supply-chain.jpg';
-import consumerGoodsESG from '../assets/consumer-goods-esg.jpg';
+import consumerGoodsESG from '../assets/consumer-goods-esg-neutral.jpg';
 import blockchainTechnology from '../assets/blockchain-technology.jpg';
 const DeepTierSCF = () => {
   return <div className="min-h-screen bg-background relative overflow-hidden">
