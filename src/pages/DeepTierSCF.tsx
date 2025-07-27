@@ -3,7 +3,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { ArrowRight, CheckCircle, XCircle, Users, TrendingUp, Shield, Globe, Zap, Network, Building, Banknote, FileText, BarChart3, Target, Layers, ArrowUpRight, Mail, Phone, ArrowDown, Sparkles, Clock, CreditCard, Repeat, Send } from "lucide-react";
+import { ArrowRight, CheckCircle, XCircle, Users, TrendingUp, Shield, Globe, Zap, Network, Building, Banknote, FileText, BarChart3, Target, Layers, ArrowUpRight, Mail, Phone, ArrowDown, Sparkles, Clock, CreditCard, Repeat, Send, Play, Pause, ExternalLink } from "lucide-react";
+
+import globalManufacturing from '../assets/global-manufacturing.jpg';
+import automotiveSupplyChain from '../assets/automotive-supply-chain.jpg';
+import consumerGoodsESG from '../assets/consumer-goods-esg.jpg';
+import blockchainTechnology from '../assets/blockchain-technology.jpg';
 const DeepTierSCF = () => {
   return <div className="min-h-screen bg-background relative overflow-hidden">
       {/* Animated Background Elements */}
@@ -474,93 +479,266 @@ const DeepTierSCF = () => {
         </div>
       </section>
 
-      {/* Real-World Use Cases */}
-      <section className="py-24 bg-white">
+      {/* Real-World Use Cases - Interactive Story Layout */}
+      <section className="py-24 bg-gradient-to-br from-white via-primary/2 to-secondary/5 relative overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-6 bg-secondary/10 text-secondary">
-              Success Stories
+          <div className="text-center mb-20">
+            <Badge className="mb-6 bg-gradient-to-r from-secondary to-accent text-white shadow-lg px-6 py-2">
+              <Play className="mr-2 h-4 w-4" />
+              Interactive Success Stories
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
-              Real-World Use Cases
+            <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-secondary via-accent to-primary bg-clip-text text-transparent">
+              See DTSCF in Action
             </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Explore real transformations across industries through interactive case studies
+            </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          {/* Interactive Case Studies */}
+          <div className="space-y-16">
             {[{
-            icon: Globe,
-            title: "Global Manufacturer",
-            desc: "Anchors a multi-country chain with 4 supplier layers—financed directly from top to tier 3.",
-            color: "primary"
-          }, {
-            icon: Building,
-            title: "Automotive OEM",
-            desc: "Helps second-tier parts manufacturers get faster access to capital via anchor's purchase orders.",
-            color: "secondary"
-          }, {
-            icon: Users,
-            title: "Consumer Goods Giant",
-            desc: "Uses DTSCF to meet ESG goals by bringing women-owned and rural suppliers into the finance fold.",
-            color: "accent"
-          }].map((useCase, index) => <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 hover:-translate-y-2 bg-gradient-to-br from-white to-gray-50">
-                <CardHeader>
-                  <div className={`w-16 h-16 bg-gradient-to-br from-${useCase.color} to-${useCase.color}/80 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
-                    <useCase.icon className="h-8 w-8 text-white" />
+              title: "Global Manufacturing Network",
+              subtitle: "Multi-tier financing across 15 countries",
+              image: globalManufacturing,
+              stats: ["4 Supplier Tiers", "500+ MSMEs Financed", "25% Cost Reduction"],
+              highlight: "Cross-border supply chain finance",
+              color: "from-blue-500 to-indigo-600"
+            }, {
+              title: "Automotive Supply Chain",
+              subtitle: "Real-time financing for parts manufacturers",
+              image: automotiveSupplyChain,
+              stats: ["Tier 2-3 Coverage", "48hr Processing", "85% Approval Rate"],
+              highlight: "Smart contract automation",
+              color: "from-purple-500 to-pink-600"
+            }, {
+              title: "ESG-Driven Consumer Goods",
+              subtitle: "Inclusive financing for diverse suppliers",
+              image: consumerGoodsESG,
+              stats: ["60% Women-owned", "Rural Suppliers", "ESG Compliance+"],
+              highlight: "Social impact measurement",
+              color: "from-emerald-500 to-teal-600"
+            }].map((story, index) => (
+              <div key={index} className={`group relative ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} flex flex-col lg:flex gap-12 items-center`}>
+                {/* Image Container */}
+                <div className="lg:w-1/2 relative">
+                  <div className="relative overflow-hidden rounded-3xl shadow-2xl group-hover:shadow-3xl transition-all duration-700">
+                    <img 
+                      src={story.image} 
+                      alt={story.title}
+                      className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    
+                    {/* Floating Action Button */}
+                    <div className="absolute top-6 right-6">
+                      <Button size="icon" className="bg-white/20 backdrop-blur-sm hover:bg-white/30 border-0 rounded-full">
+                        <ExternalLink className="h-5 w-5 text-white" />
+                      </Button>
+                    </div>
+                    
+                    {/* Status Indicator */}
+                    <div className="absolute bottom-6 left-6 flex items-center space-x-2 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                      <span className="text-sm font-medium text-gray-800">Live Implementation</span>
+                    </div>
                   </div>
-                  <CardTitle className="text-2xl">{useCase.title}</CardTitle>
-                  <CardDescription className="text-gray-600 leading-relaxed text-lg">
-                    {useCase.desc}
-                  </CardDescription>
-                </CardHeader>
-              </Card>)}
+                </div>
+                
+                {/* Content Container */}
+                <div className="lg:w-1/2 space-y-6">
+                  <div className="space-y-4">
+                    <Badge className={`bg-gradient-to-r ${story.color} text-white border-0 px-4 py-1`}>
+                      {story.highlight}
+                    </Badge>
+                    <h3 className="text-3xl lg:text-4xl font-bold text-gray-800 group-hover:text-gray-900 transition-colors">
+                      {story.title}
+                    </h3>
+                    <p className="text-xl text-gray-600 leading-relaxed">
+                      {story.subtitle}
+                    </p>
+                  </div>
+                  
+                  {/* Stats Grid */}
+                  <div className="grid grid-cols-3 gap-4">
+                    {story.stats.map((stat, statIndex) => (
+                      <div key={statIndex} className="bg-white rounded-2xl p-4 shadow-lg border border-gray-100 group-hover:shadow-xl group-hover:-translate-y-1 transition-all duration-300">
+                        <div className={`text-sm font-bold bg-gradient-to-r ${story.color} bg-clip-text text-transparent mb-1`}>
+                          {stat}
+                        </div>
+                        <div className="text-xs text-gray-500">Impact</div>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Action Button */}
+                  <Button className={`bg-gradient-to-r ${story.color} hover:opacity-90 text-white shadow-lg hover:shadow-xl transition-all duration-300 group/btn px-6 py-3`}>
+                    Explore Case Study
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                  </Button>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Technology That Powers It */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 to-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-6 bg-accent/10 text-accent">
-              Technology Stack
+      {/* Technology That Powers It - Interactive Tech Hub */}
+      <section className="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white relative overflow-hidden">
+        {/* Animated Background Grid */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0)`,
+            backgroundSize: '40px 40px'
+          }}></div>
+        </div>
+        
+        {/* Floating Tech Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+          <div className="absolute top-40 right-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-300"></div>
+          <div className="absolute bottom-32 left-1/4 w-2 h-2 bg-green-400 rounded-full animate-pulse delay-700"></div>
+          <div className="absolute bottom-20 right-20 w-4 h-4 bg-blue-400 rounded-full animate-pulse delay-1000"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-20">
+            <Badge className="mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 text-white border-0 px-6 py-2">
+              <Zap className="mr-2 h-4 w-4" />
+              Next-Gen Technology
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
-              Technology That Powers It
+            <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Powered by Innovation
             </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Cutting-edge technology stack driving the future of supply chain finance
+            </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {[{
-            icon: Network,
-            title: "Distributed Ledgers & Tokenization",
-            desc: "Transparency and programmable finance options for enhanced trust and automation.",
-            color: "primary"
-          }, {
-            icon: Layers,
-            title: "Seamless Integration",
-            desc: "Works with anchor ERP, logistics, and banking systems for unified operations.",
-            color: "secondary"
-          }, {
-            icon: Zap,
-            title: "Event-Based Smart Triggers",
-            desc: "Automated financing based on real-time supply chain events and milestones.",
-            color: "accent"
-          }, {
-            icon: FileText,
-            title: "Comprehensive APIs",
-            desc: "Document exchange, onboarding, and credit scoring through robust API infrastructure.",
-            color: "primary"
-          }].map((tech, index) => <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 hover:-translate-y-2 bg-white">
-                <CardHeader>
-                  <div className={`w-16 h-16 bg-gradient-to-br from-${tech.color} to-${tech.color}/80 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
-                    <tech.icon className="h-8 w-8 text-white" />
+          {/* Hero Tech Visual */}
+          <div className="relative mb-20">
+            <div className="max-w-4xl mx-auto">
+              <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+                <img 
+                  src={blockchainTechnology}
+                  alt="Blockchain Technology"
+                  className="w-full h-96 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                
+                {/* Floating Tech Badges */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl">
+                    {['Blockchain', 'Smart Contracts', 'AI/ML', 'Real-time APIs'].map((tech, index) => (
+                      <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-2 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-pointer group">
+                        <div className="text-sm font-medium text-white group-hover:scale-105 transition-transform">
+                          {tech}
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                  <CardTitle className="text-2xl">{tech.title}</CardTitle>
-                  <CardDescription className="text-gray-600 leading-relaxed text-lg">
-                    {tech.desc}
-                  </CardDescription>
-                </CardHeader>
-              </Card>)}
+                </div>
+                
+                {/* Status Indicator */}
+                <div className="absolute top-6 right-6 flex items-center space-x-2 bg-green-500/20 backdrop-blur-sm rounded-full px-4 py-2 border border-green-400/30">
+                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                  <span className="text-sm font-medium text-green-300">Live Infrastructure</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Interactive Tech Stack */}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Tech Features */}
+            <div className="space-y-8">
+              {[{
+                icon: Network,
+                title: "Blockchain Infrastructure",
+                desc: "Distributed ledger technology ensuring transparency, immutability, and programmable finance across all tiers.",
+                features: ["Ethereum Compatibility", "Smart Contract Automation", "Cross-chain Integration"],
+                color: "from-cyan-400 to-blue-500"
+              }, {
+                icon: Zap,
+                title: "Real-time Processing",
+                desc: "Event-driven architecture with instant transaction processing and automated financing triggers.",
+                features: ["Microsecond Response", "Auto-scaling Infrastructure", "99.9% Uptime SLA"],
+                color: "from-purple-400 to-pink-500"
+              }].map((tech, index) => (
+                <div key={index} className="group">
+                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-500 hover:bg-white/10">
+                    <div className="flex items-start space-x-6">
+                      <div className={`w-16 h-16 bg-gradient-to-br ${tech.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                        <tech.icon className="h-8 w-8 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">
+                          {tech.title}
+                        </h3>
+                        <p className="text-gray-300 leading-relaxed mb-4">
+                          {tech.desc}
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                          {tech.features.map((feature, idx) => (
+                            <span key={idx} className="px-3 py-1 bg-white/10 rounded-full text-sm text-gray-300 border border-white/20">
+                              {feature}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            {/* Tech Metrics Dashboard */}
+            <div className="space-y-6">
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                <h3 className="text-2xl font-bold text-white mb-6 text-center">Platform Metrics</h3>
+                <div className="grid grid-cols-2 gap-6">
+                  {[{
+                    value: "99.9%",
+                    label: "Uptime",
+                    color: "text-green-400"
+                  }, {
+                    value: "<500ms",
+                    label: "Response Time",
+                    color: "text-cyan-400"
+                  }, {
+                    value: "1M+",
+                    label: "Transactions",
+                    color: "text-purple-400"
+                  }, {
+                    value: "24/7",
+                    label: "Monitoring",
+                    color: "text-blue-400"
+                  }].map((metric, index) => (
+                    <div key={index} className="text-center group">
+                      <div className={`text-3xl font-bold ${metric.color} mb-2 group-hover:scale-110 transition-transform`}>
+                        {metric.value}
+                      </div>
+                      <div className="text-gray-400 text-sm">{metric.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              {/* API Integration */}
+              <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
+                <div className="flex items-center space-x-4 mb-4">
+                  <FileText className="h-6 w-6 text-cyan-400" />
+                  <h4 className="text-lg font-semibold text-white">RESTful APIs</h4>
+                </div>
+                <p className="text-gray-300 text-sm mb-4">
+                  Comprehensive API suite for seamless integration with existing systems
+                </p>
+                <Button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white border-0 w-full">
+                  View API Documentation
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
