@@ -357,26 +357,7 @@ const DeepTierSCF = () => {
             </div>
           </div>
 
-          {/* Simple Process Steps */}
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {[{
-            num: 1,
-            title: "Setup & Integration",
-            desc: "Anchor buyer integrates with Vayana DTSCP platform and maps supply chain tiers"
-          }, {
-            num: 2,
-            title: "Token Flow",
-            desc: "Digital payment obligations flow through blockchain rails from anchor to all supplier tiers"
-          }, {
-            num: 3,
-            title: "Financing & Settlement",
-            desc: "Financiers provide instant liquidity while secure repayment flows ensure seamless settlement"
-          }].map((step, index) => <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 text-center hover:shadow-xl transition-shadow">
-                
-                <h3 className="font-bold text-lg mb-2 text-gray-800">{step.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{step.desc}</p>
-              </div>)}
-          </div>
+          {/* Process Steps Removed */}
         </div>
       </section>
 
