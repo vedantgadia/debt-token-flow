@@ -439,14 +439,25 @@ const VDPTradeDocs = () => {
                         Countries worldwide are adopting MLETR to modernize their trade laws and enable digital transformation of trade finance.
                       </p>
                     </div>
-                    <Button 
-                      size="lg" 
-                      className="w-full bg-primary hover:bg-primary/90 text-white"
-                      onClick={() => window.open('https://www.digitalizetrade.org/mletr', '_blank')}
-                    >
-                      <Globe className="mr-2 h-5 w-5" />
-                      View Live MLETR Adoption Map
-                    </Button>
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <Button 
+                        size="lg" 
+                        className="bg-primary hover:bg-primary/90 text-white"
+                        onClick={() => window.open('https://www.digitalizetrade.org/mletr', '_blank')}
+                      >
+                        <Globe className="mr-2 h-5 w-5" />
+                        View Live MLETR Adoption Map
+                      </Button>
+                      <Button 
+                        size="lg" 
+                        variant="outline" 
+                        className="border-accent text-accent hover:bg-accent hover:text-white"
+                        onClick={() => window.open('https://www.perplexity.ai/search?q=Show+the+latest+news+on+MLETR+and+trade+digitisation+from+the+past+week', '_blank')}
+                      >
+                        Latest MLETR News
+                        <ExternalLink className="ml-2 h-4 w-4" />
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -854,15 +865,6 @@ const VDPTradeDocs = () => {
               </Button>
               <Button size="lg" className="bg-gradient-to-r from-secondary to-accent text-white hover:opacity-90 px-8 py-4">
                 Request Demo
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-accent text-accent hover:bg-accent hover:text-white px-8 py-4"
-                onClick={() => window.open('https://www.perplexity.ai/search?q=Show+the+latest+news+on+MLETR+and+trade+digitisation+from+the+past+week', '_blank')}
-              >
-                Latest MLETR News
-                <ExternalLink className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>
