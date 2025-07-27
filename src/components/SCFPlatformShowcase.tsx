@@ -102,7 +102,7 @@ const SCFPlatformShowcase = () => {
   const IconComponent = currentScreen.icon;
 
   return (
-    <section className="py-24 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
+    <section className="py-24 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 flex items-center justify-center">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
