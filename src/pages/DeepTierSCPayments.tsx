@@ -95,20 +95,20 @@ const DeepTierSCPayments = () => {
               <div className="grid sm:grid-cols-2 gap-6">
                 <div className="group">
                   <div className="flex items-start space-x-4 p-6 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-orange-500/20 hover:-translate-y-1">
-                    <div className="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Smartphone className="h-6 w-6 text-orange-600" />
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Smartphone className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg mb-2">UPI Integration</h4>
-                      <p className="text-gray-600">Seamless integration with India's Unified Payments Interface.</p>
+                      <h4 className="font-bold text-lg mb-2">Digital Integration</h4>
+                      <p className="text-gray-600">Seamless integration with existing payment systems.</p>
                     </div>
                   </div>
                 </div>
                 
                 <div className="group">
                   <div className="flex items-start space-x-4 p-6 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-green-600/20 hover:-translate-y-1">
-                    <div className="w-12 h-12 bg-green-600/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Zap className="h-6 w-6 text-green-600" />
+                    <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Zap className="h-6 w-6 text-secondary" />
                     </div>
                     <div>
                       <h4 className="font-bold text-lg mb-2">Instant Settlement</h4>
@@ -119,8 +119,8 @@ const DeepTierSCPayments = () => {
                 
                 <div className="group">
                   <div className="flex items-start space-x-4 p-6 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-600/20 hover:-translate-y-1">
-                    <div className="w-12 h-12 bg-blue-600/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Shield className="h-6 w-6 text-blue-600" />
+                    <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Shield className="h-6 w-6 text-accent" />
                     </div>
                     <div>
                       <h4 className="font-bold text-lg mb-2">Blockchain Security</h4>
@@ -131,8 +131,8 @@ const DeepTierSCPayments = () => {
                 
                 <div className="group">
                   <div className="flex items-start space-x-4 p-6 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-purple-600/20 hover:-translate-y-1">
-                    <div className="w-12 h-12 bg-purple-600/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Users className="h-6 w-6 text-purple-600" />
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Users className="h-6 w-6 text-primary" />
                     </div>
                     <div>
                       <h4 className="font-bold text-lg mb-2">MSME Inclusion</h4>
@@ -252,7 +252,7 @@ const DeepTierSCPayments = () => {
           }, {
             icon: IndianRupee,
             title: "Cost Reduction",
-            desc: "Lower transaction costs via UPI",
+            desc: "Lower transaction costs via digital payments",
             color: "green-600"
           }, {
             icon: Smartphone,
@@ -287,7 +287,7 @@ const DeepTierSCPayments = () => {
             color: "from-green-600 to-blue-600"
           }, {
             stat: "₹500Cr+",
-            desc: "Daily UPI transaction volume potential",
+            desc: "Daily digital transaction volume potential",
             color: "from-blue-600 to-purple-600"
           }].map((item, index) => <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white hover:-translate-y-2">
                 <CardContent className="pt-8 text-center">
@@ -312,7 +312,7 @@ const DeepTierSCPayments = () => {
               How Deep-Tier Payments Work in India
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Leveraging UPI infrastructure and blockchain technology for seamless multi-tier payments
+              Leveraging blockchain technology and digital infrastructure for seamless multi-tier payments
             </p>
           </div>
           
@@ -321,7 +321,7 @@ const DeepTierSCPayments = () => {
             <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-4 md:p-6">
               <div className="text-center mb-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-2">Deep-Tier Supply Chain Payments Flow</h3>
-                <p className="text-gray-600">Powered by UPI + Blockchain Technology</p>
+                <p className="text-gray-600">Powered by Blockchain + Digital Payment Technology</p>
               </div>
               
               {/* Diagram Container */}
@@ -408,7 +408,7 @@ const DeepTierSCPayments = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      {["Multi-tier UPI Integration", "Instant Settlement", "Blockchain Transparency", "MSME Digital Onboarding", "Real-time Compliance", "Regional Language Support"].map((feature, index) => <tr key={index} className="border-b border-gray-100 hover:bg-white/50 transition-colors">
+                      {["Multi-tier Digital Integration", "Instant Settlement", "Blockchain Transparency", "MSME Digital Onboarding", "Real-time Compliance", "Regional Language Support"].map((feature, index) => <tr key={index} className="border-b border-gray-100 hover:bg-white/50 transition-colors">
                           <td className="py-6 font-semibold text-gray-800">{feature}</td>
                           <td className="text-center py-6">
                             <div className="flex justify-center">
@@ -456,7 +456,7 @@ const DeepTierSCPayments = () => {
               title: "Digital India Manufacturing",
               subtitle: "Instant payments across automotive supply chain",
               image: indiaDigitalPayments,
-              stats: ["UPI Integration", "MSME Empowerment", "Real-time Settlement"],
+              stats: ["Digital Integration", "MSME Empowerment", "Real-time Settlement"],
               highlight: "Digital India initiative",
               color: "from-orange-500 to-red-600"
             }, {
@@ -583,7 +583,7 @@ const DeepTierSCPayments = () => {
                 {/* Floating Tech Badges */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl">
-                    {['UPI Integration', 'Blockchain', 'Smart Contracts', 'Mobile-First'].map((tech, index) => (
+                    {['Digital Payments', 'Blockchain', 'Smart Contracts', 'Mobile-First'].map((tech, index) => (
                       <div key={index} className="bg-white/90 backdrop-blur-sm rounded-xl px-4 py-2 text-center border border-white/20 hover:bg-white transition-all duration-300 cursor-pointer group shadow-lg">
                         <div className="text-sm font-medium text-gray-800 group-hover:scale-105 transition-transform">
                           {tech}
@@ -607,9 +607,9 @@ const DeepTierSCPayments = () => {
             <div className="grid gap-8">
               {[{
                 icon: Smartphone,
-                title: "UPI + Blockchain Integration",
-                desc: "Seamless integration with India's Unified Payments Interface enhanced with blockchain transparency and security features.",
-                features: ["UPI Compatible", "Smart Contracts", "Instant Settlement"],
+                title: "Digital Payment + Blockchain Integration",
+                desc: "Seamless integration with India's digital payment infrastructure enhanced with blockchain transparency and security features.",
+                features: ["Digital Compatible", "Smart Contracts", "Instant Settlement"],
                 color: "from-orange-600 to-green-600"
               }, {
                 icon: Network,
@@ -689,7 +689,7 @@ const DeepTierSCPayments = () => {
               icon: Users,
               title: "MSMEs & Small Businesses",
               desc: "India's 6.3 crore MSMEs seeking instant payment solutions and digital financial inclusion",
-              features: ["Instant Payment Receipt", "Digital Payment History", "Easy UPI Integration"],
+              features: ["Digital payment receipt", "Digital payment history", "Easy integration"],
               color: "from-green-600 to-teal-600"
             }, {
               icon: Banknote,
@@ -830,7 +830,7 @@ const DeepTierSCPayments = () => {
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                   <h4 className="font-bold text-white mb-4">Why Choose Our Platform?</h4>
                   <ul className="space-y-3">
-                    {["India-first payment solution", "UPI + Blockchain integration", "Instant multi-tier settlements", "Regional language support"].map((benefit, index) => <li key={index} className="flex items-center space-x-3">
+                    {["India-first payment solution", "Digital + Blockchain integration", "Instant multi-tier settlements", "Regional language support"].map((benefit, index) => <li key={index} className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-green-300 flex-shrink-0" />
                         <span className="text-white/90">{benefit}</span>
                       </li>)}
