@@ -27,6 +27,9 @@ import realEstateImage from '../assets/real-estate-building.jpg';
 import financeImage from '../assets/finance-code.jpg';
 import alternateAssetsImage from '../assets/alternate-assets.jpg';
 import debtCapitalImage from '../assets/debt-capital.jpg';
+import collectiblesImage from '../assets/collectibles-art.jpg';
+import techCircuitImage from '../assets/tech-circuit.jpg';
+import tokenNetworkImage from '../assets/token-network-flow.jpg';
 
 const Tokenization = () => {
   const [searchParams] = useSearchParams();
@@ -174,28 +177,23 @@ const Tokenization = () => {
               </div>
             </div>
             
-            {/* Asset Type Visual */}
+            {/* Simplified Visual Elements */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="w-80 h-80 rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20 backdrop-blur-sm">
-                  <img 
-                    src={getHeroImage()} 
-                    alt={content.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <div className="absolute bottom-6 left-6 right-6 text-white">
-                    <h3 className="text-xl font-bold mb-2">{content.title}</h3>
-                    <p className="text-sm text-white/80">{content.useCases}</p>
+                {/* Floating Token Icons */}
+                <div className="grid grid-cols-2 gap-8">
+                  <div className="w-32 h-32 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 flex items-center justify-center">
+                    <Coins className="h-16 w-16 text-white" />
                   </div>
-                </div>
-                
-                {/* Floating Elements */}
-                <div className="absolute -top-4 -right-4 w-16 h-16 bg-vayana-blue/20 rounded-full backdrop-blur-sm border border-white/30 flex items-center justify-center animate-pulse">
-                  <Coins className="h-8 w-8 text-white" />
-                </div>
-                <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-vayana-red/20 rounded-full backdrop-blur-sm border border-white/30 flex items-center justify-center animate-pulse">
-                  <Network className="h-6 w-6 text-white" />
+                  <div className="w-32 h-32 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 flex items-center justify-center">
+                    <Network className="h-16 w-16 text-white" />
+                  </div>
+                  <div className="w-32 h-32 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 flex items-center justify-center">
+                    <Building className="h-16 w-16 text-white" />
+                  </div>
+                  <div className="w-32 h-32 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 flex items-center justify-center">
+                    <Shield className="h-16 w-16 text-white" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -206,19 +204,37 @@ const Tokenization = () => {
       {/* Section 2: Future of Asset Ownership */}
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h2 className="section-title text-gray-900">
-              {content.section2Title}
-            </h2>
-            <p className="section-subtitle text-gray-600">
-              {content.section2Body}
-            </p>
-            <p className="section-subtitle text-gray-600">
-              At Vayana, we bring the power of blockchain to {content.title.toLowerCase()}, enabling trusted institutions, asset managers, and platforms to unlock efficiency and scalability through tokenization.
-            </p>
-            <div className="inline-flex items-center px-6 py-3 bg-blue-50 text-blue-700 rounded-xl text-sm font-medium border border-blue-200">
-              <Award className="mr-2 h-4 w-4" />
-              {content.partnershipText}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <h2 className="section-title text-gray-900">
+                {content.section2Title}
+              </h2>
+              <p className="section-subtitle text-gray-600">
+                {content.section2Body}
+              </p>
+              <p className="section-subtitle text-gray-600">
+                At Vayana, we bring the power of blockchain to {content.title.toLowerCase()}, enabling trusted institutions, asset managers, and platforms to unlock efficiency and scalability through tokenization.
+              </p>
+              <div className="inline-flex items-center px-6 py-3 bg-blue-50 text-blue-700 rounded-xl text-sm font-medium border border-blue-200">
+                <Award className="mr-2 h-4 w-4" />
+                {content.partnershipText}
+              </div>
+            </div>
+            
+            {/* Category-specific visual */}
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src={category === 'alternate-assets' ? collectiblesImage : tokenNetworkImage} 
+                  alt={content.title}
+                  className="w-full h-80 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-vayana-blue/60 via-transparent to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6 text-white">
+                  <h3 className="text-xl font-bold mb-2">Digital Asset Innovation</h3>
+                  <p className="text-sm text-white/90">Transforming traditional assets into programmable digital securities</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -268,13 +284,31 @@ const Tokenization = () => {
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center space-y-6 mb-16">
-              <h2 className="section-title text-gray-900">
-                Institutional-Grade Tokenization Infrastructure
-              </h2>
-              <p className="section-subtitle text-gray-600">
-                Built for security, compliance, and scale, the Vayana Tokenization Platform offers everything you need to tokenize and manage {content.title.toLowerCase()} across their lifecycle.
-              </p>
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+              <div className="space-y-6">
+                <h2 className="section-title text-gray-900">
+                  Institutional-Grade Tokenization Infrastructure
+                </h2>
+                <p className="section-subtitle text-gray-600">
+                  Built for security, compliance, and scale, the Vayana Tokenization Platform offers everything you need to tokenize and manage {content.title.toLowerCase()} across their lifecycle.
+                </p>
+              </div>
+              
+              {/* Tech Infrastructure Visual */}
+              <div className="relative">
+                <div className="rounded-2xl overflow-hidden shadow-2xl">
+                  <img 
+                    src={techCircuitImage} 
+                    alt="Technology Infrastructure"
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-vayana-purple/70 via-transparent to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6 text-white">
+                    <h3 className="text-xl font-bold mb-2">Enterprise Infrastructure</h3>
+                    <p className="text-sm text-white/90">Scalable, secure, and regulatory-compliant technology stack</p>
+                  </div>
+                </div>
+              </div>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
