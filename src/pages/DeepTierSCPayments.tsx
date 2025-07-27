@@ -89,7 +89,7 @@ const DeepTierSCPayments = () => {
                 Traditional payment systems in India often exclude smaller suppliers from instant payment benefits, creating cash flow challenges across the supply chain.
               </p>
               <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-                Our Deep-Tier Supply Chain Payments platform extends instant, digital payments to every tier of your supply chain, leveraging India's robust UPI infrastructure and blockchain technology.
+                Our Deep-Tier Supply Chain Payments platform extends instant, digital payments to every tier of your supply chain, leveraging India's robust digital infrastructure and blockchain technology.
               </p>
               
               <div className="grid sm:grid-cols-2 gap-6">
