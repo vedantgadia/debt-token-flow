@@ -727,7 +727,7 @@ const DeepTierSCPayments = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="relative bg-gradient-to-br from-orange-600 via-green-600 to-blue-600 py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-primary via-secondary to-accent py-20 overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0">
           {/* Floating geometric shapes */}
@@ -749,8 +749,10 @@ const DeepTierSCPayments = () => {
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 border border-white/10 rounded-full"></div>
             </div>
           </div>
+        </div>
           
-          <div className="relative z-10">
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-12">
             <Badge className="mb-6 bg-white/10 text-white border-white/20">
               Get Started
             </Badge>
@@ -783,7 +785,7 @@ const DeepTierSCPayments = () => {
                   <Input placeholder="Company" className="bg-white/10 border-white/30 text-white placeholder:text-white/60 focus:border-white/50" />
                   <Input placeholder="Email" type="email" className="bg-white/10 border-white/30 text-white placeholder:text-white/60 focus:border-white/50" />
                   <Textarea placeholder="Tell us about your payment challenges..." className="bg-white/10 border-white/30 text-white placeholder:text-white/60 focus:border-white/50 min-h-[100px]" />
-                  <Button className="w-full bg-white text-orange-600 hover:bg-white/90 font-semibold py-3 shadow-xl hover:shadow-2xl transition-all duration-300">
+                  <Button className="w-full bg-white text-primary hover:bg-white/90 font-semibold py-3 shadow-xl hover:shadow-2xl transition-all duration-300">
                     Request Demo
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -831,7 +833,7 @@ const DeepTierSCPayments = () => {
                   <h4 className="font-bold text-white mb-4">Why Choose Our Platform?</h4>
                   <ul className="space-y-3">
                     {["India-first payment solution", "Digital + Blockchain integration", "Instant multi-tier settlements", "Regional language support"].map((benefit, index) => <li key={index} className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-green-300 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0" />
                         <span className="text-white/90">{benefit}</span>
                       </li>)}
                   </ul>
