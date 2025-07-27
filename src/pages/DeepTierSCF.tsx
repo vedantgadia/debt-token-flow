@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import SCFPlatformShowcase from "@/components/SCFPlatformShowcase";
 import { ArrowRight, CheckCircle, XCircle, Users, TrendingUp, Shield, Globe, Zap, Network, Building, Banknote, FileText, BarChart3, Target, Layers, ArrowUpRight, Mail, Phone, ArrowDown, Sparkles, Clock, CreditCard, Repeat, Send } from "lucide-react";
 const DeepTierSCF = () => {
   return (
@@ -584,6 +585,9 @@ const DeepTierSCF = () => {
           </div>
         </div>
       </section>
+
+      {/* SCF Platform Screenshots Showcase */}
+      <SCFPlatformShowcase />
 
       {/* Who is it for */}
       <section className="py-16 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 relative overflow-hidden">
