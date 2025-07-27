@@ -24,7 +24,7 @@ const DeepTierSCPayments = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-orange-600 via-orange-500 to-green-600 py-20 lg:py-28 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-primary via-primary/80 to-secondary py-20 lg:py-28 overflow-hidden">
         {/* Floating elements */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-4 h-4 bg-white/20 rounded-full animate-bounce" style={{
@@ -57,11 +57,11 @@ const DeepTierSCPayments = () => {
               Revolutionize payments across your entire supply chain ecosystem in India with our Deep-Tier Supply Chain Payments platform—enabling instant, secure, and transparent transactions for every supplier.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button size="lg" className="bg-white text-orange-600 hover:bg-white/90 h-14 px-8 text-lg font-semibold shadow-2xl hover:shadow-white/20 transition-all duration-300 group">
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90 h-14 px-8 text-lg font-semibold shadow-2xl hover:shadow-white/20 transition-all duration-300 group">
                 Explore the Platform
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button size="lg" variant="outline" className="border-white hover:bg-white h-14 px-8 text-lg font-semibold backdrop-blur-sm transition-all duration-300 text-white hover:text-orange-600">
+              <Button size="lg" variant="outline" className="border-white hover:bg-white h-14 px-8 text-lg font-semibold backdrop-blur-sm transition-all duration-300 text-white hover:text-primary">
                 Book a Demo
               </Button>
             </div>
@@ -79,10 +79,10 @@ const DeepTierSCPayments = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-5 gap-16 items-center">
             <div className="lg:col-span-3">
-              <Badge className="mb-6 bg-orange-500/10 text-orange-600">
+              <Badge className="mb-6 bg-primary/10 text-primary">
                 Revolutionary Payment System
               </Badge>
-              <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-orange-600 to-green-600 bg-clip-text text-transparent">
+              <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 What is Deep-Tier Supply Chain Payments?
               </h2>
               <p className="text-xl text-gray-600 mb-6 leading-relaxed">
