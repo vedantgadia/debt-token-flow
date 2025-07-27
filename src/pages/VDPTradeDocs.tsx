@@ -439,10 +439,10 @@ const VDPTradeDocs = () => {
                         Countries worldwide are adopting MLETR to modernize their trade laws and enable digital transformation of trade finance.
                       </p>
                     </div>
-                    <div className="flex flex-col sm:flex-row gap-4">
+                    <div className="flex flex-col gap-4">
                       <Button 
                         size="lg" 
-                        className="bg-primary hover:bg-primary/90 text-white"
+                        className="w-full bg-primary hover:bg-primary/90 text-white shadow-lg hover:shadow-xl transition-all duration-300"
                         onClick={() => window.open('https://www.digitalizetrade.org/mletr', '_blank')}
                       >
                         <Globe className="mr-2 h-5 w-5" />
@@ -451,7 +451,7 @@ const VDPTradeDocs = () => {
                       <Button 
                         size="lg" 
                         variant="outline" 
-                        className="border-accent text-accent hover:bg-accent hover:text-white"
+                        className="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300"
                         onClick={() => window.open('https://www.perplexity.ai/search?q=Show+the+latest+news+on+MLETR+and+trade+digitisation+from+the+past+week', '_blank')}
                       >
                         Latest MLETR News
@@ -463,7 +463,7 @@ const VDPTradeDocs = () => {
               </div>
             </div>
 
-            <div className="text-center bg-white/30 backdrop-blur-sm rounded-2xl p-8 border border-primary/20">
+            <div className="text-center bg-white/50 backdrop-blur-sm rounded-2xl p-8 border border-primary/20 shadow-lg">
               <h3 className="text-xl font-semibold text-foreground mb-4">
                 VDP Trade Docs is fully MLETR compliant
               </h3>
