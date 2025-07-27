@@ -53,7 +53,7 @@ const DeepTierSCF = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-4xl mx-auto leading-relaxed">
-              Enable liquidity for even your smallest suppliers with our Deep-Tier Supply Chain Finance platform—driving resilience, inclusivity, and transparency at every tier.
+              Enable liquidity for even your smallest suppliers with our Multi-Tier Financing platform—driving resilience, inclusivity, and transparency at every tier.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button size="lg" className="bg-white text-primary hover:bg-white/90 h-14 px-8 text-lg font-semibold shadow-2xl hover:shadow-white/20 transition-all duration-300 group">
@@ -73,7 +73,7 @@ const DeepTierSCF = () => {
         </div>
       </section>
 
-      {/* What is Deep-Tier Supply Chain Finance */}
+      {/* What is Multi-Tier Financing */}
       <section className="py-16 bg-gradient-to-br from-gray-50 to-white relative">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-5 gap-16 items-center">
@@ -82,13 +82,13 @@ const DeepTierSCF = () => {
                 Revolutionary Approach
               </Badge>
               <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                What is Deep-Tier Supply Chain Finance?
+                What is Multi-Tier Financing?
               </h2>
               <p className="text-xl text-gray-600 mb-6 leading-relaxed">
-                Traditional supply chain finance often stops at the first-tier supplier—leaving thousands of smaller, deep-tier suppliers underserved.
+                Traditional supply chain finance often stops at the first-tier supplier—leaving thousands of smaller, multi-tier suppliers underserved.
               </p>
               <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-                DTSCF is a paradigm shift. It extends working capital solutions across all tiers of a supply chain, empowering MSMEs with timely access to finance using the anchor buyer's strength.
+                MTF is a paradigm shift. It extends working capital solutions across all tiers of a supply chain, empowering MSMEs with timely access to finance using the anchor buyer's strength.
               </p>
               
               <div className="grid sm:grid-cols-2 gap-6">
@@ -203,7 +203,7 @@ const DeepTierSCF = () => {
                       </div>
                       <div className="flex-1">
                         <h4 className="font-bold text-lg text-gray-800">Tier 2 & 3 Suppliers</h4>
-                        <p className="text-gray-600">Deep-Tier MSMEs</p>
+                        <p className="text-gray-600">Multi-Tier MSMEs</p>
                         <div className="mt-2 h-1 bg-gradient-to-r from-accent to-transparent rounded"></div>
                       </div>
                     </div>
@@ -226,7 +226,7 @@ const DeepTierSCF = () => {
         </div>
       </section>
 
-      {/* Why DTSCF Matters Today */}
+      {/* Why MTF Matters Today */}
       <section className="py-16 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -234,7 +234,7 @@ const DeepTierSCF = () => {
               Market Impact
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-              Why DTSCF Matters Today
+              Why MTF Matters Today
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Global supply chains are more interdependent than ever, and disruptions at the lower tiers can paralyze the entire system.
@@ -308,7 +308,7 @@ const DeepTierSCF = () => {
               Process Flow
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              How Deep-Tier SCF Works
+              How Multi-Tier Financing Works
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               A blockchain-powered platform connecting anchors, suppliers, and financiers in a seamless flow
@@ -319,13 +319,13 @@ const DeepTierSCF = () => {
           <div className="max-w-6xl mx-auto mb-12">
             <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-4 md:p-6">
               <div className="text-center mb-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Deep-Tier Supply Chain Finance Flow</h3>
-                <p className="text-gray-600">Powered by Vayana's DTSCP Platform on Blockchain Rails</p>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Multi-Tier Financing Flow</h3>
+                <p className="text-gray-600">Powered by Vayana's MTF Platform on Blockchain Rails</p>
               </div>
               
               {/* Diagram Container */}
               <div className="bg-gray-50 rounded-xl p-4">
-                <img src="/lovable-uploads/b4d908ab-34da-4fbc-9d1a-2a39b8403b72.png" alt="Deep-Tier Supply Chain Finance Flow Diagram" className="w-full h-auto max-w-full mx-auto rounded-lg" />
+                <img src="/lovable-uploads/b4d908ab-34da-4fbc-9d1a-2a39b8403b72.png" alt="Multi-Tier Financing Flow Diagram" className="w-full h-auto max-w-full mx-auto rounded-lg" />
               </div>
               
               {/* Key Features Below Diagram */}
@@ -430,7 +430,7 @@ const DeepTierSCF = () => {
                       <tr className="border-b border-gray-200">
                         <th className="text-left py-6 font-bold text-xl text-gray-800">Feature</th>
                         <th className="text-center py-6 font-bold text-xl text-gray-800">Traditional SCF</th>
-                        <th className="text-center py-6 font-bold text-xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Our DTSCF Platform</th>
+                        <th className="text-center py-6 font-bold text-xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Our MTF Platform</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -469,7 +469,7 @@ const DeepTierSCF = () => {
               Interactive Success Stories
             </Badge>
             <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-secondary via-accent to-primary bg-clip-text text-transparent">
-              See DTSCF in Action
+              See MTF in Action
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Explore real transformations across industries through interactive case studies
@@ -489,7 +489,7 @@ const DeepTierSCF = () => {
               title: "Automotive Supply Chain",
               subtitle: "Streamlined financing for parts manufacturers",
               image: automotiveSupplyChain,
-              stats: ["Deep-Tier Coverage", "Rapid Processing", "High Accessibility"],
+              stats: ["Multi-Tier Coverage", "Rapid Processing", "High Accessibility"],
               highlight: "Smart contract automation",
               color: "from-purple-500 to-pink-600"
             }, {
@@ -791,7 +791,7 @@ const DeepTierSCF = () => {
                     </Badge>
                     <h2 className="text-4xl font-bold mb-6 font-display">Transform Your Supply Chain Finance</h2>
                     <p className="text-xl text-white/90 mb-12 leading-relaxed">
-                      Ready to unlock capital deep into your supply chain? Contact our team to learn more about Deep-Tier Supply Chain Finance.
+                      Ready to unlock capital deep into your supply chain? Contact our team to learn more about Multi-Tier Financing.
                     </p>
                     
                     <div className="space-y-8">
