@@ -99,16 +99,23 @@ const Navbar = () => {
                           VDP Trade Docs
                         </Link>
                       </DropdownMenuItem>
-                       <DropdownMenuItem asChild>
-                        <Link to="/deep-tier-scf" className="w-full">
-                          Multi-Tier Financing
-                        </Link>
-                      </DropdownMenuItem>
-                      <DropdownMenuItem asChild>
-                        <Link to="/deep-tier-sc-payments" className="w-full">
-                          Deep-Tier SC Payments
-                        </Link>
-                      </DropdownMenuItem>
+                      <DropdownMenuSub>
+                        <DropdownMenuSubTrigger>
+                          Supply Chain Finance
+                        </DropdownMenuSubTrigger>
+                        <DropdownMenuSubContent className="bg-background border-border/50 shadow-lg z-50">
+                          <DropdownMenuItem asChild>
+                            <Link to="/deep-tier-scf" className="w-full">
+                              Multi-Tier Financing
+                            </Link>
+                          </DropdownMenuItem>
+                          <DropdownMenuItem asChild>
+                            <Link to="/deep-tier-sc-payments" className="w-full">
+                              Deep-Tier Supply Chain Payments
+                            </Link>
+                          </DropdownMenuItem>
+                        </DropdownMenuSubContent>
+                      </DropdownMenuSub>
                       <DropdownMenuItem asChild>
                         <a 
                           href="https://www.linkedin.com/company/vayanaofficial/posts/?feedView=articles" 
@@ -208,20 +215,23 @@ const Navbar = () => {
                   >
                     VDP Trade Docs
                   </Link>
-                  <Link 
-                    to="/deep-tier-scf" 
-                    className="block text-sm text-gray-600 hover:text-secondary transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Multi-Tier Financing
-                  </Link>
-                  <Link 
-                    to="/deep-tier-sc-payments" 
-                    className="block text-sm text-gray-600 hover:text-secondary transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Deep-Tier SC Payments
-                  </Link>
+                  <div className="block font-medium text-gray-600 pb-1">Supply Chain Finance</div>
+                  <div className="pl-4 space-y-2">
+                    <Link 
+                      to="/deep-tier-scf" 
+                      className="block text-sm text-gray-500 hover:text-secondary transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Multi-Tier Financing
+                    </Link>
+                    <Link 
+                      to="/deep-tier-sc-payments" 
+                      className="block text-sm text-gray-500 hover:text-secondary transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Deep-Tier Supply Chain Payments
+                    </Link>
+                  </div>
                   <a 
                     href="https://www.linkedin.com/company/vayanaofficial/posts/?feedView=articles" 
                     target="_blank" 
