@@ -258,11 +258,11 @@ const VDPTradeDocs = () => {
               <div className="flex items-center gap-6 pt-8">
                 <div className="flex items-center gap-2">
                   <Shield className="h-6 w-6 text-green-400" />
-                  <span className="text-sm font-medium">Legal Validity</span>
+                  <span className="text-lg font-semibold">Legal Validity</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Globe className="h-6 w-6 text-blue-400" />
-                  <span className="text-sm font-medium">Global Standards</span>
+                  <span className="text-lg font-semibold">Global Standards</span>
                 </div>
               </div>
             </div>
