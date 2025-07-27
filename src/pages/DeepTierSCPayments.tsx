@@ -118,7 +118,7 @@ const DeepTierSCPayments = () => {
                 </div>
                 
                 <div className="group">
-                  <div className="flex items-start space-x-4 p-6 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-600/20 hover:-translate-y-1">
+                  <div className="flex items-start space-x-4 p-6 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-accent/20 hover:-translate-y-1">
                     <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                       <Shield className="h-6 w-6 text-accent" />
                     </div>
@@ -130,7 +130,7 @@ const DeepTierSCPayments = () => {
                 </div>
                 
                 <div className="group">
-                  <div className="flex items-start space-x-4 p-6 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-purple-600/20 hover:-translate-y-1">
+                  <div className="flex items-start space-x-4 p-6 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20 hover:-translate-y-1">
                     <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                       <Users className="h-6 w-6 text-primary" />
                     </div>
@@ -187,7 +187,7 @@ const DeepTierSCPayments = () => {
                     
                     {/* Connection line */}
                     <div className="flex justify-center ml-8">
-                      <div className="w-px h-8 bg-gradient-to-b from-green-600 via-blue-600 to-purple-600 animate-pulse" style={{
+                      <div className="w-px h-8 bg-gradient-to-b from-primary via-secondary to-accent animate-pulse" style={{
                       animationDelay: '0.5s'
                     }}></div>
                     </div>
@@ -195,29 +195,29 @@ const DeepTierSCPayments = () => {
                     {/* Tier 2 & 3 Suppliers */}
                     <div className="flex items-center space-x-6 ml-16 group">
                       <div className="relative">
-                        <div className="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-500 rounded-lg flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300">
+                        <div className="w-14 h-14 bg-gradient-to-br from-accent to-accent/80 rounded-lg flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300">
                           <Network className="h-6 w-6 text-white" />
                         </div>
-                        <div className="absolute -top-1 -right-1 w-3 h-3 bg-purple-500 rounded-full border border-white animate-pulse" style={{
+                        <div className="absolute -top-1 -right-1 w-3 h-3 bg-primary rounded-full border border-white animate-pulse" style={{
                         animationDelay: '1s'
                       }}></div>
                       </div>
                       <div className="flex-1">
                         <h4 className="font-bold text-lg text-gray-800">Tier 2 & 3 Suppliers</h4>
                         <p className="text-gray-600">MSMEs & Small Vendors</p>
-                        <div className="mt-2 h-1 bg-gradient-to-r from-blue-600 to-transparent rounded"></div>
+                        <div className="mt-2 h-1 bg-gradient-to-r from-accent to-transparent rounded"></div>
                       </div>
                     </div>
                   </div>
                   
                   {/* Floating elements around the visualization */}
-                  <div className="absolute top-4 right-4 w-3 h-3 bg-orange-600/30 rounded-full animate-bounce" style={{
+                  <div className="absolute top-4 right-4 w-3 h-3 bg-primary/30 rounded-full animate-bounce" style={{
                   animationDelay: '0.2s'
                 }}></div>
-                  <div className="absolute bottom-4 left-4 w-2 h-2 bg-green-600/30 rounded-full animate-bounce" style={{
+                  <div className="absolute bottom-4 left-4 w-2 h-2 bg-secondary/30 rounded-full animate-bounce" style={{
                   animationDelay: '0.7s'
                 }}></div>
-                  <div className="absolute top-1/2 right-0 w-4 h-4 bg-blue-600/30 rounded-full animate-bounce" style={{
+                  <div className="absolute top-1/2 right-0 w-4 h-4 bg-accent/30 rounded-full animate-bounce" style={{
                   animationDelay: '1.2s'
                 }}></div>
                 </div>
@@ -248,22 +248,22 @@ const DeepTierSCPayments = () => {
             icon: Zap,
             title: "Instant Payments",
             desc: "Real-time settlements for all tiers",
-            color: "orange-600"
+            color: "primary"
           }, {
             icon: IndianRupee,
             title: "Cost Reduction",
             desc: "Lower transaction costs via digital payments",
-            color: "green-600"
+            color: "secondary"
           }, {
             icon: Smartphone,
             title: "Digital Inclusion",
             desc: "Mobile-first approach for MSMEs",
-            color: "blue-600"
+            color: "accent"
           }, {
             icon: Shield,
             title: "Transparency",
             desc: "Complete audit trails and reporting",
-            color: "purple-600"
+            color: "primary"
           }].map((item, index) => <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white/60 backdrop-blur-sm hover:bg-white hover:-translate-y-2">
                 <CardContent className="pt-8 text-center">
                   <div className={`w-16 h-16 bg-${item.color}/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 group-hover:rotate-6`}>
@@ -280,15 +280,15 @@ const DeepTierSCPayments = () => {
             {[{
             stat: "6.3 Crore",
             desc: "MSMEs in India need better payment solutions",
-            color: "from-orange-600 to-green-600"
+            color: "from-primary to-secondary"
           }, {
             stat: "45 Days",
             desc: "Average payment cycle for small suppliers",
-            color: "from-green-600 to-blue-600"
+            color: "from-secondary to-accent"
           }, {
             stat: "₹500Cr+",
             desc: "Daily digital transaction volume potential",
-            color: "from-blue-600 to-purple-600"
+            color: "from-accent to-primary"
           }].map((item, index) => <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white hover:-translate-y-2">
                 <CardContent className="pt-8 text-center">
                   <div className={`text-6xl font-bold bg-gradient-to-r ${item.color} bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform`}>
@@ -305,10 +305,10 @@ const DeepTierSCPayments = () => {
       <section className="py-16 bg-white relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-orange-600/10 text-orange-600">
+            <Badge className="mb-4 bg-primary/10 text-primary">
               Payment Flow
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-600 to-green-600 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               How Deep-Tier Payments Work in India
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -339,10 +339,10 @@ const DeepTierSCPayments = () => {
       <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="mb-6 bg-gradient-to-r from-green-600 to-blue-600 text-white shadow-lg px-4 py-2">
+            <Badge className="mb-6 bg-gradient-to-r from-primary to-secondary text-white shadow-lg px-4 py-2">
               Stakeholder Benefits
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-green-600 via-orange-600 to-blue-600 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
               Benefits for Indian Supply Chain Ecosystem
             </h2>
           </div>
@@ -352,17 +352,17 @@ const DeepTierSCPayments = () => {
             icon: Building,
             title: "Large Corporations",
             benefits: ["Improved supplier relationships", "Better working capital management", "Enhanced supply chain visibility", "ESG compliance tracking"],
-            color: "orange-600"
+            color: "primary"
           }, {
             icon: Users,
             title: "MSMEs & Suppliers",
             benefits: ["Instant payment settlements", "Reduced transaction costs", "Digital payment history", "Access to credit scoring"],
-            color: "green-600"
+            color: "secondary"
           }, {
             icon: Banknote,
             title: "Financial Institutions",
             benefits: ["Real-time transaction monitoring", "Complete audit trails", "Integration with existing systems", "Regulatory compliance support"],
-            color: "blue-600"
+            color: "accent"
           }].map((stakeholder, index) => <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 hover:-translate-y-2 bg-white">
                 <CardHeader>
                   <div className={`w-16 h-16 bg-gradient-to-br from-${stakeholder.color} to-${stakeholder.color}/80 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
@@ -384,13 +384,13 @@ const DeepTierSCPayments = () => {
       </section>
 
       {/* Differentiators */}
-      <section className="py-16 bg-gradient-to-br from-orange-600/5 via-green-600/5 to-blue-600/5">
+      <section className="py-16 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="mb-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg px-4 py-2">
+            <Badge className="mb-6 bg-gradient-to-r from-primary to-secondary text-white shadow-lg px-4 py-2">
               Competitive Edge
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-orange-600 to-green-600 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Our Differentiators in Indian Market
             </h2>
           </div>
@@ -404,7 +404,7 @@ const DeepTierSCPayments = () => {
                       <tr className="border-b border-gray-200">
                         <th className="text-left py-6 font-bold text-xl text-gray-800">Feature</th>
                         <th className="text-center py-6 font-bold text-xl text-gray-800">Traditional Payments</th>
-                        <th className="text-center py-6 font-bold text-xl bg-gradient-to-r from-orange-600 to-green-600 bg-clip-text text-transparent">Our Deep-Tier Payments</th>
+                        <th className="text-center py-6 font-bold text-xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Our Deep-Tier Payments</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -435,14 +435,14 @@ const DeepTierSCPayments = () => {
       </section>
 
       {/* Real-World Use Cases - Interactive Story Layout */}
-      <section className="py-24 bg-gradient-to-br from-white via-orange-600/2 to-green-600/5 relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-br from-white via-primary/2 to-secondary/5 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
-            <Badge className="mb-6 bg-gradient-to-r from-green-600 to-blue-600 text-white shadow-lg px-6 py-2">
+            <Badge className="mb-6 bg-gradient-to-r from-primary to-secondary text-white shadow-lg px-6 py-2">
               <Play className="mr-2 h-4 w-4" />
               Indian Success Stories
             </Badge>
-            <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-600 via-blue-600 to-orange-600 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
               See Payments in Action
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -458,21 +458,21 @@ const DeepTierSCPayments = () => {
               image: indiaDigitalPayments,
               stats: ["Digital Integration", "MSME Empowerment", "Real-time Settlement"],
               highlight: "Digital India initiative",
-              color: "from-orange-500 to-red-600"
+              color: "from-primary to-secondary"
             }, {
               title: "Textile Industry Revolution",
               subtitle: "Transforming traditional textile payments",
               image: indiaTextilePayments,
               stats: ["Traditional to Digital", "Instant Processing", "Cost Reduction"],
               highlight: "Made in India support",
-              color: "from-green-500 to-teal-600"
+              color: "from-secondary to-accent"
             }, {
               title: "Agriculture Payment Innovation",
               subtitle: "Bringing farmers into digital payment ecosystem",
               image: indiaAgriculturePayments,
               stats: ["Rural Inclusion", "Mobile-first", "Government Alignment"],
               highlight: "Farmer welfare program",
-              color: "from-blue-500 to-indigo-600"
+              color: "from-accent to-primary"
             }].map((story, index) => (
               <div key={index} className={`group relative ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} flex flex-col lg:flex gap-12 items-center`}>
                 {/* Image Container */}
@@ -539,29 +539,29 @@ const DeepTierSCPayments = () => {
       </section>
 
       {/* Technology That Powers It - Interactive Tech Hub */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-orange-600/5 relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-primary/5 relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-32 h-32 border-2 border-orange-600 rounded-full animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-24 h-24 border-2 border-green-600 rounded-full animate-pulse delay-300"></div>
-          <div className="absolute top-1/2 left-1/4 w-16 h-16 border-2 border-blue-600 rounded-full animate-pulse delay-700"></div>
+          <div className="absolute top-20 left-20 w-32 h-32 border-2 border-primary rounded-full animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-24 h-24 border-2 border-secondary rounded-full animate-pulse delay-300"></div>
+          <div className="absolute top-1/2 left-1/4 w-16 h-16 border-2 border-accent rounded-full animate-pulse delay-700"></div>
         </div>
         
         {/* Floating Tech Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-20 w-2 h-2 bg-orange-600 rounded-full animate-pulse"></div>
-          <div className="absolute top-40 right-32 w-3 h-3 bg-green-600 rounded-full animate-pulse delay-300"></div>
-          <div className="absolute bottom-32 left-1/4 w-2 h-2 bg-blue-600 rounded-full animate-pulse delay-700"></div>
-          <div className="absolute bottom-20 right-20 w-4 h-4 bg-orange-600 rounded-full animate-pulse delay-1000"></div>
+          <div className="absolute top-20 left-20 w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+          <div className="absolute top-40 right-32 w-3 h-3 bg-secondary rounded-full animate-pulse delay-300"></div>
+          <div className="absolute bottom-32 left-1/4 w-2 h-2 bg-accent rounded-full animate-pulse delay-700"></div>
+          <div className="absolute bottom-20 right-20 w-4 h-4 bg-primary rounded-full animate-pulse delay-1000"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-20">
-            <Badge className="mb-6 bg-gradient-to-r from-orange-600 to-green-600 text-white border-0 px-6 py-2">
+            <Badge className="mb-6 bg-gradient-to-r from-primary to-secondary text-white border-0 px-6 py-2">
               <Wifi className="mr-2 h-4 w-4" />
               India-First Technology
             </Badge>
-            <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-orange-600 via-green-600 to-blue-600 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
               Powered by Indian Innovation
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -578,7 +578,7 @@ const DeepTierSCPayments = () => {
                   alt="India Blockchain Payments Technology"
                   className="w-full h-96 object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-orange-600/80 via-orange-600/40 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/40 to-transparent"></div>
                 
                 {/* Floating Tech Badges */}
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -594,8 +594,8 @@ const DeepTierSCPayments = () => {
                 </div>
                 
                 {/* Status Indicator */}
-                <div className="absolute top-6 right-6 flex items-center space-x-2 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 border border-orange-600/20 shadow-lg">
-                  <div className="w-2 h-2 bg-orange-600 rounded-full animate-pulse"></div>
+                <div className="absolute top-6 right-6 flex items-center space-x-2 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 border border-primary/20 shadow-lg">
+                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
                   <span className="text-sm font-medium text-gray-800">Production Ready</span>
                 </div>
               </div>
@@ -610,22 +610,22 @@ const DeepTierSCPayments = () => {
                 title: "Advanced Digital Payment Integration",
                 desc: "Seamless integration with India's digital payment infrastructure enhanced with advanced security and transparency features.",
                 features: ["Digital Compatible", "Automated Processing", "Instant Settlement"],
-                color: "from-orange-600 to-green-600"
+                color: "from-primary to-secondary"
               }, {
                 icon: Network,
                 title: "Real-time Payment Processing",
                 desc: "Event-driven architecture designed for India's high-volume payment ecosystem with instant transaction processing.",
                 features: ["High Volume Support", "Multi-language UI", "Regional Compliance"],
-                color: "from-green-600 to-blue-600"
+                color: "from-secondary to-accent"
               }].map((tech, index) => (
                 <div key={index} className="group">
-                  <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-200 hover:border-orange-600/30 transition-all duration-500 hover:shadow-xl shadow-lg">
+                  <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-200 hover:border-primary/30 transition-all duration-500 hover:shadow-xl shadow-lg">
                     <div className="flex items-start space-x-6">
                       <div className={`w-16 h-16 bg-gradient-to-br ${tech.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                         <tech.icon className="h-8 w-8 text-white" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-orange-600 transition-colors">
+                        <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-primary transition-colors">
                           {tech.title}
                         </h3>
                         <p className="text-gray-600 leading-relaxed mb-4">
@@ -633,7 +633,7 @@ const DeepTierSCPayments = () => {
                         </p>
                         <div className="flex flex-wrap gap-2">
                           {tech.features.map((feature, idx) => (
-                            <span key={idx} className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700 border border-gray-200 hover:bg-orange-600/10 hover:border-orange-600/30 transition-colors">
+                            <span key={idx} className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700 border border-gray-200 hover:bg-primary/10 hover:border-primary/30 transition-colors">
                               {feature}
                             </span>
                           ))}
@@ -649,20 +649,20 @@ const DeepTierSCPayments = () => {
       </section>
 
       {/* Who is it for */}
-      <section className="py-16 bg-gradient-to-br from-orange-600/5 via-green-600/5 to-blue-600/5 relative overflow-hidden">
+      <section className="py-16 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 relative overflow-hidden">
         {/* Background Decorative Elements */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-10 w-32 h-32 border-2 border-orange-600 rounded-full animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-24 h-24 border-2 border-green-600 rounded-full animate-pulse delay-300"></div>
-          <div className="absolute top-1/2 left-1/4 w-16 h-16 border-2 border-blue-600 rounded-full animate-pulse delay-700"></div>
+          <div className="absolute top-20 left-10 w-32 h-32 border-2 border-primary rounded-full animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-24 h-24 border-2 border-secondary rounded-full animate-pulse delay-300"></div>
+          <div className="absolute top-1/2 left-1/4 w-16 h-16 border-2 border-accent rounded-full animate-pulse delay-700"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-20">
-            <Badge className="mb-8 bg-gradient-to-r from-orange-600 to-green-600 text-white shadow-lg hover:shadow-xl transition-shadow duration-300 px-6 py-2 text-lg">
+            <Badge className="mb-8 bg-gradient-to-r from-primary to-secondary text-white shadow-lg hover:shadow-xl transition-shadow duration-300 px-6 py-2 text-lg">
               Target Audience
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-600 via-green-600 to-blue-600 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
               Who is it for?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -673,10 +673,10 @@ const DeepTierSCPayments = () => {
           {/* Connection Diagram */}
           <div className="relative max-w-6xl mx-auto mb-16">
             {/* Connection Lines */}
-            <div className="hidden md:block absolute top-1/2 left-1/4 right-1/4 h-0.5 bg-gradient-to-r from-orange-600 via-green-600 to-blue-600 transform -translate-y-1/2"></div>
-            <div className="hidden md:block absolute top-1/2 left-1/4 w-2 h-2 bg-orange-600 rounded-full transform -translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
-            <div className="hidden md:block absolute top-1/2 right-1/4 w-2 h-2 bg-blue-600 rounded-full transform translate-x-1/2 -translate-y-1/2 animate-pulse delay-500"></div>
-            <div className="hidden md:block absolute top-1/2 left-1/2 w-3 h-3 bg-green-600 rounded-full transform -translate-x-1/2 -translate-y-1/2 animate-pulse delay-300"></div>
+            <div className="hidden md:block absolute top-1/2 left-1/4 right-1/4 h-0.5 bg-gradient-to-r from-primary via-secondary to-accent transform -translate-y-1/2"></div>
+            <div className="hidden md:block absolute top-1/2 left-1/4 w-2 h-2 bg-primary rounded-full transform -translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
+            <div className="hidden md:block absolute top-1/2 right-1/4 w-2 h-2 bg-accent rounded-full transform translate-x-1/2 -translate-y-1/2 animate-pulse delay-500"></div>
+            <div className="hidden md:block absolute top-1/2 left-1/2 w-3 h-3 bg-secondary rounded-full transform -translate-x-1/2 -translate-y-1/2 animate-pulse delay-300"></div>
             
             <div className="grid md:grid-cols-3 gap-12">
               {[{
@@ -684,19 +684,19 @@ const DeepTierSCPayments = () => {
               title: "Large Indian Corporations",
               desc: "Multinational companies and large enterprises looking to digitize their supply chain payments across India",
               features: ["Supply Chain Digitization", "MSME Payment Management", "Compliance Automation"],
-              color: "from-orange-600 to-red-600"
+              color: "from-primary to-secondary"
             }, {
               icon: Users,
               title: "MSMEs & Small Businesses",
               desc: "India's 6.3 crore MSMEs seeking instant payment solutions and digital financial inclusion",
               features: ["Digital payment receipt", "Digital payment history", "Easy integration"],
-              color: "from-green-600 to-teal-600"
+              color: "from-secondary to-accent"
             }, {
               icon: Banknote,
               title: "Financial Institutions",
               desc: "Banks, NBFCs, and payment service providers wanting to serve the supply chain payment ecosystem",
               features: ["Payment Infrastructure", "Regulatory Compliance", "Transaction Monitoring"],
-              color: "from-blue-600 to-indigo-600"
+              color: "from-accent to-primary"
             }].map((audience, index) => <Card key={index} className="group bg-white/80 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
                   {/* Background pattern */}
                   <div className="absolute inset-0 opacity-5">
@@ -727,94 +727,116 @@ const DeepTierSCPayments = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-gradient-to-br from-gray-100 to-white" id="contact-form">
+      <section className="relative py-32 bg-gradient-to-br from-background to-muted/30" id="contact-us">
         <div className="container px-4 mx-auto">
           <div className="max-w-6xl mx-auto">
-            <Card className="overflow-hidden shadow-2xl border-0 bg-white">
-              <div className="grid grid-cols-1 lg:grid-cols-2">
-                <div className="bg-gradient-to-br from-primary via-secondary to-accent text-white p-12 lg:p-16 relative overflow-hidden">
-                  {/* Background decoration */}
-                  <div className="absolute inset-0 opacity-10">
-                    <div className="absolute top-10 right-10 w-32 h-32 border border-white/20 rounded-full"></div>
-                    <div className="absolute bottom-10 left-10 w-24 h-24 border border-white/20 rounded-full"></div>
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 border border-white/10 rounded-full"></div>
-                  </div>
-                  
-                  <div className="relative z-10">
-                    <Badge className="mb-6 bg-white/10 text-white border-white/20">
-                      Get Started
-                    </Badge>
-                    <h2 className="text-4xl font-bold mb-6 font-display">Transform Your Supply Chain Payments</h2>
-                    <p className="text-xl text-white/90 mb-12 leading-relaxed">
-                      Ready to revolutionize payments across your supply chain in India? Contact our team to learn more about Deep-Tier Supply Chain Payments.
-                    </p>
-                    
-                    <div className="space-y-8">
-                      <div className="flex items-center gap-6 group">
-                        <div className="bg-white/10 p-4 rounded-2xl group-hover:bg-white/20 transition-colors backdrop-blur-sm">
-                          <Mail className="h-8 w-8" />
+            <div className="text-center space-y-6 mb-16">
+              <div className="inline-flex items-center px-6 py-3 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                Get Started
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+                Ready to Transform
+                <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                  Your Supply Chain Payments?
+                </span>
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Join leading organizations already transforming their payment operations with Deep-Tier Supply Chain Payments
+              </p>
+            </div>
+
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary via-secondary to-accent rounded-3xl blur-2xl opacity-20" />
+              <div className="relative bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden border border-border/50">
+                <div className="grid grid-cols-1 lg:grid-cols-2">
+                  {/* Info Side */}
+                  <div className="bg-gradient-to-br from-primary via-secondary to-accent text-white p-8 lg:p-12 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-black/20" />
+                    <div className="relative z-10 space-y-8">
+                      <div className="space-y-4">
+                        <h3 className="text-3xl font-bold">Start Your Digital Transformation</h3>
+                        <p className="text-lg text-white/90 leading-relaxed">
+                          Transform your supply chain payments with instant, secure, and transparent solutions powered by advanced digital technology.
+                        </p>
+                      </div>
+
+                      <div className="space-y-6">
+                        <div className="flex items-center gap-4">
+                          <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                            <Mail className="h-6 w-6" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-lg">Email Us</h4>
+                            <p className="text-white/80">contact@vayana.com</p>
+                          </div>
                         </div>
+
+                        <div className="flex items-center gap-4">
+                          <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                            <Phone className="h-6 w-6" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-lg">Call Us</h4>
+                            <p className="text-white/80">+91-80-4906-8800</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Form Side */}
+                  <div className="p-8 lg:p-12">
+                    <h3 className="text-2xl font-bold mb-8 text-foreground">Contact Us</h3>
+                    
+                    <form className="space-y-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                          <h3 className="font-bold text-xl mb-1">Email Us</h3>
-                          <p className="text-white/80 text-lg">payments@vayana.com</p>
+                          <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                            Full Name *
+                          </label>
+                          <input id="name" name="name" required placeholder="John Doe" className="w-full px-4 py-3 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors" />
+                        </div>
+                        
+                        <div>
+                          <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                            Email Address *
+                          </label>
+                          <input id="email" name="email" type="email" required placeholder="john@company.com" className="w-full px-4 py-3 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors" />
                         </div>
                       </div>
                       
-                      <div className="flex items-center gap-6 group">
-                        <div className="bg-white/10 p-4 rounded-2xl group-hover:bg-white/20 transition-colors backdrop-blur-sm">
-                          <Phone className="h-8 w-8" />
-                        </div>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                          <h3 className="font-bold text-xl mb-1">Call Us</h3>
-                          <p className="text-white/80 text-lg">+91-80-4906-8800</p>
+                          <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2">
+                            Organization
+                          </label>
+                          <input id="company" name="company" placeholder="Your Organization" className="w-full px-4 py-3 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors" />
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="p-12 lg:p-16 bg-gradient-to-br from-white to-gray-50">
-                  <h3 className="text-3xl font-bold mb-8 text-gray-800">Contact Us</h3>
-                  
-                  <form className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
-                          Full Name *
-                        </label>
-                        <Input id="name" name="name" required placeholder="John Doe" className="h-12 border-gray-200 focus:border-primary focus:ring-primary/20 rounded-xl" />
+
+                        <div>
+                          <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                            Phone Number
+                          </label>
+                          <input id="phone" name="phone" placeholder="+91 (123) 456-7890" className="w-full px-4 py-3 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors" />
+                        </div>
                       </div>
                       
                       <div>
-                        <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-                          Email Address *
+                        <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                          Message *
                         </label>
-                        <Input id="email" name="email" type="email" required placeholder="john@example.com" className="h-12 border-gray-200 focus:border-primary focus:ring-primary/20 rounded-xl" />
+                        <textarea id="message" name="message" required placeholder="Tell us about your supply chain payment requirements..." className="w-full h-32 px-4 py-3 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors resize-none" />
                       </div>
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="organization" className="block text-sm font-semibold text-gray-700 mb-2">
-                        Organization
-                      </label>
-                      <Input id="organization" name="organization" placeholder="Your Organization" className="h-12 border-gray-200 focus:border-primary focus:ring-primary/20 rounded-xl" />
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
-                        Message
-                      </label>
-                      <Textarea id="message" name="message" placeholder="Tell us about your payment challenges..." className="border-gray-200 focus:border-primary focus:ring-primary/20 rounded-xl min-h-[120px]" />
-                    </div>
-                    
-                    <Button className="w-full h-12 bg-primary hover:bg-primary/90 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                      Send Message
-                      <Send className="ml-2 h-4 w-4" />
-                    </Button>
-                  </form>
+                      
+                      <Button type="submit" size="lg" className="w-full bg-gradient-to-r from-primary via-secondary to-accent text-white hover:opacity-90 transition-opacity py-4 text-lg">
+                        Send Inquiry
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Button>
+                    </form>
+                  </div>
                 </div>
               </div>
-            </Card>
+            </div>
           </div>
         </div>
       </section>
