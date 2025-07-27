@@ -49,7 +49,7 @@ const DeepTierSCPayments = () => {
             </Badge>
             <h1 className="text-5xl md:text-7xl font-bold mb-8 text-white leading-tight">
               Instant Payments.
-              <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-yellow-300 to-secondary bg-clip-text text-transparent">
                 Deep into Your Supply Chain.
               </span>
             </h1>
@@ -94,7 +94,7 @@ const DeepTierSCPayments = () => {
               
               <div className="grid sm:grid-cols-2 gap-6">
                 <div className="group">
-                  <div className="flex items-start space-x-4 p-6 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-orange-500/20 hover:-translate-y-1">
+                  <div className="flex items-start space-x-4 p-6 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20 hover:-translate-y-1">
                     <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                       <Smartphone className="h-6 w-6 text-primary" />
                     </div>
@@ -106,7 +106,7 @@ const DeepTierSCPayments = () => {
                 </div>
                 
                 <div className="group">
-                  <div className="flex items-start space-x-4 p-6 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-green-600/20 hover:-translate-y-1">
+                  <div className="flex items-start space-x-4 p-6 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-secondary/20 hover:-translate-y-1">
                     <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                       <Zap className="h-6 w-6 text-secondary" />
                     </div>
@@ -151,10 +151,10 @@ const DeepTierSCPayments = () => {
                     {/* Anchor Buyer */}
                     <div className="flex items-center space-x-6 group">
                       <div className="relative">
-                        <div className="w-20 h-20 bg-gradient-to-br from-orange-600 to-orange-500 rounded-2xl flex items-center justify-center shadow-2xl group-hover:scale-110 transition-all duration-300">
+                        <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center shadow-2xl group-hover:scale-110 transition-all duration-300">
                           <Building className="h-10 w-10 text-white" />
                         </div>
-                        <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full border-2 border-white animate-pulse"></div>
+                        <div className="absolute -top-2 -right-2 w-6 h-6 bg-secondary rounded-full border-2 border-white animate-pulse"></div>
                       </div>
                       <div className="flex-1">
                         <h4 className="font-bold text-xl text-gray-800">Large Corporation</h4>
@@ -228,13 +228,13 @@ const DeepTierSCPayments = () => {
       </section>
 
       {/* Why Deep-Tier Payments Matter in India */}
-      <section className="py-16 bg-gradient-to-br from-orange-600/5 via-green-600/5 to-blue-600/5 relative">
+      <section className="py-16 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="mb-6 bg-gradient-to-r from-orange-600 to-green-600 text-white shadow-lg px-4 py-2">
+            <Badge className="mb-6 bg-gradient-to-r from-primary to-secondary text-white shadow-lg px-4 py-2">
               Digital India Impact
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-orange-600 via-green-600 to-blue-600 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
               Why Deep-Tier Payments Matter in India
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">

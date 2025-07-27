@@ -1,0 +1,9 @@
+Here are the key color replacements needed:
+
+1. Orange/green gradients → primary/secondary gradients
+2. Orange-600, green-600 → primary, secondary, accent
+3. Background colors → use Vayana theme colors
+4. Border colors → use theme colors
+5. Text colors → use theme colors
+
+This is a planning file to organize the comprehensive color update.
