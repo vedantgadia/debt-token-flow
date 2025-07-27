@@ -159,29 +159,29 @@ const DeepTierSCPayments = () => {
                       <div className="flex-1">
                         <h4 className="font-bold text-xl text-gray-800">Large Corporation</h4>
                         <p className="text-gray-600">Anchor Buyer</p>
-                        <div className="mt-2 h-1 bg-gradient-to-r from-orange-600 to-transparent rounded"></div>
+                        <div className="mt-2 h-1 bg-gradient-to-r from-primary to-transparent rounded"></div>
                       </div>
                     </div>
                     
                     {/* Connection line */}
                     <div className="flex justify-center">
-                      <div className="w-px h-8 bg-gradient-to-b from-orange-600 via-green-600 to-blue-600 animate-pulse"></div>
+                      <div className="w-px h-8 bg-gradient-to-b from-primary via-secondary to-accent animate-pulse"></div>
                     </div>
                     
                     {/* Tier 1 Suppliers */}
                     <div className="flex items-center space-x-6 ml-8 group">
                       <div className="relative">
-                        <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-green-500 rounded-xl flex items-center justify-center shadow-xl group-hover:scale-110 transition-all duration-300">
+                        <div className="w-16 h-16 bg-gradient-to-br from-secondary to-secondary/80 rounded-xl flex items-center justify-center shadow-xl group-hover:scale-110 transition-all duration-300">
                           <Users className="h-8 w-8 text-white" />
                         </div>
-                        <div className="absolute -top-1 -right-1 w-4 h-4 bg-orange-500 rounded-full border border-white animate-pulse" style={{
+                        <div className="absolute -top-1 -right-1 w-4 h-4 bg-primary rounded-full border border-white animate-pulse" style={{
                         animationDelay: '0.5s'
                       }}></div>
                       </div>
                       <div className="flex-1">
                         <h4 className="font-bold text-lg text-gray-800">Tier 1 Suppliers</h4>
                         <p className="text-gray-600">Direct Partners</p>
-                        <div className="mt-2 h-1 bg-gradient-to-r from-green-600 to-transparent rounded"></div>
+                        <div className="mt-2 h-1 bg-gradient-to-r from-secondary to-transparent rounded"></div>
                       </div>
                     </div>
                     
