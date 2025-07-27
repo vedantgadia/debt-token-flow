@@ -119,9 +119,9 @@ const SCFPlatformShowcase = () => {
           </div>
 
           {/* Main Showcase */}
-          <div className="grid lg:grid-cols-12 gap-12 items-center">
+          <div className="flex justify-center">
             {/* Platform Screenshot */}
-            <div className="lg:col-span-8">
+            <div className="max-w-5xl w-full">
               <div className="relative group">
                 {/* Enhanced Browser Frame */}
                 <div className="bg-white rounded-xl shadow-2xl p-3 border border-gray-200 hover:shadow-3xl transition-all duration-500">
@@ -180,116 +180,44 @@ const SCFPlatformShowcase = () => {
                   </Button>
                 </div>
               </div>
-            </div>
-
-            {/* Enhanced Platform Details */}
-            <div className="lg:col-span-4 space-y-8">
-              {/* Current Platform Info */}
-              <Card className="border-2 border-primary/20 bg-white/80 backdrop-blur-sm shadow-xl">
-                <CardContent className="p-8">
-                  <div className="space-y-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl flex items-center justify-center shadow-lg">
-                        <IconComponent className="h-7 w-7 text-primary" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center space-x-2 mb-2">
-                          <Badge variant="secondary" className="text-xs">
-                            {currentScreen.category}
-                          </Badge>
-                          <Badge variant="outline" className="text-xs text-gray-600">
-                            {currentScreen.userType}
-                          </Badge>
-                        </div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-1">
-                          {currentScreen.title}
-                        </h3>
-                      </div>
-                    </div>
-                    
-                    <p className="text-gray-600 leading-relaxed">
-                      {currentScreen.description}
-                    </p>
-                    
-                    <div className="space-y-4">
-                      <h4 className="font-semibold text-gray-900 flex items-center">
-                        <Network className="h-4 w-4 mr-2 text-primary" />
-                        Key Capabilities:
-                      </h4>
-                      <div className="grid grid-cols-1 gap-3">
-                        {currentScreen.features.map((feature, index) => (
-                          <div key={index} className="flex items-center space-x-3 p-2 rounded-lg bg-gray-50 hover:bg-primary/5 transition-colors">
-                            <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-secondary" />
-                            <span className="text-sm text-gray-700 font-medium">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Enhanced Platform Navigation */}
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <h4 className="font-semibold text-gray-900 flex items-center">
-                    <TrendingUp className="h-4 w-4 mr-2 text-primary" />
-                    Platform Modules
-                  </h4>
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-                    className="flex items-center space-x-2 hover:bg-primary/5"
-                  >
-                    {isAutoPlaying ? <Pause className="h-3 w-3" /> : <Play className="h-3 w-3" />}
-                    <span className="text-xs">{isAutoPlaying ? 'Pause' : 'Play'}</span>
-                  </Button>
-                </div>
-                
-                <div className="space-y-3">
-                  {scfPlatformScreens.map((screen, index) => (
-                    <button
-                      key={screen.id}
-                      onClick={() => setCurrentSlide(index)}
-                      className={`w-full text-left p-4 rounded-xl transition-all duration-300 transform ${
-                        index === currentSlide 
-                          ? 'bg-gradient-to-r from-primary to-secondary text-white shadow-lg scale-[1.02]' 
-                          : 'bg-white hover:bg-gray-50 text-gray-700 border-2 border-gray-100 hover:border-primary/30 hover:shadow-md'
-                      }`}
-                    >
-                      <div className="flex items-center space-x-3">
-                        <screen.icon className={`h-5 w-5 ${index === currentSlide ? 'text-white' : 'text-primary'}`} />
-                        <div className="flex-1">
-                          <div className={`font-semibold text-sm ${index === currentSlide ? 'text-white' : 'text-gray-900'}`}>
-                            {screen.title}
-                          </div>
-                          <div className={`text-xs ${index === currentSlide ? 'text-white/80' : 'text-gray-500'}`}>
-                            {screen.userType}
-                          </div>
-                        </div>
-                      </div>
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Enhanced Progress Indicator */}
-              <div className="space-y-3">
-                <div className="flex justify-between text-sm text-gray-600">
-                  <span className="font-medium">Demo Progress</span>
-                  <span className="font-mono">{currentSlide + 1} / {scfPlatformScreens.length}</span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-3 shadow-inner">
-                  <div 
-                    className="bg-gradient-to-r from-primary to-secondary h-3 rounded-full transition-all duration-700 shadow-sm"
-                    style={{ width: `${((currentSlide + 1) / scfPlatformScreens.length) * 100}%` }}
+              
+              {/* Platform indicators below carousel */}
+              <div className="mt-8 flex justify-center space-x-3">
+                {scfPlatformScreens.map((screen, index) => (
+                  <button
+                    key={screen.id}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      index === currentSlide 
+                        ? 'bg-primary scale-125' 
+                        : 'bg-gray-300 hover:bg-gray-400'
+                    }`}
                   />
-                </div>
-                <div className="flex justify-between text-xs text-gray-500">
-                  <span>Supplier View</span>
-                  <span>Blockchain Monitor</span>
-                </div>
+                ))}
+              </div>
+              
+              {/* Platform info below indicators */}
+              <div className="mt-6 text-center max-w-2xl mx-auto">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  {currentScreen.title}
+                </h3>
+                <Badge variant="outline" className="mb-3">
+                  {currentScreen.category} • {currentScreen.userType}
+                </Badge>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  {currentScreen.description}
+                </p>
+                
+                {/* Play/Pause control */}
+                <Button
+                  size="sm"
+                  variant="outline"
+                  onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+                  className="flex items-center space-x-2 mx-auto"
+                >
+                  {isAutoPlaying ? <Pause className="h-3 w-3" /> : <Play className="h-3 w-3" />}
+                  <span className="text-xs">{isAutoPlaying ? 'Pause Demo' : 'Play Demo'}</span>
+                </Button>
               </div>
             </div>
           </div>
