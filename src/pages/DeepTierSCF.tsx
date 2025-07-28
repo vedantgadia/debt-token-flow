@@ -329,7 +329,7 @@ const DeepTierSCF = () => {
               
               {/* Diagram Container */}
               <div className="bg-gray-50 rounded-xl p-4">
-                <img src="/lovable-uploads/b4d908ab-34da-4fbc-9d1a-2a39b8403b72.png" alt="Multi-Tier Financing Flow Diagram" className="w-full h-auto max-w-full mx-auto rounded-lg" />
+                <img src="/lovable-uploads/40cbf9f8-c601-47f9-a143-7e5611ea1eda.png" alt="Multi-Tier Financing Flow Diagram" className="w-full h-auto max-w-full mx-auto rounded-lg" />
               </div>
               
               {/* Key Features Below Diagram */}
