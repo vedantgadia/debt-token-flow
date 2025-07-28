@@ -125,7 +125,7 @@ const Securitization = () => {
                   Explore Solutions
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Button size="lg" variant="outline" className="border-white/30 hover:bg-white backdrop-blur-sm transition-all duration-300 text-white hover:text-primary">
+                <Button size="lg" variant="outline" className="border-white text-white bg-white/20 backdrop-blur-sm hover:bg-white hover:text-primary transition-all duration-300">
                   Contact Us
                   <Mail className="ml-2 h-4 w-4" />
                 </Button>
