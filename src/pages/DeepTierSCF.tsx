@@ -57,7 +57,7 @@ const DeepTierSCF = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-4xl mx-auto leading-relaxed">
-              Enable liquidity for even your smallest suppliers with our Multi-Tier Financing platform—driving resilience, inclusivity, and transparency at every tier.
+              Enable liquidity for even your smallest suppliers with our Multi-Tier Financing platform - driving resilience, inclusivity, and transparency at every tier.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button size="lg" className="bg-white text-primary hover:bg-white/90 h-14 px-8 text-lg font-semibold shadow-2xl hover:shadow-white/20 transition-all duration-300 group">
@@ -89,7 +89,7 @@ const DeepTierSCF = () => {
                 What is Multi-Tier Financing?
               </h2>
               <p className="text-xl text-gray-600 mb-6 leading-relaxed">
-                Traditional supply chain finance often stops at the first-tier supplier—leaving thousands of smaller, multi-tier suppliers underserved.
+                Traditional supply chain finance often stops at the first-tier supplier - leaving thousands of smaller, multi-tier suppliers underserved.
               </p>
               <p className="text-xl text-gray-600 mb-10 leading-relaxed">
                 MTF is a paradigm shift. It extends working capital solutions across all tiers of a supply chain, empowering MSMEs with timely access to finance using the anchor buyer's strength.

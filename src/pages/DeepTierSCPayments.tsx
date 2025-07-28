@@ -57,7 +57,7 @@ const DeepTierSCPayments = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-4xl mx-auto leading-relaxed">
-              Revolutionize payments across your entire supply chain ecosystem in India with our Deep-Tier Supply Chain Payments platform—enabling instant, secure, and transparent transactions for every supplier.
+              Revolutionize payments across your entire supply chain ecosystem in India with our Deep-Tier Supply Chain Payments platform - enabling instant, secure, and transparent transactions for every supplier.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button size="lg" className="bg-white text-primary hover:bg-white/90 h-14 px-8 text-lg font-semibold shadow-2xl hover:shadow-white/20 transition-all duration-300 group">

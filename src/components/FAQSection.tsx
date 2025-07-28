@@ -9,8 +9,8 @@ import {
 
 const faqs = [
   {
-    question: "What types of assets can be tokenised on the Vayana Debt Platform?",
-    answer: "We currently support tokenisation of loans, debentures, and other private credit instruments. Structured products and hybrid debt instruments are also supported through custom workflows."
+    question: "What types of assets can be tokenized on the Vayana Debt Platform?",
+    answer: "We currently support tokenization of loans, debentures, and other private credit instruments. Structured products and hybrid debt instruments are also supported through custom workflows."
   },
   {
     question: "Is the platform available as a white-label solution?",
@@ -22,14 +22,14 @@ const faqs = [
   },
   {
     question: "Who is the platform intended for?",
-    answer: "VDP is purpose-built for asset originators, fintech platforms, private credit funds, banks, family offices, NBFIs, and asset managers looking to digitise credit workflows and scale investor access."
+    answer: "VDP is purpose-built for asset originators, fintech platforms, private credit funds, banks, family offices, NBFIs, and asset managers looking to digitize credit workflows and scale investor access."
   },
   {
     question: "Can the platform handle multiple investor types and jurisdictions?",
     answer: "Yes, VDP supports complex investor onboarding, jurisdiction-based compliance filters, and dynamic transfer rules based on regulatory requirements."
   },
   {
-    question: "How long does it take to launch a tokenised debt instrument?",
+    question: "How long does it take to launch a tokenized debt instrument?",
     answer: "Depending on the complexity of the structure, it can be done in as little as 1–2 weeks using our pre-built templates and onboarding support."
   },
   {
@@ -37,7 +37,7 @@ const faqs = [
     answer: "We offer dedicated onboarding, compliance configuration, and integration support, along with SLAs for enterprise clients."
   },
   {
-    question: "Can tokenised assets be custodied or held with third-party custodians?",
+    question: "Can tokenized assets be custodied or held with third-party custodians?",
     answer: "Yes. VDP is compatible with both self-custody and integration with institutional custodians, depending on client preferences."
   },
   {

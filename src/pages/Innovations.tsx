@@ -10,12 +10,12 @@ const products = [
     id: 'vdp',
     icon: Coins,
     headline: 'Vayana Debt Platform (VDP)',
-    subheadline: 'Tokenise Private Credit. Simplify Issuance. Unlock Liquidity.',
-    description: `The Vayana Debt Platform (VDP) is a modular, SaaS-based platform that enables financial institutions to issue, manage, and service tokenised private credit instruments — including loans, debentures, and structured debt — with ease.
+    subheadline: 'Tokenize Private Credit. Simplify Issuance. Unlock Liquidity.',
+    description: `The Vayana Debt Platform (VDP) is a modular, SaaS-based platform that enables financial institutions to issue, manage, and service tokenized private credit instruments - including loans, debentures, and structured debt - with ease.
 
 Built to power the next generation of private credit, VDP brings automation, transparency, and digital-native workflows to a market still constrained by manual processes and fragmented infrastructure.`,
     coreCapabilities: [
-      'Tokenisation of Debt Instruments',
+      'Tokenization of Debt Instruments',
       'Workflow Automation',
       'Multi-Tenant SaaS',
       'Built-in Compliance',

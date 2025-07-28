@@ -24,7 +24,7 @@ const steps = [
   {
     id: 4,
     title: "Post Issuance Management",
-    description: "Interest Payments, Trading, Default Tracking, etc.",
+    description: "Interest Payments, Trading, Default Tracking, and more",
     icon: CreditCard
   }
 ];

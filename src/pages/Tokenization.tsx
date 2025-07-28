@@ -379,7 +379,7 @@ const Tokenization = () => {
                 Trusted by Ecosystems Across Asset Classes
               </h2>
               <p className="section-subtitle text-gray-600">
-                Whether you're an asset manager, tokenization platform, REIT, private fund, or fractional investment platform — our infrastructure supports diverse use cases with modularity and control.
+                Whether you're an asset manager, tokenization platform, REIT, private fund, or fractional investment platform - our infrastructure supports diverse use cases with modularity and control.
               </p>
             </div>
             
@@ -500,7 +500,7 @@ const Tokenization = () => {
               Launch a Tokenized Offering in Weeks
             </h2>
             <p className="section-subtitle text-gray-600">
-              Start small with a compliant, branded tokenization flow using our plug-and-play infrastructure. Whether it's a tokenized {content.title.toLowerCase()} project, fund unit, or alt-asset drop — go live in weeks, not months.
+              Start small with a compliant, branded tokenization flow using our plug-and-play infrastructure. Whether it's a tokenized {content.title.toLowerCase()} project, fund unit, or alt-asset drop - go live in weeks, not months.
             </p>
             <div className="flex items-center justify-center space-x-4 text-vayana-blue mb-8">
               <Clock className="h-8 w-8" />

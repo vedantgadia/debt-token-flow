@@ -12,10 +12,10 @@ const AboutSection = () => {
               Vayana Debt Platform (VDP)
             </h2>
             <h3 className="text-xl md:text-2xl text-secondary font-semibold mb-6">
-              Tokenise Private Credit. Simplify Issuance. Unlock Liquidity.
+              Tokenize Private Credit. Simplify Issuance. Unlock Liquidity.
             </h3>
             <p className="text-gray-700 mb-6">
-              The Vayana Debt Platform (VDP) is a modular, SaaS-based platform that enables financial institutions to issue, manage, and service tokenised private credit instruments — including loans, debentures, and structured debt — with ease.
+              The Vayana Debt Platform (VDP) is a modular, SaaS-based platform that enables financial institutions to issue, manage, and service tokenized private credit instruments - including loans, debentures, and structured debt - with ease.
             </p>
             <p className="text-gray-700 mb-8">
               Built to power the next generation of private credit, VDP brings automation, transparency, and digital-native workflows to a market still constrained by manual processes and fragmented infrastructure.
@@ -25,7 +25,7 @@ const AboutSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="check-item">
                 <Database className="check-icon" />
-                <span>Tokenisation of Debt Instruments</span>
+                <span>Tokenization of Debt Instruments</span>
               </div>
               <div className="check-item">
                 <LayoutDashboard className="check-icon" />

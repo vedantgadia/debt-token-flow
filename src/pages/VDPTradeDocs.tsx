@@ -166,7 +166,7 @@ const VDPTradeDocs = () => {
   }];
   const features = [{
     title: "Universal Document Digitization",
-    desc: "Enable creation of Digital Originals for any Trade or B2B Credit document — including both Transferable (title-based) and Verifiable formats.",
+    desc: "Enable creation of Digital Originals for any Trade or B2B Credit document - including both Transferable (title-based) and Verifiable formats.",
     icon: FileText,
     emoji: "📄"
   }, {

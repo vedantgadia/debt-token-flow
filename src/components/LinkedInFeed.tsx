@@ -42,7 +42,7 @@ const LinkedInFeed = () => {
               Latest from LinkedIn
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Follow our latest insights, industry updates, and thought leadership content
+              Follow our latest insights, industry updates, and thought leadership content.
             </p>
           </div>
 
