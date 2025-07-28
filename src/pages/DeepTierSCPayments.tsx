@@ -331,6 +331,33 @@ const DeepTierSCPayments = () => {
               <div className="bg-gray-50 rounded-xl p-4">
                 <img src="/lovable-uploads/b4d908ab-34da-4fbc-9d1a-2a39b8403b72.png" alt="Deep-Tier Supply Chain Payments Flow Diagram" className="w-full h-auto max-w-full mx-auto rounded-lg" />
               </div>
+              
+              {/* Key Features Below Diagram */}
+              <div className="grid md:grid-cols-4 gap-6 mt-8">
+                {[{
+                icon: Shield,
+                title: "Digital Security",
+                desc: "Bank-grade encryption & authentication"
+              }, {
+                icon: Zap,
+                title: "Instant Settlement",
+                desc: "Real-time payment processing"
+              }, {
+                icon: Network,
+                title: "Multi-tier Integration",
+                desc: "From Tier 1 to deepest supplier levels"
+              }, {
+                icon: TrendingUp,
+                title: "Scalable Payments",
+                desc: "Volume-based processing capabilities"
+              }].map((feature, index) => <div key={index} className="text-center group">
+                    <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                      <feature.icon className="h-5 w-5 text-white" />
+                    </div>
+                    <h4 className="font-semibold text-gray-800 mb-1">{feature.title}</h4>
+                    <p className="text-sm text-gray-600">{feature.desc}</p>
+                  </div>)}
+              </div>
             </div>
           </div>
 
