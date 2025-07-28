@@ -583,7 +583,7 @@ const DeepTierSCPayments = () => {
                 {/* Floating Tech Badges */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl">
-                    {['Digital Payments', 'Cloud Infrastructure', 'API Integration', 'Mobile-First'].map((tech, index) => (
+                    {['Digital Payments', 'Cloud Infrastructure', 'API Integration'].map((tech, index) => (
                       <div key={index} className="bg-white/90 backdrop-blur-sm rounded-xl px-4 py-2 text-center border border-white/20 hover:bg-white transition-all duration-300 cursor-pointer group shadow-lg">
                         <div className="text-sm font-medium text-gray-800 group-hover:scale-105 transition-transform">
                           {tech}
