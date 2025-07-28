@@ -125,23 +125,12 @@ const Securitization = () => {
                   Explore Solutions
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Button size="lg" variant="outline" className="border-white/30 hover:bg-white backdrop-blur-sm transition-all duration-300 text-red-800">
-                  Watch Demo
-                  <Play className="ml-2 h-4 w-4" />
+                <Button size="lg" variant="outline" className="border-white/30 hover:bg-white backdrop-blur-sm transition-all duration-300 text-white hover:text-primary">
+                  Contact Us
+                  <Mail className="ml-2 h-4 w-4" />
                 </Button>
               </div>
 
-              {/* Trust Indicators */}
-              <div className="flex items-center gap-6 pt-8">
-                <div className="flex items-center gap-2">
-                  <Shield className="h-6 w-6 text-green-400" />
-                  <span className="text-lg font-semibold">Regulatory Compliant</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <BarChart3 className="h-6 w-6 text-blue-400" />
-                  <span className="text-lg font-semibold">Institutional Grade</span>
-                </div>
-              </div>
             </div>
 
             <div className="flex justify-center lg:justify-end">
@@ -362,80 +351,6 @@ const Securitization = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 bg-gradient-to-br from-muted/30 to-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <Badge className="mb-6 bg-accent/10 text-accent">
-                Market Impact
-              </Badge>
-              <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
-                Why Choose Our Platform?
-              </h2>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: Zap,
-                  title: "Faster Time to Market",
-                  desc: "Reduce securitization timeline from months to weeks",
-                  stat: "70%",
-                  statDesc: "Time Reduction"
-                },
-                {
-                  icon: Shield,
-                  title: "Enhanced Compliance",
-                  desc: "Built-in regulatory compliance and reporting",
-                  stat: "100%",
-                  statDesc: "Compliance Rate"
-                },
-                {
-                  icon: DollarSign,
-                  title: "Cost Efficiency",
-                  desc: "Lower issuance costs through automation",
-                  stat: "40%",
-                  statDesc: "Cost Savings"
-                },
-                {
-                  icon: Users,
-                  title: "Broader Access",
-                  desc: "Connect with diverse investor base",
-                  stat: "500+",
-                  statDesc: "Active Investors"
-                },
-                {
-                  icon: BarChart3,
-                  title: "Real-time Analytics",
-                  desc: "Comprehensive performance monitoring",
-                  stat: "24/7",
-                  statDesc: "Monitoring"
-                },
-                {
-                  icon: Target,
-                  title: "Customization",
-                  desc: "Tailored structures for specific needs",
-                  stat: "∞",
-                  statDesc: "Flexibility"
-                }
-              ].map((benefit, i) => (
-                <Card key={i} className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white hover:-translate-y-2">
-                  <CardContent className="p-8 text-center">
-                    <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                      <benefit.icon className="h-8 w-8 text-primary" />
-                    </div>
-                    <div className="text-3xl font-bold text-accent mb-2">{benefit.stat}</div>
-                    <div className="text-sm text-muted-foreground mb-4">{benefit.statDesc}</div>
-                    <h3 className="font-bold text-xl mb-3 text-foreground">{benefit.title}</h3>
-                    <p className="text-muted-foreground">{benefit.desc}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Contact Section */}
       <section className="relative py-32 bg-gradient-to-br from-background to-muted/30" id="contact-us">
