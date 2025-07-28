@@ -23,16 +23,26 @@ import {
 } from 'lucide-react';
 
 const Securitization = () => {
-  const [activeTab, setActiveTab] = useState('ptc');
+  const [activeTab, setActiveTab] = useState('trs');
 
   const securitizationTypes = [
+    {
+      id: 'trs',
+      title: 'Trade Receivables Securitization',
+      description: 'Convert trade receivables into marketable securities',
+      benefits: ['Improved Liquidity', 'Risk Distribution', 'Capital Efficiency', 'Working Capital Optimization'],
+      icon: TrendingUp,
+      color: 'from-accent to-primary',
+      shortName: 'TRS'
+    },
     {
       id: 'ptc',
       title: 'Pass Through Certificates (PTCs)',
       description: 'Direct ownership in underlying assets with transparent cash flows',
       benefits: ['Direct Asset Exposure', 'Transparent Structure', 'Regular Income', 'Asset-Backed Security'],
       icon: FileText,
-      color: 'from-primary to-secondary'
+      color: 'from-primary to-secondary',
+      shortName: 'PTC'
     },
     {
       id: 'sdi',
@@ -40,15 +50,8 @@ const Securitization = () => {
       description: 'Structured investment vehicles for infrastructure financing',
       benefits: ['Infrastructure Focus', 'Long-term Returns', 'Diversified Portfolio', 'ESG Compliance'],
       icon: Building,
-      color: 'from-secondary to-accent'
-    },
-    {
-      id: 'trs',
-      title: 'Trade Receivables Securitization',
-      description: 'Convert trade receivables into marketable securities',
-      benefits: ['Improved Liquidity', 'Risk Distribution', 'Capital Efficiency', 'Working Capital Optimization'],
-      icon: TrendingUp,
-      color: 'from-accent to-primary'
+      color: 'from-secondary to-accent',
+      shortName: 'SDI'
     }
   ];
 
@@ -246,7 +249,7 @@ const Securitization = () => {
                   onClick={() => setActiveTab(type.id)}
                 >
                   <type.icon className="mr-2 h-4 w-4" />
-                  {type.title.split(' ')[0]}
+                  {type.shortName}
                 </Button>
               ))}
             </div>
