@@ -425,41 +425,59 @@ const DeepTierSCF = () => {
             </h2>
           </div>
           
-          <div className="max-w-6xl mx-auto">
-            <Card className="bg-white/60 backdrop-blur-sm border-0 shadow-2xl overflow-hidden">
-              <div className="p-8 lg:p-12">
-                <div className="overflow-x-auto">
-                  <table className="w-full">
-                    <thead>
-                      <tr className="border-b border-gray-200">
-                        <th className="text-left py-6 font-bold text-xl text-gray-800">Feature</th>
-                        <th className="text-center py-6 font-bold text-xl text-gray-800">Traditional SCF</th>
-                        <th className="text-center py-6 font-bold text-xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Our MTF Platform</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {["Multi-tier access", "Anchor Credit Utilization", "MSME Onboarding at Scale", "Real-time Transaction Data", "Digital Document Exchange", "Tokenized Payments Option"].map((feature, index) => <tr key={index} className="border-b border-gray-100 hover:bg-white/50 transition-colors">
-                          <td className="py-6 font-semibold text-gray-800">{feature}</td>
-                          <td className="text-center py-6">
-                            <div className="flex justify-center">
-                              <div className="w-10 h-10 bg-red-50 rounded-full flex items-center justify-center">
-                                <XCircle className="h-6 w-6 text-red-500" />
-                              </div>
-                            </div>
-                          </td>
-                          <td className="text-center py-6">
-                            <div className="flex justify-center">
-                              <div className="w-10 h-10 bg-green-50 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
-                                <CheckCircle className="h-6 w-6 text-green-500" />
-                              </div>
-                            </div>
-                          </td>
-                        </tr>)}
-                    </tbody>
-                  </table>
-                </div>
+          <div className="max-w-7xl mx-auto">
+            {/* Header Row */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+              <div className="lg:col-span-1"></div>
+              <div className="text-center">
+                <Card className="bg-red-50 border-red-200 p-6 h-full">
+                  <h3 className="text-xl font-bold text-red-700 mb-2">Traditional SCF</h3>
+                  <p className="text-red-600">Limited tier access & capabilities</p>
+                </Card>
               </div>
-            </Card>
+              <div className="text-center">
+                <Card className="bg-gradient-to-br from-primary/10 to-secondary/10 border-primary/20 p-6 h-full">
+                  <h3 className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-2">Our MTF Platform</h3>
+                  <p className="text-muted-foreground">Advanced multi-tier financing</p>
+                </Card>
+              </div>
+            </div>
+
+            {/* Comparison Cards */}
+            <div className="space-y-6">
+              {["Multi-tier access", "Anchor Credit Utilization", "MSME Onboarding at Scale", "Real-time Transaction Data", "Digital Document Exchange", "Tokenized Payments Option"].map((feature, index) => (
+                <Card key={index} className="bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
+                    {/* Feature Name */}
+                    <div className="p-6 lg:p-8 bg-gradient-to-r from-slate-50 to-white border-r border-gray-100">
+                      <h4 className="text-lg font-semibold text-gray-800 group-hover:text-primary transition-colors">
+                        {feature}
+                      </h4>
+                    </div>
+                    
+                    {/* Traditional SCF */}
+                    <div className="p-6 lg:p-8 bg-red-25 border-r border-gray-100 text-center">
+                      <div className="flex items-center justify-center space-x-3">
+                        <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                          <XCircle className="h-6 w-6 text-red-500" />
+                        </div>
+                        <span className="text-red-600 font-medium">Not Available</span>
+                      </div>
+                    </div>
+                    
+                    {/* Our Platform */}
+                    <div className="p-6 lg:p-8 bg-gradient-to-r from-green-25 to-primary/5 text-center">
+                      <div className="flex items-center justify-center space-x-3">
+                        <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                          <CheckCircle className="h-6 w-6 text-green-500" />
+                        </div>
+                        <span className="text-green-600 font-medium">Fully Supported</span>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
