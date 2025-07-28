@@ -147,12 +147,12 @@ const TokenizationImages = () => {
     </div>;
 };
 const HeroSection = () => {
-  return <section className="bg-vayana-gradient text-white py-20 md:py-32">
+  return <section className="bg-vayana-gradient text-white min-h-screen flex flex-col justify-center relative">
       <div className="container px-4 mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display leading-tight mb-6">Vayana Debt Platform</h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-xl">Enterprise-Grade Tokenization</p>
+            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-xl">Reimagining Private Credit Market with Tokenization</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="hero-button bg-vayana-blue hover:bg-vayana-blue/90 text-white flex items-center gap-2" onClick={() => {
               const form = document.getElementById('contact-form');
@@ -181,6 +181,14 @@ const HeroSection = () => {
           <div className="flex justify-center lg:justify-end">
             <TokenizationImages />
           </div>
+        </div>
+      </div>
+      
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="flex flex-col items-center text-white/80">
+          <span className="text-sm mb-2">Scroll to explore</span>
+          <ArrowRight className="h-5 w-5 transform rotate-90" />
         </div>
       </div>
     </section>;

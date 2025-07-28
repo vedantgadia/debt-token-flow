@@ -9,6 +9,7 @@ import FAQSection from '../components/FAQSection';
 import ContactSection from '../components/ContactSection';
 import LinkedInFeed from '../components/LinkedInFeed';
 import PricingSection from '../components/PricingSection';
+import PlatformShowcase from '../components/PlatformShowcase';
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <HeroSection />
       <PricingSection />
       <AboutSection />
+      <PlatformShowcase />
       <CalloutSection />
       <StepByStepSection />
       <FeaturesSection />
