@@ -13,11 +13,11 @@ const Index = () => {
   return (
     <>
       <HeroSection />
-      <FeaturesSection />
-      <CalloutSection />
       <PricingSection />
       <AboutSection />
+      <CalloutSection />
       <StepByStepSection />
+      <FeaturesSection />
       <FAQSection />
       <ContactSection />
     </>
