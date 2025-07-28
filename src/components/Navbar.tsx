@@ -2,7 +2,7 @@
 // Updated navbar - only shows Blockchain dropdown - v2
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Youtube, Linkedin, BookOpen } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import {
   DropdownMenu,
@@ -141,6 +141,31 @@ const Navbar = () => {
                           Events & Webinars
                         </a>
                       </DropdownMenuItem>
+                      
+                      {/* Social Media Links */}
+                      <div className="px-3 py-2 border-t border-border/50 mt-2">
+                        <div className="flex items-center justify-center gap-4">
+                          <a 
+                            href="https://www.youtube.com/@VayanaDebtPlatform" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center w-8 h-8 rounded-full bg-red-50 hover:bg-red-100 transition-colors group"
+                          >
+                            <Youtube className="h-4 w-4 text-red-600 group-hover:text-red-700" />
+                          </a>
+                          <a 
+                            href="https://www.linkedin.com/company/vayana-debt-platform" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-50 hover:bg-blue-100 transition-colors group"
+                          >
+                            <Linkedin className="h-4 w-4 text-blue-600 group-hover:text-blue-700" />
+                          </a>
+                          <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gray-50 cursor-not-allowed opacity-50">
+                            <BookOpen className="h-4 w-4 text-gray-500" />
+                          </div>
+                        </div>
+                      </div>
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </li>
@@ -262,6 +287,31 @@ const Navbar = () => {
                   >
                     Podcasts & Webinars
                   </a>
+                  
+                  {/* Social Media Links for Mobile */}
+                  <div className="flex items-center justify-center gap-4 pt-4 mt-2 border-t border-gray-200">
+                    <a 
+                      href="https://www.youtube.com/@VayanaDebtPlatform" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-8 h-8 rounded-full bg-red-50 hover:bg-red-100 transition-colors group"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <Youtube className="h-4 w-4 text-red-600 group-hover:text-red-700" />
+                    </a>
+                    <a 
+                      href="https://www.linkedin.com/company/vayana-debt-platform" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-50 hover:bg-blue-100 transition-colors group"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <Linkedin className="h-4 w-4 text-blue-600 group-hover:text-blue-700" />
+                    </a>
+                    <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gray-50 cursor-not-allowed opacity-50">
+                      <BookOpen className="h-4 w-4 text-gray-500" />
+                    </div>
+                  </div>
                 </div>
               </li>
               <li className="pt-2">
