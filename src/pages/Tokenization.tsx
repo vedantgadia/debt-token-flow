@@ -425,36 +425,6 @@ const Tokenization = () => {
         </div>
       </section>
 
-      {/* Section 6: Why Vayana */}
-      <section className="py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center space-y-6 mb-16">
-              <h2 className="section-title text-gray-900">
-                Built by a Trusted Infrastructure Partner
-              </h2>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              {pillars.map((pillar, index) => (
-                 <Card key={index} className="text-center group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white hover:bg-vayana-blue/5">
-                   <CardContent className="p-8 space-y-4">
-                     <div className="w-16 h-16 bg-vayana-blue/10 rounded-xl flex items-center justify-center mx-auto group-hover:bg-vayana-blue/20 transition-all duration-300">
-                       <pillar.icon className="h-8 w-8 text-vayana-blue" />
-                     </div>
-                    <h3 className="text-xl font-semibold">
-                      {pillar.title}
-                    </h3>
-                    <p className="text-muted-foreground">
-                      {pillar.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Platform Screenshots Showcase */}
       <PlatformShowcase />
