@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import LinkedInFeed from '../components/LinkedInFeed';
-import LinkedInFeed from '../components/LinkedInFeed';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { FileText, Shield, Globe, CheckCircle, ArrowRight, Zap, Users, Lock, Database, Truck, Building2, Scale, FileCheck, ClipboardList, Award, Package, Play, Download, RefreshCw, Eye, Mail, Phone, ExternalLink } from 'lucide-react';
@@ -14,7 +13,8 @@ const TradeDocVisual = () => {
     }, 2000);
     return () => clearInterval(interval);
   }, []);
-  return <div className="relative w-full max-w-md">
+  return (
+    <div className="relative w-full max-w-md">
       <div className="absolute top-0 left-0 w-full h-full bg-vayana-red/20 rounded-2xl blur-3xl transform -translate-x-4 translate-y-4 animate-pulse-slow"></div>
       <div className="relative bg-gradient-to-br from-gray-900 to-black rounded-2xl overflow-hidden shadow-2xl animate-fade-in border border-vayana-blue/30 p-8">
         {/* Digital Supply Chain Flow */}
@@ -112,6 +112,8 @@ const TradeDocVisual = () => {
       </div>
     </div>
   );
+};
+
 const VDPTradeDocs = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -1006,7 +1008,5 @@ const VDPTradeDocs = () => {
     </div>
   );
 };
-
-export default VDPTradeDocs;
 
 export default VDPTradeDocs;
