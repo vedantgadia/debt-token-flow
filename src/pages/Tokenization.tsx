@@ -24,6 +24,7 @@ import { useSearchParams } from "react-router-dom";
 import ContactSection from '../components/ContactSection';
 import TokenizationFlow from '../components/TokenizationFlow';
 import PlatformShowcase from '../components/PlatformShowcase';
+import LinkedInFeed from '../components/LinkedInFeed';
 import realEstateImage from '../assets/real-estate-building.jpg';
 import financeImage from '../assets/finance-code.jpg';
 import alternateAssetsImage from '../assets/alternate-assets.jpg';
@@ -578,6 +579,9 @@ const Tokenization = () => {
 
       {/* Contact Section */}
       <ContactSection />
+      
+      {/* LinkedIn Feed */}
+      <LinkedInFeed />
     </div>
   );
 };

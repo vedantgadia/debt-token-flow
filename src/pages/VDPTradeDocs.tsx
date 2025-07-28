@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import LinkedInFeed from '../components/LinkedInFeed';
+import LinkedInFeed from '../components/LinkedInFeed';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { FileText, Shield, Globe, CheckCircle, ArrowRight, Zap, Users, Lock, Database, Truck, Building2, Scale, FileCheck, ClipboardList, Award, Package, Play, Download, RefreshCw, Eye, Mail, Phone, ExternalLink } from 'lucide-react';
@@ -108,8 +110,8 @@ const TradeDocVisual = () => {
           {[0, 1, 2, 3, 4].map(step => <div key={step} className={`w-2 h-2 rounded-full transition-all duration-300 ${currentStep === step ? 'bg-white' : 'bg-white/40'}`} />)}
         </div>
       </div>
-    </div>;
-};
+    </div>
+  );
 const VDPTradeDocs = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -212,7 +214,8 @@ const VDPTradeDocs = () => {
     benefit: "Automated verification and audit trails",
     icon: Scale
   }];
-  return <>
+  return (
+    <div className="min-h-screen bg-background">
       
       {/* Hero Section with Enhanced Design */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -997,7 +1000,13 @@ const VDPTradeDocs = () => {
           </div>
         </div>
       </section>
-
-    </>;
+      
+      {/* LinkedIn Feed */}
+      <LinkedInFeed />
+    </div>
+  );
 };
+
+export default VDPTradeDocs;
+
 export default VDPTradeDocs;

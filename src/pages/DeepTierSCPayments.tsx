@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+import LinkedInFeed from '../components/LinkedInFeed';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -11,7 +13,8 @@ import indiaAgriculturePayments from '../assets/india-agriculture-payments.jpg';
 import indiaBlockchainPayments from '../assets/india-blockchain-payments.jpg';
 
 const DeepTierSCPayments = () => {
-  return <div className="min-h-screen bg-background relative overflow-hidden">
+  return (
+    <div className="min-h-screen bg-background relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="fixed inset-0 opacity-5">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary rounded-full blur-3xl animate-pulse-slow"></div>
@@ -840,7 +843,11 @@ const DeepTierSCPayments = () => {
           </div>
         </div>
       </section>
-    </div>;
+      
+      {/* LinkedIn Feed */}
+      <LinkedInFeed />
+    </div>
+  );
 };
 
 export default DeepTierSCPayments;

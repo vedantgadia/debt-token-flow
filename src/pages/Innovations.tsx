@@ -1,4 +1,5 @@
 import React from 'react';
+import LinkedInFeed from '../components/LinkedInFeed';
 import InnovationsHero from '@/components/InnovationsHero';
 import ProductCard from '@/components/ProductCard';
 import InnovationsContact from '@/components/InnovationsContact';
@@ -103,6 +104,9 @@ const Innovations = () => {
       </section>
       
       <InnovationsContact />
+      
+      {/* LinkedIn Feed */}
+      <LinkedInFeed />
     </>
   );
 };

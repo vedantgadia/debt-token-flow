@@ -1,3 +1,5 @@
+import React from 'react';
+import LinkedInFeed from '../components/LinkedInFeed';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -9,8 +11,10 @@ import globalManufacturing from '../assets/global-manufacturing.jpg';
 import automotiveSupplyChain from '../assets/automotive-supply-chain.jpg';
 import consumerGoodsESG from '../assets/consumer-goods-esg-neutral.jpg';
 import blockchainTechnology from '../assets/blockchain-technology.jpg';
+
 const DeepTierSCF = () => {
-  return <div className="min-h-screen bg-background relative overflow-hidden">
+  return (
+    <div className="min-h-screen bg-background relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="fixed inset-0 opacity-5">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary rounded-full blur-3xl animate-pulse-slow"></div>
@@ -870,6 +874,11 @@ const DeepTierSCF = () => {
           </div>
         </div>
       </section>
-    </div>;
+      
+      {/* LinkedIn Feed */}
+      <LinkedInFeed />
+    </div>
+  );
 };
+
 export default DeepTierSCF;

@@ -7,6 +7,7 @@ import CalloutSection from '../components/CalloutSection';
 import AboutSection from '../components/AboutSection';
 import FAQSection from '../components/FAQSection';
 import ContactSection from '../components/ContactSection';
+import LinkedInFeed from '../components/LinkedInFeed';
 import PricingSection from '../components/PricingSection';
 
 const Index = () => {
@@ -20,6 +21,7 @@ const Index = () => {
       <FeaturesSection />
       <FAQSection />
       <ContactSection />
+      <LinkedInFeed />
     </>
   );
 };
