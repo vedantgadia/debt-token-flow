@@ -112,9 +112,9 @@ const PlatformShowcase = () => {
           </div>
 
           {/* Main Showcase */}
-          <div className="grid lg:grid-cols-12 gap-12 items-center">
+          <div className="flex justify-center">
             {/* Platform Screenshot */}
-            <div className="lg:col-span-8">
+            <div className="max-w-4xl w-full">
               <div className="relative group">
                 {/* Browser Frame */}
                 <div className="bg-white rounded-lg shadow-2xl p-2 border border-gray-200">
@@ -163,101 +163,20 @@ const PlatformShowcase = () => {
                   </Button>
                 </div>
               </div>
-            </div>
-
-            {/* Platform Details */}
-            <div className="lg:col-span-4 space-y-8">
-              {/* Current Platform Info */}
-              <Card className="border-2 border-vayana-blue/20 bg-white">
-                <CardContent className="p-8">
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-vayana-blue/10 rounded-lg flex items-center justify-center">
-                        <IconComponent className="h-6 w-6 text-vayana-blue" />
-                      </div>
-                      <div>
-                        <Badge variant="secondary" className="mb-2">
-                          {currentScreen.category}
-                        </Badge>
-                        <h3 className="text-xl font-bold text-gray-900">
-                          {currentScreen.title}
-                        </h3>
-                      </div>
-                    </div>
-                    
-                    <p className="text-gray-600">
-                      {currentScreen.description}
-                    </p>
-                    
-                    <div className="space-y-3">
-                      <h4 className="font-semibold text-gray-900">Key Features:</h4>
-                      <div className="grid grid-cols-2 gap-2">
-                        {currentScreen.features.map((feature, index) => (
-                          <div key={index} className="flex items-center space-x-2">
-                            <div className="w-1.5 h-1.5 rounded-full bg-vayana-blue" />
-                            <span className="text-sm text-gray-600">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Platform Navigation */}
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <h4 className="font-semibold text-gray-900">Platform Modules</h4>
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-                    className="flex items-center space-x-2"
-                  >
-                    {isAutoPlaying ? <Pause className="h-3 w-3" /> : <Play className="h-3 w-3" />}
-                    <span className="text-xs">{isAutoPlaying ? 'Pause' : 'Play'}</span>
-                  </Button>
-                </div>
-                
-                <div className="space-y-2">
-                  {platformScreens.map((screen, index) => (
-                    <button
-                      key={screen.id}
-                      onClick={() => setCurrentSlide(index)}
-                      className={`w-full text-left p-3 rounded-lg transition-all duration-200 ${
-                        index === currentSlide 
-                          ? 'bg-vayana-blue text-white shadow-md' 
-                          : 'bg-white hover:bg-gray-50 text-gray-700 border border-gray-200'
-                      }`}
-                    >
-                      <div className="flex items-center space-x-3">
-                        <screen.icon className={`h-4 w-4 ${index === currentSlide ? 'text-white' : 'text-vayana-blue'}`} />
-                        <div>
-                          <div className={`font-medium text-sm ${index === currentSlide ? 'text-white' : 'text-gray-900'}`}>
-                            {screen.title}
-                          </div>
-                          <div className={`text-xs ${index === currentSlide ? 'text-white/80' : 'text-gray-500'}`}>
-                            {screen.category}
-                          </div>
-                        </div>
-                      </div>
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Progress Indicator */}
-              <div className="space-y-2">
-                <div className="flex justify-between text-sm text-gray-600">
-                  <span>Progress</span>
-                  <span>{currentSlide + 1} / {platformScreens.length}</span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-2">
-                  <div 
-                    className="bg-vayana-blue h-2 rounded-full transition-all duration-500"
-                    style={{ width: `${((currentSlide + 1) / platformScreens.length) * 100}%` }}
+              
+              {/* Slide indicators */}
+              <div className="flex justify-center mt-6 space-x-2">
+                {platformScreens.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      index === currentSlide 
+                        ? 'bg-vayana-blue' 
+                        : 'bg-gray-300 hover:bg-gray-400'
+                    }`}
                   />
-                </div>
+                ))}
               </div>
             </div>
           </div>
