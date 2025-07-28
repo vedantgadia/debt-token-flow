@@ -426,55 +426,113 @@ const DeepTierSCF = () => {
           </div>
           
           <div className="max-w-7xl mx-auto">
-            {/* Header Row */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
-              <div className="lg:col-span-1"></div>
-              <div className="text-center">
-                <Card className="bg-red-50 border-red-200 p-6 h-full">
-                  <h3 className="text-xl font-bold text-red-700 mb-2">Traditional SCF</h3>
-                  <p className="text-red-600">Limited tier access & capabilities</p>
-                </Card>
-              </div>
-              <div className="text-center">
-                <Card className="bg-gradient-to-br from-primary/10 to-secondary/10 border-primary/20 p-6 h-full">
-                  <h3 className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-2">Our MTF Platform</h3>
-                  <p className="text-muted-foreground">Advanced multi-tier financing</p>
-                </Card>
-              </div>
+            {/* Hero Comparison */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+              {/* Traditional SCF */}
+              <Card className="bg-gradient-to-br from-red-50 to-red-100 border-red-200 p-8 relative overflow-hidden">
+                <div className="absolute top-4 right-4">
+                  <div className="w-12 h-12 bg-red-200 rounded-full flex items-center justify-center">
+                    <XCircle className="h-6 w-6 text-red-600" />
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-red-800 mb-4">Traditional SCF</h3>
+                <p className="text-red-700 mb-6">Limited to direct supplier relationships with basic financing options</p>
+                <div className="space-y-3">
+                  <div className="flex items-center text-red-600">
+                    <div className="w-2 h-2 bg-red-400 rounded-full mr-3"></div>
+                    <span className="text-sm">Single-tier access only</span>
+                  </div>
+                  <div className="flex items-center text-red-600">
+                    <div className="w-2 h-2 bg-red-400 rounded-full mr-3"></div>
+                    <span className="text-sm">Manual document processing</span>
+                  </div>
+                  <div className="flex items-center text-red-600">
+                    <div className="w-2 h-2 bg-red-400 rounded-full mr-3"></div>
+                    <span className="text-sm">Limited MSME reach</span>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Our MTF Platform */}
+              <Card className="bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 border-primary/20 p-8 relative overflow-hidden">
+                <div className="absolute top-4 right-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+                    <CheckCircle className="h-6 w-6 text-white" />
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">Our MTF Platform</h3>
+                <p className="text-muted-foreground mb-6">Advanced multi-tier financing reaching entire supply chain ecosystems</p>
+                <div className="space-y-3">
+                  <div className="flex items-center text-primary">
+                    <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                    <span className="text-sm">Multi-tier ecosystem access</span>
+                  </div>
+                  <div className="flex items-center text-primary">
+                    <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                    <span className="text-sm">Automated digital workflows</span>
+                  </div>
+                  <div className="flex items-center text-primary">
+                    <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                    <span className="text-sm">Comprehensive MSME inclusion</span>
+                  </div>
+                </div>
+              </Card>
             </div>
 
-            {/* Comparison Cards */}
-            <div className="space-y-6">
-              {["Multi-tier access", "Anchor Credit Utilization", "MSME Onboarding at Scale", "Real-time Transaction Data", "Digital Document Exchange", "Tokenized Payments Option"].map((feature, index) => (
-                <Card key={index} className="bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
-                    {/* Feature Name */}
-                    <div className="p-6 lg:p-8 bg-gradient-to-r from-slate-50 to-white border-r border-gray-100">
-                      <h4 className="text-lg font-semibold text-gray-800 group-hover:text-primary transition-colors">
-                        {feature}
-                      </h4>
+            {/* Feature Showcase */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "Multi-tier Access",
+                  icon: "🏗️",
+                  description: "Reach Tier 2 & 3 suppliers with cascading credit",
+                  gradient: "from-blue-500 to-indigo-600"
+                },
+                {
+                  title: "Anchor Credit Utilization", 
+                  icon: "⚓",
+                  description: "Leverage anchor creditworthiness across tiers",
+                  gradient: "from-purple-500 to-pink-600"
+                },
+                {
+                  title: "MSME Onboarding at Scale",
+                  icon: "🚀", 
+                  description: "Digital onboarding for thousands of MSMEs",
+                  gradient: "from-green-500 to-emerald-600"
+                },
+                {
+                  title: "Real-time Transaction Data",
+                  icon: "📊",
+                  description: "Live visibility into payment flows and risks",
+                  gradient: "from-orange-500 to-red-600"
+                },
+                {
+                  title: "Digital Document Exchange",
+                  icon: "📄",
+                  description: "Automated invoice and document processing",
+                  gradient: "from-teal-500 to-cyan-600"
+                },
+                {
+                  title: "Tokenized Payments Option",
+                  icon: "🪙",
+                  description: "Blockchain-enabled settlement options",
+                  gradient: "from-indigo-500 to-purple-600"
+                }
+              ].map((feature, index) => (
+                <Card key={index} className="group bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                  <div className={`h-2 bg-gradient-to-r ${feature.gradient}`}></div>
+                  <div className="p-6">
+                    <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                      {feature.icon}
                     </div>
-                    
-                    {/* Traditional SCF */}
-                    <div className="p-6 lg:p-8 bg-red-25 border-r border-gray-100 text-center">
-                      <div className="flex items-center justify-center space-x-3">
-                        <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
-                          <XCircle className="h-6 w-6 text-red-500" />
-                        </div>
-                        <span className="text-red-600 font-medium">Not Available</span>
-                      </div>
-                    </div>
-                    
-                    {/* Our Platform */}
-                    <div className="p-6 lg:p-8 bg-gradient-to-r from-green-25 to-primary/5 text-center">
-                      <div className="flex items-center justify-center space-x-3">
-                        <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                          <CheckCircle className="h-6 w-6 text-green-500" />
-                        </div>
-                        <span className="text-green-600 font-medium">Fully Supported</span>
-                      </div>
-                    </div>
+                    <h4 className="text-lg font-bold text-gray-800 mb-3 group-hover:text-primary transition-colors">
+                      {feature.title}
+                    </h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {feature.description}
+                    </p>
                   </div>
+                  <div className={`h-1 bg-gradient-to-r ${feature.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left`}></div>
                 </Card>
               ))}
             </div>
