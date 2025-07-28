@@ -133,7 +133,7 @@ const Navbar = () => {
                       </DropdownMenuItem>
                       <DropdownMenuItem asChild>
                         <a 
-                          href="https://www.youtube.com/@VayanaDebtPlatform" 
+                          href="https://www.linkedin.com/company/vayana-debt-platform/events/?viewAsMember=true" 
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="w-full"
