@@ -123,7 +123,7 @@ const Navbar = () => {
                       </DropdownMenuSub>
                       <DropdownMenuItem asChild>
                         <a 
-                          href="vayanadebtplatform.medium.com" 
+                          href="https://vayanadebtplatform.medium.com" 
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="w-full"
@@ -162,7 +162,7 @@ const Navbar = () => {
                             <Linkedin className="h-4 w-4 text-blue-600 group-hover:text-blue-700" />
                           </a>
                           <a 
-                            href="vayanadebtplatform.medium.com" 
+                            href="https://vayanadebtplatform.medium.com" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="flex items-center justify-center w-8 h-8 rounded-full bg-gray-50 hover:bg-gray-100 transition-colors group"
