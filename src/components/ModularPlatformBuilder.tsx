@@ -32,10 +32,13 @@ const ModularPlatformBuilder = () => {
     },
     {
       id: 'compliance',
-      name: 'Compliance Module',
+      title: 'Compliance Module',
       description: 'Regulatory oversight and KYC/AML',
       icon: Shield,
-      category: 'Compliance',
+      color: 'text-vayana-red',
+      bgColor: 'bg-vayana-red/10',
+      price: '+$25K/month',
+      features: ['KYC/AML Processing', 'Regulatory Reporting', 'Audit Trails']
     },
     {
       id: 'scf',
