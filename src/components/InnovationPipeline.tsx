@@ -90,41 +90,7 @@ const InnovationPipeline = () => {
         </div>
 
         {/* Innovation Stages */}
-        <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-6 mb-16">
-          {innovations.map((stage, index) => {
-            const IconComponent = stage.icon;
-            return (
-              <Card key={index} className="p-6 relative overflow-hidden">
-                <div className={`absolute inset-0 bg-gradient-to-br ${stage.color} opacity-5`} />
-                <div className="relative z-10">
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${stage.color} flex items-center justify-center mb-4`}>
-                    <IconComponent className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-4">{stage.category}</h3>
-                  <div className="space-y-4">
-                    {stage.projects.map((project, projectIndex) => (
-                      <div key={projectIndex} className="space-y-2">
-                        <div className="flex justify-between items-center">
-                          <h4 className="font-semibold text-sm">{project.name}</h4>
-                          <Badge variant="secondary" className="text-xs">
-                            {project.progress}%
-                          </Badge>
-                        </div>
-                        <div className="w-full bg-muted rounded-full h-2">
-                          <div 
-                            className={`h-2 rounded-full bg-gradient-to-r ${stage.color}`}
-                            style={{ width: `${project.progress}%` }}
-                          />
-                        </div>
-                        <p className="text-xs text-muted-foreground">{project.description}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </Card>
-            );
-          })}
-        </div>
+        
 
         {/* Innovation Highlights */}
         <div className="grid md:grid-cols-3 gap-8">
