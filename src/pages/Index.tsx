@@ -1,26 +1,27 @@
 
 import React from 'react';
 import ImmersiveHero from '../components/ImmersiveHero';
-import InnovationPipeline from '../components/InnovationPipeline';
-import PlatformVision from '../components/PlatformVision';
+import ImmersiveScrollTrigger from '../components/ImmersiveScrollTrigger';
+import ParallaxSection from '../components/ParallaxSection';
 import ProductShowcase from '../components/ProductShowcase';
-import TransformationTimeline from '../components/TransformationTimeline';
 import AboutSection from '../components/AboutSection';
 import FAQSection from '../components/FAQSection';
 import ContactSection from '../components/ContactSection';
 import LinkedInFeed from '../components/LinkedInFeed';
+import InteractiveFloatingMenu from '../components/InteractiveFloatingMenu';
 
 const Index = () => {
   return (
     <>
       <ImmersiveHero />
-      <InnovationPipeline />
+      <ImmersiveScrollTrigger />
+      <ParallaxSection />
       <ProductShowcase />
-      <PlatformVision />
       <AboutSection />
       <FAQSection />
       <ContactSection />
       <LinkedInFeed />
+      <InteractiveFloatingMenu />
     </>
   );
 };
