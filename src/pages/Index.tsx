@@ -1,8 +1,8 @@
 
 import React from 'react';
 import ImmersiveHero from '../components/ImmersiveHero';
-import DigitalEcosystem from '../components/DigitalEcosystem';
-import DigitalAssetsEcosystem from '../components/DigitalAssetsEcosystem';
+import TechnologyStack from '../components/TechnologyStack';
+import GlobalPresence from '../components/GlobalPresence';
 import ProductShowcase from '../components/ProductShowcase';
 import TransformationTimeline from '../components/TransformationTimeline';
 import AboutSection from '../components/AboutSection';
@@ -14,9 +14,9 @@ const Index = () => {
   return (
     <>
       <ImmersiveHero />
-      <DigitalEcosystem />
-      <DigitalAssetsEcosystem />
+      <TechnologyStack />
       <ProductShowcase />
+      <GlobalPresence />
       <AboutSection />
       <FAQSection />
       <ContactSection />
