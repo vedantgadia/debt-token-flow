@@ -46,7 +46,7 @@ const PlatformVision = () => {
       timeline: "Current",
       status: "Active",
       focus: "Core MVP platforms and pilot partnerships",
-      achievements: ["SCF Platform MVP", "Tokenization Engine", "2 Pilot Partners", "Security Framework"]
+      achievements: ["Platform MVP", "Tokenization Engine", "Pilot Partners", "Security Framework"]
     },
     {
       phase: "Expansion",
