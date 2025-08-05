@@ -11,7 +11,7 @@ const VayanaLogo: React.FC<VayanaLogoProps> = ({ className = '' }) => {
       <img 
         src="/lovable-uploads/b47b3f90-ef22-4a3e-be9b-c1c945af9b79.png" 
         alt="Vayana Logo" 
-        className="h-16 w-auto"
+        className="h-20 w-auto"
       />
     </div>
   );
