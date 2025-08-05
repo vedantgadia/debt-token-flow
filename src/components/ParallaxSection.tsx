@@ -62,10 +62,11 @@ const ParallaxSection = () => {
       <div className="absolute inset-0">
         {/* Layer 1 - Slowest */}
         <div 
-          className="absolute inset-0 bg-cyber-grid opacity-20"
+          className="absolute inset-0 opacity-20"
           style={{ 
-            transform: `translateY(${scrollY * 0.1}px) scale(${1 + scrollY * 0.0001})`,
-            backgroundSize: '60px 60px'
+            backgroundImage: 'linear-gradient(rgba(59,130,246,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.1) 1px, transparent 1px)',
+            backgroundSize: '60px 60px',
+            transform: `translateY(${scrollY * 0.1}px) scale(${1 + scrollY * 0.0001})`
           }}
         />
         

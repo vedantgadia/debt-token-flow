@@ -77,10 +77,11 @@ const ImmersiveScrollTrigger = () => {
         
         {/* Animated Grid */}
         <div 
-          className="absolute inset-0 bg-cyber-grid opacity-30"
+          className="absolute inset-0 opacity-30"
           style={{
-            transform: `translateY(${scrollProgress * 100}px) scale(${1 + scrollProgress * 0.2})`,
-            backgroundSize: `${40 + scrollProgress * 20}px ${40 + scrollProgress * 20}px`
+            backgroundImage: 'linear-gradient(rgba(59,130,246,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.1) 1px, transparent 1px)',
+            backgroundSize: `${40 + scrollProgress * 20}px ${40 + scrollProgress * 20}px`,
+            transform: `translateY(${scrollProgress * 100}px) scale(${1 + scrollProgress * 0.2})`
           }}
         />
       </div>
@@ -113,9 +114,9 @@ const ImmersiveScrollTrigger = () => {
                 {activeSection === index && (
                   <>
                     <div className="mb-8">
-                      <div className="inline-flex items-center justify-center w-24 h-24 rounded-full neural-card mb-6">
-                        <SectionIcon className={`w-12 h-12 ${section.color} animate-neural-pulse`} />
-                      </div>
+                     <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 border border-primary/30 mb-6 shadow-lg">
+                       <SectionIcon className={`w-12 h-12 ${section.color} animate-pulse`} />
+                     </div>
                     </div>
                     
                     <h2 className="text-6xl md:text-8xl font-bold font-futuristic holographic-text mb-6">

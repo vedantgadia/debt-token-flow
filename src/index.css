@@ -49,6 +49,11 @@
     --gradient-neural: linear-gradient(45deg, hsl(var(--cyber-cyan)), hsl(var(--neural-purple)), hsl(var(--plasma-orange)));
     --gradient-hologram: conic-gradient(from 0deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--neural-purple)), hsl(var(--primary)));
     
+    /* Cyber grid pattern */
+    --cyber-grid: 
+      linear-gradient(rgba(59,130,246,0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59,130,246,0.1) 1px, transparent 1px);
+    
     /* Glass morphism */
     --glass-bg: rgba(255, 255, 255, 0.1);
     --glass-border: rgba(255, 255, 255, 0.2);
@@ -123,7 +128,8 @@
 
   .holographic-text {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-neural-purple to-secondary
-           animate-pulse-slow font-futuristic tracking-wider;
+           animate-shimmer font-futuristic tracking-wider;
+    background-size: 200% 100%;
   }
 
   .cyber-glow {
@@ -217,6 +223,16 @@
   .data-stream {
     @apply relative overflow-hidden after:absolute after:inset-0 after:bg-gradient-to-r 
            after:from-transparent after:via-primary/20 after:to-transparent 
-           after:translate-x-[-100%] after:animate-[dataFlow_2s_linear_infinite];
+           after:translate-x-[-100%] after:animate-data-flow;
+  }
+  
+  /* Fix missing utility classes */
+  .animate-neural-pulse {
+    @apply animate-neural-pulse;
+  }
+
+  .bg-cyber-grid {
+    background-image: var(--cyber-grid);
+    background-size: 40px 40px;
   }
 }
