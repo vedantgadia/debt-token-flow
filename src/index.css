@@ -37,32 +37,6 @@
 
     --radius: 0.5rem;
 
-    /* Enhanced design tokens for immersive experience */
-    --primary-glow: 221 73% 45%;
-    --secondary-glow: 353 97% 60%;
-    --neural-purple: 270 91% 65%;
-    --cyber-cyan: 180 100% 70%;
-    --plasma-orange: 25 95% 53%;
-    
-    /* Advanced gradients */
-    --gradient-mesh: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--neural-purple)) 50%, hsl(var(--secondary)) 100%);
-    --gradient-neural: linear-gradient(45deg, hsl(var(--cyber-cyan)), hsl(var(--neural-purple)), hsl(var(--plasma-orange)));
-    --gradient-hologram: conic-gradient(from 0deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--neural-purple)), hsl(var(--primary)));
-    
-    /* Cyber grid pattern */
-    --cyber-grid: 
-      linear-gradient(rgba(59,130,246,0.1) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(59,130,246,0.1) 1px, transparent 1px);
-    
-    /* Glass morphism */
-    --glass-bg: rgba(255, 255, 255, 0.1);
-    --glass-border: rgba(255, 255, 255, 0.2);
-    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    
-    /* Neon effects */
-    --neon-primary: 0 0 20px hsl(var(--primary-glow)), 0 0 40px hsl(var(--primary-glow)), 0 0 60px hsl(var(--primary-glow));
-    --neon-secondary: 0 0 20px hsl(var(--secondary-glow)), 0 0 40px hsl(var(--secondary-glow)), 0 0 60px hsl(var(--secondary-glow));
-
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -116,120 +90,55 @@
 }
 
 @layer components {
-  /* Next-level immersive components */
-  .neural-card {
-    @apply relative p-8 rounded-2xl backdrop-blur-md border border-white/20 bg-gradient-to-br from-white/10 to-white/5 
-           hover:from-white/20 hover:to-white/10 transition-all duration-700 
-           hover:shadow-[0_0_50px_rgba(59,130,246,0.3)] hover:scale-[1.02]
-           before:absolute before:inset-0 before:rounded-2xl before:p-[1px] 
-           before:bg-gradient-to-r before:from-primary/50 before:via-secondary/50 before:to-primary/50
-           before:-z-10 before:animate-pulse-slow;
-  }
-
-  .holographic-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-neural-purple to-secondary
-           animate-shimmer font-futuristic tracking-wider;
-    background-size: 200% 100%;
-  }
-
-  .cyber-glow {
-    @apply shadow-[0_0_30px_hsl(var(--primary-glow)),inset_0_0_30px_hsl(var(--primary-glow))]
-           border border-primary/30 bg-primary/5 backdrop-blur-sm;
-  }
-
-  .plasma-orb {
-    @apply relative rounded-full bg-gradient-to-r from-neural-purple via-cyber-cyan to-plasma-orange
-           animate-[spin_8s_linear_infinite] shadow-[0_0_60px_rgba(139,92,246,0.8)];
-  }
-
-  .glassmorphism {
-    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.1)];
-  }
-
   .feature-badge {
-    @apply inline-flex items-center justify-center bg-primary/10 text-primary px-4 py-2 text-sm font-medium rounded-full
-           border border-primary/20 hover:bg-primary/20 hover:shadow-[0_0_20px_hsl(var(--primary-glow))] 
-           transition-all duration-300;
+    @apply inline-flex items-center justify-center bg-vayana-blue/10 text-vayana-blue px-3 py-1 text-sm font-medium rounded-full;
   }
   
   .check-item {
-    @apply flex items-start gap-3 mb-4 p-3 rounded-lg hover:bg-primary/5 transition-all duration-300
-           hover:translate-x-2 hover:shadow-lg;
+    @apply flex items-start gap-2 mb-2;
   }
   
   .check-icon {
-    @apply text-secondary h-6 w-6 mt-0.5 flex-shrink-0 drop-shadow-[0_0_8px_hsl(var(--secondary))]
-           animate-pulse-slow;
+    @apply text-secondary h-5 w-5 mt-0.5 flex-shrink-0;
   }
   
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-secondary via-primary to-secondary
-           animate-[shimmer_3s_ease-in-out_infinite];
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary;
   }
   
   .hero-button {
-    @apply px-8 py-4 rounded-xl font-semibold transition-all duration-300 text-base relative overflow-hidden
-           hover:shadow-[0_0_30px_hsl(var(--primary-glow))] hover:scale-105 
-           before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent 
-           before:via-white/20 before:to-transparent before:translate-x-[-100%] 
-           before:hover:translate-x-[100%] before:transition-transform before:duration-700;
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-200 text-base;
   }
   
   .section-title {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold mb-8 font-display relative
-           after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 
-           after:bg-gradient-to-r after:from-primary after:to-secondary after:rounded-full
-           after:animate-pulse-slow;
+    @apply text-3xl md:text-4xl font-bold mb-6 font-display;
   }
   
   .section-subtitle {
-    @apply text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed;
+    @apply text-lg text-gray-600 mb-10 max-w-3xl mx-auto;
   }
 
   .ecosystem-node {
-    @apply neural-card cursor-pointer hover:rotate-1 hover:-translate-y-2
-           hover:shadow-[0_20px_50px_rgba(59,130,246,0.3)] transition-all duration-500;
+    @apply relative p-6 rounded-xl border border-border/50 bg-card/80 backdrop-blur-sm hover:border-primary/30 transition-all duration-500 cursor-pointer hover:scale-105 hover:shadow-xl;
+  }
+
+  .ecosystem-connector {
+    @apply absolute w-0.5 bg-gradient-to-b from-primary/30 to-secondary/30;
   }
 
   .timeline-dot {
-    @apply w-6 h-6 rounded-full bg-gradient-to-r from-primary to-secondary border-4 border-background 
-           shadow-[0_0_20px_hsl(var(--primary-glow))] relative z-10 animate-pulse-slow;
+    @apply w-4 h-4 rounded-full bg-primary border-4 border-background shadow-lg relative z-10;
   }
 
   .timeline-line {
-    @apply absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-primary/50 via-secondary/50 to-primary/50 h-full
-           shadow-[0_0_10px_hsl(var(--primary-glow))];
+    @apply absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-gradient-to-b from-primary/50 to-secondary/50 h-full;
   }
 
   .module-card {
-    @apply neural-card cursor-pointer hover:rotate-1 hover:-translate-y-4;
+    @apply relative p-6 rounded-xl bg-gradient-to-br from-card to-muted/30 border border-border/50 backdrop-blur-sm transition-all duration-300 hover:border-primary/30 hover:shadow-lg cursor-pointer;
   }
 
   .platform-preview {
-    @apply glassmorphism p-12 rounded-3xl border-2 border-primary/30 
-           shadow-[0_0_60px_rgba(59,130,246,0.2)] hover:shadow-[0_0_100px_rgba(59,130,246,0.4)]
-           transition-all duration-700;
-  }
-
-  /* Advanced animations */
-  .magnetic-hover {
-    @apply transition-transform duration-300 hover:scale-110 cursor-pointer;
-  }
-
-  .neural-pulse {
-    @apply animate-[neuralPulse_2s_ease-in-out_infinite];
-  }
-
-  .data-stream {
-    @apply relative overflow-hidden after:absolute after:inset-0 after:bg-gradient-to-r 
-           after:from-transparent after:via-primary/20 after:to-transparent 
-           after:translate-x-[-100%] after:animate-data-flow;
-  }
-  
-  /* Background utilities */
-
-  .bg-cyber-grid {
-    background-image: var(--cyber-grid);
-    background-size: 40px 40px;
+    @apply p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 backdrop-blur-sm;
   }
 }

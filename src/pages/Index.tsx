@@ -1,36 +1,27 @@
 
 import React from 'react';
-import Navbar from '../components/Navbar';
 import ImmersiveHero from '../components/ImmersiveHero';
-import ImmersiveScrollTrigger from '../components/ImmersiveScrollTrigger';
-import ParallaxSection from '../components/ParallaxSection';
+import InnovationPipeline from '../components/InnovationPipeline';
+import PlatformVision from '../components/PlatformVision';
 import ProductShowcase from '../components/ProductShowcase';
+import TransformationTimeline from '../components/TransformationTimeline';
 import AboutSection from '../components/AboutSection';
 import FAQSection from '../components/FAQSection';
 import ContactSection from '../components/ContactSection';
-import Footer from '../components/Footer';
-import InteractiveFloatingMenu from '../components/InteractiveFloatingMenu';
+import LinkedInFeed from '../components/LinkedInFeed';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-      <main>
-        <ImmersiveHero />
-        <div id="ecosystem">
-          <ImmersiveScrollTrigger />
-        </div>
-        <ParallaxSection />
-        <ProductShowcase />
-        <AboutSection />
-        <FAQSection />
-        <div id="contact-form">
-          <ContactSection />
-        </div>
-      </main>
-      <Footer />
-      <InteractiveFloatingMenu />
-    </div>
+    <>
+      <ImmersiveHero />
+      <InnovationPipeline />
+      <ProductShowcase />
+      <PlatformVision />
+      <AboutSection />
+      <FAQSection />
+      <ContactSection />
+      <LinkedInFeed />
+    </>
   );
 };
 
