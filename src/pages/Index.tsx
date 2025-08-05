@@ -2,6 +2,7 @@
 import React from 'react';
 import ImmersiveHero from '../components/ImmersiveHero';
 import DigitalEcosystem from '../components/DigitalEcosystem';
+import DigitalAssetsEcosystem from '../components/DigitalAssetsEcosystem';
 import ProductShowcase from '../components/ProductShowcase';
 import TransformationTimeline from '../components/TransformationTimeline';
 import AboutSection from '../components/AboutSection';
@@ -14,8 +15,8 @@ const Index = () => {
     <>
       <ImmersiveHero />
       <DigitalEcosystem />
+      <DigitalAssetsEcosystem />
       <ProductShowcase />
-      <TransformationTimeline />
       <AboutSection />
       <FAQSection />
       <ContactSection />
