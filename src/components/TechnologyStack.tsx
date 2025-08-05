@@ -20,10 +20,10 @@ const TechnologyStack = () => {
       icon: Shield,
       gradient: "from-red-500 to-pink-600",
       technologies: [
-        { name: "End-to-End Encryption", status: "Active" },
-        { name: "Multi-Factor Authentication", status: "Active" },
-        { name: "Zero-Trust Architecture", status: "Active" },
-        { name: "Hardware Security Modules", status: "Active" }
+        { name: "End-to-End Encryption", status: "In Development" },
+        { name: "Multi-Factor Authentication", status: "MVP" },
+        { name: "Zero-Trust Architecture", status: "Planned" },
+        { name: "Security Best Practices", status: "Active" }
       ]
     },
     {
@@ -31,10 +31,10 @@ const TechnologyStack = () => {
       icon: Network,
       gradient: "from-blue-500 to-cyan-600",
       technologies: [
-        { name: "Ethereum Compatible", status: "Live" },
-        { name: "Polygon Network", status: "Live" },
-        { name: "Smart Contract Engine", status: "Active" },
-        { name: "Cross-chain Bridges", status: "Beta" }
+        { name: "Ethereum Compatible", status: "MVP" },
+        { name: "Polygon Network", status: "Testing" },
+        { name: "Smart Contract Engine", status: "Development" },
+        { name: "Cross-chain Bridges", status: "Planned" }
       ]
     },
     {
@@ -42,21 +42,21 @@ const TechnologyStack = () => {
       icon: Database,
       gradient: "from-green-500 to-emerald-600",
       technologies: [
-        { name: "Real-time Analytics", status: "Active" },
-        { name: "AI/ML Risk Models", status: "Active" },
-        { name: "Document Processing", status: "Active" },
-        { name: "Automated Workflows", status: "Active" }
+        { name: "Document Processing", status: "MVP" },
+        { name: "Basic Analytics", status: "Active" },
+        { name: "AI/ML Models", status: "Research" },
+        { name: "Workflow Engine", status: "Development" }
       ]
     },
     {
-      category: "Cloud Infrastructure",
+      category: "Platform Infrastructure",
       icon: Cloud,
       gradient: "from-purple-500 to-indigo-600",
       technologies: [
-        { name: "Multi-Region Deployment", status: "Global" },
-        { name: "Auto-scaling", status: "Active" },
-        { name: "99.9% Uptime SLA", status: "Guaranteed" },
-        { name: "Disaster Recovery", status: "Active" }
+        { name: "Cloud Deployment", status: "Active" },
+        { name: "API Framework", status: "MVP" },
+        { name: "Database Layer", status: "Active" },
+        { name: "Monitoring Tools", status: "Basic" }
       ]
     }
   ];
@@ -70,12 +70,12 @@ const TechnologyStack = () => {
             Technology Stack
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold font-display mb-6">
-            Built on{' '}
-            <span className="gradient-text">Enterprise-Grade Technology</span>
+            Building{' '}
+            <span className="gradient-text">Next-Generation Technology</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our platform leverages cutting-edge technology to deliver security, scalability, 
-            and performance at institutional standards.
+            Our MVP platform is built with modern technology stack, focusing on security, 
+            scalability, and innovation in digital assets.
           </p>
         </div>
 
@@ -107,38 +107,38 @@ const TechnologyStack = () => {
         {/* Performance Metrics */}
         <Card className="p-8 bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold mb-2">Platform Performance</h3>
-            <p className="text-muted-foreground">Real-time system metrics and capabilities</p>
+            <h3 className="text-2xl font-bold mb-2">Development Focus</h3>
+            <p className="text-muted-foreground">Key areas driving our platform innovation</p>
           </div>
           
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="flex items-center justify-center mb-3">
-                <Zap className="w-8 h-8 text-yellow-500" />
+                <Code className="w-8 h-8 text-blue-500" />
               </div>
-              <div className="text-3xl font-bold text-primary mb-1">&lt;100ms</div>
-              <div className="text-sm text-muted-foreground">API Response Time</div>
-            </div>
-            <div className="text-center">
-              <div className="flex items-center justify-center mb-3">
-                <Database className="w-8 h-8 text-blue-500" />
-              </div>
-              <div className="text-3xl font-bold text-primary mb-1">1M+</div>
-              <div className="text-sm text-muted-foreground">Transactions/Day</div>
+              <div className="text-3xl font-bold text-primary mb-1">MVP</div>
+              <div className="text-sm text-muted-foreground">Core Platform</div>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center mb-3">
                 <Lock className="w-8 h-8 text-green-500" />
               </div>
-              <div className="text-3xl font-bold text-primary mb-1">256-bit</div>
-              <div className="text-sm text-muted-foreground">Encryption Standard</div>
+              <div className="text-3xl font-bold text-primary mb-1">Security</div>
+              <div className="text-sm text-muted-foreground">First Priority</div>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center mb-3">
-                <RefreshCw className="w-8 h-8 text-purple-500" />
+                <Network className="w-8 h-8 text-purple-500" />
               </div>
-              <div className="text-3xl font-bold text-primary mb-1">24/7</div>
-              <div className="text-sm text-muted-foreground">System Monitoring</div>
+              <div className="text-3xl font-bold text-primary mb-1">Blockchain</div>
+              <div className="text-sm text-muted-foreground">Integration Ready</div>
+            </div>
+            <div className="text-center">
+              <div className="flex items-center justify-center mb-3">
+                <Cpu className="w-8 h-8 text-orange-500" />
+              </div>
+              <div className="text-3xl font-bold text-primary mb-1">API</div>
+              <div className="text-sm text-muted-foreground">Modern Architecture</div>
             </div>
           </div>
         </Card>

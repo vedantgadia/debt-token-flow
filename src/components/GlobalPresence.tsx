@@ -13,34 +13,30 @@ import {
 } from 'lucide-react';
 
 const GlobalPresence = () => {
-  const regions = [
+  const focusAreas = [
     {
-      name: "Asia Pacific",
-      countries: ["India", "Singapore", "Hong Kong", "Japan"],
-      clients: "150+",
-      volume: "$25B+",
-      compliance: ["RBI", "MAS", "HKMA", "JFSA"]
+      name: "Digital Assets Innovation",
+      icon: "🔗",
+      description: "Building blockchain-based solutions for asset tokenization and digital transformation",
+      status: "Active Development"
     },
     {
-      name: "Europe",
-      countries: ["UK", "Germany", "France", "Netherlands"],
-      clients: "80+",
-      volume: "$15B+",
-      compliance: ["FCA", "BaFin", "AMF", "DNB"]
+      name: "Supply Chain Finance",
+      icon: "🏭",
+      description: "Revolutionizing trade finance with digital documentation and automated workflows",
+      status: "MVP Ready"
     },
     {
-      name: "North America",
-      countries: ["USA", "Canada"],
-      clients: "60+",
-      volume: "$20B+",
-      compliance: ["SEC", "CFTC", "OSC", "FINTRAC"]
+      name: "Regulatory Compliance",
+      icon: "⚖️",
+      description: "Ensuring adherence to global financial regulations and security standards",
+      status: "Research Phase"
     },
     {
-      name: "Middle East",
-      countries: ["UAE", "Saudi Arabia", "Qatar"],
-      clients: "40+",
-      volume: "$8B+",
-      compliance: ["ADGM", "SAMA", "QFC"]
+      name: "Platform Integration",
+      icon: "🔄",
+      description: "Creating seamless APIs and interfaces for enterprise adoption",
+      status: "In Progress"
     }
   ];
 
@@ -65,53 +61,26 @@ const GlobalPresence = () => {
             Global Reach
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold font-display mb-6">
-            Trusted Worldwide by{' '}
-            <span className="gradient-text">Leading Institutions</span>
+            Innovation{' '}
+            <span className="gradient-text">Focus Areas</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Operating across 15+ countries with regulatory compliance and institutional-grade 
-            security, serving Fortune 500 companies and financial institutions globally.
+            Building the future of digital assets with focused development in key areas 
+            that will transform how businesses handle digital transactions and asset management.
           </p>
         </div>
 
-        {/* Regional Presence */}
+        {/* Focus Areas */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {regions.map((region, index) => (
+          {focusAreas.map((area, index) => (
             <Card key={index} className="p-6 border-2 hover:border-primary/50 transition-all duration-300 group">
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <h3 className="font-bold text-lg mb-2">{region.name}</h3>
-                  <div className="space-y-1">
-                    {region.countries.map((country, idx) => (
-                      <div key={idx} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                        <span className="text-sm text-muted-foreground">{country}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <Globe className="w-8 h-8 text-primary/60 group-hover:text-primary transition-colors" />
-              </div>
-              
-              <div className="space-y-3 border-t pt-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-sm">Clients</span>
-                  <Badge variant="secondary">{region.clients}</Badge>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm">Volume</span>
-                  <Badge variant="outline">{region.volume}</Badge>
-                </div>
-                <div className="space-y-1">
-                  <span className="text-xs text-muted-foreground">Regulatory</span>
-                  <div className="flex flex-wrap gap-1">
-                    {region.compliance.slice(0, 2).map((comp, idx) => (
-                      <Badge key={idx} variant="outline" className="text-xs">
-                        {comp}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
+              <div className="text-center mb-4">
+                <div className="text-4xl mb-3">{area.icon}</div>
+                <h3 className="font-bold text-lg mb-2">{area.name}</h3>
+                <p className="text-sm text-muted-foreground mb-3">{area.description}</p>
+                <Badge variant="secondary" className="text-xs">
+                  {area.status}
+                </Badge>
               </div>
             </Card>
           ))}
@@ -176,29 +145,29 @@ const GlobalPresence = () => {
           </Card>
         </div>
 
-        {/* Global Stats */}
+        {/* Development Milestones */}
         <Card className="p-8 bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold mb-2">Global Impact</h3>
-            <p className="text-muted-foreground">Making digital assets accessible worldwide</p>
+            <h3 className="text-2xl font-bold mb-2">Development Journey</h3>
+            <p className="text-muted-foreground">Building tomorrow's digital assets infrastructure</p>
           </div>
           
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">330+</div>
-              <div className="text-sm text-muted-foreground">Enterprise Clients</div>
+              <div className="text-4xl font-bold text-primary mb-2">4</div>
+              <div className="text-sm text-muted-foreground">Core Products MVP</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">$68B+</div>
-              <div className="text-sm text-muted-foreground">Total Volume Processed</div>
+              <div className="text-4xl font-bold text-primary mb-2">2</div>
+              <div className="text-sm text-muted-foreground">Pilot Partners</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">15+</div>
-              <div className="text-sm text-muted-foreground">Countries Served</div>
+              <div className="text-4xl font-bold text-primary mb-2">100%</div>
+              <div className="text-sm text-muted-foreground">Security Focus</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">50+</div>
-              <div className="text-sm text-muted-foreground">Regulatory Approvals</div>
+              <div className="text-4xl font-bold text-primary mb-2">24/7</div>
+              <div className="text-sm text-muted-foreground">Innovation Mode</div>
             </div>
           </div>
         </Card>
