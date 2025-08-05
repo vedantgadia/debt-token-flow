@@ -226,10 +226,7 @@
            after:translate-x-[-100%] after:animate-data-flow;
   }
   
-  /* Fix missing utility classes */
-  .animate-neural-pulse {
-    @apply animate-neural-pulse;
-  }
+  /* Background utilities */
 
   .bg-cyber-grid {
     background-image: var(--cyber-grid);
