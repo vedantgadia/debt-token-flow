@@ -22,57 +22,57 @@ const TransformationTimeline = () => {
   const eras = [
     {
       id: 0,
-      year: '1980s',
-      title: 'Traditional Banking',
-      description: 'Paper-based processes, manual verification, weeks for settlements',
+      year: '2010',
+      title: 'Fragmented Solutions',
+      description: 'Separate systems for trade finance, tokenization, and asset management',
       icon: Building,
       color: 'text-gray-500',
       bgColor: 'bg-gray-100',
-      challenges: ['Manual Processes', 'Slow Settlements', 'High Costs', 'Limited Access'],
+      challenges: ['Siloed Systems', 'Manual Integration', 'High Complexity', 'Limited Interoperability'],
       status: 'legacy'
     },
     {
       id: 1,
-      year: '1990s',
-      title: 'Digital Banking',
-      description: 'Online banking emerges, electronic transfers, faster processing',
+      year: '2015',
+      title: 'Digital Adoption',
+      description: 'Individual modules emerge but lack integration',
       icon: Computer,
       color: 'text-blue-600',
       bgColor: 'bg-blue-100',
-      challenges: ['System Integration', 'Security Concerns', 'Digital Divide', 'Fragmented Systems'],
+      challenges: ['Integration Challenges', 'Data Silos', 'Multiple Vendors', 'Inconsistent UX'],
       status: 'evolution'
     },
     {
       id: 2,
-      year: '2000s',
-      title: 'Mobile Revolution',
-      description: 'Mobile banking, real-time payments, digital wallets',
+      year: '2020',
+      title: 'Blockchain Integration',
+      description: 'Distributed ledger technology transforms individual processes',
       icon: Smartphone,
       color: 'text-green-600',
       bgColor: 'bg-green-100',
-      challenges: ['Mobile Security', 'User Adoption', 'Cross-platform Issues', 'Regulatory Gaps'],
+      challenges: ['Scalability Issues', 'Adoption Barriers', 'Technical Complexity', 'Regulatory Gaps'],
       status: 'evolution'
     },
     {
       id: 3,
-      year: '2010s',
-      title: 'Blockchain Era',
-      description: 'Distributed ledgers, smart contracts, cryptocurrency adoption',
+      year: '2023',
+      title: 'Platform Convergence',
+      description: 'Early attempts at unified platforms with limited success',
       icon: Cpu,
       color: 'text-purple-600',
       bgColor: 'bg-purple-100',
-      challenges: ['Scalability', 'Energy Consumption', 'Regulatory Uncertainty', 'Technical Complexity'],
+      challenges: ['Incomplete Integration', 'Performance Issues', 'Limited Scalability', 'High Costs'],
       status: 'revolution'
     },
     {
       id: 4,
       year: 'Today',
-      title: 'Digital Assets Platform',
-      description: 'Unified ecosystem for tokenization, trade finance, and asset management',
+      title: 'Vayana Digital Assets Platform',
+      description: 'Unified ecosystem connecting tokenization, SCF, trade docs, and securitization',
       icon: Brain,
       color: 'text-primary',
       bgColor: 'bg-primary/10',
-      challenges: ['Solved by Vayana'],
+      challenges: ['Solved by Vayana Platform'],
       status: 'current'
     }
   ];
@@ -124,11 +124,12 @@ const TransformationTimeline = () => {
             Digital Transformation Journey
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold font-display mb-6">
-            The Evolution of{' '}
-            <span className="gradient-text">Financial Infrastructure</span>
+            Platform Evolution{' '}
+            <span className="gradient-text">Timeline</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            See how financial technology has evolved and where Vayana fits in the future of digital assets.
+            From fragmented solutions to a unified digital assets platform - 
+            see how Vayana is shaping the future of integrated finance.
           </p>
         </div>
 
@@ -230,8 +231,8 @@ const TransformationTimeline = () => {
             </div>
             
             <p className="text-lg text-muted-foreground mb-8">
-              While others are still catching up to the blockchain revolution, Vayana has already built 
-              the complete digital assets infrastructure for the next decade.
+              While others struggle with fragmented solutions, Vayana Digital Assets Platform 
+              delivers the complete integrated ecosystem businesses need today.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

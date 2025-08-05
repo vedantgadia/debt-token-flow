@@ -16,11 +16,11 @@ import {
 const DigitalEcosystem = () => {
   const [selectedNode, setSelectedNode] = useState<string | null>(null);
 
-  const ecosystemNodes = [
+  const platformModules = [
     {
       id: 'tokenization',
-      title: 'Asset Tokenization',
-      description: 'Transform any asset into digital tokens with regulatory compliance',
+      title: 'Tokenization Module',
+      description: 'Transform any asset into secure, tradeable digital tokens',
       icon: Coins,
       color: 'text-primary',
       bgColor: 'bg-primary/10',
@@ -31,8 +31,8 @@ const DigitalEcosystem = () => {
     },
     {
       id: 'scf',
-      title: 'Supply Chain Finance',
-      description: 'Deep-tier supplier financing with blockchain transparency',
+      title: 'Supply Chain Finance Module',
+      description: 'Deep-tier financing across multi-level supply networks',
       icon: Network,
       color: 'text-secondary',
       bgColor: 'bg-secondary/10',
@@ -43,8 +43,8 @@ const DigitalEcosystem = () => {
     },
     {
       id: 'trade-docs',
-      title: 'Trade Documentation',
-      description: 'Digitize and automate trade finance workflows',
+      title: 'Trade Documentation Module',
+      description: 'Digitized trade finance workflows and documentation',
       icon: FileText,
       color: 'text-vayana-green',
       bgColor: 'bg-vayana-green/10',
@@ -55,8 +55,8 @@ const DigitalEcosystem = () => {
     },
     {
       id: 'securitization',
-      title: 'Securitization',
-      description: 'Create and manage asset-backed securities with transparency',
+      title: 'Securitization Module',
+      description: 'Structure and distribute asset-backed securities',
       icon: Shield,
       color: 'text-vayana-purple',
       bgColor: 'bg-vayana-purple/10',
@@ -83,12 +83,12 @@ const DigitalEcosystem = () => {
             Digital Assets Ecosystem
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold font-display mb-6">
-            One Platform,{' '}
-            <span className="gradient-text">Infinite Connections</span>
+            Platform{' '}
+            <span className="gradient-text">Modules</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Discover how our interconnected solutions create a seamless digital assets ecosystem, 
-            where each platform enhances the others.
+            Discover the integrated modules that power the Vayana Digital Assets Platform. 
+            Each module seamlessly connects to create a unified financial ecosystem.
           </p>
         </div>
 
@@ -98,8 +98,8 @@ const DigitalEcosystem = () => {
             {/* Connection lines */}
             <svg className="absolute inset-0 w-full h-full" style={{ pointerEvents: 'none' }}>
               {connections.map((connection, index) => {
-                const fromNode = ecosystemNodes.find(n => n.id === connection.from);
-                const toNode = ecosystemNodes.find(n => n.id === connection.to);
+                const fromNode = platformModules.find(n => n.id === connection.from);
+                const toNode = platformModules.find(n => n.id === connection.to);
                 if (!fromNode || !toNode) return null;
 
                 const x1 = (fromNode.position.x / 100) * 100;
@@ -130,7 +130,7 @@ const DigitalEcosystem = () => {
             </svg>
 
             {/* Ecosystem nodes */}
-            {ecosystemNodes.map((node, index) => {
+            {platformModules.map((node, index) => {
               const NodeIcon = node.icon;
               const isSelected = selectedNode === node.id;
               

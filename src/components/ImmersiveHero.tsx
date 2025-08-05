@@ -47,21 +47,21 @@ const ImmersiveHero = () => {
             <div className="space-y-2">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20">
                 <Sparkles className="w-4 h-4" />
-                <span className="text-sm font-medium">Next-Gen Digital Assets Platform</span>
+                <span className="text-sm font-medium">Unified Digital Assets Platform</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-display leading-tight">
-                Build the{' '}
+                Vayana{' '}
                 <span className="gradient-text font-futuristic">
-                  Future
+                  Digital Assets
                 </span>{' '}
-                of Finance
+                Platform
               </h1>
             </div>
             
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl">
-              One unified platform. Infinite possibilities. From tokenization to supply chain finance, 
-              create the complete digital assets ecosystem your business needs.
+              Where tokenization, supply chain finance, trade documentation, and securitization 
+              converge into one powerful, integrated ecosystem.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -75,7 +75,7 @@ const ImmersiveHero = () => {
                   }
                 }}
               >
-                Explore Ecosystem
+                Explore Platform Modules
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               

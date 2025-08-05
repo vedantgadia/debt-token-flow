@@ -31,6 +31,13 @@ const ModularPlatformBuilder = () => {
       features: ['ERC3643 Standard', 'Regulatory Compliance', 'Multi-asset Support']
     },
     {
+      id: 'compliance',
+      name: 'Compliance Module',
+      description: 'Regulatory oversight and KYC/AML',
+      icon: Shield,
+      category: 'Compliance',
+    },
+    {
       id: 'scf',
       title: 'Supply Chain Finance',
       description: 'Deep-tier supplier financing ecosystem',
