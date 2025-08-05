@@ -1,63 +1,78 @@
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { 
-  Lightbulb, 
-  Rocket, 
-  Target, 
-  Zap,
-  Code,
-  Brain,
-  Shield,
-  Network
-} from 'lucide-react';
-
+import { Lightbulb, Rocket, Target, Zap, Code, Brain, Shield, Network } from 'lucide-react';
 const InnovationPipeline = () => {
-  const innovations = [
-    {
-      category: "Research Phase",
-      icon: Brain,
-      color: "from-purple-500 to-indigo-600",
-      projects: [
-        { name: "AI-Powered Risk Assessment", progress: 30, description: "Machine learning models for automated risk evaluation" },
-        { name: "Cross-chain Interoperability", progress: 15, description: "Seamless asset transfers across blockchains" },
-        { name: "Quantum-Resistant Security", progress: 10, description: "Future-proofing against quantum computing" }
-      ]
-    },
-    {
-      category: "Development",
-      icon: Code,
-      color: "from-blue-500 to-cyan-600",
-      projects: [
-        { name: "Smart Contract Templates", progress: 75, description: "Pre-built contracts for common use cases" },
-        { name: "Advanced Analytics Dashboard", progress: 60, description: "Real-time insights and reporting" },
-        { name: "Mobile SDK", progress: 45, description: "Native mobile integration capabilities" }
-      ]
-    },
-    {
-      category: "Testing",
-      icon: Shield,
-      color: "from-green-500 to-emerald-600",
-      projects: [
-        { name: "Tokenization Engine", progress: 85, description: "Core asset digitization platform" },
-        { name: "Digital Trade Documents", progress: 70, description: "Paperless trade finance workflows" },
-        { name: "Compliance Automation", progress: 55, description: "Automated regulatory reporting" }
-      ]
-    },
-    {
-      category: "MVP Ready",
-      icon: Rocket,
-      color: "from-orange-500 to-red-600",
-      projects: [
-        { name: "Supply Chain Finance", progress: 95, description: "Digital SCF platform with pilot partners" },
-        { name: "Asset Registry", progress: 90, description: "Secure digital asset management" },
-        { name: "API Gateway", progress: 88, description: "RESTful APIs for platform integration" }
-      ]
-    }
-  ];
-
-  return (
-    <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
+  const innovations = [{
+    category: "Research Phase",
+    icon: Brain,
+    color: "from-purple-500 to-indigo-600",
+    projects: [{
+      name: "AI-Powered Risk Assessment",
+      progress: 30,
+      description: "Machine learning models for automated risk evaluation"
+    }, {
+      name: "Cross-chain Interoperability",
+      progress: 15,
+      description: "Seamless asset transfers across blockchains"
+    }, {
+      name: "Quantum-Resistant Security",
+      progress: 10,
+      description: "Future-proofing against quantum computing"
+    }]
+  }, {
+    category: "Development",
+    icon: Code,
+    color: "from-blue-500 to-cyan-600",
+    projects: [{
+      name: "Smart Contract Templates",
+      progress: 75,
+      description: "Pre-built contracts for common use cases"
+    }, {
+      name: "Advanced Analytics Dashboard",
+      progress: 60,
+      description: "Real-time insights and reporting"
+    }, {
+      name: "Mobile SDK",
+      progress: 45,
+      description: "Native mobile integration capabilities"
+    }]
+  }, {
+    category: "Testing",
+    icon: Shield,
+    color: "from-green-500 to-emerald-600",
+    projects: [{
+      name: "Tokenization Engine",
+      progress: 85,
+      description: "Core asset digitization platform"
+    }, {
+      name: "Digital Trade Documents",
+      progress: 70,
+      description: "Paperless trade finance workflows"
+    }, {
+      name: "Compliance Automation",
+      progress: 55,
+      description: "Automated regulatory reporting"
+    }]
+  }, {
+    category: "MVP Ready",
+    icon: Rocket,
+    color: "from-orange-500 to-red-600",
+    projects: [{
+      name: "Supply Chain Finance",
+      progress: 95,
+      description: "Digital SCF platform with pilot partners"
+    }, {
+      name: "Asset Registry",
+      progress: 90,
+      description: "Secure digital asset management"
+    }, {
+      name: "API Gateway",
+      progress: 88,
+      description: "RESTful APIs for platform integration"
+    }]
+  }];
+  return <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-4">
@@ -77,35 +92,9 @@ const InnovationPipeline = () => {
         {/* Innovation Stages */}
         <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-6 mb-16">
           {innovations.map((stage, index) => {
-            const IconComponent = stage.icon;
-            return (
-              <Card key={index} className="p-6 border-2 hover:border-primary/50 transition-all duration-300 group">
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${stage.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                  <IconComponent className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="font-bold text-lg mb-4">{stage.category}</h3>
-                <div className="space-y-4">
-                  {stage.projects.map((project, idx) => (
-                    <div key={idx} className="space-y-2">
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm font-medium">{project.name}</span>
-                        <Badge variant="secondary" className="text-xs">
-                          {project.progress}%
-                        </Badge>
-                      </div>
-                      <div className="w-full bg-muted rounded-full h-1.5">
-                        <div 
-                          className={`bg-gradient-to-r ${stage.color} h-1.5 rounded-full transition-all duration-500`}
-                          style={{ width: `${project.progress}%` }}
-                        />
-                      </div>
-                      <p className="text-xs text-muted-foreground">{project.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </Card>
-            );
-          })}
+          const IconComponent = stage.icon;
+          return;
+        })}
         </div>
 
         {/* Innovation Highlights */}
@@ -138,8 +127,6 @@ const InnovationPipeline = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default InnovationPipeline;
