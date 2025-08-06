@@ -73,7 +73,7 @@ const Navbar = () => {
                         </DropdownMenuSubTrigger>
                         <DropdownMenuSubContent className="bg-background border-border/50 shadow-lg z-50">
                           <DropdownMenuItem asChild>
-                            <Link to="/vdp-debt-capital" className="w-full">
+                            <Link to="/" className="w-full">
                               Debt Capital Markets
                             </Link>
                           </DropdownMenuItem>
@@ -215,7 +215,7 @@ const Navbar = () => {
                   <div className="block font-medium text-gray-600 pb-1">Tokenization</div>
                   <div className="pl-4 space-y-2">
                     <Link 
-                      to="/vdp-debt-capital" 
+                      to="/" 
                       className="block text-sm text-gray-500 hover:text-secondary transition-colors"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
