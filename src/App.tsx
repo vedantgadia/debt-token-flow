@@ -10,6 +10,7 @@ import Index from "./pages/Index";
 import Innovations from "./pages/Innovations";
 import Securitization from "./pages/Securitization";
 import VDPTradeDocs from "./pages/VDPTradeDocs";
+import VDPDebtCapital from "./pages/VDPDebtCapital";
 import DeepTierSCF from "./pages/DeepTierSCF";
 import DeepTierSCPayments from "./pages/DeepTierSCPayments";
 import Tokenization from "./pages/Tokenization";
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/innovations" element={<Innovations />} />
           <Route path="/vdp-trade-docs" element={<VDPTradeDocs />} />
+          <Route path="/vdp-debt-capital" element={<VDPDebtCapital />} />
           <Route path="/securitization" element={<Securitization />} />
             <Route path="/deep-tier-scf" element={<DeepTierSCF />} />
             <Route path="/deep-tier-sc-payments" element={<DeepTierSCPayments />} />
