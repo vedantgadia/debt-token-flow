@@ -58,7 +58,7 @@ const Navbar = () => {
           </Link>
           
           <div className="hidden md:flex items-center space-x-8">
-            <nav className={`${isScrolled ? 'text-gray-700' : 'text-white'}`}>
+            <nav className={`${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`}>
               <ul className="flex space-x-8">
                 <li>
                   <DropdownMenu>
