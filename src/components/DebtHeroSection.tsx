@@ -151,8 +151,8 @@ const DebtHeroSection = () => {
       <div className="container px-4 mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display leading-tight mb-6">Vayana Debt Platform</h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-xl">Reimagining Private Credit Market with Tokenization</p>
+            <h1 className="text-4xl md:text-5xl font-bold font-display leading-tight mb-6 lg:text-5xl">Reimagining Bond Markets for the Digital Age</h1>
+            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-xl">From private placements to tokenized debt, VDP streamlines the full lifecycle - issuance, distribution, and post-trade, all on one platform</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="hero-button bg-vayana-blue hover:bg-vayana-blue/90 text-white flex items-center gap-2" onClick={() => {
               const form = document.getElementById('contact-form');
@@ -166,13 +166,13 @@ const DebtHeroSection = () => {
                 Book a Demo
               </Button>
               <Button variant="outline" className="hero-button bg-transparent border-white hover:bg-white/10 text-white flex items-center gap-2" onClick={() => {
-                const vdpSection = document.getElementById('about');
-                if (vdpSection) {
-                  vdpSection.scrollIntoView({
-                    behavior: 'smooth'
-                  });
-                }
-              }}>
+              const vdpSection = document.getElementById('about');
+              if (vdpSection) {
+                vdpSection.scrollIntoView({
+                  behavior: 'smooth'
+                });
+              }
+            }}>
                 Know More
                 <ArrowRight className="h-5 w-5" />
               </Button>
