@@ -58,7 +58,7 @@ const Navbar = () => {
           </Link>
           
           <div className="hidden md:flex items-center space-x-8">
-            <nav className={`${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`}>
+            <nav className={`${isScrolled ? 'text-foreground' : 'text-white'}`}>
               <ul className="flex space-x-8">
                 <li>
                   <DropdownMenu>
@@ -196,7 +196,7 @@ const Navbar = () => {
           </div>
           
           <button 
-            className={`md:hidden ${isScrolled ? 'text-primary' : 'text-white'}`}
+            className={`md:hidden ${isScrolled ? 'text-foreground' : 'text-white'}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
