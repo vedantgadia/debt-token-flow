@@ -184,10 +184,7 @@ const Tokenization = () => {
               </div>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight font-display text-white">
-                Reimagining Private Credit Market
-                <span className="block bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">
-                  with Tokenization
-                </span>
+                {content.hero}
               </h1>
               
               <p className="text-lg md:text-xl text-white/90 max-w-xl">
