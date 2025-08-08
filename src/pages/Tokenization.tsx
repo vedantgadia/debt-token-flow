@@ -424,10 +424,6 @@ const Tokenization = () => {
         </div>
       </section>
 
-
-      {/* Platform Screenshots Showcase */}
-      <PlatformShowcase />
-
       {/* New Section: ERC3643 Benefits */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
